@@ -10,17 +10,27 @@ module demo
     import Label = laya.ui.Label;
 
     export class listDemo{
-        private listPage : ui.ListPageUI;
-        private arr : Array<any>;
+        
         constructor(){
             Laya.init(1136,640,WebGL);
             Laya.stage.bgColor = "#ffffff";
-            Laya.loader.load(["res/atlas/ui.atlas","res/atlas/comp.atlas"],Handler.create(this,this.OnLoadAtlas));
+            Laya.stage.scaleMode = Laya.Stage.SCALE_FIXED_AUTO;
+            Laya.loader.load(["res/atlas/ui.atlas","res/atlas/comp.atlas"],Handler.create(this,this.initMainWnd));
         }
 
-        private OnLoadAtlas() : void
+        private mainPage : ui.page.backgroundUI;
+        private initMainWnd() : void
         {
-            this.listPage = new ui.ListPageUI();
+            this.mainPage = new ui.page.backgroundUI();
+            Laya.stage.addChild(this.mainPage);
+            this.mainPage.openBtn.on(Laya.Event.MOUSE_UP,this,this.OpenListPage);
+        }
+
+        private listPage : ui.page.ListPageUI;
+        private arr : Array<any>;
+        private OpenListPage() : void
+        {
+            this.listPage = new ui.page.ListPageUI();
             Laya.stage.addChild(this.listPage);
             this.listPage.pos(Laya.stage.width / 2,Laya.stage.height / 2);
             this.listPage.pivot(this.listPage.width / 2,this.listPage.height / 2);
@@ -28,6 +38,7 @@ module demo
 
             this.listPage.add.on(Laya.Event.CLICK,this,this.clickAdd);
             this.listPage.del.on(Laya.Event.CLICK,this,this.clickDel);
+            this.listPage.close.on(Laya.Event.CLICK,this,this.onCloseListPage);
         }
 
         private setListData() : void
@@ -95,6 +106,11 @@ module demo
             }
             this.arr = newArr;
             this.listPage._list.array = this.arr;
+        }
+        private onCloseListPage() : void
+        {
+            console.log("onCloseListPage");
+            Laya.stage.removeChild(this.listPage);
         }
     }
 }

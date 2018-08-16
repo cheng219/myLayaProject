@@ -1,9 +1,9 @@
 /*
 * name;
 */
-class tsBase{
-    constructor(){
+// class tsBase{
+//     constructor(){
 
-    }
-}
-let isDone : boolean = false;
+//     }
+// }
+// let isDone : boolean = false;

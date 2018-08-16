@@ -3,4 +3,6 @@
    <item name="ui/jiesuan_01.png" type="Image" compress="0" pack="0" quality="80" props="" picType="0" scale="0"/>
    <item name="ui/qt229.png" type="Image" compress="0" pack="0" quality="80" props="sizeGrid=4,4,4,4" picType="0" scale="0"/>
    <item name="ui/qt281.png" type="Image" compress="0" pack="0" quality="80" props="sizeGrid=4,10,4,10" picType="0" scale="0"/>
+   <item name="comp/bg.png" type="Image" compress="0" pack="0" quality="80" props="sizeGrid=26,4,4,4" picType="0" scale="0"/>
+   <item name="ui/close.png" type="Image" compress="0" pack="0" quality="80" props="" picType="0" scale="0"/>
 </res>

@@ -1,9 +1,9 @@
 /*
 * name;
 */
-class tsBase {
-    constructor() {
-    }
-}
-let isDone = false;
+// class tsBase{
+//     constructor(){
+//     }
+// }
+// let isDone : boolean = false;
 //# sourceMappingURL=tsBase.js.map

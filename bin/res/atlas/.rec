@@ -37,6 +37,7 @@ P 2BFF7046 vslider.png
 D template
 D ui
 P 52E437E8 btn_qt113.png
+P 6F3D2937 close.png
 P AA7B3D93 jiesuan_01.png
 P AE046AD0 qt154.png
 P 91AA5975 qt221.png
@@ -47,7 +48,6 @@ P 180C8AB0 qt276.png
 P 2B0FD14F qt279.png
 P 89402E87 qt281.png
 P ED0D00D4 qt286.png
-P 6F3D2937 qt316.png
 D template/Search
 P 789B5A2E btn_search_close.png
 P E8BF1864 btn_search_icon.png
