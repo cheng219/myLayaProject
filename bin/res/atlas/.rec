@@ -1,4 +1,5 @@
 D .
+R 39B957DA texture.png
 D comp
 P D12221A9 bg.png
 P 9401CC40 blank.png
@@ -33,9 +34,10 @@ P B9680947 vscroll$up.png
 P 7E990267 vscroll.png
 P E466EB1C vslider$bar.png
 P 2BFF7046 vslider.png
+D template
 D ui
+P 52E437E8 btn_qt113.png
 P AA7B3D93 jiesuan_01.png
-P 52E437E8 qt113.png
 P AE046AD0 qt154.png
 P 91AA5975 qt221.png
 P 64DF6066 qt228.png
@@ -46,3 +48,11 @@ P 2B0FD14F qt279.png
 P 89402E87 qt281.png
 P ED0D00D4 qt286.png
 P 6F3D2937 qt316.png
+D template/Search
+P 789B5A2E btn_search_close.png
+P E8BF1864 btn_search_icon.png
+P 5EDC128C label.png
+R 4F2CD3AC search bar_blue.png
+D template/Text
+P 5EDC128C label.png
+R 1E74727C TextBox.png
