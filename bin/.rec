@@ -1,9 +1,4 @@
 D .
-R 246B90A9 .rec
-R ECE34CE5 game.atlas
-R CDFF87FF game.png
-R 49C5DAD2 ui.atlas
-R 35DB9498 ui.png
 D game
 P 1EC30EDE blast1.png
 P 90B3C8B9 blast2.png

@@ -1,0 +1,841 @@
+{
+    "frames": {
+        "blast1.png": {
+            "frame": {
+                "h": 12,
+                "idx": 0,
+                "w": 15,
+                "x": 337,
+                "y": 0
+            },
+            "sourceSize": {
+                "h": 107,
+                "w": 136
+            },
+            "spriteSourceSize": {
+                "x": 58,
+                "y": 45
+            }
+        },
+        "blast2.png": {
+            "frame": {
+                "h": 29,
+                "idx": 0,
+                "w": 37,
+                "x": 0,
+                "y": 0
+            },
+            "sourceSize": {
+                "h": 107,
+                "w": 136
+            },
+            "spriteSourceSize": {
+                "x": 50,
+                "y": 37
+            }
+        },
+        "blast3.png": {
+            "frame": {
+                "h": 38,
+                "idx": 0,
+                "w": 49,
+                "x": 38,
+                "y": 0
+            },
+            "sourceSize": {
+                "h": 107,
+                "w": 136
+            },
+            "spriteSourceSize": {
+                "x": 42,
+                "y": 33
+            }
+        },
+        "blast4.png": {
+            "frame": {
+                "h": 49,
+                "idx": 0,
+                "w": 63,
+                "x": 88,
+                "y": 0
+            },
+            "sourceSize": {
+                "h": 107,
+                "w": 136
+            },
+            "spriteSourceSize": {
+                "x": 35,
+                "y": 27
+            }
+        },
+        "blast5.png": {
+            "frame": {
+                "h": 65,
+                "idx": 0,
+                "w": 84,
+                "x": 152,
+                "y": 0
+            },
+            "sourceSize": {
+                "h": 107,
+                "w": 136
+            },
+            "spriteSourceSize": {
+                "x": 26,
+                "y": 20
+            }
+        },
+        "blast6.png": {
+            "frame": {
+                "h": 77,
+                "idx": 0,
+                "w": 99,
+                "x": 237,
+                "y": 0
+            },
+            "sourceSize": {
+                "h": 107,
+                "w": 136
+            },
+            "spriteSourceSize": {
+                "x": 16,
+                "y": 14
+            }
+        },
+        "blast7.png": {
+            "frame": {
+                "h": 93,
+                "idx": 0,
+                "w": 119,
+                "x": 0,
+                "y": 50
+            },
+            "sourceSize": {
+                "h": 107,
+                "w": 136
+            },
+            "spriteSourceSize": {
+                "x": 9,
+                "y": 0
+            }
+        },
+        "blast8.png": {
+            "frame": {
+                "h": 106,
+                "idx": 0,
+                "w": 135,
+                "x": 0,
+                "y": 144
+            },
+            "sourceSize": {
+                "h": 107,
+                "w": 136
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "bomb.png": {
+            "frame": {
+                "h": 40,
+                "idx": 0,
+                "w": 40,
+                "x": 363,
+                "y": 376
+            },
+            "sourceSize": {
+                "h": 40,
+                "w": 40
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "born1.png": {
+            "frame": {
+                "h": 25,
+                "idx": 0,
+                "w": 33,
+                "x": 79,
+                "y": 373
+            },
+            "sourceSize": {
+                "h": 60,
+                "w": 60
+            },
+            "spriteSourceSize": {
+                "x": 13,
+                "y": 16
+            }
+        },
+        "born2.png": {
+            "frame": {
+                "h": 30,
+                "idx": 0,
+                "w": 39,
+                "x": 180,
+                "y": 66
+            },
+            "sourceSize": {
+                "h": 60,
+                "w": 60
+            },
+            "spriteSourceSize": {
+                "x": 10,
+                "y": 14
+            }
+        },
+        "born3.png": {
+            "frame": {
+                "h": 36,
+                "idx": 0,
+                "w": 47,
+                "x": 195,
+                "y": 194
+            },
+            "sourceSize": {
+                "h": 60,
+                "w": 60
+            },
+            "spriteSourceSize": {
+                "x": 6,
+                "y": 11
+            }
+        },
+        "born4.png": {
+            "frame": {
+                "h": 41,
+                "idx": 0,
+                "w": 54,
+                "x": 256,
+                "y": 138
+            },
+            "sourceSize": {
+                "h": 60,
+                "w": 60
+            },
+            "spriteSourceSize": {
+                "x": 3,
+                "y": 9
+            }
+        },
+        "destory.png": {
+            "frame": {
+                "h": 45,
+                "idx": 0,
+                "w": 60,
+                "x": 241,
+                "y": 361
+            },
+            "sourceSize": {
+                "h": 45,
+                "w": 60
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "enemy1D.png": {
+            "frame": {
+                "h": 60,
+                "idx": 0,
+                "w": 59,
+                "x": 256,
+                "y": 180
+            },
+            "sourceSize": {
+                "h": 60,
+                "w": 60
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "enemy1L.png": {
+            "frame": {
+                "h": 59,
+                "idx": 0,
+                "w": 60,
+                "x": 240,
+                "y": 241
+            },
+            "sourceSize": {
+                "h": 60,
+                "w": 60
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "enemy1R.png": {
+            "frame": {
+                "h": 59,
+                "idx": 0,
+                "w": 60,
+                "x": 241,
+                "y": 301
+            },
+            "sourceSize": {
+                "h": 60,
+                "w": 60
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 1
+            }
+        },
+        "enemy1U.png": {
+            "frame": {
+                "h": 60,
+                "idx": 0,
+                "w": 59,
+                "x": 302,
+                "y": 254
+            },
+            "sourceSize": {
+                "h": 60,
+                "w": 60
+            },
+            "spriteSourceSize": {
+                "x": 1,
+                "y": 0
+            }
+        },
+        "enemy2D.png": {
+            "frame": {
+                "h": 60,
+                "idx": 0,
+                "w": 59,
+                "x": 317,
+                "y": 133
+            },
+            "sourceSize": {
+                "h": 60,
+                "w": 60
+            },
+            "spriteSourceSize": {
+                "x": 1,
+                "y": 0
+            }
+        },
+        "enemy2L.png": {
+            "frame": {
+                "h": 59,
+                "idx": 0,
+                "w": 60,
+                "x": 316,
+                "y": 194
+            },
+            "sourceSize": {
+                "h": 60,
+                "w": 60
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 1
+            }
+        },
+        "enemy2R.png": {
+            "frame": {
+                "h": 59,
+                "idx": 0,
+                "w": 60,
+                "x": 302,
+                "y": 315
+            },
+            "sourceSize": {
+                "h": 60,
+                "w": 60
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "enemy2U.png": {
+            "frame": {
+                "h": 60,
+                "idx": 0,
+                "w": 59,
+                "x": 363,
+                "y": 315
+            },
+            "sourceSize": {
+                "h": 60,
+                "w": 60
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "enemy3D.png": {
+            "frame": {
+                "h": 59,
+                "idx": 0,
+                "w": 60,
+                "x": 256,
+                "y": 78
+            },
+            "sourceSize": {
+                "h": 60,
+                "w": 60
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 1
+            }
+        },
+        "enemy3L.png": {
+            "frame": {
+                "h": 60,
+                "idx": 0,
+                "w": 59,
+                "x": 362,
+                "y": 254
+            },
+            "sourceSize": {
+                "h": 60,
+                "w": 60
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "enemy3R.png": {
+            "frame": {
+                "h": 60,
+                "idx": 0,
+                "w": 59,
+                "x": 0,
+                "y": 251
+            },
+            "sourceSize": {
+                "h": 60,
+                "w": 60
+            },
+            "spriteSourceSize": {
+                "x": 1,
+                "y": 0
+            }
+        },
+        "enemy3U.png": {
+            "frame": {
+                "h": 59,
+                "idx": 0,
+                "w": 60,
+                "x": 0,
+                "y": 312
+            },
+            "sourceSize": {
+                "h": 60,
+                "w": 60
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "enemymissile.png": {
+            "frame": {
+                "h": 15,
+                "idx": 0,
+                "w": 15,
+                "x": 136,
+                "y": 50
+            },
+            "sourceSize": {
+                "h": 15,
+                "w": 15
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "grass.png": {
+            "frame": {
+                "h": 60,
+                "idx": 0,
+                "w": 60,
+                "x": 61,
+                "y": 312
+            },
+            "sourceSize": {
+                "h": 60,
+                "w": 60
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "mintank.png": {
+            "frame": {
+                "h": 30,
+                "idx": 0,
+                "w": 30,
+                "x": 398,
+                "y": 62
+            },
+            "sourceSize": {
+                "h": 30,
+                "w": 30
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "over.png": {
+            "frame": {
+                "h": 43,
+                "idx": 0,
+                "w": 78,
+                "x": 0,
+                "y": 373
+            },
+            "sourceSize": {
+                "h": 45,
+                "w": 80
+            },
+            "spriteSourceSize": {
+                "x": 1,
+                "y": 1
+            }
+        },
+        "p1tankD.png": {
+            "frame": {
+                "h": 58,
+                "idx": 0,
+                "w": 59,
+                "x": 120,
+                "y": 66
+            },
+            "sourceSize": {
+                "h": 60,
+                "w": 60
+            },
+            "spriteSourceSize": {
+                "x": 1,
+                "y": 1
+            }
+        },
+        "p1tankL.png": {
+            "frame": {
+                "h": 59,
+                "idx": 0,
+                "w": 58,
+                "x": 136,
+                "y": 125
+            },
+            "sourceSize": {
+                "h": 60,
+                "w": 60
+            },
+            "spriteSourceSize": {
+                "x": 1,
+                "y": 1
+            }
+        },
+        "p1tankR.png": {
+            "frame": {
+                "h": 59,
+                "idx": 0,
+                "w": 58,
+                "x": 136,
+                "y": 185
+            },
+            "sourceSize": {
+                "h": 60,
+                "w": 60
+            },
+            "spriteSourceSize": {
+                "x": 1,
+                "y": 0
+            }
+        },
+        "p1tankU.png": {
+            "frame": {
+                "h": 58,
+                "idx": 0,
+                "w": 59,
+                "x": 337,
+                "y": 13
+            },
+            "sourceSize": {
+                "h": 60,
+                "w": 60
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 1
+            }
+        },
+        "p2tankD.png": {
+            "frame": {
+                "h": 58,
+                "idx": 0,
+                "w": 59,
+                "x": 121,
+                "y": 251
+            },
+            "sourceSize": {
+                "h": 60,
+                "w": 60
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 1
+            }
+        },
+        "p2tankL.png": {
+            "frame": {
+                "h": 59,
+                "idx": 0,
+                "w": 58,
+                "x": 122,
+                "y": 310
+            },
+            "sourceSize": {
+                "h": 60,
+                "w": 60
+            },
+            "spriteSourceSize": {
+                "x": 1,
+                "y": 0
+            }
+        },
+        "p2tankR.png": {
+            "frame": {
+                "h": 59,
+                "idx": 0,
+                "w": 58,
+                "x": 181,
+                "y": 245
+            },
+            "sourceSize": {
+                "h": 60,
+                "w": 60
+            },
+            "spriteSourceSize": {
+                "x": 1,
+                "y": 1
+            }
+        },
+        "p2tankU.png": {
+            "frame": {
+                "h": 58,
+                "idx": 0,
+                "w": 59,
+                "x": 181,
+                "y": 305
+            },
+            "sourceSize": {
+                "h": 60,
+                "w": 60
+            },
+            "spriteSourceSize": {
+                "x": 1,
+                "y": 1
+            }
+        },
+        "selecttank.png": {
+            "frame": {
+                "h": 44,
+                "idx": 0,
+                "w": 48,
+                "x": 377,
+                "y": 133
+            },
+            "sourceSize": {
+                "h": 45,
+                "w": 50
+            },
+            "spriteSourceSize": {
+                "x": 1,
+                "y": 0
+            }
+        },
+        "star.png": {
+            "frame": {
+                "h": 40,
+                "idx": 0,
+                "w": 40,
+                "x": 122,
+                "y": 370
+            },
+            "sourceSize": {
+                "h": 40,
+                "w": 40
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "tankmissile.png": {
+            "frame": {
+                "h": 15,
+                "idx": 0,
+                "w": 15,
+                "x": 120,
+                "y": 50
+            },
+            "sourceSize": {
+                "h": 17,
+                "w": 17
+            },
+            "spriteSourceSize": {
+                "x": 1,
+                "y": 1
+            }
+        },
+        "timer.png": {
+            "frame": {
+                "h": 40,
+                "idx": 0,
+                "w": 40,
+                "x": 181,
+                "y": 364
+            },
+            "sourceSize": {
+                "h": 40,
+                "w": 40
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "tugai.net.20101117134209.png": {
+            "frame": {
+                "h": 30,
+                "idx": 0,
+                "w": 30,
+                "x": 397,
+                "y": 0
+            },
+            "sourceSize": {
+                "h": 30,
+                "w": 30
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "tugai.net.20101117144551.png": {
+            "frame": {
+                "h": 30,
+                "idx": 0,
+                "w": 60,
+                "x": 302,
+                "y": 375
+            },
+            "sourceSize": {
+                "h": 30,
+                "w": 60
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "tugai.net.20101117144625.png": {
+            "frame": {
+                "h": 60,
+                "idx": 0,
+                "w": 30,
+                "x": 377,
+                "y": 178
+            },
+            "sourceSize": {
+                "h": 60,
+                "w": 30
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "tugai.net.20101117145147.png": {
+            "frame": {
+                "h": 60,
+                "idx": 0,
+                "w": 60,
+                "x": 337,
+                "y": 72
+            },
+            "sourceSize": {
+                "h": 60,
+                "w": 60
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "wall.png": {
+            "frame": {
+                "h": 30,
+                "idx": 0,
+                "w": 30,
+                "x": 397,
+                "y": 31
+            },
+            "sourceSize": {
+                "h": 30,
+                "w": 30
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "walls.png": {
+            "frame": {
+                "h": 60,
+                "idx": 0,
+                "w": 60,
+                "x": 195,
+                "y": 133
+            },
+            "sourceSize": {
+                "h": 60,
+                "w": 60
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        },
+        "water.png": {
+            "frame": {
+                "h": 60,
+                "idx": 0,
+                "w": 60,
+                "x": 60,
+                "y": 251
+            },
+            "sourceSize": {
+                "h": 60,
+                "w": 60
+            },
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0
+            }
+        }
+    },
+    "meta": {
+        "image": "game.png",
+        "prefix": "game/"
+    }
+}

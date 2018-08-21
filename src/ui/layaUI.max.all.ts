@@ -2,15 +2,6 @@
 import View=laya.ui.View;
 import Dialog=laya.ui.Dialog;
 import EffectAnimation=laya.display.EffectAnimation
-module ui.efc {
-    export class scaleUI extends EffectAnimation {
-		public ani1:Laya.FrameAnimation;
-
-        public static  uiView:any ={"type":"View","props":{},"child":[{"type":"Image","props":{"skin":"comp/image.png","anchorY":0.5,"anchorX":0.5},"compId":2}],"animations":[{"nodes":[{"target":2,"keyframes":{"scaleY":[{"value":1,"tweenMethod":"linearNone","tween":true,"target":2,"key":"scaleY","index":0},{"value":0.2,"tweenMethod":"linearNone","tween":true,"target":2,"key":"scaleY","index":1},{"value":1,"tweenMethod":"linearNone","tween":true,"target":2,"key":"scaleY","index":10}],"scaleX":[{"value":1,"tweenMethod":"linearNone","tween":true,"target":2,"key":"scaleX","index":0},{"value":0.2,"tweenMethod":"linearNone","tween":true,"target":2,"key":"scaleX","index":1},{"value":1,"tweenMethod":"linearNone","tween":true,"target":2,"key":"scaleX","index":10}]}}],"name":"ani1","id":1,"frameRate":24,"action":0}]};
-        constructor(){ super();this.effectData =ui.efc.scaleUI.uiView;}
-    }
-}
-
 module ui.page {
     export class backgroundUI extends View {
 		public openBtn:Laya.Button;
@@ -40,6 +31,40 @@ module ui.page {
         
             super.createChildren();
             this.createView(ui.page.ListPageUI.uiView);
+
+        }
+
+    }
+}
+
+module ui.page {
+    export class loginUI extends View {
+		public btn_start:Laya.Button;
+
+        public static  uiView:any ={"type":"View","props":{"width":1136,"height":640},"child":[{"type":"Button","props":{"y":320,"x":568,"width":84,"var":"btn_start","skin":"ui/btn_qt113.png","label":"start","height":27,"anchorY":0.5,"anchorX":0.5}}]};
+        constructor(){ super()}
+        createChildren():void {
+        
+            super.createChildren();
+            this.createView(ui.page.loginUI.uiView);
+
+        }
+
+    }
+}
+
+module ui.page {
+    export class stageUI extends Dialog {
+		public remainEnemy:Laya.Label;
+		public remainTimes:Laya.Label;
+		public stageName:Laya.Label;
+
+        public static  uiView:any ={"type":"Dialog","props":{"y":0,"x":0,"width":1136,"height":640},"child":[{"type":"Box","props":{"y":320,"x":1136,"width":236,"name":"right","height":640,"anchorY":0.5,"anchorX":1},"child":[{"type":"Image","props":{"y":320,"x":236,"width":236,"skin":"ui/qt228.png","name":"right","height":640,"anchorY":0.5,"anchorX":1,"sizeGrid":"5,5,5,5"}},{"type":"Label","props":{"y":14,"x":17,"width":72,"text":"剩余敌军","height":35,"fontSize":25,"font":"Arial"}},{"type":"Label","props":{"y":57,"x":76,"width":64,"var":"remainEnemy","text":"10","name":"enemyLabel","height":27,"fontSize":20,"font":"Arial","color":"#0f933a","bold":true}},{"type":"Label","props":{"y":119,"x":8,"width":72,"text":"剩余挑战次数","height":35,"fontSize":25,"font":"Arial"}},{"type":"Label","props":{"y":158,"x":76,"width":64,"var":"remainTimes","text":"10","name":"enemyLabel","height":27,"fontSize":20,"font":"Arial","color":"#0f933a","bold":true}},{"type":"Label","props":{"y":549,"x":63,"width":64,"var":"stageName","text":"第一关","name":"stageLabel","height":27,"fontSize":20,"font":"Arial","color":"#0f933a"}},{"type":"Label","props":{"y":509,"x":31,"width":72,"text":"关卡","height":35,"fontSize":30,"font":"Arial"}}]},{"type":"Image","props":{"y":0,"x":0,"width":60,"skin":"game/walls.png","height":60}},{"type":"Image","props":{"y":0,"x":60,"width":60,"skin":"game/walls.png","height":60}},{"type":"Image","props":{"y":0,"x":120,"width":60,"skin":"game/walls.png","height":60}},{"type":"Image","props":{"y":0,"x":180,"width":60,"skin":"game/walls.png","height":60}},{"type":"Image","props":{"y":0,"x":240,"width":60,"skin":"game/walls.png","height":60}},{"type":"Image","props":{"y":0,"x":300,"width":60,"skin":"game/walls.png","height":60}},{"type":"Image","props":{"y":0,"x":360,"width":60,"skin":"game/walls.png","height":60}},{"type":"Image","props":{"y":0,"x":420,"width":60,"skin":"game/walls.png","height":60}},{"type":"Image","props":{"y":0,"x":480,"width":60,"skin":"game/walls.png","height":60}},{"type":"Image","props":{"y":0,"x":540,"width":60,"skin":"game/walls.png","height":60}},{"type":"Image","props":{"y":0,"x":600,"width":60,"skin":"game/walls.png","height":60}},{"type":"Image","props":{"y":0,"x":660,"width":60,"skin":"game/walls.png","height":60}},{"type":"Image","props":{"y":0,"x":720,"width":60,"skin":"game/walls.png","height":60}},{"type":"Image","props":{"y":0,"x":780,"width":60,"skin":"game/walls.png","height":60}},{"type":"Image","props":{"y":0,"x":840,"width":60,"skin":"game/walls.png","height":60}}]};
+        constructor(){ super()}
+        createChildren():void {
+        
+            super.createChildren();
+            this.createView(ui.page.stageUI.uiView);
 
         }
 
