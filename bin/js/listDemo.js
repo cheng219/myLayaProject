@@ -7,6 +7,7 @@ var demo;
     var Handler = laya.utils.Handler;
     var listDemo = /** @class */ (function () {
         function listDemo() {
+            Laya.MiniAdpter.init();
             Laya.init(1136, 640, WebGL);
             Laya.stage.bgColor = "#ffffff";
             Laya.stage.scaleMode = Laya.Stage.SCALE_FIXED_AUTO;
