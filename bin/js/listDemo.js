@@ -90,5 +90,5 @@ var demo;
     }());
     demo.listDemo = listDemo;
 })(demo || (demo = {}));
-new demo.listDemo();
+//new demo.listDemo();
 //# sourceMappingURL=listDemo.js.map

@@ -1,8 +1,8 @@
 {
     "x":0,
     "type":"View",
-    "selectedBox":1,
-    "selecteID":2,
+    "selectedBox":14,
+    "selecteID":20,
     "props":{"width":600,"sceneColor":"#000000","height":400},
     "nodeParent":-1,
     "label":"View",
@@ -31,13 +31,14 @@
             "props":{"y":13,"x":10,"width":574,"var":"_list","height":313},
             "nodeParent":1,
             "label":"List(_list)",
-            "isOpen":false,
+            "isOpen":true,
             "isDirectory":true,
             "isAniNode":true,
             "hasChild":true,
             "compId":13,
             "child":[
                 {
+                    "x":30,
                     "type":"Box",
                     "props":{"renderType":"render"},
                     "nodeParent":13,
@@ -49,6 +50,7 @@
                     "compId":9,
                     "child":[
                         {
+                            "x":45,
                             "type":"Image",
                             "props":{"width":574,"skin":"ui/qt229.png","height":45},
                             "nodeParent":9,
@@ -61,6 +63,7 @@
                                 ]
                         },
                         {
+                            "x":45,
                             "type":"CheckBox",
                             "props":{"y":10,"x":524,"width":27,"stateNum":"3","skin":"comp/checkbox.png","name":"listCheck","height":24},
                             "nodeParent":9,
@@ -73,6 +76,7 @@
                                 ]
                         },
                         {
+                            "x":45,
                             "type":"Label",
                             "props":{"y":13,"x":19,"width":32,"text":"1","name":"listNumber","height":22,"fontSize":20},
                             "nodeParent":9,
@@ -85,6 +89,7 @@
                                 ]
                         },
                         {
+                            "x":45,
                             "type":"Label",
                             "props":{"y":13,"x":161,"width":164,"text":"1","name":"listName","height":22,"fontSize":20},
                             "nodeParent":9,
@@ -104,6 +109,7 @@
             "props":{"y":352,"x":93,"width":90,"var":"add","stateNum":"1","skin":"ui/qt281.png","labelStroke":0,"labelSize":20,"labelBold":true,"label":"添加","height":30},
             "nodeParent":1,
             "label":"Button(add)",
+            "isOpen":true,
             "isDirectory":false,
             "isAniNode":true,
             "hasChild":false,
@@ -117,6 +123,7 @@
             "props":{"y":357,"x":284,"width":90,"var":"del","skin":"ui/qt281.png","labelSize":20,"labelBold":true,"label":"删除","height":30},
             "nodeParent":1,
             "label":"Button(del)",
+            "isOpen":true,
             "isDirectory":false,
             "isAniNode":true,
             "hasChild":false,
@@ -130,6 +137,7 @@
             "props":{"y":-4,"x":564,"width":36,"var":"close","stateNum":"1","skin":"ui/close.png","labelSize":20,"labelBold":true,"height":33},
             "nodeParent":1,
             "label":"Button(close)",
+            "isOpen":true,
             "isDirectory":false,
             "isAniNode":true,
             "hasChild":false,
