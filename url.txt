@@ -1,2 +1,4 @@
 json配置加载 https://blog.csdn.net/honey199396/article/details/79558539
 自定义脚本   http://blog.sina.com.cn/s/blog_9fe6ba930102x43x.html
+相交(2d碰撞检测) http://ask.layabox.com/question/1397
+laya对象池 https://blog.csdn.net/wxq_wuxingquan/article/details/53926625

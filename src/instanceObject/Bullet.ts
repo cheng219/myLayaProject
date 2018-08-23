@@ -1,21 +1,19 @@
 /*
-* 坦克对象;
+* 子弹对象;
 */
 module obj
 {
-    
-    export class Tank extends InstanceObject
+    export class Bullet extends InstanceObject
     {
-        public id : number = 0;
         constructor()
         {
             super();
+            this.speed = 10;
         }
-
         protected onFrameOnce() : void
         {
             super.onFrameOnce();
-            let rect = new Laya.Rectangle(0,0,60,60)
+            let rect = new Laya.Rectangle(0,0,60,15)
             this.setBounds(rect);
         }
 
@@ -32,16 +30,13 @@ module obj
             }
         }
 
-        protected attack() : void
-        {
-
-        }
-
         public intersectWithOther(other : InstanceObject) : void
         {
-            if(other instanceof Bullet)
+            if(other instanceof Tank || other instanceof Brick)
             {
-                console.log("被击中");
+                console.log("击中其他，销毁自己");
+                this.visible = false;
+                game.GameCenter.gameStage.DelInstanceObj(this);
             }
         }
     }

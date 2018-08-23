@@ -54,6 +54,13 @@ P A8E1A07C tugai.net.20101117145147.png
 P 74815AAC wall.png
 P FCD31347 walls.png
 P 00FCA9B5 water.png
+D prefab
+R 9F6DF6B5 bullet.prefab
+R 81623A3E grass.prefab
+R 4E987313 metal.prefab
+R 6FBCFCCF tank.prefab
+R CC9B88F5 wall.prefab
+R 2ABA4F26 water.prefab
 D ui
 P 52E437E8 btn_qt113.png
 P 6F3D2937 close.png

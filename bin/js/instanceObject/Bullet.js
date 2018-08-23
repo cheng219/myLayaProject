@@ -12,23 +12,23 @@ var __extends = (this && this.__extends) || (function () {
     };
 })();
 /*
-* 坦克对象;
+* 子弹对象;
 */
 var obj;
 (function (obj) {
-    var Tank = /** @class */ (function (_super) {
-        __extends(Tank, _super);
-        function Tank() {
+    var Bullet = /** @class */ (function (_super) {
+        __extends(Bullet, _super);
+        function Bullet() {
             var _this = _super.call(this) || this;
-            _this.id = 0;
+            _this.speed = 10;
             return _this;
         }
-        Tank.prototype.onFrameOnce = function () {
+        Bullet.prototype.onFrameOnce = function () {
             _super.prototype.onFrameOnce.call(this);
-            var rect = new Laya.Rectangle(0, 0, 60, 60);
+            var rect = new Laya.Rectangle(0, 0, 60, 15);
             this.setBounds(rect);
         };
-        Tank.prototype.onFrameLoop = function () {
+        Bullet.prototype.onFrameLoop = function () {
             if (game.GameCenter.gameStage.intersectWithOther(this, MoveDir.UP)) {
                 //console.log("遇到障碍");
             }
@@ -38,15 +38,15 @@ var obj;
                 _super.prototype.move.call(this);
             }
         };
-        Tank.prototype.attack = function () {
-        };
-        Tank.prototype.intersectWithOther = function (other) {
-            if (other instanceof obj.Bullet) {
-                console.log("被击中");
+        Bullet.prototype.intersectWithOther = function (other) {
+            if (other instanceof obj.Tank || other instanceof obj.Brick) {
+                console.log("击中其他，销毁自己");
+                this.visible = false;
+                game.GameCenter.gameStage.DelInstanceObj(this);
             }
         };
-        return Tank;
+        return Bullet;
     }(obj.InstanceObject));
-    obj.Tank = Tank;
+    obj.Bullet = Bullet;
 })(obj || (obj = {}));
-//# sourceMappingURL=Tank.js.map
+//# sourceMappingURL=Bullet.js.map

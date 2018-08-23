@@ -1,8 +1,8 @@
 {
     "x":0,
     "type":"Dialog",
-    "selectedBox":925,
-    "selecteID":30,
+    "selectedBox":1,
+    "selecteID":2573,
     "props":{"y":0,"x":0,"width":1136,"sceneColor":"#000000","height":640},
     "nodeParent":-1,
     "label":"Dialog",
@@ -118,18 +118,17 @@
             "props":{"y":0,"x":0,"var":"map","name":"map"},
             "nodeParent":1,
             "label":"Box(map)",
-            "isOpen":true,
+            "isOpen":false,
             "isDirectory":true,
             "isAniNode":true,
             "hasChild":true,
             "compId":925,
             "child":[
                 {
-                    "x":30,
                     "type":"Box",
-                    "props":{"y":0,"x":0,"sort":1,"name":"item0","appendProps":"laya/pages/script/Brick.prop"},
+                    "props":{"presetID":1,"preset":"laya/assets/prefab/wall.prefab"},
                     "nodeParent":925,
-                    "label":"Box(item0)",
+                    "label":"Box(wall)",
                     "isOpen":false,
                     "isDirectory":true,
                     "isAniNode":true,
@@ -138,9 +137,9 @@
                     "child":[
                         {
                             "type":"Image",
-                            "props":{"y":0,"x":0,"width":60,"skin":"game/walls.png","height":60},
+                            "props":{"presetID":2,"preset":"laya/assets/prefab/wall.prefab"},
                             "nodeParent":30,
-                            "label":"Image",
+                            "label":"Image(wall)",
                             "isOpen":true,
                             "isDirectory":false,
                             "isAniNode":true,
@@ -151,9 +150,8 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Box",
-                    "props":{"y":0,"x":60,"sort":1,"name":"item1","appendProps":"laya/pages/script/Brick.prop"},
+                    "props":{"y":0,"x":60,"sort":1,"name":"item1","id":0,"appendProps":"laya/pages/script/Brick.prop"},
                     "nodeParent":925,
                     "label":"Box(item1)",
                     "isOpen":false,
@@ -177,9 +175,8 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Box",
-                    "props":{"y":0,"x":120,"sort":1,"name":"item2","appendProps":"laya/pages/script/Brick.prop"},
+                    "props":{"y":0,"x":120,"sort":1,"name":"item2","id":2,"appendProps":"laya/pages/script/Brick.prop"},
                     "nodeParent":925,
                     "label":"Box(item2)",
                     "isOpen":false,
@@ -203,7 +200,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Box",
                     "props":{"y":0,"x":180,"sort":1,"name":"item3","appendProps":"laya/pages/script/Brick.prop"},
                     "nodeParent":925,
@@ -229,7 +225,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Box",
                     "props":{"y":0,"x":240,"sort":1,"name":"item4","appendProps":"laya/pages/script/Brick.prop"},
                     "nodeParent":925,
@@ -255,7 +250,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Box",
                     "props":{"y":0,"x":300,"sort":1,"name":"item5","appendProps":"laya/pages/script/Brick.prop"},
                     "nodeParent":925,
@@ -281,7 +275,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Box",
                     "props":{"y":0,"x":360,"sort":1,"name":"item6","appendProps":"laya/pages/script/Brick.prop"},
                     "nodeParent":925,
@@ -307,7 +300,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Box",
                     "props":{"y":0,"x":420,"sort":1,"name":"item7","appendProps":"laya/pages/script/Brick.prop"},
                     "nodeParent":925,
@@ -333,7 +325,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Box",
                     "props":{"y":0,"x":480,"sort":1,"name":"item8","appendProps":"laya/pages/script/Brick.prop"},
                     "nodeParent":925,
@@ -359,7 +350,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Box",
                     "props":{"y":0,"x":540,"sort":1,"name":"item9","appendProps":"laya/pages/script/Brick.prop"},
                     "nodeParent":925,
@@ -385,7 +375,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Box",
                     "props":{"y":0,"x":600,"sort":1,"name":"item10","appendProps":"laya/pages/script/Brick.prop"},
                     "nodeParent":925,
@@ -411,7 +400,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Box",
                     "props":{"y":0,"x":660,"sort":1,"name":"item11","appendProps":"laya/pages/script/Brick.prop"},
                     "nodeParent":925,
@@ -437,7 +425,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Box",
                     "props":{"y":0,"x":720,"sort":1,"name":"item12","appendProps":"laya/pages/script/Brick.prop"},
                     "nodeParent":925,
@@ -463,7 +450,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Box",
                     "props":{"y":0,"x":780,"sort":1,"name":"item13","appendProps":"laya/pages/script/Brick.prop"},
                     "nodeParent":925,
@@ -489,7 +475,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Box",
                     "props":{"y":0,"x":840,"sort":1,"name":"item14","appendProps":"laya/pages/script/Brick.prop"},
                     "nodeParent":925,
@@ -515,7 +500,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Box",
                     "props":{"y":60,"x":0,"sort":1,"name":"item15","appendProps":"laya/pages/script/Brick.prop"},
                     "nodeParent":925,
@@ -541,7 +525,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Box",
                     "props":{"y":60,"x":60,"sort":1,"name":"item16","appendProps":"laya/pages/script/Brick.prop"},
                     "nodeParent":925,
@@ -567,7 +550,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Box",
                     "props":{"y":60,"x":120,"sort":1,"name":"item17","appendProps":"laya/pages/script/Brick.prop"},
                     "nodeParent":925,
@@ -593,7 +575,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Box",
                     "props":{"y":60,"x":180,"sort":1,"name":"item18","appendProps":"laya/pages/script/Brick.prop"},
                     "nodeParent":925,
@@ -619,7 +600,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Box",
                     "props":{"y":60,"x":240,"sort":1,"name":"item19","appendProps":"laya/pages/script/Brick.prop"},
                     "nodeParent":925,
@@ -645,7 +625,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Box",
                     "props":{"y":60,"x":300,"sort":1,"name":"item20","appendProps":"laya/pages/script/Brick.prop"},
                     "nodeParent":925,
@@ -671,7 +650,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Box",
                     "props":{"y":60,"x":360,"sort":1,"name":"item21","appendProps":"laya/pages/script/Brick.prop"},
                     "nodeParent":925,
@@ -697,7 +675,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Box",
                     "props":{"y":60,"x":420,"sort":1,"name":"item22","appendProps":"laya/pages/script/Brick.prop"},
                     "nodeParent":925,
@@ -723,7 +700,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Box",
                     "props":{"y":60,"x":480,"sort":1,"name":"item23","appendProps":"laya/pages/script/Brick.prop"},
                     "nodeParent":925,
@@ -749,7 +725,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Box",
                     "props":{"y":60,"x":540,"sort":1,"name":"item24","appendProps":"laya/pages/script/Brick.prop"},
                     "nodeParent":925,
@@ -775,7 +750,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Box",
                     "props":{"y":60,"x":600,"sort":1,"name":"item25","appendProps":"laya/pages/script/Brick.prop"},
                     "nodeParent":925,
@@ -801,7 +775,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Box",
                     "props":{"y":60,"x":660,"sort":1,"name":"item26","appendProps":"laya/pages/script/Brick.prop"},
                     "nodeParent":925,
@@ -827,7 +800,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Box",
                     "props":{"y":60,"x":720,"sort":1,"name":"item27","appendProps":"laya/pages/script/Brick.prop"},
                     "nodeParent":925,
@@ -853,7 +825,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Box",
                     "props":{"y":60,"x":780,"sort":1,"name":"item28","appendProps":"laya/pages/script/Brick.prop"},
                     "nodeParent":925,
@@ -879,7 +850,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Box",
                     "props":{"y":60,"x":840,"sort":1,"name":"item29","appendProps":"laya/pages/script/Brick.prop"},
                     "nodeParent":925,
@@ -905,7 +875,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Box",
                     "props":{"y":120,"x":0,"sort":1,"name":"item30","appendProps":"laya/pages/script/Brick.prop"},
                     "nodeParent":925,
@@ -931,7 +900,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Box",
                     "props":{"y":120,"x":60,"sort":1,"name":"item31","appendProps":"laya/pages/script/Brick.prop"},
                     "nodeParent":925,
@@ -957,7 +925,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Box",
                     "props":{"y":120,"x":120,"sort":1,"name":"item32","appendProps":"laya/pages/script/Brick.prop"},
                     "nodeParent":925,
@@ -983,33 +950,6 @@
                         }]
                 },
                 {
-                    "x":30,
-                    "type":"Box",
-                    "props":{"y":120,"x":180,"sort":1,"name":"item33","appendProps":"laya/pages/script/Brick.prop"},
-                    "nodeParent":925,
-                    "label":"Box(item33)",
-                    "isOpen":false,
-                    "isDirectory":true,
-                    "isAniNode":true,
-                    "hasChild":true,
-                    "compId":2332,
-                    "child":[
-                        {
-                            "type":"Image",
-                            "props":{"y":0,"x":0,"width":60,"skin":"game/walls.png","height":60},
-                            "nodeParent":2332,
-                            "label":"Image",
-                            "isOpen":true,
-                            "isDirectory":false,
-                            "isAniNode":true,
-                            "hasChild":false,
-                            "compId":2333,
-                            "child":[
-                                ]
-                        }]
-                },
-                {
-                    "x":30,
                     "type":"Box",
                     "props":{"y":120,"x":240,"sort":1,"name":"item34","appendProps":"laya/pages/script/Brick.prop"},
                     "nodeParent":925,
@@ -1035,7 +975,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Box",
                     "props":{"y":120,"x":300,"sort":1,"name":"item35","appendProps":"laya/pages/script/Brick.prop"},
                     "nodeParent":925,
@@ -1061,7 +1000,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Box",
                     "props":{"y":120,"x":360,"sort":1,"name":"item36","appendProps":"laya/pages/script/Brick.prop"},
                     "nodeParent":925,
@@ -1087,7 +1025,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Box",
                     "props":{"y":120,"x":420,"sort":1,"name":"item37","appendProps":"laya/pages/script/Brick.prop"},
                     "nodeParent":925,
@@ -1113,7 +1050,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Box",
                     "props":{"y":120,"x":480,"sort":1,"name":"item38","appendProps":"laya/pages/script/Brick.prop"},
                     "nodeParent":925,
@@ -1139,33 +1075,6 @@
                         }]
                 },
                 {
-                    "x":30,
-                    "type":"Box",
-                    "props":{"y":120,"x":540,"sort":1,"name":"item39","appendProps":"laya/pages/script/Brick.prop"},
-                    "nodeParent":925,
-                    "label":"Box(item39)",
-                    "isOpen":false,
-                    "isDirectory":true,
-                    "isAniNode":true,
-                    "hasChild":true,
-                    "compId":2344,
-                    "child":[
-                        {
-                            "type":"Image",
-                            "props":{"y":0,"x":0,"width":60,"skin":"game/walls.png","height":60},
-                            "nodeParent":2344,
-                            "label":"Image",
-                            "isOpen":true,
-                            "isDirectory":false,
-                            "isAniNode":true,
-                            "hasChild":false,
-                            "compId":2345,
-                            "child":[
-                                ]
-                        }]
-                },
-                {
-                    "x":30,
                     "type":"Box",
                     "props":{"y":120,"x":600,"sort":1,"name":"item40","appendProps":"laya/pages/script/Brick.prop"},
                     "nodeParent":925,
@@ -1191,7 +1100,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Box",
                     "props":{"y":120,"x":660,"sort":1,"name":"item41","appendProps":"laya/pages/script/Brick.prop"},
                     "nodeParent":925,
@@ -1217,7 +1125,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Box",
                     "props":{"y":120,"x":720,"sort":1,"name":"item42","appendProps":"laya/pages/script/Brick.prop"},
                     "nodeParent":925,
@@ -1243,7 +1150,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Box",
                     "props":{"y":120,"x":780,"sort":1,"name":"item43","appendProps":"laya/pages/script/Brick.prop"},
                     "nodeParent":925,
@@ -1269,7 +1175,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Box",
                     "props":{"y":120,"x":840,"sort":1,"name":"item44","appendProps":"laya/pages/script/Brick.prop"},
                     "nodeParent":925,
@@ -1295,7 +1200,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Box",
                     "props":{"y":180,"x":0,"sort":1,"name":"item45","appendProps":"laya/pages/script/Brick.prop"},
                     "nodeParent":925,
@@ -1321,7 +1225,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Box",
                     "props":{"y":180,"x":60,"sort":1,"name":"item46","appendProps":"laya/pages/script/Brick.prop"},
                     "nodeParent":925,
@@ -1347,7 +1250,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Box",
                     "props":{"y":180,"x":120,"sort":1,"name":"item47","appendProps":"laya/pages/script/Brick.prop"},
                     "nodeParent":925,
@@ -1373,33 +1275,6 @@
                         }]
                 },
                 {
-                    "x":30,
-                    "type":"Box",
-                    "props":{"y":180,"x":180,"sort":1,"name":"item48","appendProps":"laya/pages/script/Brick.prop"},
-                    "nodeParent":925,
-                    "label":"Box(item48)",
-                    "isOpen":false,
-                    "isDirectory":true,
-                    "isAniNode":true,
-                    "hasChild":true,
-                    "compId":2362,
-                    "child":[
-                        {
-                            "type":"Image",
-                            "props":{"y":0,"x":0,"width":60,"skin":"game/walls.png","height":60},
-                            "nodeParent":2362,
-                            "label":"Image",
-                            "isOpen":true,
-                            "isDirectory":false,
-                            "isAniNode":true,
-                            "hasChild":false,
-                            "compId":2363,
-                            "child":[
-                                ]
-                        }]
-                },
-                {
-                    "x":30,
                     "type":"Box",
                     "props":{"y":180,"x":240,"sort":1,"name":"item49","appendProps":"laya/pages/script/Brick.prop"},
                     "nodeParent":925,
@@ -1425,7 +1300,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Box",
                     "props":{"y":180,"x":300,"sort":1,"name":"item50","appendProps":"laya/pages/script/Brick.prop"},
                     "nodeParent":925,
@@ -1451,7 +1325,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Box",
                     "props":{"y":180,"x":360,"sort":1,"name":"item51","appendProps":"laya/pages/script/Brick.prop"},
                     "nodeParent":925,
@@ -1477,7 +1350,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Box",
                     "props":{"y":180,"x":420,"sort":1,"name":"item52","appendProps":"laya/pages/script/Brick.prop"},
                     "nodeParent":925,
@@ -1503,7 +1375,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Box",
                     "props":{"y":180,"x":480,"sort":1,"name":"item53","appendProps":"laya/pages/script/Brick.prop"},
                     "nodeParent":925,
@@ -1529,33 +1400,6 @@
                         }]
                 },
                 {
-                    "x":30,
-                    "type":"Box",
-                    "props":{"y":180,"x":540,"sort":1,"name":"item54","appendProps":"laya/pages/script/Brick.prop"},
-                    "nodeParent":925,
-                    "label":"Box(item54)",
-                    "isOpen":false,
-                    "isDirectory":true,
-                    "isAniNode":true,
-                    "hasChild":true,
-                    "compId":2374,
-                    "child":[
-                        {
-                            "type":"Image",
-                            "props":{"y":0,"x":0,"width":60,"skin":"game/walls.png","height":60},
-                            "nodeParent":2374,
-                            "label":"Image",
-                            "isOpen":true,
-                            "isDirectory":false,
-                            "isAniNode":true,
-                            "hasChild":false,
-                            "compId":2375,
-                            "child":[
-                                ]
-                        }]
-                },
-                {
-                    "x":30,
                     "type":"Box",
                     "props":{"y":180,"x":600,"sort":1,"name":"item55","appendProps":"laya/pages/script/Brick.prop"},
                     "nodeParent":925,
@@ -1581,7 +1425,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Box",
                     "props":{"y":180,"x":660,"sort":1,"name":"item56","appendProps":"laya/pages/script/Brick.prop"},
                     "nodeParent":925,
@@ -1607,7 +1450,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Box",
                     "props":{"y":180,"x":720,"sort":1,"name":"item57","appendProps":"laya/pages/script/Brick.prop"},
                     "nodeParent":925,
@@ -1633,7 +1475,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Box",
                     "props":{"y":180,"x":780,"sort":1,"name":"item58","appendProps":"laya/pages/script/Brick.prop"},
                     "nodeParent":925,
@@ -1659,7 +1500,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Box",
                     "props":{"y":180,"x":840,"sort":1,"name":"item59","appendProps":"laya/pages/script/Brick.prop"},
                     "nodeParent":925,
@@ -1685,7 +1525,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Box",
                     "props":{"y":240,"x":0,"sort":1,"name":"item60","appendProps":"laya/pages/script/Brick.prop"},
                     "nodeParent":925,
@@ -1711,7 +1550,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Box",
                     "props":{"y":240,"x":60,"sort":1,"name":"item61","appendProps":"laya/pages/script/Brick.prop"},
                     "nodeParent":925,
@@ -1737,7 +1575,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Box",
                     "props":{"y":240,"x":120,"sort":1,"name":"item62","appendProps":"laya/pages/script/Brick.prop"},
                     "nodeParent":925,
@@ -1763,33 +1600,6 @@
                         }]
                 },
                 {
-                    "x":30,
-                    "type":"Box",
-                    "props":{"y":240,"x":180,"sort":1,"name":"item63","appendProps":"laya/pages/script/Brick.prop"},
-                    "nodeParent":925,
-                    "label":"Box(item63)",
-                    "isOpen":false,
-                    "isDirectory":true,
-                    "isAniNode":true,
-                    "hasChild":true,
-                    "compId":2392,
-                    "child":[
-                        {
-                            "type":"Image",
-                            "props":{"y":0,"x":0,"width":60,"skin":"game/walls.png","height":60},
-                            "nodeParent":2392,
-                            "label":"Image",
-                            "isOpen":true,
-                            "isDirectory":false,
-                            "isAniNode":true,
-                            "hasChild":false,
-                            "compId":2393,
-                            "child":[
-                                ]
-                        }]
-                },
-                {
-                    "x":30,
                     "type":"Box",
                     "props":{"y":240,"x":240,"sort":1,"name":"item64","appendProps":"laya/pages/script/Brick.prop"},
                     "nodeParent":925,
@@ -1815,7 +1625,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Box",
                     "props":{"y":240,"x":300,"sort":1,"name":"item65","appendProps":"laya/pages/script/Brick.prop"},
                     "nodeParent":925,
@@ -1841,7 +1650,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Box",
                     "props":{"y":240,"x":360,"sort":1,"name":"item66","appendProps":"laya/pages/script/Brick.prop"},
                     "nodeParent":925,
@@ -1867,7 +1675,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Box",
                     "props":{"y":240,"x":420,"sort":1,"name":"item67","appendProps":"laya/pages/script/Brick.prop"},
                     "nodeParent":925,
@@ -1893,7 +1700,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Box",
                     "props":{"y":240,"x":480,"sort":1,"name":"item68","appendProps":"laya/pages/script/Brick.prop"},
                     "nodeParent":925,
@@ -1919,33 +1725,6 @@
                         }]
                 },
                 {
-                    "x":30,
-                    "type":"Box",
-                    "props":{"y":240,"x":540,"sort":1,"name":"item69","appendProps":"laya/pages/script/Brick.prop"},
-                    "nodeParent":925,
-                    "label":"Box(item69)",
-                    "isOpen":false,
-                    "isDirectory":true,
-                    "isAniNode":true,
-                    "hasChild":true,
-                    "compId":2404,
-                    "child":[
-                        {
-                            "type":"Image",
-                            "props":{"y":0,"x":0,"width":60,"skin":"game/walls.png","height":60},
-                            "nodeParent":2404,
-                            "label":"Image",
-                            "isOpen":true,
-                            "isDirectory":false,
-                            "isAniNode":true,
-                            "hasChild":false,
-                            "compId":2405,
-                            "child":[
-                                ]
-                        }]
-                },
-                {
-                    "x":30,
                     "type":"Box",
                     "props":{"y":240,"x":600,"sort":1,"name":"item70","appendProps":"laya/pages/script/Brick.prop"},
                     "nodeParent":925,
@@ -1971,7 +1750,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Box",
                     "props":{"y":240,"x":660,"sort":1,"name":"item71","appendProps":"laya/pages/script/Brick.prop"},
                     "nodeParent":925,
@@ -1997,7 +1775,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Box",
                     "props":{"y":240,"x":720,"sort":1,"name":"item72","appendProps":"laya/pages/script/Brick.prop"},
                     "nodeParent":925,
@@ -2023,7 +1800,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Box",
                     "props":{"y":240,"x":780,"sort":1,"name":"item73","appendProps":"laya/pages/script/Brick.prop"},
                     "nodeParent":925,
@@ -2049,7 +1825,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Box",
                     "props":{"y":240,"x":840,"sort":1,"name":"item74","appendProps":"laya/pages/script/Brick.prop"},
                     "nodeParent":925,
@@ -2075,7 +1850,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Box",
                     "props":{"y":300,"x":0,"sort":1,"name":"item75","appendProps":"laya/pages/script/Brick.prop"},
                     "nodeParent":925,
@@ -2101,7 +1875,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Box",
                     "props":{"y":300,"x":60,"sort":1,"name":"item76","appendProps":"laya/pages/script/Brick.prop"},
                     "nodeParent":925,
@@ -2127,11 +1900,10 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Box",
-                    "props":{"y":300,"x":120,"sort":1,"name":"item77","appendProps":"laya/pages/script/Brick.prop"},
+                    "props":{"y":300,"x":180,"sort":2,"presetID":1,"preset":"laya/assets/prefab/grass.prefab"},
                     "nodeParent":925,
-                    "label":"Box(item77)",
+                    "label":"Box(grass)",
                     "isOpen":false,
                     "isDirectory":true,
                     "isAniNode":true,
@@ -2140,9 +1912,9 @@
                     "child":[
                         {
                             "type":"Image",
-                            "props":{"y":0,"x":0,"width":60,"skin":"game/walls.png","height":60},
+                            "props":{"presetID":2,"preset":"laya/assets/prefab/grass.prefab"},
                             "nodeParent":2420,
-                            "label":"Image",
+                            "label":"Image(grass)",
                             "isOpen":true,
                             "isDirectory":false,
                             "isAniNode":true,
@@ -2153,37 +1925,10 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Box",
-                    "props":{"y":300,"x":180,"sort":1,"name":"item78","appendProps":"laya/pages/script/Brick.prop"},
+                    "props":{"y":300,"x":240,"sort":4,"presetID":1,"preset":"laya/assets/prefab/water.prefab"},
                     "nodeParent":925,
-                    "label":"Box(item78)",
-                    "isOpen":false,
-                    "isDirectory":true,
-                    "isAniNode":true,
-                    "hasChild":true,
-                    "compId":2422,
-                    "child":[
-                        {
-                            "type":"Image",
-                            "props":{"y":0,"x":0,"width":60,"skin":"game/walls.png","height":60},
-                            "nodeParent":2422,
-                            "label":"Image",
-                            "isOpen":true,
-                            "isDirectory":false,
-                            "isAniNode":true,
-                            "hasChild":false,
-                            "compId":2423,
-                            "child":[
-                                ]
-                        }]
-                },
-                {
-                    "x":30,
-                    "type":"Box",
-                    "props":{"y":300,"x":240,"sort":1,"name":"item79","appendProps":"laya/pages/script/Brick.prop"},
-                    "nodeParent":925,
-                    "label":"Box(item79)",
+                    "label":"Box(water)",
                     "isOpen":false,
                     "isDirectory":true,
                     "isAniNode":true,
@@ -2192,9 +1937,9 @@
                     "child":[
                         {
                             "type":"Image",
-                            "props":{"y":0,"x":0,"width":60,"skin":"game/walls.png","height":60},
+                            "props":{"presetID":2,"preset":"laya/assets/prefab/water.prefab"},
                             "nodeParent":2424,
-                            "label":"Image",
+                            "label":"Image(water)",
                             "isOpen":true,
                             "isDirectory":false,
                             "isAniNode":true,
@@ -2205,11 +1950,10 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Box",
-                    "props":{"y":300,"x":300,"sort":1,"name":"item80","appendProps":"laya/pages/script/Brick.prop"},
+                    "props":{"y":300,"x":300,"sort":3,"presetID":1,"preset":"laya/assets/prefab/metal.prefab"},
                     "nodeParent":925,
-                    "label":"Box(item80)",
+                    "label":"Box(metal)",
                     "isOpen":false,
                     "isDirectory":true,
                     "isAniNode":true,
@@ -2218,9 +1962,9 @@
                     "child":[
                         {
                             "type":"Image",
-                            "props":{"y":0,"x":0,"width":60,"skin":"game/walls.png","height":60},
+                            "props":{"presetID":2,"preset":"laya/assets/prefab/metal.prefab"},
                             "nodeParent":2426,
-                            "label":"Image",
+                            "label":"Image(metal)",
                             "isOpen":true,
                             "isDirectory":false,
                             "isAniNode":true,
@@ -2231,7 +1975,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Box",
                     "props":{"y":300,"x":360,"sort":1,"name":"item81","appendProps":"laya/pages/script/Brick.prop"},
                     "nodeParent":925,
@@ -2257,7 +2000,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Box",
                     "props":{"y":300,"x":420,"sort":1,"name":"item82","appendProps":"laya/pages/script/Brick.prop"},
                     "nodeParent":925,
@@ -2283,7 +2025,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Box",
                     "props":{"y":300,"x":480,"sort":1,"name":"item83","appendProps":"laya/pages/script/Brick.prop"},
                     "nodeParent":925,
@@ -2309,33 +2050,6 @@
                         }]
                 },
                 {
-                    "x":30,
-                    "type":"Box",
-                    "props":{"y":300,"x":540,"sort":1,"name":"item84","appendProps":"laya/pages/script/Brick.prop"},
-                    "nodeParent":925,
-                    "label":"Box(item84)",
-                    "isOpen":false,
-                    "isDirectory":true,
-                    "isAniNode":true,
-                    "hasChild":true,
-                    "compId":2434,
-                    "child":[
-                        {
-                            "type":"Image",
-                            "props":{"y":0,"x":0,"width":60,"skin":"game/walls.png","height":60},
-                            "nodeParent":2434,
-                            "label":"Image",
-                            "isOpen":true,
-                            "isDirectory":false,
-                            "isAniNode":true,
-                            "hasChild":false,
-                            "compId":2435,
-                            "child":[
-                                ]
-                        }]
-                },
-                {
-                    "x":30,
                     "type":"Box",
                     "props":{"y":300,"x":600,"sort":1,"name":"item85","appendProps":"laya/pages/script/Brick.prop"},
                     "nodeParent":925,
@@ -2361,7 +2075,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Box",
                     "props":{"y":300,"x":660,"sort":1,"name":"item86","appendProps":"laya/pages/script/Brick.prop"},
                     "nodeParent":925,
@@ -2387,7 +2100,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Box",
                     "props":{"y":300,"x":720,"sort":1,"name":"item87","appendProps":"laya/pages/script/Brick.prop"},
                     "nodeParent":925,
@@ -2413,7 +2125,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Box",
                     "props":{"y":300,"x":780,"sort":1,"name":"item88","appendProps":"laya/pages/script/Brick.prop"},
                     "nodeParent":925,
@@ -2439,7 +2150,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Box",
                     "props":{"y":300,"x":840,"sort":1,"name":"item89","appendProps":"laya/pages/script/Brick.prop"},
                     "nodeParent":925,
@@ -2465,7 +2175,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Box",
                     "props":{"y":360,"x":0,"sort":1,"name":"item90","appendProps":"laya/pages/script/Brick.prop"},
                     "nodeParent":925,
@@ -2491,7 +2200,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Box",
                     "props":{"y":360,"x":60,"sort":1,"name":"item91","appendProps":"laya/pages/script/Brick.prop"},
                     "nodeParent":925,
@@ -2517,7 +2225,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Box",
                     "props":{"y":360,"x":120,"sort":1,"name":"item92","appendProps":"laya/pages/script/Brick.prop"},
                     "nodeParent":925,
@@ -2543,33 +2250,6 @@
                         }]
                 },
                 {
-                    "x":30,
-                    "type":"Box",
-                    "props":{"y":360,"x":180,"sort":1,"name":"item93","appendProps":"laya/pages/script/Brick.prop"},
-                    "nodeParent":925,
-                    "label":"Box(item93)",
-                    "isOpen":false,
-                    "isDirectory":true,
-                    "isAniNode":true,
-                    "hasChild":true,
-                    "compId":2452,
-                    "child":[
-                        {
-                            "type":"Image",
-                            "props":{"y":0,"x":0,"width":60,"skin":"game/walls.png","height":60},
-                            "nodeParent":2452,
-                            "label":"Image",
-                            "isOpen":true,
-                            "isDirectory":false,
-                            "isAniNode":true,
-                            "hasChild":false,
-                            "compId":2453,
-                            "child":[
-                                ]
-                        }]
-                },
-                {
-                    "x":30,
                     "type":"Box",
                     "props":{"y":360,"x":240,"sort":1,"name":"item94","appendProps":"laya/pages/script/Brick.prop"},
                     "nodeParent":925,
@@ -2595,7 +2275,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Box",
                     "props":{"y":360,"x":300,"sort":1,"name":"item95","appendProps":"laya/pages/script/Brick.prop"},
                     "nodeParent":925,
@@ -2621,7 +2300,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Box",
                     "props":{"y":360,"x":360,"sort":1,"name":"item96","appendProps":"laya/pages/script/Brick.prop"},
                     "nodeParent":925,
@@ -2647,7 +2325,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Box",
                     "props":{"y":360,"x":420,"sort":1,"name":"item97","appendProps":"laya/pages/script/Brick.prop"},
                     "nodeParent":925,
@@ -2673,7 +2350,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Box",
                     "props":{"y":360,"x":480,"sort":1,"name":"item98","appendProps":"laya/pages/script/Brick.prop"},
                     "nodeParent":925,
@@ -2699,33 +2375,6 @@
                         }]
                 },
                 {
-                    "x":30,
-                    "type":"Box",
-                    "props":{"y":360,"x":540,"sort":1,"name":"item99","appendProps":"laya/pages/script/Brick.prop"},
-                    "nodeParent":925,
-                    "label":"Box(item99)",
-                    "isOpen":false,
-                    "isDirectory":true,
-                    "isAniNode":true,
-                    "hasChild":true,
-                    "compId":2464,
-                    "child":[
-                        {
-                            "type":"Image",
-                            "props":{"y":0,"x":0,"width":60,"skin":"game/walls.png","height":60},
-                            "nodeParent":2464,
-                            "label":"Image",
-                            "isOpen":true,
-                            "isDirectory":false,
-                            "isAniNode":true,
-                            "hasChild":false,
-                            "compId":2465,
-                            "child":[
-                                ]
-                        }]
-                },
-                {
-                    "x":30,
                     "type":"Box",
                     "props":{"y":360,"x":600,"sort":1,"name":"item100","appendProps":"laya/pages/script/Brick.prop"},
                     "nodeParent":925,
@@ -2751,7 +2400,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Box",
                     "props":{"y":360,"x":660,"sort":1,"name":"item101","appendProps":"laya/pages/script/Brick.prop"},
                     "nodeParent":925,
@@ -2777,7 +2425,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Box",
                     "props":{"y":360,"x":720,"sort":1,"name":"item102","appendProps":"laya/pages/script/Brick.prop"},
                     "nodeParent":925,
@@ -2803,7 +2450,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Box",
                     "props":{"y":360,"x":780,"sort":1,"name":"item103","appendProps":"laya/pages/script/Brick.prop"},
                     "nodeParent":925,
@@ -2829,7 +2475,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Box",
                     "props":{"y":360,"x":840,"sort":1,"name":"item104","appendProps":"laya/pages/script/Brick.prop"},
                     "nodeParent":925,
@@ -2855,7 +2500,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Box",
                     "props":{"y":420,"x":0,"sort":1,"name":"item105","appendProps":"laya/pages/script/Brick.prop"},
                     "nodeParent":925,
@@ -2881,7 +2525,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Box",
                     "props":{"y":420,"x":60,"sort":1,"name":"item106","appendProps":"laya/pages/script/Brick.prop"},
                     "nodeParent":925,
@@ -2907,7 +2550,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Box",
                     "props":{"y":420,"x":120,"sort":1,"name":"item107","appendProps":"laya/pages/script/Brick.prop"},
                     "nodeParent":925,
@@ -2933,33 +2575,6 @@
                         }]
                 },
                 {
-                    "x":30,
-                    "type":"Box",
-                    "props":{"y":420,"x":180,"sort":1,"name":"item108","appendProps":"laya/pages/script/Brick.prop"},
-                    "nodeParent":925,
-                    "label":"Box(item108)",
-                    "isOpen":false,
-                    "isDirectory":true,
-                    "isAniNode":true,
-                    "hasChild":true,
-                    "compId":2482,
-                    "child":[
-                        {
-                            "type":"Image",
-                            "props":{"y":0,"x":0,"width":60,"skin":"game/walls.png","height":60},
-                            "nodeParent":2482,
-                            "label":"Image",
-                            "isOpen":true,
-                            "isDirectory":false,
-                            "isAniNode":true,
-                            "hasChild":false,
-                            "compId":2483,
-                            "child":[
-                                ]
-                        }]
-                },
-                {
-                    "x":30,
                     "type":"Box",
                     "props":{"y":420,"x":240,"sort":1,"name":"item109","appendProps":"laya/pages/script/Brick.prop"},
                     "nodeParent":925,
@@ -2985,7 +2600,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Box",
                     "props":{"y":420,"x":300,"sort":1,"name":"item110","appendProps":"laya/pages/script/Brick.prop"},
                     "nodeParent":925,
@@ -3011,7 +2625,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Box",
                     "props":{"y":420,"x":360,"sort":1,"name":"item111","appendProps":"laya/pages/script/Brick.prop"},
                     "nodeParent":925,
@@ -3037,7 +2650,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Box",
                     "props":{"y":420,"x":420,"sort":1,"name":"item112","appendProps":"laya/pages/script/Brick.prop"},
                     "nodeParent":925,
@@ -3063,7 +2675,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Box",
                     "props":{"y":420,"x":480,"sort":1,"name":"item113","appendProps":"laya/pages/script/Brick.prop"},
                     "nodeParent":925,
@@ -3089,33 +2700,6 @@
                         }]
                 },
                 {
-                    "x":30,
-                    "type":"Box",
-                    "props":{"y":420,"x":540,"sort":1,"name":"item114","appendProps":"laya/pages/script/Brick.prop"},
-                    "nodeParent":925,
-                    "label":"Box(item114)",
-                    "isOpen":false,
-                    "isDirectory":true,
-                    "isAniNode":true,
-                    "hasChild":true,
-                    "compId":2494,
-                    "child":[
-                        {
-                            "type":"Image",
-                            "props":{"y":0,"x":0,"width":60,"skin":"game/walls.png","height":60},
-                            "nodeParent":2494,
-                            "label":"Image",
-                            "isOpen":true,
-                            "isDirectory":false,
-                            "isAniNode":true,
-                            "hasChild":false,
-                            "compId":2495,
-                            "child":[
-                                ]
-                        }]
-                },
-                {
-                    "x":30,
                     "type":"Box",
                     "props":{"y":420,"x":600,"sort":1,"name":"item115","appendProps":"laya/pages/script/Brick.prop"},
                     "nodeParent":925,
@@ -3141,7 +2725,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Box",
                     "props":{"y":420,"x":660,"sort":1,"name":"item116","appendProps":"laya/pages/script/Brick.prop"},
                     "nodeParent":925,
@@ -3167,7 +2750,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Box",
                     "props":{"y":420,"x":720,"sort":1,"name":"item117","appendProps":"laya/pages/script/Brick.prop"},
                     "nodeParent":925,
@@ -3193,7 +2775,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Box",
                     "props":{"y":420,"x":780,"sort":1,"name":"item118","appendProps":"laya/pages/script/Brick.prop"},
                     "nodeParent":925,
@@ -3219,7 +2800,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Box",
                     "props":{"y":420,"x":840,"sort":1,"name":"item119","appendProps":"laya/pages/script/Brick.prop"},
                     "nodeParent":925,
@@ -3245,7 +2825,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Box",
                     "props":{"y":480,"x":0,"sort":1,"name":"item120","appendProps":"laya/pages/script/Brick.prop"},
                     "nodeParent":925,
@@ -3271,7 +2850,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Box",
                     "props":{"y":480,"x":60,"sort":1,"name":"item121","appendProps":"laya/pages/script/Brick.prop"},
                     "nodeParent":925,
@@ -3297,7 +2875,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Box",
                     "props":{"y":480,"x":120,"sort":1,"name":"item122","appendProps":"laya/pages/script/Brick.prop"},
                     "nodeParent":925,
@@ -3323,33 +2900,6 @@
                         }]
                 },
                 {
-                    "x":30,
-                    "type":"Box",
-                    "props":{"y":480,"x":180,"sort":1,"name":"item123","appendProps":"laya/pages/script/Brick.prop"},
-                    "nodeParent":925,
-                    "label":"Box(item123)",
-                    "isOpen":false,
-                    "isDirectory":true,
-                    "isAniNode":true,
-                    "hasChild":true,
-                    "compId":2512,
-                    "child":[
-                        {
-                            "type":"Image",
-                            "props":{"y":0,"x":0,"width":60,"skin":"game/walls.png","height":60},
-                            "nodeParent":2512,
-                            "label":"Image",
-                            "isOpen":true,
-                            "isDirectory":false,
-                            "isAniNode":true,
-                            "hasChild":false,
-                            "compId":2513,
-                            "child":[
-                                ]
-                        }]
-                },
-                {
-                    "x":30,
                     "type":"Box",
                     "props":{"y":480,"x":240,"sort":1,"name":"item124","appendProps":"laya/pages/script/Brick.prop"},
                     "nodeParent":925,
@@ -3375,7 +2925,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Box",
                     "props":{"y":480,"x":300,"sort":1,"name":"item125","appendProps":"laya/pages/script/Brick.prop"},
                     "nodeParent":925,
@@ -3401,7 +2950,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Box",
                     "props":{"y":480,"x":360,"sort":1,"name":"item126","appendProps":"laya/pages/script/Brick.prop"},
                     "nodeParent":925,
@@ -3427,7 +2975,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Box",
                     "props":{"y":480,"x":420,"sort":1,"name":"item127","appendProps":"laya/pages/script/Brick.prop"},
                     "nodeParent":925,
@@ -3453,7 +3000,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Box",
                     "props":{"y":480,"x":480,"sort":1,"name":"item128","appendProps":"laya/pages/script/Brick.prop"},
                     "nodeParent":925,
@@ -3479,33 +3025,6 @@
                         }]
                 },
                 {
-                    "x":30,
-                    "type":"Box",
-                    "props":{"y":480,"x":540,"sort":1,"name":"item129","appendProps":"laya/pages/script/Brick.prop"},
-                    "nodeParent":925,
-                    "label":"Box(item129)",
-                    "isOpen":false,
-                    "isDirectory":true,
-                    "isAniNode":true,
-                    "hasChild":true,
-                    "compId":2524,
-                    "child":[
-                        {
-                            "type":"Image",
-                            "props":{"y":0,"x":0,"width":60,"skin":"game/walls.png","height":60},
-                            "nodeParent":2524,
-                            "label":"Image",
-                            "isOpen":true,
-                            "isDirectory":false,
-                            "isAniNode":true,
-                            "hasChild":false,
-                            "compId":2525,
-                            "child":[
-                                ]
-                        }]
-                },
-                {
-                    "x":30,
                     "type":"Box",
                     "props":{"y":480,"x":600,"sort":1,"name":"item130","appendProps":"laya/pages/script/Brick.prop"},
                     "nodeParent":925,
@@ -3531,7 +3050,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Box",
                     "props":{"y":480,"x":660,"sort":1,"name":"item131","appendProps":"laya/pages/script/Brick.prop"},
                     "nodeParent":925,
@@ -3557,7 +3075,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Box",
                     "props":{"y":480,"x":720,"sort":1,"name":"item132","appendProps":"laya/pages/script/Brick.prop"},
                     "nodeParent":925,
@@ -3583,7 +3100,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Box",
                     "props":{"y":480,"x":780,"sort":1,"name":"item133","appendProps":"laya/pages/script/Brick.prop"},
                     "nodeParent":925,
@@ -3609,7 +3125,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Box",
                     "props":{"y":480,"x":840,"sort":1,"name":"item134","appendProps":"laya/pages/script/Brick.prop"},
                     "nodeParent":925,
@@ -3633,396 +3148,58 @@
                             "child":[
                                 ]
                         }]
-                },
+                }]
+        },
+        {
+            "x":15,
+            "type":"Box",
+            "props":{"y":490,"x":180,"width":60,"presetID":1,"preset":"laya/assets/prefab/bullet.prefab","height":15,"appendProps":"laya/pages/script/Bullet.prop"},
+            "nodeParent":1,
+            "label":"Box(bullet)",
+            "isOpen":false,
+            "isDirectory":true,
+            "isAniNode":true,
+            "hasChild":true,
+            "compId":2573,
+            "child":[
                 {
                     "x":30,
-                    "type":"Box",
-                    "props":{"y":540,"x":0,"sort":1,"name":"item135","appendProps":"laya/pages/script/Brick.prop"},
-                    "nodeParent":925,
-                    "label":"Box(item135)",
-                    "isOpen":false,
-                    "isDirectory":true,
+                    "type":"Image",
+                    "props":{"y":7.5,"x":30,"presetID":2,"preset":"laya/assets/prefab/bullet.prefab","anchorY":0.5,"anchorX":0.5},
+                    "nodeParent":2573,
+                    "label":"Image(bullet)",
+                    "isOpen":true,
+                    "isDirectory":false,
                     "isAniNode":true,
-                    "hasChild":true,
-                    "compId":2536,
+                    "hasChild":false,
+                    "compId":2574,
                     "child":[
-                        {
-                            "type":"Image",
-                            "props":{"y":0,"x":0,"width":60,"skin":"game/walls.png","height":60},
-                            "nodeParent":2536,
-                            "label":"Image",
-                            "isOpen":true,
-                            "isDirectory":false,
-                            "isAniNode":true,
-                            "hasChild":false,
-                            "compId":2537,
-                            "child":[
-                                ]
-                        }]
-                },
+                        ]
+                }]
+        },
+        {
+            "x":15,
+            "type":"Box",
+            "props":{"y":567,"x":180,"var":"tank","presetID":1,"preset":"laya/assets/prefab/tank.prefab","appendProps":"laya/pages/script/Tank.prop"},
+            "nodeParent":1,
+            "label":"Box(tank)",
+            "isOpen":false,
+            "isDirectory":true,
+            "isAniNode":true,
+            "hasChild":true,
+            "compId":2567,
+            "child":[
                 {
-                    "x":30,
-                    "type":"Box",
-                    "props":{"y":540,"x":60,"sort":1,"name":"item136","appendProps":"laya/pages/script/Brick.prop"},
-                    "nodeParent":925,
-                    "label":"Box(item136)",
-                    "isOpen":false,
-                    "isDirectory":true,
+                    "type":"Image",
+                    "props":{"presetID":2,"preset":"laya/assets/prefab/tank.prefab"},
+                    "nodeParent":2567,
+                    "label":"Image(tank)",
+                    "isDirectory":false,
                     "isAniNode":true,
-                    "hasChild":true,
-                    "compId":2538,
+                    "hasChild":false,
+                    "compId":2568,
                     "child":[
-                        {
-                            "type":"Image",
-                            "props":{"y":0,"x":0,"width":60,"skin":"game/walls.png","height":60},
-                            "nodeParent":2538,
-                            "label":"Image",
-                            "isOpen":true,
-                            "isDirectory":false,
-                            "isAniNode":true,
-                            "hasChild":false,
-                            "compId":2539,
-                            "child":[
-                                ]
-                        }]
-                },
-                {
-                    "x":30,
-                    "type":"Box",
-                    "props":{"y":540,"x":120,"sort":1,"name":"item137","appendProps":"laya/pages/script/Brick.prop"},
-                    "nodeParent":925,
-                    "label":"Box(item137)",
-                    "isOpen":false,
-                    "isDirectory":true,
-                    "isAniNode":true,
-                    "hasChild":true,
-                    "compId":2540,
-                    "child":[
-                        {
-                            "type":"Image",
-                            "props":{"y":0,"x":0,"width":60,"skin":"game/walls.png","height":60},
-                            "nodeParent":2540,
-                            "label":"Image",
-                            "isOpen":true,
-                            "isDirectory":false,
-                            "isAniNode":true,
-                            "hasChild":false,
-                            "compId":2541,
-                            "child":[
-                                ]
-                        }]
-                },
-                {
-                    "x":30,
-                    "type":"Box",
-                    "props":{"y":540,"x":180,"sort":1,"name":"item138","appendProps":"laya/pages/script/Brick.prop"},
-                    "nodeParent":925,
-                    "label":"Box(item138)",
-                    "isOpen":false,
-                    "isDirectory":true,
-                    "isAniNode":true,
-                    "hasChild":true,
-                    "compId":2542,
-                    "child":[
-                        {
-                            "type":"Image",
-                            "props":{"y":0,"x":0,"width":60,"skin":"game/walls.png","height":60},
-                            "nodeParent":2542,
-                            "label":"Image",
-                            "isOpen":true,
-                            "isDirectory":false,
-                            "isAniNode":true,
-                            "hasChild":false,
-                            "compId":2543,
-                            "child":[
-                                ]
-                        }]
-                },
-                {
-                    "x":30,
-                    "type":"Box",
-                    "props":{"y":540,"x":240,"sort":1,"name":"item139","appendProps":"laya/pages/script/Brick.prop"},
-                    "nodeParent":925,
-                    "label":"Box(item139)",
-                    "isOpen":false,
-                    "isDirectory":true,
-                    "isAniNode":true,
-                    "hasChild":true,
-                    "compId":2544,
-                    "child":[
-                        {
-                            "type":"Image",
-                            "props":{"y":0,"x":0,"width":60,"skin":"game/walls.png","height":60},
-                            "nodeParent":2544,
-                            "label":"Image",
-                            "isOpen":true,
-                            "isDirectory":false,
-                            "isAniNode":true,
-                            "hasChild":false,
-                            "compId":2545,
-                            "child":[
-                                ]
-                        }]
-                },
-                {
-                    "x":30,
-                    "type":"Box",
-                    "props":{"y":540,"x":300,"sort":1,"name":"item140","appendProps":"laya/pages/script/Brick.prop"},
-                    "nodeParent":925,
-                    "label":"Box(item140)",
-                    "isOpen":false,
-                    "isDirectory":true,
-                    "isAniNode":true,
-                    "hasChild":true,
-                    "compId":2546,
-                    "child":[
-                        {
-                            "type":"Image",
-                            "props":{"y":0,"x":0,"width":60,"skin":"game/walls.png","height":60},
-                            "nodeParent":2546,
-                            "label":"Image",
-                            "isOpen":true,
-                            "isDirectory":false,
-                            "isAniNode":true,
-                            "hasChild":false,
-                            "compId":2547,
-                            "child":[
-                                ]
-                        }]
-                },
-                {
-                    "x":30,
-                    "type":"Box",
-                    "props":{"y":540,"x":360,"sort":1,"name":"item141","appendProps":"laya/pages/script/Brick.prop"},
-                    "nodeParent":925,
-                    "label":"Box(item141)",
-                    "isOpen":false,
-                    "isDirectory":true,
-                    "isAniNode":true,
-                    "hasChild":true,
-                    "compId":2548,
-                    "child":[
-                        {
-                            "type":"Image",
-                            "props":{"y":0,"x":0,"width":60,"skin":"game/walls.png","height":60},
-                            "nodeParent":2548,
-                            "label":"Image",
-                            "isOpen":true,
-                            "isDirectory":false,
-                            "isAniNode":true,
-                            "hasChild":false,
-                            "compId":2549,
-                            "child":[
-                                ]
-                        }]
-                },
-                {
-                    "x":30,
-                    "type":"Box",
-                    "props":{"y":540,"x":420,"sort":1,"name":"item142","appendProps":"laya/pages/script/Brick.prop"},
-                    "nodeParent":925,
-                    "label":"Box(item142)",
-                    "isOpen":false,
-                    "isDirectory":true,
-                    "isAniNode":true,
-                    "hasChild":true,
-                    "compId":2550,
-                    "child":[
-                        {
-                            "type":"Image",
-                            "props":{"y":0,"x":0,"width":60,"skin":"game/walls.png","height":60},
-                            "nodeParent":2550,
-                            "label":"Image",
-                            "isOpen":true,
-                            "isDirectory":false,
-                            "isAniNode":true,
-                            "hasChild":false,
-                            "compId":2551,
-                            "child":[
-                                ]
-                        }]
-                },
-                {
-                    "x":30,
-                    "type":"Box",
-                    "props":{"y":540,"x":480,"sort":1,"name":"item143","appendProps":"laya/pages/script/Brick.prop"},
-                    "nodeParent":925,
-                    "label":"Box(item143)",
-                    "isOpen":false,
-                    "isDirectory":true,
-                    "isAniNode":true,
-                    "hasChild":true,
-                    "compId":2552,
-                    "child":[
-                        {
-                            "type":"Image",
-                            "props":{"y":0,"x":0,"width":60,"skin":"game/walls.png","height":60},
-                            "nodeParent":2552,
-                            "label":"Image",
-                            "isOpen":true,
-                            "isDirectory":false,
-                            "isAniNode":true,
-                            "hasChild":false,
-                            "compId":2553,
-                            "child":[
-                                ]
-                        }]
-                },
-                {
-                    "x":30,
-                    "type":"Box",
-                    "props":{"y":540,"x":540,"sort":1,"name":"item144","appendProps":"laya/pages/script/Brick.prop"},
-                    "nodeParent":925,
-                    "label":"Box(item144)",
-                    "isOpen":false,
-                    "isDirectory":true,
-                    "isAniNode":true,
-                    "hasChild":true,
-                    "compId":2554,
-                    "child":[
-                        {
-                            "type":"Image",
-                            "props":{"y":0,"x":0,"width":60,"skin":"game/walls.png","height":60},
-                            "nodeParent":2554,
-                            "label":"Image",
-                            "isOpen":true,
-                            "isDirectory":false,
-                            "isAniNode":true,
-                            "hasChild":false,
-                            "compId":2555,
-                            "child":[
-                                ]
-                        }]
-                },
-                {
-                    "x":30,
-                    "type":"Box",
-                    "props":{"y":540,"x":600,"sort":1,"name":"item145","appendProps":"laya/pages/script/Brick.prop"},
-                    "nodeParent":925,
-                    "label":"Box(item145)",
-                    "isOpen":false,
-                    "isDirectory":true,
-                    "isAniNode":true,
-                    "hasChild":true,
-                    "compId":2556,
-                    "child":[
-                        {
-                            "type":"Image",
-                            "props":{"y":0,"x":0,"width":60,"skin":"game/walls.png","height":60},
-                            "nodeParent":2556,
-                            "label":"Image",
-                            "isOpen":true,
-                            "isDirectory":false,
-                            "isAniNode":true,
-                            "hasChild":false,
-                            "compId":2557,
-                            "child":[
-                                ]
-                        }]
-                },
-                {
-                    "x":30,
-                    "type":"Box",
-                    "props":{"y":540,"x":660,"sort":1,"name":"item146","appendProps":"laya/pages/script/Brick.prop"},
-                    "nodeParent":925,
-                    "label":"Box(item146)",
-                    "isOpen":false,
-                    "isDirectory":true,
-                    "isAniNode":true,
-                    "hasChild":true,
-                    "compId":2558,
-                    "child":[
-                        {
-                            "type":"Image",
-                            "props":{"y":0,"x":0,"width":60,"skin":"game/walls.png","height":60},
-                            "nodeParent":2558,
-                            "label":"Image",
-                            "isOpen":true,
-                            "isDirectory":false,
-                            "isAniNode":true,
-                            "hasChild":false,
-                            "compId":2559,
-                            "child":[
-                                ]
-                        }]
-                },
-                {
-                    "x":30,
-                    "type":"Box",
-                    "props":{"y":540,"x":720,"sort":1,"name":"item147","appendProps":"laya/pages/script/Brick.prop"},
-                    "nodeParent":925,
-                    "label":"Box(item147)",
-                    "isOpen":false,
-                    "isDirectory":true,
-                    "isAniNode":true,
-                    "hasChild":true,
-                    "compId":2560,
-                    "child":[
-                        {
-                            "type":"Image",
-                            "props":{"y":0,"x":0,"width":60,"skin":"game/walls.png","height":60},
-                            "nodeParent":2560,
-                            "label":"Image",
-                            "isOpen":true,
-                            "isDirectory":false,
-                            "isAniNode":true,
-                            "hasChild":false,
-                            "compId":2561,
-                            "child":[
-                                ]
-                        }]
-                },
-                {
-                    "x":30,
-                    "type":"Box",
-                    "props":{"y":540,"x":780,"sort":1,"name":"item148","appendProps":"laya/pages/script/Brick.prop"},
-                    "nodeParent":925,
-                    "label":"Box(item148)",
-                    "isOpen":false,
-                    "isDirectory":true,
-                    "isAniNode":true,
-                    "hasChild":true,
-                    "compId":2562,
-                    "child":[
-                        {
-                            "type":"Image",
-                            "props":{"y":0,"x":0,"width":60,"skin":"game/walls.png","height":60},
-                            "nodeParent":2562,
-                            "label":"Image",
-                            "isOpen":true,
-                            "isDirectory":false,
-                            "isAniNode":true,
-                            "hasChild":false,
-                            "compId":2563,
-                            "child":[
-                                ]
-                        }]
-                },
-                {
-                    "x":30,
-                    "type":"Box",
-                    "props":{"y":540,"x":840,"sort":1,"name":"item149","appendProps":"laya/pages/script/Brick.prop"},
-                    "nodeParent":925,
-                    "label":"Box(item149)",
-                    "isOpen":false,
-                    "isDirectory":true,
-                    "isAniNode":true,
-                    "hasChild":true,
-                    "compId":2564,
-                    "child":[
-                        {
-                            "type":"Image",
-                            "props":{"y":0,"x":0,"width":60,"skin":"game/walls.png","height":60},
-                            "nodeParent":2564,
-                            "label":"Image",
-                            "isOpen":true,
-                            "isDirectory":false,
-                            "isAniNode":true,
-                            "hasChild":false,
-                            "compId":2565,
-                            "child":[
-                                ]
-                        }]
+                        ]
                 }]
         }],
     "animations":[
