@@ -20,6 +20,8 @@ var obj;
         __extends(InstanceObject, _super);
         function InstanceObject() {
             var _this = _super.call(this) || this;
+            _this._inited = false;
+            _this._camp = 0;
             _this._speed = 6;
             _this._dir = MoveDir.UP;
             _this._ismoving = false;
@@ -29,6 +31,23 @@ var obj;
             game.GameCenter.gameStage.AddInstanceObj(_this);
             return _this;
         }
+        Object.defineProperty(InstanceObject.prototype, "inited", {
+            get: function () {
+                return this._inited;
+            },
+            enumerable: true,
+            configurable: true
+        });
+        Object.defineProperty(InstanceObject.prototype, "camp", {
+            get: function () {
+                return this._camp;
+            },
+            set: function (camp) {
+                this._camp = camp;
+            },
+            enumerable: true,
+            configurable: true
+        });
         Object.defineProperty(InstanceObject.prototype, "speed", {
             set: function (speed) {
                 this._speed = speed;

@@ -21,24 +21,36 @@ var obj;
         function Tank() {
             var _this = _super.call(this) || this;
             _this.id = 0;
+            _this.camp = 1;
             return _this;
         }
         Tank.prototype.onFrameOnce = function () {
             _super.prototype.onFrameOnce.call(this);
             var rect = new Laya.Rectangle(0, 0, 60, 60);
             this.setBounds(rect);
+            this._inited = true;
+            this.frameLoop(30, this, this.attackLoop);
         };
         Tank.prototype.onFrameLoop = function () {
             if (game.GameCenter.gameStage.intersectWithOther(this, MoveDir.UP)) {
                 //console.log("遇到障碍");
             }
             else {
-                //this.y = this.y - 6;
-                this.ismoving = true;
-                _super.prototype.move.call(this);
+                //this.ismoving = true;
+                //super.move();
             }
         };
+        Tank.prototype.attackLoop = function () {
+            this.attack();
+        };
         Tank.prototype.attack = function () {
+            console.log("attack");
+            var bullet = new obj.Bullet();
+            bullet.pos(this.x, this.y);
+            bullet.ismoving = true;
+            bullet.camp = this.camp;
+            bullet.speed = 10;
+            Laya.stage.addChild(bullet);
         };
         Tank.prototype.intersectWithOther = function (other) {
             if (other instanceof obj.Bullet) {

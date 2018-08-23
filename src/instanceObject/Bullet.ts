@@ -15,18 +15,20 @@ module obj
             super.onFrameOnce();
             let rect = new Laya.Rectangle(0,0,60,15)
             this.setBounds(rect);
+            this._inited = true;
         }
 
         protected onFrameLoop() : void
         {
+            if(!this.inited)return;
             if(game.GameCenter.gameStage.intersectWithOther(this,MoveDir.UP))
             {
-                //console.log("遇到障碍");
+                console.log("遇到障碍");
             }else
             {
                 //this.y = this.y - 6;
-                this.ismoving = true;
-                super.move();
+                //this.ismoving = true;
+                //super.move();
             }
         }
 

@@ -51,14 +51,16 @@ var game;
                 this.objs.splice(index, 1);
             }
             brick.destroy(true);
-            Laya.stage.removeChild(brick);
+            //Laya.stage.removeChild(brick);
         };
         GameStage.prototype.intersectWithOther = function (tank, dir) {
             //console.log("intersectWithOther id:"+brick.id);
             if (tank.x <= this.minX || tank.x >= this.maxX || tank.y <= this.minY || tank.y >= this.maxY)
                 return true;
             for (var i = 0, len = this.objs.length; i < len; i++) {
-                if (this.objs[i] == tank)
+                if (!this.objs[i].inited)
+                    continue;
+                if (this.objs[i] == tank || this.objs[i].camp == tank.camp) //这里会导致坦克穿透
                     continue;
                 var diffX = this.objs[i].x - tank.x;
                 var diffY = this.objs[i].y - tank.y;
@@ -69,25 +71,25 @@ var game;
                     switch (dir) {
                         case MoveDir.UP:
                             if (diffY < 0 && Math.abs(diffX) < 60) {
-                                console.log("intersectWithOther other x:" + this.objs[i].x + ",y:" + this.objs[i].y + ",dir:" + dir);
+                                //console.log("intersectWithOther other x:"+this.objs[i].x + ",y:"+this.objs[i].y + ",dir:"+dir);
                                 intersect = true;
                             }
                             break;
                         case MoveDir.DOWN:
                             if (diffY > 0 && Math.abs(diffX) < 60) {
-                                console.log("intersectWithOther other x:" + this.objs[i].x + ",y:" + this.objs[i].y + ",dir:" + dir);
+                                //console.log("intersectWithOther other x:"+this.objs[i].x + ",y:"+this.objs[i].y + ",dir:"+dir);
                                 intersect = true;
                             }
                             break;
                         case MoveDir.LEFT:
                             if (diffX > 0 && Math.abs(diffY) < 60) {
-                                console.log("intersectWithOther other x:" + this.objs[i].x + ",y:" + this.objs[i].y + ",dir:" + dir);
+                                //console.log("intersectWithOther other x:"+this.objs[i].x + ",y:"+this.objs[i].y + ",dir:"+dir);
                                 intersect = true;
                             }
                             break;
                         case MoveDir.RIGHT:
                             if (diffX > 0 && Math.abs(diffY) < 60) {
-                                console.log("intersectWithOther other x:" + this.objs[i].x + ",y:" + this.objs[i].y + ",dir:" + dir);
+                                //console.log("intersectWithOther other x:"+this.objs[i].x + ",y:"+this.objs[i].y + ",dir:"+dir);
                                 intersect = true;
                             }
                             break;

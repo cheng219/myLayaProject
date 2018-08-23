@@ -10,6 +10,7 @@ module obj
         constructor()
         {
             super();
+            this.camp = 1;
         }
 
         protected onFrameOnce() : void
@@ -17,6 +18,8 @@ module obj
             super.onFrameOnce();
             let rect = new Laya.Rectangle(0,0,60,60)
             this.setBounds(rect);
+            this._inited = true;
+            this.frameLoop(30,this,this.attackLoop)
         }
 
         protected onFrameLoop() : void
@@ -26,15 +29,25 @@ module obj
                 //console.log("遇到障碍");
             }else
             {
-                //this.y = this.y - 6;
-                this.ismoving = true;
-                super.move();
+                //this.ismoving = true;
+                //super.move();
             }
+        }
+
+        protected attackLoop() : void
+        {
+            this.attack();
         }
 
         protected attack() : void
         {
-
+            console.log("attack");
+            let bullet = new Bullet();
+            bullet.pos(this.x,this.y);
+            bullet.ismoving = true;
+            bullet.camp = this.camp;
+            bullet.speed = 10;
+            Laya.stage.addChild(bullet);
         }
 
         public intersectWithOther(other : InstanceObject) : void

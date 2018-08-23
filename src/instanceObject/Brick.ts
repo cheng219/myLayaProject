@@ -11,6 +11,7 @@ module obj
         constructor()
         {
             super();
+            this.camp = 0;
             //自定义的脚本会有时序问题，所以在此添加一个延时
             this.frameOnce(1,this,this.onFrame);
         }

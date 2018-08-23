@@ -52,7 +52,18 @@ module game
             this.loginWnd = new ui.page.loginUI();
             Laya.stage.addChild(this.loginWnd);
             this.loginWnd.btn_start.on(Laya.Event.MOUSE_UP,this,this.CreateStageWnd);
+
+
+
+            console.log("attack");
+            let bullet : obj.Bullet = new obj.Bullet();
+            bullet.pos(100,100);
+            //bullet.ismoving = true;
+            //bullet.camp = this.camp;
+            //bullet.speed = 10;
+            Laya.stage.addChild(bullet);
         }
+
         protected CreateStageWnd() : void
         {
             this.stageWnd = new ui.page.stageUI();

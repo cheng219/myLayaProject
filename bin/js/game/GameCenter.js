@@ -42,7 +42,7 @@ var game;
             Laya.init(1136, 640, WebGL);
             Laya.stage.bgColor = "#000000";
             Laya.stage.scaleMode = Laya.Stage.SCALE_FIXED_AUTO;
-            Laya.loader.load(["res/atlas/ui.atlas", "res/atlas/game.atlas"], Handler.create(this, this.initMainWnd));
+            Laya.loader.load(["res/atlas/ui.atlas", "res/atlas/game.atlas", "prefab/bullet.prefab"], Handler.create(this, this.initMainWnd));
         };
         GameCenter.prototype.initMainWnd = function () {
             console.log("initMainWnd");
@@ -54,6 +54,13 @@ var game;
             this.loginWnd = new ui.page.loginUI();
             Laya.stage.addChild(this.loginWnd);
             this.loginWnd.btn_start.on(Laya.Event.MOUSE_UP, this, this.CreateStageWnd);
+            console.log("attack");
+            var bullet = new obj.Bullet();
+            bullet.pos(100, 100);
+            //bullet.ismoving = true;
+            //bullet.camp = this.camp;
+            //bullet.speed = 10;
+            Laya.stage.addChild(bullet);
         };
         GameCenter.prototype.CreateStageWnd = function () {
             this.stageWnd = new ui.page.stageUI();

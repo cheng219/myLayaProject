@@ -27,15 +27,18 @@ var obj;
             _super.prototype.onFrameOnce.call(this);
             var rect = new Laya.Rectangle(0, 0, 60, 15);
             this.setBounds(rect);
+            this._inited = true;
         };
         Bullet.prototype.onFrameLoop = function () {
+            if (!this.inited)
+                return;
             if (game.GameCenter.gameStage.intersectWithOther(this, MoveDir.UP)) {
-                //console.log("遇到障碍");
+                console.log("遇到障碍");
             }
             else {
                 //this.y = this.y - 6;
-                this.ismoving = true;
-                _super.prototype.move.call(this);
+                //this.ismoving = true;
+                //super.move();
             }
         };
         Bullet.prototype.intersectWithOther = function (other) {

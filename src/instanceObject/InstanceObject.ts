@@ -5,6 +5,20 @@ module obj
 {
 	export class InstanceObject extends laya.ui.Box
 	{
+		protected _inited : boolean = false;
+		public get inited()
+		{
+			return this._inited;
+		}
+		protected _camp : number = 0;
+		public set camp(camp : number)
+		{
+			this._camp = camp;
+		}
+		public get camp()
+		{
+			return this._camp;
+		}
 		private _speed : number = 6;
 		public set speed(speed : number)
 		{

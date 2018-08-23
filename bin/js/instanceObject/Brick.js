@@ -22,6 +22,7 @@ var obj;
             var _this = _super.call(this) || this;
             _this.id = 0;
             _this.sort = 0;
+            _this.camp = 0;
             //自定义的脚本会有时序问题，所以在此添加一个延时
             _this.frameOnce(1, _this, _this.onFrame);
             return _this;

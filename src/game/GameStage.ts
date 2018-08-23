@@ -60,7 +60,9 @@ module game
                 return true;
             for(let i = 0,len=this.objs.length;i < len;i++)
             {
-                if(this.objs[i] == tank)
+                if(!this.objs[i].inited)
+                    continue;
+                if(this.objs[i] == tank || this.objs[i].camp == tank.camp)//这里会导致坦克穿透
                     continue;
                 let diffX : number = this.objs[i].x - tank.x;
                 let diffY : number = this.objs[i].y - tank.y;
