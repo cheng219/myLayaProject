@@ -38,6 +38,7 @@ var obj;
                 var rect = new Laya.Rectangle(0, 0, 0, 0);
                 this.setBounds(rect);
             }
+            this._inited = true;
         };
         Brick.prototype.onLoop = function () {
         };

@@ -40,11 +40,17 @@ module obj
 
 		constructor(){
 			super();
-			this.frameOnce(1,this,this.onFrameOnce);
-			game.GameCenter.gameStage.AddInstanceObj(this);
+			if(this instanceof Bullet)
+			{
+				game.GameCenter.gameStage.AddPool(this);
+			}else
+			{
+				this.frameOnce(1,this,this.onFrameOnce);
+			}
 		}
 		protected onFrameOnce() : void
         {
+			game.GameCenter.gameStage.AddInstanceObj(this);
             this.frameLoop(1,this,this.onFrameLoop);
         }
 		protected onFrameLoop() : void
@@ -54,7 +60,7 @@ module obj
 
 		public move() : void
 		{
-			console.log("move ismoving : "+this._ismoving);
+			//console.log("move ismoving : "+this._ismoving);
 			if(!this._ismoving)
 				return;
 			switch(this.rotation)
@@ -95,10 +101,34 @@ module obj
 					break;
 			}
 		}
-
+		public get Dir() : MoveDir
+		{
+			switch(this.rotation)
+			{
+				case 0:
+					return MoveDir.UP;
+				case 90:
+					return MoveDir.RIGHT;
+				case 180:
+					return MoveDir.DOWN;
+				case 270:
+					return MoveDir.LEFT;
+			}
+			return MoveDir.UP;
+		}
 		public intersectWithOther(other : InstanceObject) : void
 		{
 			
+		}
+
+		public init() : void
+        {
+            this.frameOnce(1,this,this.onFrameOnce);
+			game.GameCenter.gameStage.AddInstanceObj(this);
+        }
+		public return2Pool() : void
+		{
+			this._inited = false;
 		}
 	}
 }

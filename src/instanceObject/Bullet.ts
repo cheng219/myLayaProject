@@ -10,6 +10,7 @@ module obj
             super();
             this.speed = 10;
         }
+        
         protected onFrameOnce() : void
         {
             super.onFrameOnce();
@@ -23,12 +24,13 @@ module obj
             if(!this.inited)return;
             if(game.GameCenter.gameStage.intersectWithOther(this,MoveDir.UP))
             {
-                console.log("遇到障碍");
+                game.GameCenter.gameStage.DelInstanceObj(this);
+                //console.log("遇到障碍");
             }else
             {
                 //this.y = this.y - 6;
-                //this.ismoving = true;
-                //super.move();
+                this.ismoving = true;
+                super.move();
             }
         }
 
@@ -37,7 +39,7 @@ module obj
             if(other instanceof Tank || other instanceof Brick)
             {
                 console.log("击中其他，销毁自己");
-                this.visible = false;
+                //this.visible = false;
                 game.GameCenter.gameStage.DelInstanceObj(this);
             }
         }

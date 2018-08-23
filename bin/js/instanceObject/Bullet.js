@@ -33,18 +33,19 @@ var obj;
             if (!this.inited)
                 return;
             if (game.GameCenter.gameStage.intersectWithOther(this, MoveDir.UP)) {
-                console.log("遇到障碍");
+                game.GameCenter.gameStage.DelInstanceObj(this);
+                //console.log("遇到障碍");
             }
             else {
                 //this.y = this.y - 6;
-                //this.ismoving = true;
-                //super.move();
+                this.ismoving = true;
+                _super.prototype.move.call(this);
             }
         };
         Bullet.prototype.intersectWithOther = function (other) {
             if (other instanceof obj.Tank || other instanceof obj.Brick) {
                 console.log("击中其他，销毁自己");
-                this.visible = false;
+                //this.visible = false;
                 game.GameCenter.gameStage.DelInstanceObj(this);
             }
         };

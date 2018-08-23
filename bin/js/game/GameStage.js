@@ -21,6 +21,8 @@ var game;
         function GameStage() {
             var _this = _super.call(this) || this;
             _this.objs = [];
+            _this.poolBullets = [];
+            _this.mainTank = null;
             _this.minX = 0;
             _this.minY = 0;
             _this.maxX = 540; //600-60
@@ -50,11 +52,35 @@ var game;
             if (index > -1) {
                 this.objs.splice(index, 1);
             }
-            brick.destroy(true);
+            if (brick instanceof obj.Brick) {
+                brick.destroy(true);
+            }
+            else if (brick instanceof obj.Bullet) {
+                this.return2Pool(brick);
+            }
             //Laya.stage.removeChild(brick);
         };
+        GameStage.prototype.AddPool = function (brick) {
+            this.poolBullets.push(brick);
+            var index = this.poolBullets.indexOf(brick);
+            brick.pos(1044, 20 * index);
+            //console.log("pool :"+this.poolBullets.length);
+        };
+        GameStage.prototype.requstPool = function () {
+            if (this.poolBullets.length > 0) {
+                var go = this.poolBullets[0];
+                go.init();
+                this.poolBullets.splice(0, 1);
+                console.log("remain :" + this.poolBullets.length);
+                return go;
+            }
+        };
+        GameStage.prototype.return2Pool = function (brick) {
+            brick.return2Pool();
+            this.AddPool(brick);
+        };
         GameStage.prototype.intersectWithOther = function (tank, dir) {
-            //console.log("intersectWithOther id:"+brick.id);
+            //console.log("intersectWithOther id:"+tank.camp);
             if (tank.x <= this.minX || tank.x >= this.maxX || tank.y <= this.minY || tank.y >= this.maxY)
                 return true;
             for (var i = 0, len = this.objs.length; i < len; i++) {

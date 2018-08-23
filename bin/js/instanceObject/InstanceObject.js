@@ -27,8 +27,12 @@ var obj;
             _this._ismoving = false;
             _this.zeroRect = new Laya.Rectangle(0, 0, 0, 0);
             _this.oneRect = new Laya.Rectangle(0, 0, 60, 60);
-            _this.frameOnce(1, _this, _this.onFrameOnce);
-            game.GameCenter.gameStage.AddInstanceObj(_this);
+            if (_this instanceof obj.Bullet) {
+                game.GameCenter.gameStage.AddPool(_this);
+            }
+            else {
+                _this.frameOnce(1, _this, _this.onFrameOnce);
+            }
             return _this;
         }
         Object.defineProperty(InstanceObject.prototype, "inited", {
@@ -70,12 +74,13 @@ var obj;
             configurable: true
         });
         InstanceObject.prototype.onFrameOnce = function () {
+            game.GameCenter.gameStage.AddInstanceObj(this);
             this.frameLoop(1, this, this.onFrameLoop);
         };
         InstanceObject.prototype.onFrameLoop = function () {
         };
         InstanceObject.prototype.move = function () {
-            console.log("move ismoving : " + this._ismoving);
+            //console.log("move ismoving : "+this._ismoving);
             if (!this._ismoving)
                 return;
             switch (this.rotation) {
@@ -112,7 +117,31 @@ var obj;
                     break;
             }
         };
+        Object.defineProperty(InstanceObject.prototype, "Dir", {
+            get: function () {
+                switch (this.rotation) {
+                    case 0:
+                        return MoveDir.UP;
+                    case 90:
+                        return MoveDir.RIGHT;
+                    case 180:
+                        return MoveDir.DOWN;
+                    case 270:
+                        return MoveDir.LEFT;
+                }
+                return MoveDir.UP;
+            },
+            enumerable: true,
+            configurable: true
+        });
         InstanceObject.prototype.intersectWithOther = function (other) {
+        };
+        InstanceObject.prototype.init = function () {
+            this.frameOnce(1, this, this.onFrameOnce);
+            game.GameCenter.gameStage.AddInstanceObj(this);
+        };
+        InstanceObject.prototype.return2Pool = function () {
+            this._inited = false;
         };
         return InstanceObject;
     }(laya.ui.Box));

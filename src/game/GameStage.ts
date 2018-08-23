@@ -7,6 +7,10 @@ module game
     {
         protected objs : Array<obj.InstanceObject> = [];
 
+        protected poolBullets : Array<obj.InstanceObject> = [];
+
+        public mainTank : obj.Tank = null;
+
         protected minX : number = 0;
         protected minY : number = 0;
         protected maxX : number = 540;//600-60
@@ -49,13 +53,42 @@ module game
             {
                 this.objs.splice(index,1);
             }
-            brick.destroy(true);
+            if(brick instanceof obj.Brick)
+            {
+                brick.destroy(true);
+            }else if(brick instanceof obj.Bullet)
+            {
+                this.return2Pool(brick);
+            }
             //Laya.stage.removeChild(brick);
+        }
+        public AddPool(brick : obj.InstanceObject) : void
+        {
+            this.poolBullets.push(brick);
+            let index = this.poolBullets.indexOf(brick);
+            brick.pos(1044,20*index);
+            //console.log("pool :"+this.poolBullets.length);
+        }
+        public requstPool() : obj.InstanceObject
+        {
+            if(this.poolBullets.length > 0)
+            {
+                let go = this.poolBullets[0];
+                go.init();
+                this.poolBullets.splice(0,1);
+                console.log("remain :" + this.poolBullets.length);
+                return go;
+            }
+        }
+        public return2Pool(brick : obj.InstanceObject) : void
+        {
+            brick.return2Pool();
+            this.AddPool(brick);
         }
 
         public intersectWithOther(tank : obj.InstanceObject,dir : MoveDir) : boolean
         {
-            //console.log("intersectWithOther id:"+brick.id);
+            //console.log("intersectWithOther id:"+tank.camp);
             if(tank.x <= this.minX || tank.x >= this.maxX || tank.y <= this.minY || tank.y >= this.maxY)
                 return true;
             for(let i = 0,len=this.objs.length;i < len;i++)

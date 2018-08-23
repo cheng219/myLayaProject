@@ -28,6 +28,7 @@ module obj
                 let rect = new Laya.Rectangle(0,0,0,0)
                 this.setBounds(rect);
             }
+            this._inited = true;
         }
 
         private onLoop() : void

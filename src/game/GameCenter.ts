@@ -52,27 +52,50 @@ module game
             this.loginWnd = new ui.page.loginUI();
             Laya.stage.addChild(this.loginWnd);
             this.loginWnd.btn_start.on(Laya.Event.MOUSE_UP,this,this.CreateStageWnd);
-
-
-
-            console.log("attack");
-            let bullet : obj.Bullet = new obj.Bullet();
-            bullet.pos(100,100);
-            //bullet.ismoving = true;
-            //bullet.camp = this.camp;
-            //bullet.speed = 10;
-            Laya.stage.addChild(bullet);
         }
 
         protected CreateStageWnd() : void
         {
             this.stageWnd = new ui.page.stageUI();
             Laya.stage.addChild(this.stageWnd);
-            // let box : laya.ui.Box = this.stageWnd.map.getChildByName("item") as laya.ui.Box;
-            // if(box != null)
-            // {
-
-            // }
+            this.stageWnd.attack.on(Laya.Event.MOUSE_UP,this,this.tankAttack);
+            this.stageWnd.up.on(Laya.Event.MOUSE_DOWN,this,this.tankUp);
+            this.stageWnd.down.on(Laya.Event.MOUSE_DOWN,this,this.tankDown);
+            this.stageWnd.right.on(Laya.Event.MOUSE_DOWN,this,this.tankRight);
+            this.stageWnd.left.on(Laya.Event.MOUSE_DOWN,this,this.tankLeft);
+            this.stageWnd.up.on(Laya.Event.MOUSE_UP,this,this.tankStopMove);
+            this.stageWnd.down.on(Laya.Event.MOUSE_UP,this,this.tankStopMove);
+            this.stageWnd.right.on(Laya.Event.MOUSE_UP,this,this.tankStopMove);
+            this.stageWnd.left.on(Laya.Event.MOUSE_UP,this,this.tankStopMove);
+        }
+        protected tankAttack() : void
+        {
+            game.GameCenter.gameStage.mainTank.attack();
+        }
+        protected tankUp() : void
+        {
+            console.log("tankUp");
+            game.GameCenter.gameStage.mainTank.turn(MoveDir.UP);
+            game.GameCenter.gameStage.mainTank.ismoving = true;
+        }
+        protected tankDown() : void
+        {
+            game.GameCenter.gameStage.mainTank.turn(MoveDir.DOWN);
+            game.GameCenter.gameStage.mainTank.ismoving = true;
+        }
+        protected tankLeft() : void
+        {
+            game.GameCenter.gameStage.mainTank.turn(MoveDir.LEFT);
+            game.GameCenter.gameStage.mainTank.ismoving = true;
+        }
+        protected tankRight() : void
+        {
+            game.GameCenter.gameStage.mainTank.turn(MoveDir.RIGHT);
+            game.GameCenter.gameStage.mainTank.ismoving = true;
+        }
+        protected tankStopMove() : void
+        {
+            game.GameCenter.gameStage.mainTank.ismoving = false;
         }
     }
 }
