@@ -17,6 +17,8 @@ module obj
         protected onFrameOnce() : void
         {
             super.onFrameOnce();
+            this.widthX = ConfigMng.tanktWidth;
+            this.heightY = ConfigMng.tanktWidth;
             if(!this.isPoolObj)
             {
                 game.GameCenter.gameStage.mainTank = this;
@@ -44,15 +46,20 @@ module obj
                 }
             }
         }
-
+        /**没两秒攻击一次 */
         protected attackLoop() : void
         {
             if(this.isPoolObj)//敌人
                 this.attack();
         }
-
+        protected lastAttackTime : number = 0;
         public attack() : void
         {
+            if(Laya.timer.currTimer - this.lastAttackTime < ConfigMng.attackCd)
+            {
+                return;
+            }
+            this.lastAttackTime = Laya.timer.currTimer;
             console.log("attack");
             let bullet = game.GameCenter.gameStage.requstPool(ObjSort.BULLET) as Bullet;
             if(bullet != null)
@@ -66,8 +73,14 @@ module obj
             }
         }
 
+        protected lastTurnTime : number = 0;
         public intersectWithOther(other : InstanceObject) : void
         {
+            if(Laya.timer.currTimer - this.lastTurnTime < ConfigMng.autoTurnCd)
+            {
+                return;
+            }
+            this.lastTurnTime = Laya.timer.currTimer;
             if(other instanceof Bullet)
             {
                 if(other.camp != this.camp && this.isPoolObj)
@@ -84,7 +97,7 @@ module obj
                 }
             }
         }
-         
+        /** 每1秒自动转向 */
         protected autoTurn() : void
         {
             let arr : Array<MoveDir> = [MoveDir.DOWN,MoveDir.LEFT,MoveDir.RIGHT,MoveDir.UP];

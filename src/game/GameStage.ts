@@ -131,7 +131,7 @@ module game
                 let diffY : number = Math.abs(this.objs[i].y - tank.y);
                 let diffW : number = this.objs[i].widthX/2 + tank.widthX/2;
                 let diffH : number = this.objs[i].heightY/2 + tank.heightY/2;
-                if(diffX > 60 || diffY > 60)//距离过远,必然不相交,减少getBounds消耗
+                if(diffX > diffW || diffY > diffH)//距离过远
                     continue;
                 if(tank instanceof obj.Bullet && this.objs[i] instanceof obj.Brick)
                 {
@@ -142,7 +142,7 @@ module game
                 }
                 if(diffX < diffW && diffY < diffH)
                 {
-                    console.log("diffX :"+diffX+",diffW :"+diffW+",diffY :"+diffY+",diffH :"+diffH);
+                    //console.log("diffX :"+diffX+",diffW :"+diffW+",diffY :"+diffY+",diffH :"+diffH);
                     this.objs[i].intersectWithOther(tank);
                     tank.intersectWithOther(this.objs[i]);
                     return true;
@@ -161,8 +161,8 @@ module game
                 tank.pos(pos.x,pos.y);
                 tank.ismoving = true;
                 tank.camp = 2;
-                tank.speed = 4;
-                tank.bulletSpeed = 8;
+                tank.speed = ConfigMng.enemyMoveSpeed;
+                tank.bulletSpeed = ConfigMng.enemyBulletSpeed;
                 tank.turn(MoveDir.DOWN);
                 //Laya.stage.addChild(bullet);
                 this.posIndex++;

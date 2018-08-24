@@ -11,13 +11,13 @@ module game{
 
 		private onFrameOnce() : void
 		{
-			console.log("onFrameOnce");
+			//console.log("onFrameOnce");
 			Laya.timer.loop(5000,this,this.onFrameLoop);
 		}
-
+		/** 每五秒创建一个敌人*/
 		private onFrameLoop():void
 		{
-			console.log("onFrameLoop");
+			//console.log("onFrameLoop");
 			game.GameCenter.gameStage.CreateEnemyTank();
 		}
 	}

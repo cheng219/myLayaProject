@@ -19,8 +19,8 @@ module obj
             //console.log("x:"+this.x + ",y:"+this.y + ",sort:"+this.sort);
             if(this.sort != BrickSort.GRASS)
             {
-                this.widthX = 60;
-                this.heightY = 60;
+                this.widthX = ConfigMng.tanktWidth;
+                this.heightY = ConfigMng.tanktWidth;
             }else
             {
                 this.widthX = 0;

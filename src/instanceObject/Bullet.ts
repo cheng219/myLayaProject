@@ -13,15 +13,8 @@ module obj
         protected onFrameOnce() : void
         {
             super.onFrameOnce();
-            if(this.dir == MoveDir.DOWN || this.dir == MoveDir.UP)
-            {
-                this.widthX = 2;
-                this.heightY = 2;
-            }else
-            {
-                this.widthX = 2;
-                this.heightY = 2;
-            }
+            this.widthX = ConfigMng.bulletWidth;
+            this.heightY = ConfigMng.bulletWidth;
         }
         public init() : void
         {

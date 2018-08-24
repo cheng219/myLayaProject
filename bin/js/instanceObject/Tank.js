@@ -22,6 +22,7 @@ var obj;
             var _this = _super.call(this) || this;
             _this.id = 0;
             _this.bulletSpeed = 10;
+            _this.lastAttackTime = 0;
             _this.camp = 1;
             return _this;
         }
@@ -54,6 +55,10 @@ var obj;
                 this.attack();
         };
         Tank.prototype.attack = function () {
+            if (Laya.timer.currTimer - this.lastAttackTime < ConfigMng.attackCd) {
+                return;
+            }
+            this.lastAttackTime = Laya.timer.currTimer;
             console.log("attack");
             var bullet = game.GameCenter.gameStage.requstPool(ObjSort.BULLET);
             if (bullet != null) {
