@@ -11,10 +11,10 @@ module game
 
         public mainTank : obj.Tank = null;
 
-        protected minX : number = 0;
-        protected minY : number = 0;
-        protected maxX : number = 540;//600-60
-        protected maxY : number = 840;//900-60
+        protected minX : number = 30;
+        protected minY : number = 30;
+        protected maxX : number = 570;//600-30
+        protected maxY : number = 870;//900-30
 
         public static CreateNew() : GameStage
         {
@@ -97,50 +97,18 @@ module game
                     continue;
                 if(this.objs[i] == tank || this.objs[i].camp == tank.camp)//这里会导致坦克穿透
                     continue;
-                let diffX : number = this.objs[i].x - tank.x;
-                let diffY : number = this.objs[i].y - tank.y;
+                let diffX : number = Math.abs(this.objs[i].x - tank.x);
+                let diffY : number = Math.abs(this.objs[i].y - tank.y);
+                let diffW : number = this.objs[i].width/2 + tank.width/2;
+                let diffH : number = this.objs[i].height/2 + tank.height/2;
                 if(diffX > 60 || diffY > 60)//距离过远,必然不相交,减少getBounds消耗
                     continue;
-                if(this.objs[i].getBounds().intersects(tank.getBounds()))
+                if(diffX < diffW && diffY < diffH)
                 {
-                    let intersect : boolean = false;
-                    switch(dir)
-                    {
-                        case MoveDir.UP:
-                            if(diffY < 0 && Math.abs(diffX)  < 60)
-                            {
-                                //console.log("intersectWithOther other x:"+this.objs[i].x + ",y:"+this.objs[i].y + ",dir:"+dir);
-                                intersect = true;
-                            }
-                            break;
-                        case MoveDir.DOWN:
-                            if(diffY > 0 && Math.abs(diffX) < 60)
-                            {
-                                //console.log("intersectWithOther other x:"+this.objs[i].x + ",y:"+this.objs[i].y + ",dir:"+dir);
-                                intersect = true;
-                            }
-                            break;
-                        case MoveDir.LEFT:
-                            if(diffX > 0 && Math.abs(diffY) < 60)
-                            {
-                                //console.log("intersectWithOther other x:"+this.objs[i].x + ",y:"+this.objs[i].y + ",dir:"+dir);
-                                intersect = true;
-                            }
-                            break;
-                        case MoveDir.RIGHT:
-                            if(diffX > 0 && Math.abs(diffY) < 60)
-                            {
-                                //console.log("intersectWithOther other x:"+this.objs[i].x + ",y:"+this.objs[i].y + ",dir:"+dir);
-                                intersect = true;
-                            }
-                            break;
-                    }
-                    if(intersect)
-                    {
-                        this.objs[i].intersectWithOther(tank);
-                        tank.intersectWithOther(this.objs[i]);
-                        return true;
-                    }
+                    console.log("diffX :"+diffX+",diffW :"+diffW+",diffY :"+diffY+",diffH :"+diffH);
+                    this.objs[i].intersectWithOther(tank);
+                    tank.intersectWithOther(this.objs[i]);
+                    return true;
                 }
             }
             return false;

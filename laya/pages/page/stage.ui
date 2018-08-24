@@ -1,8 +1,8 @@
 {
     "x":0,
     "type":"Dialog",
-    "selectedBox":1,
-    "selecteID":2567,
+    "selectedBox":925,
+    "selecteID":3056,
     "props":{"y":0,"x":0,"width":1136,"sceneColor":"#000000","height":640},
     "nodeParent":-1,
     "label":"Dialog",
@@ -127,25 +127,25 @@
                 {
                     "x":30,
                     "type":"Box",
-                    "props":{"presetID":1,"preset":"laya/assets/prefab/wall.prefab"},
+                    "props":{"y":30,"x":30,"sort":1,"presetID":1,"preset":"laya/assets/prefab/wall.prefab","name":"item0","anchorY":0.5,"anchorX":0.5},
                     "nodeParent":925,
-                    "label":"Box(wall)",
+                    "label":"Box(item0)",
                     "isOpen":false,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
-                    "compId":30,
+                    "compId":2602,
                     "child":[
                         {
                             "type":"Image",
                             "props":{"presetID":2,"preset":"laya/assets/prefab/wall.prefab"},
-                            "nodeParent":30,
+                            "nodeParent":2602,
                             "label":"Image(wall)",
                             "isOpen":true,
                             "isDirectory":false,
                             "isAniNode":true,
                             "hasChild":false,
-                            "compId":14,
+                            "compId":2603,
                             "child":[
                                 ]
                         }]
@@ -153,25 +153,25 @@
                 {
                     "x":30,
                     "type":"Box",
-                    "props":{"y":0,"x":60,"sort":1,"name":"item1","id":0,"appendProps":"laya/pages/script/Brick.prop"},
+                    "props":{"y":30,"x":90,"sort":1,"presetID":1,"preset":"laya/assets/prefab/wall.prefab","name":"item1","anchorY":0.5,"anchorX":0.5},
                     "nodeParent":925,
                     "label":"Box(item1)",
                     "isOpen":false,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
-                    "compId":2268,
+                    "compId":2882,
                     "child":[
                         {
                             "type":"Image",
-                            "props":{"y":0,"x":0,"width":60,"skin":"game/walls.png","height":60},
-                            "nodeParent":2268,
-                            "label":"Image",
+                            "props":{"presetID":2,"preset":"laya/assets/prefab/wall.prefab"},
+                            "nodeParent":2882,
+                            "label":"Image(wall)",
                             "isOpen":true,
                             "isDirectory":false,
                             "isAniNode":true,
                             "hasChild":false,
-                            "compId":2269,
+                            "compId":2883,
                             "child":[
                                 ]
                         }]
@@ -179,25 +179,25 @@
                 {
                     "x":30,
                     "type":"Box",
-                    "props":{"y":0,"x":120,"sort":1,"name":"item2","id":2,"appendProps":"laya/pages/script/Brick.prop"},
+                    "props":{"y":30,"x":150,"sort":1,"presetID":1,"preset":"laya/assets/prefab/wall.prefab","name":"item2","anchorY":0.5,"anchorX":0.5},
                     "nodeParent":925,
                     "label":"Box(item2)",
                     "isOpen":false,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
-                    "compId":2270,
+                    "compId":2884,
                     "child":[
                         {
                             "type":"Image",
-                            "props":{"y":0,"x":0,"width":60,"skin":"game/walls.png","height":60},
-                            "nodeParent":2270,
-                            "label":"Image",
+                            "props":{"presetID":2,"preset":"laya/assets/prefab/wall.prefab"},
+                            "nodeParent":2884,
+                            "label":"Image(wall)",
                             "isOpen":true,
                             "isDirectory":false,
                             "isAniNode":true,
                             "hasChild":false,
-                            "compId":2271,
+                            "compId":2885,
                             "child":[
                                 ]
                         }]
@@ -205,25 +205,25 @@
                 {
                     "x":30,
                     "type":"Box",
-                    "props":{"y":0,"x":180,"sort":1,"name":"item3","appendProps":"laya/pages/script/Brick.prop"},
+                    "props":{"y":30,"x":210,"sort":1,"presetID":1,"preset":"laya/assets/prefab/wall.prefab","name":"item3","anchorY":0.5,"anchorX":0.5},
                     "nodeParent":925,
                     "label":"Box(item3)",
                     "isOpen":false,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
-                    "compId":2272,
+                    "compId":2886,
                     "child":[
                         {
                             "type":"Image",
-                            "props":{"y":0,"x":0,"width":60,"skin":"game/walls.png","height":60},
-                            "nodeParent":2272,
-                            "label":"Image",
+                            "props":{"presetID":2,"preset":"laya/assets/prefab/wall.prefab"},
+                            "nodeParent":2886,
+                            "label":"Image(wall)",
                             "isOpen":true,
                             "isDirectory":false,
                             "isAniNode":true,
                             "hasChild":false,
-                            "compId":2273,
+                            "compId":2887,
                             "child":[
                                 ]
                         }]
@@ -231,25 +231,25 @@
                 {
                     "x":30,
                     "type":"Box",
-                    "props":{"y":0,"x":240,"sort":1,"name":"item4","appendProps":"laya/pages/script/Brick.prop"},
+                    "props":{"y":30,"x":270,"sort":1,"presetID":1,"preset":"laya/assets/prefab/wall.prefab","name":"item4","anchorY":0.5,"anchorX":0.5},
                     "nodeParent":925,
                     "label":"Box(item4)",
                     "isOpen":false,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
-                    "compId":2274,
+                    "compId":2888,
                     "child":[
                         {
                             "type":"Image",
-                            "props":{"y":0,"x":0,"width":60,"skin":"game/walls.png","height":60},
-                            "nodeParent":2274,
-                            "label":"Image",
+                            "props":{"presetID":2,"preset":"laya/assets/prefab/wall.prefab"},
+                            "nodeParent":2888,
+                            "label":"Image(wall)",
                             "isOpen":true,
                             "isDirectory":false,
                             "isAniNode":true,
                             "hasChild":false,
-                            "compId":2275,
+                            "compId":2889,
                             "child":[
                                 ]
                         }]
@@ -257,25 +257,25 @@
                 {
                     "x":30,
                     "type":"Box",
-                    "props":{"y":0,"x":300,"sort":1,"name":"item5","appendProps":"laya/pages/script/Brick.prop"},
+                    "props":{"y":30,"x":330,"sort":1,"presetID":1,"preset":"laya/assets/prefab/wall.prefab","name":"item5","anchorY":0.5,"anchorX":0.5},
                     "nodeParent":925,
                     "label":"Box(item5)",
                     "isOpen":false,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
-                    "compId":2276,
+                    "compId":2890,
                     "child":[
                         {
                             "type":"Image",
-                            "props":{"y":0,"x":0,"width":60,"skin":"game/walls.png","height":60},
-                            "nodeParent":2276,
-                            "label":"Image",
+                            "props":{"presetID":2,"preset":"laya/assets/prefab/wall.prefab"},
+                            "nodeParent":2890,
+                            "label":"Image(wall)",
                             "isOpen":true,
                             "isDirectory":false,
                             "isAniNode":true,
                             "hasChild":false,
-                            "compId":2277,
+                            "compId":2891,
                             "child":[
                                 ]
                         }]
@@ -283,25 +283,25 @@
                 {
                     "x":30,
                     "type":"Box",
-                    "props":{"y":0,"x":360,"sort":1,"name":"item6","appendProps":"laya/pages/script/Brick.prop"},
+                    "props":{"y":30,"x":390,"sort":1,"presetID":1,"preset":"laya/assets/prefab/wall.prefab","name":"item6","anchorY":0.5,"anchorX":0.5},
                     "nodeParent":925,
                     "label":"Box(item6)",
                     "isOpen":false,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
-                    "compId":2278,
+                    "compId":2892,
                     "child":[
                         {
                             "type":"Image",
-                            "props":{"y":0,"x":0,"width":60,"skin":"game/walls.png","height":60},
-                            "nodeParent":2278,
-                            "label":"Image",
+                            "props":{"presetID":2,"preset":"laya/assets/prefab/wall.prefab"},
+                            "nodeParent":2892,
+                            "label":"Image(wall)",
                             "isOpen":true,
                             "isDirectory":false,
                             "isAniNode":true,
                             "hasChild":false,
-                            "compId":2279,
+                            "compId":2893,
                             "child":[
                                 ]
                         }]
@@ -309,25 +309,25 @@
                 {
                     "x":30,
                     "type":"Box",
-                    "props":{"y":0,"x":420,"sort":1,"name":"item7","appendProps":"laya/pages/script/Brick.prop"},
+                    "props":{"y":30,"x":450,"sort":1,"presetID":1,"preset":"laya/assets/prefab/wall.prefab","name":"item7","anchorY":0.5,"anchorX":0.5},
                     "nodeParent":925,
                     "label":"Box(item7)",
                     "isOpen":false,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
-                    "compId":2280,
+                    "compId":2894,
                     "child":[
                         {
                             "type":"Image",
-                            "props":{"y":0,"x":0,"width":60,"skin":"game/walls.png","height":60},
-                            "nodeParent":2280,
-                            "label":"Image",
+                            "props":{"presetID":2,"preset":"laya/assets/prefab/wall.prefab"},
+                            "nodeParent":2894,
+                            "label":"Image(wall)",
                             "isOpen":true,
                             "isDirectory":false,
                             "isAniNode":true,
                             "hasChild":false,
-                            "compId":2281,
+                            "compId":2895,
                             "child":[
                                 ]
                         }]
@@ -335,25 +335,25 @@
                 {
                     "x":30,
                     "type":"Box",
-                    "props":{"y":0,"x":480,"sort":1,"name":"item8","appendProps":"laya/pages/script/Brick.prop"},
+                    "props":{"y":30,"x":510,"sort":1,"presetID":1,"preset":"laya/assets/prefab/wall.prefab","name":"item8","anchorY":0.5,"anchorX":0.5},
                     "nodeParent":925,
                     "label":"Box(item8)",
                     "isOpen":false,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
-                    "compId":2282,
+                    "compId":2896,
                     "child":[
                         {
                             "type":"Image",
-                            "props":{"y":0,"x":0,"width":60,"skin":"game/walls.png","height":60},
-                            "nodeParent":2282,
-                            "label":"Image",
+                            "props":{"presetID":2,"preset":"laya/assets/prefab/wall.prefab"},
+                            "nodeParent":2896,
+                            "label":"Image(wall)",
                             "isOpen":true,
                             "isDirectory":false,
                             "isAniNode":true,
                             "hasChild":false,
-                            "compId":2283,
+                            "compId":2897,
                             "child":[
                                 ]
                         }]
@@ -361,25 +361,25 @@
                 {
                     "x":30,
                     "type":"Box",
-                    "props":{"y":0,"x":540,"sort":1,"name":"item9","appendProps":"laya/pages/script/Brick.prop"},
+                    "props":{"y":30,"x":570,"sort":1,"presetID":1,"preset":"laya/assets/prefab/wall.prefab","name":"item9","anchorY":0.5,"anchorX":0.5},
                     "nodeParent":925,
                     "label":"Box(item9)",
                     "isOpen":false,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
-                    "compId":2284,
+                    "compId":2898,
                     "child":[
                         {
                             "type":"Image",
-                            "props":{"y":0,"x":0,"width":60,"skin":"game/walls.png","height":60},
-                            "nodeParent":2284,
-                            "label":"Image",
+                            "props":{"presetID":2,"preset":"laya/assets/prefab/wall.prefab"},
+                            "nodeParent":2898,
+                            "label":"Image(wall)",
                             "isOpen":true,
                             "isDirectory":false,
                             "isAniNode":true,
                             "hasChild":false,
-                            "compId":2285,
+                            "compId":2899,
                             "child":[
                                 ]
                         }]
@@ -387,25 +387,25 @@
                 {
                     "x":30,
                     "type":"Box",
-                    "props":{"y":0,"x":600,"sort":1,"name":"item10","appendProps":"laya/pages/script/Brick.prop"},
+                    "props":{"y":30,"x":630,"sort":1,"presetID":1,"preset":"laya/assets/prefab/wall.prefab","name":"item10","anchorY":0.5,"anchorX":0.5},
                     "nodeParent":925,
                     "label":"Box(item10)",
                     "isOpen":false,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
-                    "compId":2286,
+                    "compId":2900,
                     "child":[
                         {
                             "type":"Image",
-                            "props":{"y":0,"x":0,"width":60,"skin":"game/walls.png","height":60},
-                            "nodeParent":2286,
-                            "label":"Image",
+                            "props":{"presetID":2,"preset":"laya/assets/prefab/wall.prefab"},
+                            "nodeParent":2900,
+                            "label":"Image(wall)",
                             "isOpen":true,
                             "isDirectory":false,
                             "isAniNode":true,
                             "hasChild":false,
-                            "compId":2287,
+                            "compId":2901,
                             "child":[
                                 ]
                         }]
@@ -413,25 +413,25 @@
                 {
                     "x":30,
                     "type":"Box",
-                    "props":{"y":0,"x":660,"sort":1,"name":"item11","appendProps":"laya/pages/script/Brick.prop"},
+                    "props":{"y":30,"x":690,"sort":1,"presetID":1,"preset":"laya/assets/prefab/wall.prefab","name":"item11","anchorY":0.5,"anchorX":0.5},
                     "nodeParent":925,
                     "label":"Box(item11)",
                     "isOpen":false,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
-                    "compId":2288,
+                    "compId":2902,
                     "child":[
                         {
                             "type":"Image",
-                            "props":{"y":0,"x":0,"width":60,"skin":"game/walls.png","height":60},
-                            "nodeParent":2288,
-                            "label":"Image",
+                            "props":{"presetID":2,"preset":"laya/assets/prefab/wall.prefab"},
+                            "nodeParent":2902,
+                            "label":"Image(wall)",
                             "isOpen":true,
                             "isDirectory":false,
                             "isAniNode":true,
                             "hasChild":false,
-                            "compId":2289,
+                            "compId":2903,
                             "child":[
                                 ]
                         }]
@@ -439,25 +439,25 @@
                 {
                     "x":30,
                     "type":"Box",
-                    "props":{"y":0,"x":720,"sort":1,"name":"item12","appendProps":"laya/pages/script/Brick.prop"},
+                    "props":{"y":30,"x":750,"sort":1,"presetID":1,"preset":"laya/assets/prefab/wall.prefab","name":"item12","anchorY":0.5,"anchorX":0.5},
                     "nodeParent":925,
                     "label":"Box(item12)",
                     "isOpen":false,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
-                    "compId":2290,
+                    "compId":2904,
                     "child":[
                         {
                             "type":"Image",
-                            "props":{"y":0,"x":0,"width":60,"skin":"game/walls.png","height":60},
-                            "nodeParent":2290,
-                            "label":"Image",
+                            "props":{"presetID":2,"preset":"laya/assets/prefab/wall.prefab"},
+                            "nodeParent":2904,
+                            "label":"Image(wall)",
                             "isOpen":true,
                             "isDirectory":false,
                             "isAniNode":true,
                             "hasChild":false,
-                            "compId":2291,
+                            "compId":2905,
                             "child":[
                                 ]
                         }]
@@ -465,25 +465,25 @@
                 {
                     "x":30,
                     "type":"Box",
-                    "props":{"y":0,"x":780,"sort":1,"name":"item13","appendProps":"laya/pages/script/Brick.prop"},
+                    "props":{"y":30,"x":810,"sort":1,"presetID":1,"preset":"laya/assets/prefab/wall.prefab","name":"item13","anchorY":0.5,"anchorX":0.5},
                     "nodeParent":925,
                     "label":"Box(item13)",
                     "isOpen":false,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
-                    "compId":2292,
+                    "compId":2906,
                     "child":[
                         {
                             "type":"Image",
-                            "props":{"y":0,"x":0,"width":60,"skin":"game/walls.png","height":60},
-                            "nodeParent":2292,
-                            "label":"Image",
+                            "props":{"presetID":2,"preset":"laya/assets/prefab/wall.prefab"},
+                            "nodeParent":2906,
+                            "label":"Image(wall)",
                             "isOpen":true,
                             "isDirectory":false,
                             "isAniNode":true,
                             "hasChild":false,
-                            "compId":2293,
+                            "compId":2907,
                             "child":[
                                 ]
                         }]
@@ -491,25 +491,25 @@
                 {
                     "x":30,
                     "type":"Box",
-                    "props":{"y":0,"x":840,"sort":1,"name":"item14","appendProps":"laya/pages/script/Brick.prop"},
+                    "props":{"y":90,"x":30,"sort":1,"presetID":1,"preset":"laya/assets/prefab/wall.prefab","name":"item14","anchorY":0.5,"anchorX":0.5},
                     "nodeParent":925,
                     "label":"Box(item14)",
                     "isOpen":false,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
-                    "compId":2294,
+                    "compId":2908,
                     "child":[
                         {
                             "type":"Image",
-                            "props":{"y":0,"x":0,"width":60,"skin":"game/walls.png","height":60},
-                            "nodeParent":2294,
-                            "label":"Image",
+                            "props":{"presetID":2,"preset":"laya/assets/prefab/wall.prefab"},
+                            "nodeParent":2908,
+                            "label":"Image(wall)",
                             "isOpen":true,
                             "isDirectory":false,
                             "isAniNode":true,
                             "hasChild":false,
-                            "compId":2295,
+                            "compId":2909,
                             "child":[
                                 ]
                         }]
@@ -517,25 +517,25 @@
                 {
                     "x":30,
                     "type":"Box",
-                    "props":{"y":60,"x":0,"sort":1,"name":"item15","appendProps":"laya/pages/script/Brick.prop"},
+                    "props":{"y":90,"x":90,"sort":1,"presetID":1,"preset":"laya/assets/prefab/wall.prefab","name":"item15","anchorY":0.5,"anchorX":0.5},
                     "nodeParent":925,
                     "label":"Box(item15)",
                     "isOpen":false,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
-                    "compId":2296,
+                    "compId":2910,
                     "child":[
                         {
                             "type":"Image",
-                            "props":{"y":0,"x":0,"width":60,"skin":"game/walls.png","height":60},
-                            "nodeParent":2296,
-                            "label":"Image",
+                            "props":{"presetID":2,"preset":"laya/assets/prefab/wall.prefab"},
+                            "nodeParent":2910,
+                            "label":"Image(wall)",
                             "isOpen":true,
                             "isDirectory":false,
                             "isAniNode":true,
                             "hasChild":false,
-                            "compId":2297,
+                            "compId":2911,
                             "child":[
                                 ]
                         }]
@@ -543,25 +543,25 @@
                 {
                     "x":30,
                     "type":"Box",
-                    "props":{"y":60,"x":60,"sort":1,"name":"item16","appendProps":"laya/pages/script/Brick.prop"},
+                    "props":{"y":90,"x":150,"sort":1,"presetID":1,"preset":"laya/assets/prefab/wall.prefab","name":"item16","anchorY":0.5,"anchorX":0.5},
                     "nodeParent":925,
                     "label":"Box(item16)",
                     "isOpen":false,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
-                    "compId":2298,
+                    "compId":2912,
                     "child":[
                         {
                             "type":"Image",
-                            "props":{"y":0,"x":0,"width":60,"skin":"game/walls.png","height":60},
-                            "nodeParent":2298,
-                            "label":"Image",
+                            "props":{"presetID":2,"preset":"laya/assets/prefab/wall.prefab"},
+                            "nodeParent":2912,
+                            "label":"Image(wall)",
                             "isOpen":true,
                             "isDirectory":false,
                             "isAniNode":true,
                             "hasChild":false,
-                            "compId":2299,
+                            "compId":2913,
                             "child":[
                                 ]
                         }]
@@ -569,25 +569,25 @@
                 {
                     "x":30,
                     "type":"Box",
-                    "props":{"y":60,"x":120,"sort":1,"name":"item17","appendProps":"laya/pages/script/Brick.prop"},
+                    "props":{"y":90,"x":210,"sort":1,"presetID":1,"preset":"laya/assets/prefab/wall.prefab","name":"item17","anchorY":0.5,"anchorX":0.5},
                     "nodeParent":925,
                     "label":"Box(item17)",
                     "isOpen":false,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
-                    "compId":2300,
+                    "compId":2914,
                     "child":[
                         {
                             "type":"Image",
-                            "props":{"y":0,"x":0,"width":60,"skin":"game/walls.png","height":60},
-                            "nodeParent":2300,
-                            "label":"Image",
+                            "props":{"presetID":2,"preset":"laya/assets/prefab/wall.prefab"},
+                            "nodeParent":2914,
+                            "label":"Image(wall)",
                             "isOpen":true,
                             "isDirectory":false,
                             "isAniNode":true,
                             "hasChild":false,
-                            "compId":2301,
+                            "compId":2915,
                             "child":[
                                 ]
                         }]
@@ -595,25 +595,25 @@
                 {
                     "x":30,
                     "type":"Box",
-                    "props":{"y":60,"x":180,"sort":1,"name":"item18","appendProps":"laya/pages/script/Brick.prop"},
+                    "props":{"y":90,"x":270,"sort":1,"presetID":1,"preset":"laya/assets/prefab/wall.prefab","name":"item18","anchorY":0.5,"anchorX":0.5},
                     "nodeParent":925,
                     "label":"Box(item18)",
                     "isOpen":false,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
-                    "compId":2302,
+                    "compId":2916,
                     "child":[
                         {
                             "type":"Image",
-                            "props":{"y":0,"x":0,"width":60,"skin":"game/walls.png","height":60},
-                            "nodeParent":2302,
-                            "label":"Image",
+                            "props":{"presetID":2,"preset":"laya/assets/prefab/wall.prefab"},
+                            "nodeParent":2916,
+                            "label":"Image(wall)",
                             "isOpen":true,
                             "isDirectory":false,
                             "isAniNode":true,
                             "hasChild":false,
-                            "compId":2303,
+                            "compId":2917,
                             "child":[
                                 ]
                         }]
@@ -621,25 +621,25 @@
                 {
                     "x":30,
                     "type":"Box",
-                    "props":{"y":60,"x":240,"sort":1,"name":"item19","appendProps":"laya/pages/script/Brick.prop"},
+                    "props":{"y":90,"x":330,"sort":1,"presetID":1,"preset":"laya/assets/prefab/wall.prefab","name":"item19","anchorY":0.5,"anchorX":0.5},
                     "nodeParent":925,
                     "label":"Box(item19)",
                     "isOpen":false,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
-                    "compId":2304,
+                    "compId":2918,
                     "child":[
                         {
                             "type":"Image",
-                            "props":{"y":0,"x":0,"width":60,"skin":"game/walls.png","height":60},
-                            "nodeParent":2304,
-                            "label":"Image",
+                            "props":{"presetID":2,"preset":"laya/assets/prefab/wall.prefab"},
+                            "nodeParent":2918,
+                            "label":"Image(wall)",
                             "isOpen":true,
                             "isDirectory":false,
                             "isAniNode":true,
                             "hasChild":false,
-                            "compId":2305,
+                            "compId":2919,
                             "child":[
                                 ]
                         }]
@@ -647,25 +647,25 @@
                 {
                     "x":30,
                     "type":"Box",
-                    "props":{"y":60,"x":300,"sort":1,"name":"item20","appendProps":"laya/pages/script/Brick.prop"},
+                    "props":{"y":90,"x":390,"sort":1,"presetID":1,"preset":"laya/assets/prefab/wall.prefab","name":"item20","anchorY":0.5,"anchorX":0.5},
                     "nodeParent":925,
                     "label":"Box(item20)",
                     "isOpen":false,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
-                    "compId":2306,
+                    "compId":2920,
                     "child":[
                         {
                             "type":"Image",
-                            "props":{"y":0,"x":0,"width":60,"skin":"game/walls.png","height":60},
-                            "nodeParent":2306,
-                            "label":"Image",
+                            "props":{"presetID":2,"preset":"laya/assets/prefab/wall.prefab"},
+                            "nodeParent":2920,
+                            "label":"Image(wall)",
                             "isOpen":true,
                             "isDirectory":false,
                             "isAniNode":true,
                             "hasChild":false,
-                            "compId":2307,
+                            "compId":2921,
                             "child":[
                                 ]
                         }]
@@ -673,25 +673,25 @@
                 {
                     "x":30,
                     "type":"Box",
-                    "props":{"y":60,"x":360,"sort":1,"name":"item21","appendProps":"laya/pages/script/Brick.prop"},
+                    "props":{"y":90,"x":450,"sort":1,"presetID":1,"preset":"laya/assets/prefab/wall.prefab","name":"item21","anchorY":0.5,"anchorX":0.5},
                     "nodeParent":925,
                     "label":"Box(item21)",
                     "isOpen":false,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
-                    "compId":2308,
+                    "compId":2922,
                     "child":[
                         {
                             "type":"Image",
-                            "props":{"y":0,"x":0,"width":60,"skin":"game/walls.png","height":60},
-                            "nodeParent":2308,
-                            "label":"Image",
+                            "props":{"presetID":2,"preset":"laya/assets/prefab/wall.prefab"},
+                            "nodeParent":2922,
+                            "label":"Image(wall)",
                             "isOpen":true,
                             "isDirectory":false,
                             "isAniNode":true,
                             "hasChild":false,
-                            "compId":2309,
+                            "compId":2923,
                             "child":[
                                 ]
                         }]
@@ -699,25 +699,25 @@
                 {
                     "x":30,
                     "type":"Box",
-                    "props":{"y":60,"x":420,"sort":1,"name":"item22","appendProps":"laya/pages/script/Brick.prop"},
+                    "props":{"y":90,"x":510,"sort":1,"presetID":1,"preset":"laya/assets/prefab/wall.prefab","name":"item22","anchorY":0.5,"anchorX":0.5},
                     "nodeParent":925,
                     "label":"Box(item22)",
                     "isOpen":false,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
-                    "compId":2310,
+                    "compId":2924,
                     "child":[
                         {
                             "type":"Image",
-                            "props":{"y":0,"x":0,"width":60,"skin":"game/walls.png","height":60},
-                            "nodeParent":2310,
-                            "label":"Image",
+                            "props":{"presetID":2,"preset":"laya/assets/prefab/wall.prefab"},
+                            "nodeParent":2924,
+                            "label":"Image(wall)",
                             "isOpen":true,
                             "isDirectory":false,
                             "isAniNode":true,
                             "hasChild":false,
-                            "compId":2311,
+                            "compId":2925,
                             "child":[
                                 ]
                         }]
@@ -725,25 +725,25 @@
                 {
                     "x":30,
                     "type":"Box",
-                    "props":{"y":60,"x":480,"sort":1,"name":"item23","appendProps":"laya/pages/script/Brick.prop"},
+                    "props":{"y":90,"x":570,"sort":1,"presetID":1,"preset":"laya/assets/prefab/wall.prefab","name":"item23","anchorY":0.5,"anchorX":0.5},
                     "nodeParent":925,
                     "label":"Box(item23)",
                     "isOpen":false,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
-                    "compId":2312,
+                    "compId":2926,
                     "child":[
                         {
                             "type":"Image",
-                            "props":{"y":0,"x":0,"width":60,"skin":"game/walls.png","height":60},
-                            "nodeParent":2312,
-                            "label":"Image",
+                            "props":{"presetID":2,"preset":"laya/assets/prefab/wall.prefab"},
+                            "nodeParent":2926,
+                            "label":"Image(wall)",
                             "isOpen":true,
                             "isDirectory":false,
                             "isAniNode":true,
                             "hasChild":false,
-                            "compId":2313,
+                            "compId":2927,
                             "child":[
                                 ]
                         }]
@@ -751,25 +751,25 @@
                 {
                     "x":30,
                     "type":"Box",
-                    "props":{"y":60,"x":540,"sort":1,"name":"item24","appendProps":"laya/pages/script/Brick.prop"},
+                    "props":{"y":90,"x":630,"sort":1,"presetID":1,"preset":"laya/assets/prefab/wall.prefab","name":"item24","anchorY":0.5,"anchorX":0.5},
                     "nodeParent":925,
                     "label":"Box(item24)",
                     "isOpen":false,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
-                    "compId":2314,
+                    "compId":2928,
                     "child":[
                         {
                             "type":"Image",
-                            "props":{"y":0,"x":0,"width":60,"skin":"game/walls.png","height":60},
-                            "nodeParent":2314,
-                            "label":"Image",
+                            "props":{"presetID":2,"preset":"laya/assets/prefab/wall.prefab"},
+                            "nodeParent":2928,
+                            "label":"Image(wall)",
                             "isOpen":true,
                             "isDirectory":false,
                             "isAniNode":true,
                             "hasChild":false,
-                            "compId":2315,
+                            "compId":2929,
                             "child":[
                                 ]
                         }]
@@ -777,25 +777,25 @@
                 {
                     "x":30,
                     "type":"Box",
-                    "props":{"y":60,"x":600,"sort":1,"name":"item25","appendProps":"laya/pages/script/Brick.prop"},
+                    "props":{"y":90,"x":690,"sort":1,"presetID":1,"preset":"laya/assets/prefab/wall.prefab","name":"item25","anchorY":0.5,"anchorX":0.5},
                     "nodeParent":925,
                     "label":"Box(item25)",
                     "isOpen":false,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
-                    "compId":2316,
+                    "compId":2930,
                     "child":[
                         {
                             "type":"Image",
-                            "props":{"y":0,"x":0,"width":60,"skin":"game/walls.png","height":60},
-                            "nodeParent":2316,
-                            "label":"Image",
+                            "props":{"presetID":2,"preset":"laya/assets/prefab/wall.prefab"},
+                            "nodeParent":2930,
+                            "label":"Image(wall)",
                             "isOpen":true,
                             "isDirectory":false,
                             "isAniNode":true,
                             "hasChild":false,
-                            "compId":2317,
+                            "compId":2931,
                             "child":[
                                 ]
                         }]
@@ -803,25 +803,25 @@
                 {
                     "x":30,
                     "type":"Box",
-                    "props":{"y":60,"x":660,"sort":1,"name":"item26","appendProps":"laya/pages/script/Brick.prop"},
+                    "props":{"y":90,"x":750,"sort":1,"presetID":1,"preset":"laya/assets/prefab/wall.prefab","name":"item26","anchorY":0.5,"anchorX":0.5},
                     "nodeParent":925,
                     "label":"Box(item26)",
                     "isOpen":false,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
-                    "compId":2318,
+                    "compId":2932,
                     "child":[
                         {
                             "type":"Image",
-                            "props":{"y":0,"x":0,"width":60,"skin":"game/walls.png","height":60},
-                            "nodeParent":2318,
-                            "label":"Image",
+                            "props":{"presetID":2,"preset":"laya/assets/prefab/wall.prefab"},
+                            "nodeParent":2932,
+                            "label":"Image(wall)",
                             "isOpen":true,
                             "isDirectory":false,
                             "isAniNode":true,
                             "hasChild":false,
-                            "compId":2319,
+                            "compId":2933,
                             "child":[
                                 ]
                         }]
@@ -829,25 +829,25 @@
                 {
                     "x":30,
                     "type":"Box",
-                    "props":{"y":60,"x":720,"sort":1,"name":"item27","appendProps":"laya/pages/script/Brick.prop"},
+                    "props":{"y":90,"x":810,"sort":1,"presetID":1,"preset":"laya/assets/prefab/wall.prefab","name":"item27","anchorY":0.5,"anchorX":0.5},
                     "nodeParent":925,
                     "label":"Box(item27)",
                     "isOpen":false,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
-                    "compId":2320,
+                    "compId":2934,
                     "child":[
                         {
                             "type":"Image",
-                            "props":{"y":0,"x":0,"width":60,"skin":"game/walls.png","height":60},
-                            "nodeParent":2320,
-                            "label":"Image",
+                            "props":{"presetID":2,"preset":"laya/assets/prefab/wall.prefab"},
+                            "nodeParent":2934,
+                            "label":"Image(wall)",
                             "isOpen":true,
                             "isDirectory":false,
                             "isAniNode":true,
                             "hasChild":false,
-                            "compId":2321,
+                            "compId":2935,
                             "child":[
                                 ]
                         }]
@@ -855,25 +855,25 @@
                 {
                     "x":30,
                     "type":"Box",
-                    "props":{"y":60,"x":780,"sort":1,"name":"item28","appendProps":"laya/pages/script/Brick.prop"},
+                    "props":{"y":150,"x":30,"sort":1,"presetID":1,"preset":"laya/assets/prefab/wall.prefab","name":"item28","anchorY":0.5,"anchorX":0.5},
                     "nodeParent":925,
                     "label":"Box(item28)",
                     "isOpen":false,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
-                    "compId":2322,
+                    "compId":2936,
                     "child":[
                         {
                             "type":"Image",
-                            "props":{"y":0,"x":0,"width":60,"skin":"game/walls.png","height":60},
-                            "nodeParent":2322,
-                            "label":"Image",
+                            "props":{"presetID":2,"preset":"laya/assets/prefab/wall.prefab"},
+                            "nodeParent":2936,
+                            "label":"Image(wall)",
                             "isOpen":true,
                             "isDirectory":false,
                             "isAniNode":true,
                             "hasChild":false,
-                            "compId":2323,
+                            "compId":2937,
                             "child":[
                                 ]
                         }]
@@ -881,25 +881,25 @@
                 {
                     "x":30,
                     "type":"Box",
-                    "props":{"y":60,"x":840,"sort":1,"name":"item29","appendProps":"laya/pages/script/Brick.prop"},
+                    "props":{"y":150,"x":90,"sort":1,"presetID":1,"preset":"laya/assets/prefab/wall.prefab","name":"item29","anchorY":0.5,"anchorX":0.5},
                     "nodeParent":925,
                     "label":"Box(item29)",
                     "isOpen":false,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
-                    "compId":2324,
+                    "compId":2938,
                     "child":[
                         {
                             "type":"Image",
-                            "props":{"y":0,"x":0,"width":60,"skin":"game/walls.png","height":60},
-                            "nodeParent":2324,
-                            "label":"Image",
+                            "props":{"presetID":2,"preset":"laya/assets/prefab/wall.prefab"},
+                            "nodeParent":2938,
+                            "label":"Image(wall)",
                             "isOpen":true,
                             "isDirectory":false,
                             "isAniNode":true,
                             "hasChild":false,
-                            "compId":2325,
+                            "compId":2939,
                             "child":[
                                 ]
                         }]
@@ -907,25 +907,25 @@
                 {
                     "x":30,
                     "type":"Box",
-                    "props":{"y":120,"x":0,"sort":1,"name":"item30","appendProps":"laya/pages/script/Brick.prop"},
+                    "props":{"y":150,"x":150,"sort":1,"presetID":1,"preset":"laya/assets/prefab/wall.prefab","name":"item30","anchorY":0.5,"anchorX":0.5},
                     "nodeParent":925,
                     "label":"Box(item30)",
                     "isOpen":false,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
-                    "compId":2326,
+                    "compId":2940,
                     "child":[
                         {
                             "type":"Image",
-                            "props":{"y":0,"x":0,"width":60,"skin":"game/walls.png","height":60},
-                            "nodeParent":2326,
-                            "label":"Image",
+                            "props":{"presetID":2,"preset":"laya/assets/prefab/wall.prefab"},
+                            "nodeParent":2940,
+                            "label":"Image(wall)",
                             "isOpen":true,
                             "isDirectory":false,
                             "isAniNode":true,
                             "hasChild":false,
-                            "compId":2327,
+                            "compId":2941,
                             "child":[
                                 ]
                         }]
@@ -933,25 +933,25 @@
                 {
                     "x":30,
                     "type":"Box",
-                    "props":{"y":120,"x":60,"sort":1,"name":"item31","appendProps":"laya/pages/script/Brick.prop"},
+                    "props":{"y":150,"x":210,"sort":1,"presetID":1,"preset":"laya/assets/prefab/wall.prefab","name":"item31","anchorY":0.5,"anchorX":0.5},
                     "nodeParent":925,
                     "label":"Box(item31)",
                     "isOpen":false,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
-                    "compId":2328,
+                    "compId":2942,
                     "child":[
                         {
                             "type":"Image",
-                            "props":{"y":0,"x":0,"width":60,"skin":"game/walls.png","height":60},
-                            "nodeParent":2328,
-                            "label":"Image",
+                            "props":{"presetID":2,"preset":"laya/assets/prefab/wall.prefab"},
+                            "nodeParent":2942,
+                            "label":"Image(wall)",
                             "isOpen":true,
                             "isDirectory":false,
                             "isAniNode":true,
                             "hasChild":false,
-                            "compId":2329,
+                            "compId":2943,
                             "child":[
                                 ]
                         }]
@@ -959,25 +959,25 @@
                 {
                     "x":30,
                     "type":"Box",
-                    "props":{"y":120,"x":120,"sort":1,"name":"item32","appendProps":"laya/pages/script/Brick.prop"},
+                    "props":{"y":150,"x":270,"sort":1,"presetID":1,"preset":"laya/assets/prefab/wall.prefab","name":"item32","anchorY":0.5,"anchorX":0.5},
                     "nodeParent":925,
                     "label":"Box(item32)",
                     "isOpen":false,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
-                    "compId":2330,
+                    "compId":2944,
                     "child":[
                         {
                             "type":"Image",
-                            "props":{"y":0,"x":0,"width":60,"skin":"game/walls.png","height":60},
-                            "nodeParent":2330,
-                            "label":"Image",
+                            "props":{"presetID":2,"preset":"laya/assets/prefab/wall.prefab"},
+                            "nodeParent":2944,
+                            "label":"Image(wall)",
                             "isOpen":true,
                             "isDirectory":false,
                             "isAniNode":true,
                             "hasChild":false,
-                            "compId":2331,
+                            "compId":2945,
                             "child":[
                                 ]
                         }]
@@ -985,25 +985,51 @@
                 {
                     "x":30,
                     "type":"Box",
-                    "props":{"y":120,"x":240,"sort":1,"name":"item34","appendProps":"laya/pages/script/Brick.prop"},
+                    "props":{"y":150,"x":330,"sort":1,"presetID":1,"preset":"laya/assets/prefab/wall.prefab","name":"item33","anchorY":0.5,"anchorX":0.5},
+                    "nodeParent":925,
+                    "label":"Box(item33)",
+                    "isOpen":false,
+                    "isDirectory":true,
+                    "isAniNode":true,
+                    "hasChild":true,
+                    "compId":2946,
+                    "child":[
+                        {
+                            "type":"Image",
+                            "props":{"presetID":2,"preset":"laya/assets/prefab/wall.prefab"},
+                            "nodeParent":2946,
+                            "label":"Image(wall)",
+                            "isOpen":true,
+                            "isDirectory":false,
+                            "isAniNode":true,
+                            "hasChild":false,
+                            "compId":2947,
+                            "child":[
+                                ]
+                        }]
+                },
+                {
+                    "x":30,
+                    "type":"Box",
+                    "props":{"y":150,"x":390,"sort":1,"presetID":1,"preset":"laya/assets/prefab/wall.prefab","name":"item34","anchorY":0.5,"anchorX":0.5},
                     "nodeParent":925,
                     "label":"Box(item34)",
                     "isOpen":false,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
-                    "compId":2334,
+                    "compId":2948,
                     "child":[
                         {
                             "type":"Image",
-                            "props":{"y":0,"x":0,"width":60,"skin":"game/walls.png","height":60},
-                            "nodeParent":2334,
-                            "label":"Image",
+                            "props":{"presetID":2,"preset":"laya/assets/prefab/wall.prefab"},
+                            "nodeParent":2948,
+                            "label":"Image(wall)",
                             "isOpen":true,
                             "isDirectory":false,
                             "isAniNode":true,
                             "hasChild":false,
-                            "compId":2335,
+                            "compId":2949,
                             "child":[
                                 ]
                         }]
@@ -1011,25 +1037,25 @@
                 {
                     "x":30,
                     "type":"Box",
-                    "props":{"y":120,"x":300,"sort":1,"name":"item35","appendProps":"laya/pages/script/Brick.prop"},
+                    "props":{"y":150,"x":450,"sort":1,"presetID":1,"preset":"laya/assets/prefab/wall.prefab","name":"item35","anchorY":0.5,"anchorX":0.5},
                     "nodeParent":925,
                     "label":"Box(item35)",
                     "isOpen":false,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
-                    "compId":2336,
+                    "compId":2950,
                     "child":[
                         {
                             "type":"Image",
-                            "props":{"y":0,"x":0,"width":60,"skin":"game/walls.png","height":60},
-                            "nodeParent":2336,
-                            "label":"Image",
+                            "props":{"presetID":2,"preset":"laya/assets/prefab/wall.prefab"},
+                            "nodeParent":2950,
+                            "label":"Image(wall)",
                             "isOpen":true,
                             "isDirectory":false,
                             "isAniNode":true,
                             "hasChild":false,
-                            "compId":2337,
+                            "compId":2951,
                             "child":[
                                 ]
                         }]
@@ -1037,25 +1063,25 @@
                 {
                     "x":30,
                     "type":"Box",
-                    "props":{"y":120,"x":360,"sort":1,"name":"item36","appendProps":"laya/pages/script/Brick.prop"},
+                    "props":{"y":150,"x":510,"sort":1,"presetID":1,"preset":"laya/assets/prefab/wall.prefab","name":"item36","anchorY":0.5,"anchorX":0.5},
                     "nodeParent":925,
                     "label":"Box(item36)",
                     "isOpen":false,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
-                    "compId":2338,
+                    "compId":2952,
                     "child":[
                         {
                             "type":"Image",
-                            "props":{"y":0,"x":0,"width":60,"skin":"game/walls.png","height":60},
-                            "nodeParent":2338,
-                            "label":"Image",
+                            "props":{"presetID":2,"preset":"laya/assets/prefab/wall.prefab"},
+                            "nodeParent":2952,
+                            "label":"Image(wall)",
                             "isOpen":true,
                             "isDirectory":false,
                             "isAniNode":true,
                             "hasChild":false,
-                            "compId":2339,
+                            "compId":2953,
                             "child":[
                                 ]
                         }]
@@ -1063,25 +1089,25 @@
                 {
                     "x":30,
                     "type":"Box",
-                    "props":{"y":120,"x":420,"sort":1,"name":"item37","appendProps":"laya/pages/script/Brick.prop"},
+                    "props":{"y":150,"x":570,"sort":1,"presetID":1,"preset":"laya/assets/prefab/wall.prefab","name":"item37","anchorY":0.5,"anchorX":0.5},
                     "nodeParent":925,
                     "label":"Box(item37)",
                     "isOpen":false,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
-                    "compId":2340,
+                    "compId":2954,
                     "child":[
                         {
                             "type":"Image",
-                            "props":{"y":0,"x":0,"width":60,"skin":"game/walls.png","height":60},
-                            "nodeParent":2340,
-                            "label":"Image",
+                            "props":{"presetID":2,"preset":"laya/assets/prefab/wall.prefab"},
+                            "nodeParent":2954,
+                            "label":"Image(wall)",
                             "isOpen":true,
                             "isDirectory":false,
                             "isAniNode":true,
                             "hasChild":false,
-                            "compId":2341,
+                            "compId":2955,
                             "child":[
                                 ]
                         }]
@@ -1089,25 +1115,25 @@
                 {
                     "x":30,
                     "type":"Box",
-                    "props":{"y":120,"x":480,"sort":1,"name":"item38","appendProps":"laya/pages/script/Brick.prop"},
+                    "props":{"y":150,"x":630,"sort":1,"presetID":1,"preset":"laya/assets/prefab/wall.prefab","name":"item38","anchorY":0.5,"anchorX":0.5},
                     "nodeParent":925,
                     "label":"Box(item38)",
                     "isOpen":false,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
-                    "compId":2342,
+                    "compId":2956,
                     "child":[
                         {
                             "type":"Image",
-                            "props":{"y":0,"x":0,"width":60,"skin":"game/walls.png","height":60},
-                            "nodeParent":2342,
-                            "label":"Image",
+                            "props":{"presetID":2,"preset":"laya/assets/prefab/wall.prefab"},
+                            "nodeParent":2956,
+                            "label":"Image(wall)",
                             "isOpen":true,
                             "isDirectory":false,
                             "isAniNode":true,
                             "hasChild":false,
-                            "compId":2343,
+                            "compId":2957,
                             "child":[
                                 ]
                         }]
@@ -1115,25 +1141,51 @@
                 {
                     "x":30,
                     "type":"Box",
-                    "props":{"y":120,"x":600,"sort":1,"name":"item40","appendProps":"laya/pages/script/Brick.prop"},
+                    "props":{"y":150,"x":690,"sort":1,"presetID":1,"preset":"laya/assets/prefab/wall.prefab","name":"item39","anchorY":0.5,"anchorX":0.5},
+                    "nodeParent":925,
+                    "label":"Box(item39)",
+                    "isOpen":false,
+                    "isDirectory":true,
+                    "isAniNode":true,
+                    "hasChild":true,
+                    "compId":2958,
+                    "child":[
+                        {
+                            "type":"Image",
+                            "props":{"presetID":2,"preset":"laya/assets/prefab/wall.prefab"},
+                            "nodeParent":2958,
+                            "label":"Image(wall)",
+                            "isOpen":true,
+                            "isDirectory":false,
+                            "isAniNode":true,
+                            "hasChild":false,
+                            "compId":2959,
+                            "child":[
+                                ]
+                        }]
+                },
+                {
+                    "x":30,
+                    "type":"Box",
+                    "props":{"y":150,"x":750,"sort":1,"presetID":1,"preset":"laya/assets/prefab/wall.prefab","name":"item40","anchorY":0.5,"anchorX":0.5},
                     "nodeParent":925,
                     "label":"Box(item40)",
                     "isOpen":false,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
-                    "compId":2346,
+                    "compId":2960,
                     "child":[
                         {
                             "type":"Image",
-                            "props":{"y":0,"x":0,"width":60,"skin":"game/walls.png","height":60},
-                            "nodeParent":2346,
-                            "label":"Image",
+                            "props":{"presetID":2,"preset":"laya/assets/prefab/wall.prefab"},
+                            "nodeParent":2960,
+                            "label":"Image(wall)",
                             "isOpen":true,
                             "isDirectory":false,
                             "isAniNode":true,
                             "hasChild":false,
-                            "compId":2347,
+                            "compId":2961,
                             "child":[
                                 ]
                         }]
@@ -1141,25 +1193,25 @@
                 {
                     "x":30,
                     "type":"Box",
-                    "props":{"y":120,"x":660,"sort":1,"name":"item41","appendProps":"laya/pages/script/Brick.prop"},
+                    "props":{"y":150,"x":810,"sort":1,"presetID":1,"preset":"laya/assets/prefab/wall.prefab","name":"item41","anchorY":0.5,"anchorX":0.5},
                     "nodeParent":925,
                     "label":"Box(item41)",
                     "isOpen":false,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
-                    "compId":2348,
+                    "compId":2962,
                     "child":[
                         {
                             "type":"Image",
-                            "props":{"y":0,"x":0,"width":60,"skin":"game/walls.png","height":60},
-                            "nodeParent":2348,
-                            "label":"Image",
+                            "props":{"presetID":2,"preset":"laya/assets/prefab/wall.prefab"},
+                            "nodeParent":2962,
+                            "label":"Image(wall)",
                             "isOpen":true,
                             "isDirectory":false,
                             "isAniNode":true,
                             "hasChild":false,
-                            "compId":2349,
+                            "compId":2963,
                             "child":[
                                 ]
                         }]
@@ -1167,25 +1219,25 @@
                 {
                     "x":30,
                     "type":"Box",
-                    "props":{"y":120,"x":720,"sort":1,"name":"item42","appendProps":"laya/pages/script/Brick.prop"},
+                    "props":{"y":210,"x":30,"sort":1,"presetID":1,"preset":"laya/assets/prefab/wall.prefab","name":"item42","anchorY":0.5,"anchorX":0.5},
                     "nodeParent":925,
                     "label":"Box(item42)",
                     "isOpen":false,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
-                    "compId":2350,
+                    "compId":2964,
                     "child":[
                         {
                             "type":"Image",
-                            "props":{"y":0,"x":0,"width":60,"skin":"game/walls.png","height":60},
-                            "nodeParent":2350,
-                            "label":"Image",
+                            "props":{"presetID":2,"preset":"laya/assets/prefab/wall.prefab"},
+                            "nodeParent":2964,
+                            "label":"Image(wall)",
                             "isOpen":true,
                             "isDirectory":false,
                             "isAniNode":true,
                             "hasChild":false,
-                            "compId":2351,
+                            "compId":2965,
                             "child":[
                                 ]
                         }]
@@ -1193,25 +1245,25 @@
                 {
                     "x":30,
                     "type":"Box",
-                    "props":{"y":120,"x":780,"sort":1,"name":"item43","appendProps":"laya/pages/script/Brick.prop"},
+                    "props":{"y":210,"x":90,"sort":1,"presetID":1,"preset":"laya/assets/prefab/wall.prefab","name":"item43","anchorY":0.5,"anchorX":0.5},
                     "nodeParent":925,
                     "label":"Box(item43)",
                     "isOpen":false,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
-                    "compId":2352,
+                    "compId":2966,
                     "child":[
                         {
                             "type":"Image",
-                            "props":{"y":0,"x":0,"width":60,"skin":"game/walls.png","height":60},
-                            "nodeParent":2352,
-                            "label":"Image",
+                            "props":{"presetID":2,"preset":"laya/assets/prefab/wall.prefab"},
+                            "nodeParent":2966,
+                            "label":"Image(wall)",
                             "isOpen":true,
                             "isDirectory":false,
                             "isAniNode":true,
                             "hasChild":false,
-                            "compId":2353,
+                            "compId":2967,
                             "child":[
                                 ]
                         }]
@@ -1219,25 +1271,25 @@
                 {
                     "x":30,
                     "type":"Box",
-                    "props":{"y":120,"x":840,"sort":1,"name":"item44","appendProps":"laya/pages/script/Brick.prop"},
+                    "props":{"y":210,"x":150,"sort":1,"presetID":1,"preset":"laya/assets/prefab/wall.prefab","name":"item44","anchorY":0.5,"anchorX":0.5},
                     "nodeParent":925,
                     "label":"Box(item44)",
                     "isOpen":false,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
-                    "compId":2354,
+                    "compId":2968,
                     "child":[
                         {
                             "type":"Image",
-                            "props":{"y":0,"x":0,"width":60,"skin":"game/walls.png","height":60},
-                            "nodeParent":2354,
-                            "label":"Image",
+                            "props":{"presetID":2,"preset":"laya/assets/prefab/wall.prefab"},
+                            "nodeParent":2968,
+                            "label":"Image(wall)",
                             "isOpen":true,
                             "isDirectory":false,
                             "isAniNode":true,
                             "hasChild":false,
-                            "compId":2355,
+                            "compId":2969,
                             "child":[
                                 ]
                         }]
@@ -1245,129 +1297,25 @@
                 {
                     "x":30,
                     "type":"Box",
-                    "props":{"y":180,"x":0,"sort":1,"name":"item45","appendProps":"laya/pages/script/Brick.prop"},
-                    "nodeParent":925,
-                    "label":"Box(item45)",
-                    "isOpen":false,
-                    "isDirectory":true,
-                    "isAniNode":true,
-                    "hasChild":true,
-                    "compId":2356,
-                    "child":[
-                        {
-                            "type":"Image",
-                            "props":{"y":0,"x":0,"width":60,"skin":"game/walls.png","height":60},
-                            "nodeParent":2356,
-                            "label":"Image",
-                            "isOpen":true,
-                            "isDirectory":false,
-                            "isAniNode":true,
-                            "hasChild":false,
-                            "compId":2357,
-                            "child":[
-                                ]
-                        }]
-                },
-                {
-                    "x":30,
-                    "type":"Box",
-                    "props":{"y":180,"x":60,"sort":1,"name":"item46","appendProps":"laya/pages/script/Brick.prop"},
-                    "nodeParent":925,
-                    "label":"Box(item46)",
-                    "isOpen":false,
-                    "isDirectory":true,
-                    "isAniNode":true,
-                    "hasChild":true,
-                    "compId":2358,
-                    "child":[
-                        {
-                            "type":"Image",
-                            "props":{"y":0,"x":0,"width":60,"skin":"game/walls.png","height":60},
-                            "nodeParent":2358,
-                            "label":"Image",
-                            "isOpen":true,
-                            "isDirectory":false,
-                            "isAniNode":true,
-                            "hasChild":false,
-                            "compId":2359,
-                            "child":[
-                                ]
-                        }]
-                },
-                {
-                    "x":30,
-                    "type":"Box",
-                    "props":{"y":180,"x":120,"sort":1,"name":"item47","appendProps":"laya/pages/script/Brick.prop"},
-                    "nodeParent":925,
-                    "label":"Box(item47)",
-                    "isOpen":false,
-                    "isDirectory":true,
-                    "isAniNode":true,
-                    "hasChild":true,
-                    "compId":2360,
-                    "child":[
-                        {
-                            "type":"Image",
-                            "props":{"y":0,"x":0,"width":60,"skin":"game/walls.png","height":60},
-                            "nodeParent":2360,
-                            "label":"Image",
-                            "isOpen":true,
-                            "isDirectory":false,
-                            "isAniNode":true,
-                            "hasChild":false,
-                            "compId":2361,
-                            "child":[
-                                ]
-                        }]
-                },
-                {
-                    "x":30,
-                    "type":"Box",
-                    "props":{"y":180,"x":240,"sort":1,"name":"item49","appendProps":"laya/pages/script/Brick.prop"},
-                    "nodeParent":925,
-                    "label":"Box(item49)",
-                    "isOpen":false,
-                    "isDirectory":true,
-                    "isAniNode":true,
-                    "hasChild":true,
-                    "compId":2364,
-                    "child":[
-                        {
-                            "type":"Image",
-                            "props":{"y":0,"x":0,"width":60,"skin":"game/walls.png","height":60},
-                            "nodeParent":2364,
-                            "label":"Image",
-                            "isOpen":true,
-                            "isDirectory":false,
-                            "isAniNode":true,
-                            "hasChild":false,
-                            "compId":2365,
-                            "child":[
-                                ]
-                        }]
-                },
-                {
-                    "x":30,
-                    "type":"Box",
-                    "props":{"y":180,"x":300,"sort":1,"name":"item50","appendProps":"laya/pages/script/Brick.prop"},
+                    "props":{"y":210,"x":510,"sort":1,"presetID":1,"preset":"laya/assets/prefab/wall.prefab","name":"item50","anchorY":0.5,"anchorX":0.5},
                     "nodeParent":925,
                     "label":"Box(item50)",
                     "isOpen":false,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
-                    "compId":2366,
+                    "compId":2980,
                     "child":[
                         {
                             "type":"Image",
-                            "props":{"y":0,"x":0,"width":60,"skin":"game/walls.png","height":60},
-                            "nodeParent":2366,
-                            "label":"Image",
+                            "props":{"presetID":2,"preset":"laya/assets/prefab/wall.prefab"},
+                            "nodeParent":2980,
+                            "label":"Image(wall)",
                             "isOpen":true,
                             "isDirectory":false,
                             "isAniNode":true,
                             "hasChild":false,
-                            "compId":2367,
+                            "compId":2981,
                             "child":[
                                 ]
                         }]
@@ -1375,25 +1323,25 @@
                 {
                     "x":30,
                     "type":"Box",
-                    "props":{"y":180,"x":360,"sort":1,"name":"item51","appendProps":"laya/pages/script/Brick.prop"},
+                    "props":{"y":210,"x":570,"sort":1,"presetID":1,"preset":"laya/assets/prefab/wall.prefab","name":"item51","anchorY":0.5,"anchorX":0.5},
                     "nodeParent":925,
                     "label":"Box(item51)",
                     "isOpen":false,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
-                    "compId":2368,
+                    "compId":2982,
                     "child":[
                         {
                             "type":"Image",
-                            "props":{"y":0,"x":0,"width":60,"skin":"game/walls.png","height":60},
-                            "nodeParent":2368,
-                            "label":"Image",
+                            "props":{"presetID":2,"preset":"laya/assets/prefab/wall.prefab"},
+                            "nodeParent":2982,
+                            "label":"Image(wall)",
                             "isOpen":true,
                             "isDirectory":false,
                             "isAniNode":true,
                             "hasChild":false,
-                            "compId":2369,
+                            "compId":2983,
                             "child":[
                                 ]
                         }]
@@ -1401,25 +1349,25 @@
                 {
                     "x":30,
                     "type":"Box",
-                    "props":{"y":180,"x":420,"sort":1,"name":"item52","appendProps":"laya/pages/script/Brick.prop"},
+                    "props":{"y":210,"x":630,"sort":1,"presetID":1,"preset":"laya/assets/prefab/wall.prefab","name":"item52","anchorY":0.5,"anchorX":0.5},
                     "nodeParent":925,
                     "label":"Box(item52)",
                     "isOpen":false,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
-                    "compId":2370,
+                    "compId":2984,
                     "child":[
                         {
                             "type":"Image",
-                            "props":{"y":0,"x":0,"width":60,"skin":"game/walls.png","height":60},
-                            "nodeParent":2370,
-                            "label":"Image",
+                            "props":{"presetID":2,"preset":"laya/assets/prefab/wall.prefab"},
+                            "nodeParent":2984,
+                            "label":"Image(wall)",
                             "isOpen":true,
                             "isDirectory":false,
                             "isAniNode":true,
                             "hasChild":false,
-                            "compId":2371,
+                            "compId":2985,
                             "child":[
                                 ]
                         }]
@@ -1427,25 +1375,25 @@
                 {
                     "x":30,
                     "type":"Box",
-                    "props":{"y":180,"x":480,"sort":1,"name":"item53","appendProps":"laya/pages/script/Brick.prop"},
+                    "props":{"y":210,"x":690,"sort":1,"presetID":1,"preset":"laya/assets/prefab/wall.prefab","name":"item53","anchorY":0.5,"anchorX":0.5},
                     "nodeParent":925,
                     "label":"Box(item53)",
                     "isOpen":false,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
-                    "compId":2372,
+                    "compId":2986,
                     "child":[
                         {
                             "type":"Image",
-                            "props":{"y":0,"x":0,"width":60,"skin":"game/walls.png","height":60},
-                            "nodeParent":2372,
-                            "label":"Image",
+                            "props":{"presetID":2,"preset":"laya/assets/prefab/wall.prefab"},
+                            "nodeParent":2986,
+                            "label":"Image(wall)",
                             "isOpen":true,
                             "isDirectory":false,
                             "isAniNode":true,
                             "hasChild":false,
-                            "compId":2373,
+                            "compId":2987,
                             "child":[
                                 ]
                         }]
@@ -1453,25 +1401,51 @@
                 {
                     "x":30,
                     "type":"Box",
-                    "props":{"y":180,"x":600,"sort":1,"name":"item55","appendProps":"laya/pages/script/Brick.prop"},
+                    "props":{"y":210,"x":750,"sort":1,"presetID":1,"preset":"laya/assets/prefab/wall.prefab","name":"item54","anchorY":0.5,"anchorX":0.5},
+                    "nodeParent":925,
+                    "label":"Box(item54)",
+                    "isOpen":false,
+                    "isDirectory":true,
+                    "isAniNode":true,
+                    "hasChild":true,
+                    "compId":2988,
+                    "child":[
+                        {
+                            "type":"Image",
+                            "props":{"presetID":2,"preset":"laya/assets/prefab/wall.prefab"},
+                            "nodeParent":2988,
+                            "label":"Image(wall)",
+                            "isOpen":true,
+                            "isDirectory":false,
+                            "isAniNode":true,
+                            "hasChild":false,
+                            "compId":2989,
+                            "child":[
+                                ]
+                        }]
+                },
+                {
+                    "x":30,
+                    "type":"Box",
+                    "props":{"y":210,"x":810,"sort":1,"presetID":1,"preset":"laya/assets/prefab/wall.prefab","name":"item55","anchorY":0.5,"anchorX":0.5},
                     "nodeParent":925,
                     "label":"Box(item55)",
                     "isOpen":false,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
-                    "compId":2376,
+                    "compId":2990,
                     "child":[
                         {
                             "type":"Image",
-                            "props":{"y":0,"x":0,"width":60,"skin":"game/walls.png","height":60},
-                            "nodeParent":2376,
-                            "label":"Image",
+                            "props":{"presetID":2,"preset":"laya/assets/prefab/wall.prefab"},
+                            "nodeParent":2990,
+                            "label":"Image(wall)",
                             "isOpen":true,
                             "isDirectory":false,
                             "isAniNode":true,
                             "hasChild":false,
-                            "compId":2377,
+                            "compId":2991,
                             "child":[
                                 ]
                         }]
@@ -1479,25 +1453,25 @@
                 {
                     "x":30,
                     "type":"Box",
-                    "props":{"y":180,"x":660,"sort":1,"name":"item56","appendProps":"laya/pages/script/Brick.prop"},
+                    "props":{"y":270,"x":30,"sort":1,"presetID":1,"preset":"laya/assets/prefab/wall.prefab","name":"item56","anchorY":0.5,"anchorX":0.5},
                     "nodeParent":925,
                     "label":"Box(item56)",
                     "isOpen":false,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
-                    "compId":2378,
+                    "compId":2992,
                     "child":[
                         {
                             "type":"Image",
-                            "props":{"y":0,"x":0,"width":60,"skin":"game/walls.png","height":60},
-                            "nodeParent":2378,
-                            "label":"Image",
+                            "props":{"presetID":2,"preset":"laya/assets/prefab/wall.prefab"},
+                            "nodeParent":2992,
+                            "label":"Image(wall)",
                             "isOpen":true,
                             "isDirectory":false,
                             "isAniNode":true,
                             "hasChild":false,
-                            "compId":2379,
+                            "compId":2993,
                             "child":[
                                 ]
                         }]
@@ -1505,25 +1479,25 @@
                 {
                     "x":30,
                     "type":"Box",
-                    "props":{"y":180,"x":720,"sort":1,"name":"item57","appendProps":"laya/pages/script/Brick.prop"},
+                    "props":{"y":270,"x":90,"sort":1,"presetID":1,"preset":"laya/assets/prefab/wall.prefab","name":"item57","anchorY":0.5,"anchorX":0.5},
                     "nodeParent":925,
                     "label":"Box(item57)",
                     "isOpen":false,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
-                    "compId":2380,
+                    "compId":2994,
                     "child":[
                         {
                             "type":"Image",
-                            "props":{"y":0,"x":0,"width":60,"skin":"game/walls.png","height":60},
-                            "nodeParent":2380,
-                            "label":"Image",
+                            "props":{"presetID":2,"preset":"laya/assets/prefab/wall.prefab"},
+                            "nodeParent":2994,
+                            "label":"Image(wall)",
                             "isOpen":true,
                             "isDirectory":false,
                             "isAniNode":true,
                             "hasChild":false,
-                            "compId":2381,
+                            "compId":2995,
                             "child":[
                                 ]
                         }]
@@ -1531,25 +1505,25 @@
                 {
                     "x":30,
                     "type":"Box",
-                    "props":{"y":180,"x":780,"sort":1,"name":"item58","appendProps":"laya/pages/script/Brick.prop"},
+                    "props":{"y":270,"x":150,"sort":1,"presetID":1,"preset":"laya/assets/prefab/wall.prefab","name":"item58","anchorY":0.5,"anchorX":0.5},
                     "nodeParent":925,
                     "label":"Box(item58)",
                     "isOpen":false,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
-                    "compId":2382,
+                    "compId":2996,
                     "child":[
                         {
                             "type":"Image",
-                            "props":{"y":0,"x":0,"width":60,"skin":"game/walls.png","height":60},
-                            "nodeParent":2382,
-                            "label":"Image",
+                            "props":{"presetID":2,"preset":"laya/assets/prefab/wall.prefab"},
+                            "nodeParent":2996,
+                            "label":"Image(wall)",
                             "isOpen":true,
                             "isDirectory":false,
                             "isAniNode":true,
                             "hasChild":false,
-                            "compId":2383,
+                            "compId":2997,
                             "child":[
                                 ]
                         }]
@@ -1557,51 +1531,25 @@
                 {
                     "x":30,
                     "type":"Box",
-                    "props":{"y":180,"x":840,"sort":1,"name":"item59","appendProps":"laya/pages/script/Brick.prop"},
-                    "nodeParent":925,
-                    "label":"Box(item59)",
-                    "isOpen":false,
-                    "isDirectory":true,
-                    "isAniNode":true,
-                    "hasChild":true,
-                    "compId":2384,
-                    "child":[
-                        {
-                            "type":"Image",
-                            "props":{"y":0,"x":0,"width":60,"skin":"game/walls.png","height":60},
-                            "nodeParent":2384,
-                            "label":"Image",
-                            "isOpen":true,
-                            "isDirectory":false,
-                            "isAniNode":true,
-                            "hasChild":false,
-                            "compId":2385,
-                            "child":[
-                                ]
-                        }]
-                },
-                {
-                    "x":30,
-                    "type":"Box",
-                    "props":{"y":240,"x":0,"sort":1,"name":"item60","appendProps":"laya/pages/script/Brick.prop"},
+                    "props":{"y":270,"x":270,"sort":1,"presetID":1,"preset":"laya/assets/prefab/wall.prefab","name":"item60","anchorY":0.5,"anchorX":0.5},
                     "nodeParent":925,
                     "label":"Box(item60)",
                     "isOpen":false,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
-                    "compId":2386,
+                    "compId":3000,
                     "child":[
                         {
                             "type":"Image",
-                            "props":{"y":0,"x":0,"width":60,"skin":"game/walls.png","height":60},
-                            "nodeParent":2386,
-                            "label":"Image",
+                            "props":{"presetID":2,"preset":"laya/assets/prefab/wall.prefab"},
+                            "nodeParent":3000,
+                            "label":"Image(wall)",
                             "isOpen":true,
                             "isDirectory":false,
                             "isAniNode":true,
                             "hasChild":false,
-                            "compId":2387,
+                            "compId":3001,
                             "child":[
                                 ]
                         }]
@@ -1609,25 +1557,25 @@
                 {
                     "x":30,
                     "type":"Box",
-                    "props":{"y":240,"x":60,"sort":1,"name":"item61","appendProps":"laya/pages/script/Brick.prop"},
+                    "props":{"y":270,"x":330,"sort":1,"presetID":1,"preset":"laya/assets/prefab/wall.prefab","name":"item61","anchorY":0.5,"anchorX":0.5},
                     "nodeParent":925,
                     "label":"Box(item61)",
                     "isOpen":false,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
-                    "compId":2388,
+                    "compId":3002,
                     "child":[
                         {
                             "type":"Image",
-                            "props":{"y":0,"x":0,"width":60,"skin":"game/walls.png","height":60},
-                            "nodeParent":2388,
-                            "label":"Image",
+                            "props":{"presetID":2,"preset":"laya/assets/prefab/wall.prefab"},
+                            "nodeParent":3002,
+                            "label":"Image(wall)",
                             "isOpen":true,
                             "isDirectory":false,
                             "isAniNode":true,
                             "hasChild":false,
-                            "compId":2389,
+                            "compId":3003,
                             "child":[
                                 ]
                         }]
@@ -1635,25 +1583,25 @@
                 {
                     "x":30,
                     "type":"Box",
-                    "props":{"y":240,"x":120,"sort":1,"name":"item62","appendProps":"laya/pages/script/Brick.prop"},
+                    "props":{"y":270,"x":390,"sort":1,"presetID":1,"preset":"laya/assets/prefab/wall.prefab","name":"item62","anchorY":0.5,"anchorX":0.5},
                     "nodeParent":925,
                     "label":"Box(item62)",
                     "isOpen":false,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
-                    "compId":2390,
+                    "compId":3004,
                     "child":[
                         {
                             "type":"Image",
-                            "props":{"y":0,"x":0,"width":60,"skin":"game/walls.png","height":60},
-                            "nodeParent":2390,
-                            "label":"Image",
+                            "props":{"presetID":2,"preset":"laya/assets/prefab/wall.prefab"},
+                            "nodeParent":3004,
+                            "label":"Image(wall)",
                             "isOpen":true,
                             "isDirectory":false,
                             "isAniNode":true,
                             "hasChild":false,
-                            "compId":2391,
+                            "compId":3005,
                             "child":[
                                 ]
                         }]
@@ -1661,25 +1609,25 @@
                 {
                     "x":30,
                     "type":"Box",
-                    "props":{"y":240,"x":240,"sort":1,"name":"item64","appendProps":"laya/pages/script/Brick.prop"},
+                    "props":{"y":270,"x":510,"sort":1,"presetID":1,"preset":"laya/assets/prefab/wall.prefab","name":"item64","anchorY":0.5,"anchorX":0.5},
                     "nodeParent":925,
                     "label":"Box(item64)",
                     "isOpen":false,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
-                    "compId":2394,
+                    "compId":3008,
                     "child":[
                         {
                             "type":"Image",
-                            "props":{"y":0,"x":0,"width":60,"skin":"game/walls.png","height":60},
-                            "nodeParent":2394,
-                            "label":"Image",
+                            "props":{"presetID":2,"preset":"laya/assets/prefab/wall.prefab"},
+                            "nodeParent":3008,
+                            "label":"Image(wall)",
                             "isOpen":true,
                             "isDirectory":false,
                             "isAniNode":true,
                             "hasChild":false,
-                            "compId":2395,
+                            "compId":3009,
                             "child":[
                                 ]
                         }]
@@ -1687,25 +1635,25 @@
                 {
                     "x":30,
                     "type":"Box",
-                    "props":{"y":240,"x":300,"sort":1,"name":"item65","appendProps":"laya/pages/script/Brick.prop"},
+                    "props":{"y":270,"x":570,"sort":1,"presetID":1,"preset":"laya/assets/prefab/wall.prefab","name":"item65","anchorY":0.5,"anchorX":0.5},
                     "nodeParent":925,
                     "label":"Box(item65)",
                     "isOpen":false,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
-                    "compId":2396,
+                    "compId":3010,
                     "child":[
                         {
                             "type":"Image",
-                            "props":{"y":0,"x":0,"width":60,"skin":"game/walls.png","height":60},
-                            "nodeParent":2396,
-                            "label":"Image",
+                            "props":{"presetID":2,"preset":"laya/assets/prefab/wall.prefab"},
+                            "nodeParent":3010,
+                            "label":"Image(wall)",
                             "isOpen":true,
                             "isDirectory":false,
                             "isAniNode":true,
                             "hasChild":false,
-                            "compId":2397,
+                            "compId":3011,
                             "child":[
                                 ]
                         }]
@@ -1713,25 +1661,25 @@
                 {
                     "x":30,
                     "type":"Box",
-                    "props":{"y":240,"x":360,"sort":1,"name":"item66","appendProps":"laya/pages/script/Brick.prop"},
+                    "props":{"y":270,"x":630,"sort":1,"presetID":1,"preset":"laya/assets/prefab/wall.prefab","name":"item66","anchorY":0.5,"anchorX":0.5},
                     "nodeParent":925,
                     "label":"Box(item66)",
                     "isOpen":false,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
-                    "compId":2398,
+                    "compId":3012,
                     "child":[
                         {
                             "type":"Image",
-                            "props":{"y":0,"x":0,"width":60,"skin":"game/walls.png","height":60},
-                            "nodeParent":2398,
-                            "label":"Image",
+                            "props":{"presetID":2,"preset":"laya/assets/prefab/wall.prefab"},
+                            "nodeParent":3012,
+                            "label":"Image(wall)",
                             "isOpen":true,
                             "isDirectory":false,
                             "isAniNode":true,
                             "hasChild":false,
-                            "compId":2399,
+                            "compId":3013,
                             "child":[
                                 ]
                         }]
@@ -1739,25 +1687,25 @@
                 {
                     "x":30,
                     "type":"Box",
-                    "props":{"y":240,"x":420,"sort":1,"name":"item67","appendProps":"laya/pages/script/Brick.prop"},
+                    "props":{"y":270,"x":690,"sort":1,"presetID":1,"preset":"laya/assets/prefab/wall.prefab","name":"item67","anchorY":0.5,"anchorX":0.5},
                     "nodeParent":925,
                     "label":"Box(item67)",
                     "isOpen":false,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
-                    "compId":2400,
+                    "compId":3014,
                     "child":[
                         {
                             "type":"Image",
-                            "props":{"y":0,"x":0,"width":60,"skin":"game/walls.png","height":60},
-                            "nodeParent":2400,
-                            "label":"Image",
+                            "props":{"presetID":2,"preset":"laya/assets/prefab/wall.prefab"},
+                            "nodeParent":3014,
+                            "label":"Image(wall)",
                             "isOpen":true,
                             "isDirectory":false,
                             "isAniNode":true,
                             "hasChild":false,
-                            "compId":2401,
+                            "compId":3015,
                             "child":[
                                 ]
                         }]
@@ -1765,25 +1713,25 @@
                 {
                     "x":30,
                     "type":"Box",
-                    "props":{"y":240,"x":480,"sort":1,"name":"item68","appendProps":"laya/pages/script/Brick.prop"},
+                    "props":{"y":270,"x":750,"sort":1,"presetID":1,"preset":"laya/assets/prefab/wall.prefab","name":"item68","anchorY":0.5,"anchorX":0.5},
                     "nodeParent":925,
                     "label":"Box(item68)",
                     "isOpen":false,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
-                    "compId":2402,
+                    "compId":3016,
                     "child":[
                         {
                             "type":"Image",
-                            "props":{"y":0,"x":0,"width":60,"skin":"game/walls.png","height":60},
-                            "nodeParent":2402,
-                            "label":"Image",
+                            "props":{"presetID":2,"preset":"laya/assets/prefab/wall.prefab"},
+                            "nodeParent":3016,
+                            "label":"Image(wall)",
                             "isOpen":true,
                             "isDirectory":false,
                             "isAniNode":true,
                             "hasChild":false,
-                            "compId":2403,
+                            "compId":3017,
                             "child":[
                                 ]
                         }]
@@ -1791,25 +1739,51 @@
                 {
                     "x":30,
                     "type":"Box",
-                    "props":{"y":240,"x":600,"sort":1,"name":"item70","appendProps":"laya/pages/script/Brick.prop"},
+                    "props":{"y":270,"x":810,"sort":1,"presetID":1,"preset":"laya/assets/prefab/wall.prefab","name":"item69","anchorY":0.5,"anchorX":0.5},
+                    "nodeParent":925,
+                    "label":"Box(item69)",
+                    "isOpen":false,
+                    "isDirectory":true,
+                    "isAniNode":true,
+                    "hasChild":true,
+                    "compId":3018,
+                    "child":[
+                        {
+                            "type":"Image",
+                            "props":{"presetID":2,"preset":"laya/assets/prefab/wall.prefab"},
+                            "nodeParent":3018,
+                            "label":"Image(wall)",
+                            "isOpen":true,
+                            "isDirectory":false,
+                            "isAniNode":true,
+                            "hasChild":false,
+                            "compId":3019,
+                            "child":[
+                                ]
+                        }]
+                },
+                {
+                    "x":30,
+                    "type":"Box",
+                    "props":{"y":330,"x":30,"sort":1,"presetID":1,"preset":"laya/assets/prefab/wall.prefab","name":"item70","anchorY":0.5,"anchorX":0.5},
                     "nodeParent":925,
                     "label":"Box(item70)",
                     "isOpen":false,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
-                    "compId":2406,
+                    "compId":3020,
                     "child":[
                         {
                             "type":"Image",
-                            "props":{"y":0,"x":0,"width":60,"skin":"game/walls.png","height":60},
-                            "nodeParent":2406,
-                            "label":"Image",
+                            "props":{"presetID":2,"preset":"laya/assets/prefab/wall.prefab"},
+                            "nodeParent":3020,
+                            "label":"Image(wall)",
                             "isOpen":true,
                             "isDirectory":false,
                             "isAniNode":true,
                             "hasChild":false,
-                            "compId":2407,
+                            "compId":3021,
                             "child":[
                                 ]
                         }]
@@ -1817,25 +1791,25 @@
                 {
                     "x":30,
                     "type":"Box",
-                    "props":{"y":240,"x":660,"sort":1,"name":"item71","appendProps":"laya/pages/script/Brick.prop"},
+                    "props":{"y":330,"x":90,"sort":1,"presetID":1,"preset":"laya/assets/prefab/wall.prefab","name":"item71","anchorY":0.5,"anchorX":0.5},
                     "nodeParent":925,
                     "label":"Box(item71)",
                     "isOpen":false,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
-                    "compId":2408,
+                    "compId":3022,
                     "child":[
                         {
                             "type":"Image",
-                            "props":{"y":0,"x":0,"width":60,"skin":"game/walls.png","height":60},
-                            "nodeParent":2408,
-                            "label":"Image",
+                            "props":{"presetID":2,"preset":"laya/assets/prefab/wall.prefab"},
+                            "nodeParent":3022,
+                            "label":"Image(wall)",
                             "isOpen":true,
                             "isDirectory":false,
                             "isAniNode":true,
                             "hasChild":false,
-                            "compId":2409,
+                            "compId":3023,
                             "child":[
                                 ]
                         }]
@@ -1843,25 +1817,25 @@
                 {
                     "x":30,
                     "type":"Box",
-                    "props":{"y":240,"x":720,"sort":1,"name":"item72","appendProps":"laya/pages/script/Brick.prop"},
+                    "props":{"y":330,"x":150,"sort":1,"presetID":1,"preset":"laya/assets/prefab/wall.prefab","name":"item72","anchorY":0.5,"anchorX":0.5},
                     "nodeParent":925,
                     "label":"Box(item72)",
                     "isOpen":false,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
-                    "compId":2410,
+                    "compId":3024,
                     "child":[
                         {
                             "type":"Image",
-                            "props":{"y":0,"x":0,"width":60,"skin":"game/walls.png","height":60},
-                            "nodeParent":2410,
-                            "label":"Image",
+                            "props":{"presetID":2,"preset":"laya/assets/prefab/wall.prefab"},
+                            "nodeParent":3024,
+                            "label":"Image(wall)",
                             "isOpen":true,
                             "isDirectory":false,
                             "isAniNode":true,
                             "hasChild":false,
-                            "compId":2411,
+                            "compId":3025,
                             "child":[
                                 ]
                         }]
@@ -1869,51 +1843,25 @@
                 {
                     "x":30,
                     "type":"Box",
-                    "props":{"y":240,"x":780,"sort":1,"name":"item73","appendProps":"laya/pages/script/Brick.prop"},
-                    "nodeParent":925,
-                    "label":"Box(item73)",
-                    "isOpen":false,
-                    "isDirectory":true,
-                    "isAniNode":true,
-                    "hasChild":true,
-                    "compId":2412,
-                    "child":[
-                        {
-                            "type":"Image",
-                            "props":{"y":0,"x":0,"width":60,"skin":"game/walls.png","height":60},
-                            "nodeParent":2412,
-                            "label":"Image",
-                            "isOpen":true,
-                            "isDirectory":false,
-                            "isAniNode":true,
-                            "hasChild":false,
-                            "compId":2413,
-                            "child":[
-                                ]
-                        }]
-                },
-                {
-                    "x":30,
-                    "type":"Box",
-                    "props":{"y":240,"x":840,"sort":1,"name":"item74","appendProps":"laya/pages/script/Brick.prop"},
+                    "props":{"y":330,"x":270,"sort":1,"presetID":1,"preset":"laya/assets/prefab/wall.prefab","name":"item74","anchorY":0.5,"anchorX":0.5},
                     "nodeParent":925,
                     "label":"Box(item74)",
                     "isOpen":false,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
-                    "compId":2414,
+                    "compId":3028,
                     "child":[
                         {
                             "type":"Image",
-                            "props":{"y":0,"x":0,"width":60,"skin":"game/walls.png","height":60},
-                            "nodeParent":2414,
-                            "label":"Image",
+                            "props":{"presetID":2,"preset":"laya/assets/prefab/wall.prefab"},
+                            "nodeParent":3028,
+                            "label":"Image(wall)",
                             "isOpen":true,
                             "isDirectory":false,
                             "isAniNode":true,
                             "hasChild":false,
-                            "compId":2415,
+                            "compId":3029,
                             "child":[
                                 ]
                         }]
@@ -1921,25 +1869,25 @@
                 {
                     "x":30,
                     "type":"Box",
-                    "props":{"y":300,"x":0,"sort":1,"name":"item75","appendProps":"laya/pages/script/Brick.prop"},
+                    "props":{"y":330,"x":330,"sort":1,"presetID":1,"preset":"laya/assets/prefab/wall.prefab","name":"item75","anchorY":0.5,"anchorX":0.5},
                     "nodeParent":925,
                     "label":"Box(item75)",
                     "isOpen":false,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
-                    "compId":2416,
+                    "compId":3030,
                     "child":[
                         {
                             "type":"Image",
-                            "props":{"y":0,"x":0,"width":60,"skin":"game/walls.png","height":60},
-                            "nodeParent":2416,
-                            "label":"Image",
+                            "props":{"presetID":2,"preset":"laya/assets/prefab/wall.prefab"},
+                            "nodeParent":3030,
+                            "label":"Image(wall)",
                             "isOpen":true,
                             "isDirectory":false,
                             "isAniNode":true,
                             "hasChild":false,
-                            "compId":2417,
+                            "compId":3031,
                             "child":[
                                 ]
                         }]
@@ -1947,25 +1895,25 @@
                 {
                     "x":30,
                     "type":"Box",
-                    "props":{"y":300,"x":60,"sort":1,"name":"item76","appendProps":"laya/pages/script/Brick.prop"},
+                    "props":{"y":330,"x":390,"sort":1,"presetID":1,"preset":"laya/assets/prefab/wall.prefab","name":"item76","anchorY":0.5,"anchorX":0.5},
                     "nodeParent":925,
                     "label":"Box(item76)",
                     "isOpen":false,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
-                    "compId":2418,
+                    "compId":3032,
                     "child":[
                         {
                             "type":"Image",
-                            "props":{"y":0,"x":0,"width":60,"skin":"game/walls.png","height":60},
-                            "nodeParent":2418,
-                            "label":"Image",
+                            "props":{"presetID":2,"preset":"laya/assets/prefab/wall.prefab"},
+                            "nodeParent":3032,
+                            "label":"Image(wall)",
                             "isOpen":true,
                             "isDirectory":false,
                             "isAniNode":true,
                             "hasChild":false,
-                            "compId":2419,
+                            "compId":3033,
                             "child":[
                                 ]
                         }]
@@ -1973,25 +1921,25 @@
                 {
                     "x":30,
                     "type":"Box",
-                    "props":{"y":300,"x":180,"sort":2,"presetID":1,"preset":"laya/assets/prefab/grass.prefab"},
+                    "props":{"y":330,"x":510,"sort":1,"presetID":1,"preset":"laya/assets/prefab/wall.prefab","name":"item78","anchorY":0.5,"anchorX":0.5},
                     "nodeParent":925,
-                    "label":"Box(grass)",
+                    "label":"Box(item78)",
                     "isOpen":false,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
-                    "compId":2420,
+                    "compId":3036,
                     "child":[
                         {
                             "type":"Image",
-                            "props":{"presetID":2,"preset":"laya/assets/prefab/grass.prefab"},
-                            "nodeParent":2420,
-                            "label":"Image(grass)",
+                            "props":{"presetID":2,"preset":"laya/assets/prefab/wall.prefab"},
+                            "nodeParent":3036,
+                            "label":"Image(wall)",
                             "isOpen":true,
                             "isDirectory":false,
                             "isAniNode":true,
                             "hasChild":false,
-                            "compId":2421,
+                            "compId":3037,
                             "child":[
                                 ]
                         }]
@@ -1999,25 +1947,25 @@
                 {
                     "x":30,
                     "type":"Box",
-                    "props":{"y":300,"x":240,"sort":4,"presetID":1,"preset":"laya/assets/prefab/water.prefab"},
+                    "props":{"y":330,"x":570,"sort":1,"presetID":1,"preset":"laya/assets/prefab/wall.prefab","name":"item79","anchorY":0.5,"anchorX":0.5},
                     "nodeParent":925,
-                    "label":"Box(water)",
+                    "label":"Box(item79)",
                     "isOpen":false,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
-                    "compId":2424,
+                    "compId":3038,
                     "child":[
                         {
                             "type":"Image",
-                            "props":{"presetID":2,"preset":"laya/assets/prefab/water.prefab"},
-                            "nodeParent":2424,
-                            "label":"Image(water)",
+                            "props":{"presetID":2,"preset":"laya/assets/prefab/wall.prefab"},
+                            "nodeParent":3038,
+                            "label":"Image(wall)",
                             "isOpen":true,
                             "isDirectory":false,
                             "isAniNode":true,
                             "hasChild":false,
-                            "compId":2425,
+                            "compId":3039,
                             "child":[
                                 ]
                         }]
@@ -2025,25 +1973,25 @@
                 {
                     "x":30,
                     "type":"Box",
-                    "props":{"y":300,"x":300,"sort":3,"presetID":1,"preset":"laya/assets/prefab/metal.prefab"},
+                    "props":{"y":330,"x":630,"sort":1,"presetID":1,"preset":"laya/assets/prefab/wall.prefab","name":"item80","anchorY":0.5,"anchorX":0.5},
                     "nodeParent":925,
-                    "label":"Box(metal)",
+                    "label":"Box(item80)",
                     "isOpen":false,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
-                    "compId":2426,
+                    "compId":3040,
                     "child":[
                         {
                             "type":"Image",
-                            "props":{"presetID":2,"preset":"laya/assets/prefab/metal.prefab"},
-                            "nodeParent":2426,
-                            "label":"Image(metal)",
+                            "props":{"presetID":2,"preset":"laya/assets/prefab/wall.prefab"},
+                            "nodeParent":3040,
+                            "label":"Image(wall)",
                             "isOpen":true,
                             "isDirectory":false,
                             "isAniNode":true,
                             "hasChild":false,
-                            "compId":2427,
+                            "compId":3041,
                             "child":[
                                 ]
                         }]
@@ -2051,25 +1999,25 @@
                 {
                     "x":30,
                     "type":"Box",
-                    "props":{"y":300,"x":360,"sort":1,"name":"item81","appendProps":"laya/pages/script/Brick.prop"},
+                    "props":{"y":330,"x":690,"sort":1,"presetID":1,"preset":"laya/assets/prefab/wall.prefab","name":"item81","anchorY":0.5,"anchorX":0.5},
                     "nodeParent":925,
                     "label":"Box(item81)",
                     "isOpen":false,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
-                    "compId":2428,
+                    "compId":3042,
                     "child":[
                         {
                             "type":"Image",
-                            "props":{"y":0,"x":0,"width":60,"skin":"game/walls.png","height":60},
-                            "nodeParent":2428,
-                            "label":"Image",
+                            "props":{"presetID":2,"preset":"laya/assets/prefab/wall.prefab"},
+                            "nodeParent":3042,
+                            "label":"Image(wall)",
                             "isOpen":true,
                             "isDirectory":false,
                             "isAniNode":true,
                             "hasChild":false,
-                            "compId":2429,
+                            "compId":3043,
                             "child":[
                                 ]
                         }]
@@ -2077,25 +2025,25 @@
                 {
                     "x":30,
                     "type":"Box",
-                    "props":{"y":300,"x":420,"sort":1,"name":"item82","appendProps":"laya/pages/script/Brick.prop"},
+                    "props":{"y":330,"x":750,"sort":1,"presetID":1,"preset":"laya/assets/prefab/wall.prefab","name":"item82","anchorY":0.5,"anchorX":0.5},
                     "nodeParent":925,
                     "label":"Box(item82)",
                     "isOpen":false,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
-                    "compId":2430,
+                    "compId":3044,
                     "child":[
                         {
                             "type":"Image",
-                            "props":{"y":0,"x":0,"width":60,"skin":"game/walls.png","height":60},
-                            "nodeParent":2430,
-                            "label":"Image",
+                            "props":{"presetID":2,"preset":"laya/assets/prefab/wall.prefab"},
+                            "nodeParent":3044,
+                            "label":"Image(wall)",
                             "isOpen":true,
                             "isDirectory":false,
                             "isAniNode":true,
                             "hasChild":false,
-                            "compId":2431,
+                            "compId":3045,
                             "child":[
                                 ]
                         }]
@@ -2103,25 +2051,25 @@
                 {
                     "x":30,
                     "type":"Box",
-                    "props":{"y":300,"x":480,"sort":1,"name":"item83","appendProps":"laya/pages/script/Brick.prop"},
+                    "props":{"y":330,"x":810,"sort":1,"presetID":1,"preset":"laya/assets/prefab/wall.prefab","name":"item83","anchorY":0.5,"anchorX":0.5},
                     "nodeParent":925,
                     "label":"Box(item83)",
                     "isOpen":false,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
-                    "compId":2432,
+                    "compId":3046,
                     "child":[
                         {
                             "type":"Image",
-                            "props":{"y":0,"x":0,"width":60,"skin":"game/walls.png","height":60},
-                            "nodeParent":2432,
-                            "label":"Image",
+                            "props":{"presetID":2,"preset":"laya/assets/prefab/wall.prefab"},
+                            "nodeParent":3046,
+                            "label":"Image(wall)",
                             "isOpen":true,
                             "isDirectory":false,
                             "isAniNode":true,
                             "hasChild":false,
-                            "compId":2433,
+                            "compId":3047,
                             "child":[
                                 ]
                         }]
@@ -2129,25 +2077,51 @@
                 {
                     "x":30,
                     "type":"Box",
-                    "props":{"y":300,"x":600,"sort":1,"name":"item85","appendProps":"laya/pages/script/Brick.prop"},
+                    "props":{"y":390,"x":30,"sort":1,"presetID":1,"preset":"laya/assets/prefab/wall.prefab","name":"item84","anchorY":0.5,"anchorX":0.5},
+                    "nodeParent":925,
+                    "label":"Box(item84)",
+                    "isOpen":false,
+                    "isDirectory":true,
+                    "isAniNode":true,
+                    "hasChild":true,
+                    "compId":3048,
+                    "child":[
+                        {
+                            "type":"Image",
+                            "props":{"presetID":2,"preset":"laya/assets/prefab/wall.prefab"},
+                            "nodeParent":3048,
+                            "label":"Image(wall)",
+                            "isOpen":true,
+                            "isDirectory":false,
+                            "isAniNode":true,
+                            "hasChild":false,
+                            "compId":3049,
+                            "child":[
+                                ]
+                        }]
+                },
+                {
+                    "x":30,
+                    "type":"Box",
+                    "props":{"y":390,"x":90,"sort":1,"presetID":1,"preset":"laya/assets/prefab/wall.prefab","name":"item85","anchorY":0.5,"anchorX":0.5},
                     "nodeParent":925,
                     "label":"Box(item85)",
                     "isOpen":false,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
-                    "compId":2436,
+                    "compId":3050,
                     "child":[
                         {
                             "type":"Image",
-                            "props":{"y":0,"x":0,"width":60,"skin":"game/walls.png","height":60},
-                            "nodeParent":2436,
-                            "label":"Image",
+                            "props":{"presetID":2,"preset":"laya/assets/prefab/wall.prefab"},
+                            "nodeParent":3050,
+                            "label":"Image(wall)",
                             "isOpen":true,
                             "isDirectory":false,
                             "isAniNode":true,
                             "hasChild":false,
-                            "compId":2437,
+                            "compId":3051,
                             "child":[
                                 ]
                         }]
@@ -2155,25 +2129,25 @@
                 {
                     "x":30,
                     "type":"Box",
-                    "props":{"y":300,"x":660,"sort":1,"name":"item86","appendProps":"laya/pages/script/Brick.prop"},
+                    "props":{"y":390,"x":150,"sort":1,"presetID":1,"preset":"laya/assets/prefab/wall.prefab","name":"item86","anchorY":0.5,"anchorX":0.5},
                     "nodeParent":925,
                     "label":"Box(item86)",
                     "isOpen":false,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
-                    "compId":2438,
+                    "compId":3052,
                     "child":[
                         {
                             "type":"Image",
-                            "props":{"y":0,"x":0,"width":60,"skin":"game/walls.png","height":60},
-                            "nodeParent":2438,
-                            "label":"Image",
+                            "props":{"presetID":2,"preset":"laya/assets/prefab/wall.prefab"},
+                            "nodeParent":3052,
+                            "label":"Image(wall)",
                             "isOpen":true,
                             "isDirectory":false,
                             "isAniNode":true,
                             "hasChild":false,
-                            "compId":2439,
+                            "compId":3053,
                             "child":[
                                 ]
                         }]
@@ -2181,155 +2155,25 @@
                 {
                     "x":30,
                     "type":"Box",
-                    "props":{"y":300,"x":720,"sort":1,"name":"item87","appendProps":"laya/pages/script/Brick.prop"},
-                    "nodeParent":925,
-                    "label":"Box(item87)",
-                    "isOpen":false,
-                    "isDirectory":true,
-                    "isAniNode":true,
-                    "hasChild":true,
-                    "compId":2440,
-                    "child":[
-                        {
-                            "type":"Image",
-                            "props":{"y":0,"x":0,"width":60,"skin":"game/walls.png","height":60},
-                            "nodeParent":2440,
-                            "label":"Image",
-                            "isOpen":true,
-                            "isDirectory":false,
-                            "isAniNode":true,
-                            "hasChild":false,
-                            "compId":2441,
-                            "child":[
-                                ]
-                        }]
-                },
-                {
-                    "x":30,
-                    "type":"Box",
-                    "props":{"y":300,"x":780,"sort":1,"name":"item88","appendProps":"laya/pages/script/Brick.prop"},
-                    "nodeParent":925,
-                    "label":"Box(item88)",
-                    "isOpen":false,
-                    "isDirectory":true,
-                    "isAniNode":true,
-                    "hasChild":true,
-                    "compId":2442,
-                    "child":[
-                        {
-                            "type":"Image",
-                            "props":{"y":0,"x":0,"width":60,"skin":"game/walls.png","height":60},
-                            "nodeParent":2442,
-                            "label":"Image",
-                            "isOpen":true,
-                            "isDirectory":false,
-                            "isAniNode":true,
-                            "hasChild":false,
-                            "compId":2443,
-                            "child":[
-                                ]
-                        }]
-                },
-                {
-                    "x":30,
-                    "type":"Box",
-                    "props":{"y":300,"x":840,"sort":1,"name":"item89","appendProps":"laya/pages/script/Brick.prop"},
-                    "nodeParent":925,
-                    "label":"Box(item89)",
-                    "isOpen":false,
-                    "isDirectory":true,
-                    "isAniNode":true,
-                    "hasChild":true,
-                    "compId":2444,
-                    "child":[
-                        {
-                            "type":"Image",
-                            "props":{"y":0,"x":0,"width":60,"skin":"game/walls.png","height":60},
-                            "nodeParent":2444,
-                            "label":"Image",
-                            "isOpen":true,
-                            "isDirectory":false,
-                            "isAniNode":true,
-                            "hasChild":false,
-                            "compId":2445,
-                            "child":[
-                                ]
-                        }]
-                },
-                {
-                    "x":30,
-                    "type":"Box",
-                    "props":{"y":360,"x":0,"sort":1,"name":"item90","appendProps":"laya/pages/script/Brick.prop"},
-                    "nodeParent":925,
-                    "label":"Box(item90)",
-                    "isOpen":false,
-                    "isDirectory":true,
-                    "isAniNode":true,
-                    "hasChild":true,
-                    "compId":2446,
-                    "child":[
-                        {
-                            "type":"Image",
-                            "props":{"y":0,"x":0,"width":60,"skin":"game/walls.png","height":60},
-                            "nodeParent":2446,
-                            "label":"Image",
-                            "isOpen":true,
-                            "isDirectory":false,
-                            "isAniNode":true,
-                            "hasChild":false,
-                            "compId":2447,
-                            "child":[
-                                ]
-                        }]
-                },
-                {
-                    "x":30,
-                    "type":"Box",
-                    "props":{"y":360,"x":60,"sort":1,"name":"item91","appendProps":"laya/pages/script/Brick.prop"},
-                    "nodeParent":925,
-                    "label":"Box(item91)",
-                    "isOpen":false,
-                    "isDirectory":true,
-                    "isAniNode":true,
-                    "hasChild":true,
-                    "compId":2448,
-                    "child":[
-                        {
-                            "type":"Image",
-                            "props":{"y":0,"x":0,"width":60,"skin":"game/walls.png","height":60},
-                            "nodeParent":2448,
-                            "label":"Image",
-                            "isOpen":true,
-                            "isDirectory":false,
-                            "isAniNode":true,
-                            "hasChild":false,
-                            "compId":2449,
-                            "child":[
-                                ]
-                        }]
-                },
-                {
-                    "x":30,
-                    "type":"Box",
-                    "props":{"y":360,"x":120,"sort":1,"name":"item92","appendProps":"laya/pages/script/Brick.prop"},
+                    "props":{"y":390,"x":510,"sort":1,"presetID":1,"preset":"laya/assets/prefab/wall.prefab","name":"item92","anchorY":0.5,"anchorX":0.5},
                     "nodeParent":925,
                     "label":"Box(item92)",
                     "isOpen":false,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
-                    "compId":2450,
+                    "compId":3064,
                     "child":[
                         {
                             "type":"Image",
-                            "props":{"y":0,"x":0,"width":60,"skin":"game/walls.png","height":60},
-                            "nodeParent":2450,
-                            "label":"Image",
+                            "props":{"presetID":2,"preset":"laya/assets/prefab/wall.prefab"},
+                            "nodeParent":3064,
+                            "label":"Image(wall)",
                             "isOpen":true,
                             "isDirectory":false,
                             "isAniNode":true,
                             "hasChild":false,
-                            "compId":2451,
+                            "compId":3065,
                             "child":[
                                 ]
                         }]
@@ -2337,25 +2181,51 @@
                 {
                     "x":30,
                     "type":"Box",
-                    "props":{"y":360,"x":240,"sort":1,"name":"item94","appendProps":"laya/pages/script/Brick.prop"},
+                    "props":{"y":390,"x":570,"sort":1,"presetID":1,"preset":"laya/assets/prefab/wall.prefab","name":"item93","anchorY":0.5,"anchorX":0.5},
+                    "nodeParent":925,
+                    "label":"Box(item93)",
+                    "isOpen":false,
+                    "isDirectory":true,
+                    "isAniNode":true,
+                    "hasChild":true,
+                    "compId":3066,
+                    "child":[
+                        {
+                            "type":"Image",
+                            "props":{"presetID":2,"preset":"laya/assets/prefab/wall.prefab"},
+                            "nodeParent":3066,
+                            "label":"Image(wall)",
+                            "isOpen":true,
+                            "isDirectory":false,
+                            "isAniNode":true,
+                            "hasChild":false,
+                            "compId":3067,
+                            "child":[
+                                ]
+                        }]
+                },
+                {
+                    "x":30,
+                    "type":"Box",
+                    "props":{"y":390,"x":630,"sort":1,"presetID":1,"preset":"laya/assets/prefab/wall.prefab","name":"item94","anchorY":0.5,"anchorX":0.5},
                     "nodeParent":925,
                     "label":"Box(item94)",
                     "isOpen":false,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
-                    "compId":2454,
+                    "compId":3068,
                     "child":[
                         {
                             "type":"Image",
-                            "props":{"y":0,"x":0,"width":60,"skin":"game/walls.png","height":60},
-                            "nodeParent":2454,
-                            "label":"Image",
+                            "props":{"presetID":2,"preset":"laya/assets/prefab/wall.prefab"},
+                            "nodeParent":3068,
+                            "label":"Image(wall)",
                             "isOpen":true,
                             "isDirectory":false,
                             "isAniNode":true,
                             "hasChild":false,
-                            "compId":2455,
+                            "compId":3069,
                             "child":[
                                 ]
                         }]
@@ -2363,25 +2233,25 @@
                 {
                     "x":30,
                     "type":"Box",
-                    "props":{"y":360,"x":300,"sort":1,"name":"item95","appendProps":"laya/pages/script/Brick.prop"},
+                    "props":{"y":390,"x":690,"sort":1,"presetID":1,"preset":"laya/assets/prefab/wall.prefab","name":"item95","anchorY":0.5,"anchorX":0.5},
                     "nodeParent":925,
                     "label":"Box(item95)",
                     "isOpen":false,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
-                    "compId":2456,
+                    "compId":3070,
                     "child":[
                         {
                             "type":"Image",
-                            "props":{"y":0,"x":0,"width":60,"skin":"game/walls.png","height":60},
-                            "nodeParent":2456,
-                            "label":"Image",
+                            "props":{"presetID":2,"preset":"laya/assets/prefab/wall.prefab"},
+                            "nodeParent":3070,
+                            "label":"Image(wall)",
                             "isOpen":true,
                             "isDirectory":false,
                             "isAniNode":true,
                             "hasChild":false,
-                            "compId":2457,
+                            "compId":3071,
                             "child":[
                                 ]
                         }]
@@ -2389,25 +2259,25 @@
                 {
                     "x":30,
                     "type":"Box",
-                    "props":{"y":360,"x":360,"sort":1,"name":"item96","appendProps":"laya/pages/script/Brick.prop"},
+                    "props":{"y":390,"x":750,"sort":1,"presetID":1,"preset":"laya/assets/prefab/wall.prefab","name":"item96","anchorY":0.5,"anchorX":0.5},
                     "nodeParent":925,
                     "label":"Box(item96)",
                     "isOpen":false,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
-                    "compId":2458,
+                    "compId":3072,
                     "child":[
                         {
                             "type":"Image",
-                            "props":{"y":0,"x":0,"width":60,"skin":"game/walls.png","height":60},
-                            "nodeParent":2458,
-                            "label":"Image",
+                            "props":{"presetID":2,"preset":"laya/assets/prefab/wall.prefab"},
+                            "nodeParent":3072,
+                            "label":"Image(wall)",
                             "isOpen":true,
                             "isDirectory":false,
                             "isAniNode":true,
                             "hasChild":false,
-                            "compId":2459,
+                            "compId":3073,
                             "child":[
                                 ]
                         }]
@@ -2415,25 +2285,25 @@
                 {
                     "x":30,
                     "type":"Box",
-                    "props":{"y":360,"x":420,"sort":1,"name":"item97","appendProps":"laya/pages/script/Brick.prop"},
+                    "props":{"y":390,"x":810,"sort":1,"presetID":1,"preset":"laya/assets/prefab/wall.prefab","name":"item97","anchorY":0.5,"anchorX":0.5},
                     "nodeParent":925,
                     "label":"Box(item97)",
                     "isOpen":false,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
-                    "compId":2460,
+                    "compId":3074,
                     "child":[
                         {
                             "type":"Image",
-                            "props":{"y":0,"x":0,"width":60,"skin":"game/walls.png","height":60},
-                            "nodeParent":2460,
-                            "label":"Image",
+                            "props":{"presetID":2,"preset":"laya/assets/prefab/wall.prefab"},
+                            "nodeParent":3074,
+                            "label":"Image(wall)",
                             "isOpen":true,
                             "isDirectory":false,
                             "isAniNode":true,
                             "hasChild":false,
-                            "compId":2461,
+                            "compId":3075,
                             "child":[
                                 ]
                         }]
@@ -2441,25 +2311,25 @@
                 {
                     "x":30,
                     "type":"Box",
-                    "props":{"y":360,"x":480,"sort":1,"name":"item98","appendProps":"laya/pages/script/Brick.prop"},
+                    "props":{"y":450,"x":30,"sort":1,"presetID":1,"preset":"laya/assets/prefab/wall.prefab","name":"item98","anchorY":0.5,"anchorX":0.5},
                     "nodeParent":925,
                     "label":"Box(item98)",
                     "isOpen":false,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
-                    "compId":2462,
+                    "compId":3076,
                     "child":[
                         {
                             "type":"Image",
-                            "props":{"y":0,"x":0,"width":60,"skin":"game/walls.png","height":60},
-                            "nodeParent":2462,
-                            "label":"Image",
+                            "props":{"presetID":2,"preset":"laya/assets/prefab/wall.prefab"},
+                            "nodeParent":3076,
+                            "label":"Image(wall)",
                             "isOpen":true,
                             "isDirectory":false,
                             "isAniNode":true,
                             "hasChild":false,
-                            "compId":2463,
+                            "compId":3077,
                             "child":[
                                 ]
                         }]
@@ -2467,25 +2337,51 @@
                 {
                     "x":30,
                     "type":"Box",
-                    "props":{"y":360,"x":600,"sort":1,"name":"item100","appendProps":"laya/pages/script/Brick.prop"},
+                    "props":{"y":450,"x":90,"sort":1,"presetID":1,"preset":"laya/assets/prefab/wall.prefab","name":"item99","anchorY":0.5,"anchorX":0.5},
+                    "nodeParent":925,
+                    "label":"Box(item99)",
+                    "isOpen":false,
+                    "isDirectory":true,
+                    "isAniNode":true,
+                    "hasChild":true,
+                    "compId":3078,
+                    "child":[
+                        {
+                            "type":"Image",
+                            "props":{"presetID":2,"preset":"laya/assets/prefab/wall.prefab"},
+                            "nodeParent":3078,
+                            "label":"Image(wall)",
+                            "isOpen":true,
+                            "isDirectory":false,
+                            "isAniNode":true,
+                            "hasChild":false,
+                            "compId":3079,
+                            "child":[
+                                ]
+                        }]
+                },
+                {
+                    "x":30,
+                    "type":"Box",
+                    "props":{"y":450,"x":150,"sort":1,"presetID":1,"preset":"laya/assets/prefab/wall.prefab","name":"item100","anchorY":0.5,"anchorX":0.5},
                     "nodeParent":925,
                     "label":"Box(item100)",
                     "isOpen":false,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
-                    "compId":2466,
+                    "compId":3080,
                     "child":[
                         {
                             "type":"Image",
-                            "props":{"y":0,"x":0,"width":60,"skin":"game/walls.png","height":60},
-                            "nodeParent":2466,
-                            "label":"Image",
+                            "props":{"presetID":2,"preset":"laya/assets/prefab/wall.prefab"},
+                            "nodeParent":3080,
+                            "label":"Image(wall)",
                             "isOpen":true,
                             "isDirectory":false,
                             "isAniNode":true,
                             "hasChild":false,
-                            "compId":2467,
+                            "compId":3081,
                             "child":[
                                 ]
                         }]
@@ -2493,51 +2389,25 @@
                 {
                     "x":30,
                     "type":"Box",
-                    "props":{"y":360,"x":660,"sort":1,"name":"item101","appendProps":"laya/pages/script/Brick.prop"},
-                    "nodeParent":925,
-                    "label":"Box(item101)",
-                    "isOpen":false,
-                    "isDirectory":true,
-                    "isAniNode":true,
-                    "hasChild":true,
-                    "compId":2468,
-                    "child":[
-                        {
-                            "type":"Image",
-                            "props":{"y":0,"x":0,"width":60,"skin":"game/walls.png","height":60},
-                            "nodeParent":2468,
-                            "label":"Image",
-                            "isOpen":true,
-                            "isDirectory":false,
-                            "isAniNode":true,
-                            "hasChild":false,
-                            "compId":2469,
-                            "child":[
-                                ]
-                        }]
-                },
-                {
-                    "x":30,
-                    "type":"Box",
-                    "props":{"y":360,"x":720,"sort":1,"name":"item102","appendProps":"laya/pages/script/Brick.prop"},
+                    "props":{"y":450,"x":270,"sort":1,"presetID":1,"preset":"laya/assets/prefab/wall.prefab","name":"item102","anchorY":0.5,"anchorX":0.5},
                     "nodeParent":925,
                     "label":"Box(item102)",
                     "isOpen":false,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
-                    "compId":2470,
+                    "compId":3084,
                     "child":[
                         {
                             "type":"Image",
-                            "props":{"y":0,"x":0,"width":60,"skin":"game/walls.png","height":60},
-                            "nodeParent":2470,
-                            "label":"Image",
+                            "props":{"presetID":2,"preset":"laya/assets/prefab/wall.prefab"},
+                            "nodeParent":3084,
+                            "label":"Image(wall)",
                             "isOpen":true,
                             "isDirectory":false,
                             "isAniNode":true,
                             "hasChild":false,
-                            "compId":2471,
+                            "compId":3085,
                             "child":[
                                 ]
                         }]
@@ -2545,25 +2415,25 @@
                 {
                     "x":30,
                     "type":"Box",
-                    "props":{"y":360,"x":780,"sort":1,"name":"item103","appendProps":"laya/pages/script/Brick.prop"},
+                    "props":{"y":450,"x":330,"sort":1,"presetID":1,"preset":"laya/assets/prefab/wall.prefab","name":"item103","anchorY":0.5,"anchorX":0.5},
                     "nodeParent":925,
                     "label":"Box(item103)",
                     "isOpen":false,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
-                    "compId":2472,
+                    "compId":3086,
                     "child":[
                         {
                             "type":"Image",
-                            "props":{"y":0,"x":0,"width":60,"skin":"game/walls.png","height":60},
-                            "nodeParent":2472,
-                            "label":"Image",
+                            "props":{"presetID":2,"preset":"laya/assets/prefab/wall.prefab"},
+                            "nodeParent":3086,
+                            "label":"Image(wall)",
                             "isOpen":true,
                             "isDirectory":false,
                             "isAniNode":true,
                             "hasChild":false,
-                            "compId":2473,
+                            "compId":3087,
                             "child":[
                                 ]
                         }]
@@ -2571,25 +2441,25 @@
                 {
                     "x":30,
                     "type":"Box",
-                    "props":{"y":360,"x":840,"sort":1,"name":"item104","appendProps":"laya/pages/script/Brick.prop"},
+                    "props":{"y":450,"x":390,"sort":1,"presetID":1,"preset":"laya/assets/prefab/wall.prefab","name":"item104","anchorY":0.5,"anchorX":0.5},
                     "nodeParent":925,
                     "label":"Box(item104)",
                     "isOpen":false,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
-                    "compId":2474,
+                    "compId":3088,
                     "child":[
                         {
                             "type":"Image",
-                            "props":{"y":0,"x":0,"width":60,"skin":"game/walls.png","height":60},
-                            "nodeParent":2474,
-                            "label":"Image",
+                            "props":{"presetID":2,"preset":"laya/assets/prefab/wall.prefab"},
+                            "nodeParent":3088,
+                            "label":"Image(wall)",
                             "isOpen":true,
                             "isDirectory":false,
                             "isAniNode":true,
                             "hasChild":false,
-                            "compId":2475,
+                            "compId":3089,
                             "child":[
                                 ]
                         }]
@@ -2597,51 +2467,25 @@
                 {
                     "x":30,
                     "type":"Box",
-                    "props":{"y":420,"x":0,"sort":1,"name":"item105","appendProps":"laya/pages/script/Brick.prop"},
-                    "nodeParent":925,
-                    "label":"Box(item105)",
-                    "isOpen":false,
-                    "isDirectory":true,
-                    "isAniNode":true,
-                    "hasChild":true,
-                    "compId":2476,
-                    "child":[
-                        {
-                            "type":"Image",
-                            "props":{"y":0,"x":0,"width":60,"skin":"game/walls.png","height":60},
-                            "nodeParent":2476,
-                            "label":"Image",
-                            "isOpen":true,
-                            "isDirectory":false,
-                            "isAniNode":true,
-                            "hasChild":false,
-                            "compId":2477,
-                            "child":[
-                                ]
-                        }]
-                },
-                {
-                    "x":30,
-                    "type":"Box",
-                    "props":{"y":420,"x":60,"sort":1,"name":"item106","appendProps":"laya/pages/script/Brick.prop"},
+                    "props":{"y":450,"x":510,"sort":1,"presetID":1,"preset":"laya/assets/prefab/wall.prefab","name":"item106","anchorY":0.5,"anchorX":0.5},
                     "nodeParent":925,
                     "label":"Box(item106)",
                     "isOpen":false,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
-                    "compId":2478,
+                    "compId":3092,
                     "child":[
                         {
                             "type":"Image",
-                            "props":{"y":0,"x":0,"width":60,"skin":"game/walls.png","height":60},
-                            "nodeParent":2478,
-                            "label":"Image",
+                            "props":{"presetID":2,"preset":"laya/assets/prefab/wall.prefab"},
+                            "nodeParent":3092,
+                            "label":"Image(wall)",
                             "isOpen":true,
                             "isDirectory":false,
                             "isAniNode":true,
                             "hasChild":false,
-                            "compId":2479,
+                            "compId":3093,
                             "child":[
                                 ]
                         }]
@@ -2649,25 +2493,25 @@
                 {
                     "x":30,
                     "type":"Box",
-                    "props":{"y":420,"x":120,"sort":1,"name":"item107","appendProps":"laya/pages/script/Brick.prop"},
+                    "props":{"y":450,"x":570,"sort":1,"presetID":1,"preset":"laya/assets/prefab/wall.prefab","name":"item107","anchorY":0.5,"anchorX":0.5},
                     "nodeParent":925,
                     "label":"Box(item107)",
                     "isOpen":false,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
-                    "compId":2480,
+                    "compId":3094,
                     "child":[
                         {
                             "type":"Image",
-                            "props":{"y":0,"x":0,"width":60,"skin":"game/walls.png","height":60},
-                            "nodeParent":2480,
-                            "label":"Image",
+                            "props":{"presetID":2,"preset":"laya/assets/prefab/wall.prefab"},
+                            "nodeParent":3094,
+                            "label":"Image(wall)",
                             "isOpen":true,
                             "isDirectory":false,
                             "isAniNode":true,
                             "hasChild":false,
-                            "compId":2481,
+                            "compId":3095,
                             "child":[
                                 ]
                         }]
@@ -2675,25 +2519,51 @@
                 {
                     "x":30,
                     "type":"Box",
-                    "props":{"y":420,"x":240,"sort":1,"name":"item109","appendProps":"laya/pages/script/Brick.prop"},
+                    "props":{"y":450,"x":630,"sort":1,"presetID":1,"preset":"laya/assets/prefab/wall.prefab","name":"item108","anchorY":0.5,"anchorX":0.5},
+                    "nodeParent":925,
+                    "label":"Box(item108)",
+                    "isOpen":false,
+                    "isDirectory":true,
+                    "isAniNode":true,
+                    "hasChild":true,
+                    "compId":3096,
+                    "child":[
+                        {
+                            "type":"Image",
+                            "props":{"presetID":2,"preset":"laya/assets/prefab/wall.prefab"},
+                            "nodeParent":3096,
+                            "label":"Image(wall)",
+                            "isOpen":true,
+                            "isDirectory":false,
+                            "isAniNode":true,
+                            "hasChild":false,
+                            "compId":3097,
+                            "child":[
+                                ]
+                        }]
+                },
+                {
+                    "x":30,
+                    "type":"Box",
+                    "props":{"y":450,"x":690,"sort":1,"presetID":1,"preset":"laya/assets/prefab/wall.prefab","name":"item109","anchorY":0.5,"anchorX":0.5},
                     "nodeParent":925,
                     "label":"Box(item109)",
                     "isOpen":false,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
-                    "compId":2484,
+                    "compId":3098,
                     "child":[
                         {
                             "type":"Image",
-                            "props":{"y":0,"x":0,"width":60,"skin":"game/walls.png","height":60},
-                            "nodeParent":2484,
-                            "label":"Image",
+                            "props":{"presetID":2,"preset":"laya/assets/prefab/wall.prefab"},
+                            "nodeParent":3098,
+                            "label":"Image(wall)",
                             "isOpen":true,
                             "isDirectory":false,
                             "isAniNode":true,
                             "hasChild":false,
-                            "compId":2485,
+                            "compId":3099,
                             "child":[
                                 ]
                         }]
@@ -2701,25 +2571,25 @@
                 {
                     "x":30,
                     "type":"Box",
-                    "props":{"y":420,"x":300,"sort":1,"name":"item110","appendProps":"laya/pages/script/Brick.prop"},
+                    "props":{"y":450,"x":750,"sort":1,"presetID":1,"preset":"laya/assets/prefab/wall.prefab","name":"item110","anchorY":0.5,"anchorX":0.5},
                     "nodeParent":925,
                     "label":"Box(item110)",
                     "isOpen":false,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
-                    "compId":2486,
+                    "compId":3100,
                     "child":[
                         {
                             "type":"Image",
-                            "props":{"y":0,"x":0,"width":60,"skin":"game/walls.png","height":60},
-                            "nodeParent":2486,
-                            "label":"Image",
+                            "props":{"presetID":2,"preset":"laya/assets/prefab/wall.prefab"},
+                            "nodeParent":3100,
+                            "label":"Image(wall)",
                             "isOpen":true,
                             "isDirectory":false,
                             "isAniNode":true,
                             "hasChild":false,
-                            "compId":2487,
+                            "compId":3101,
                             "child":[
                                 ]
                         }]
@@ -2727,25 +2597,25 @@
                 {
                     "x":30,
                     "type":"Box",
-                    "props":{"y":420,"x":360,"sort":1,"name":"item111","appendProps":"laya/pages/script/Brick.prop"},
+                    "props":{"y":450,"x":810,"sort":1,"presetID":1,"preset":"laya/assets/prefab/wall.prefab","name":"item111","anchorY":0.5,"anchorX":0.5},
                     "nodeParent":925,
                     "label":"Box(item111)",
                     "isOpen":false,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
-                    "compId":2488,
+                    "compId":3102,
                     "child":[
                         {
                             "type":"Image",
-                            "props":{"y":0,"x":0,"width":60,"skin":"game/walls.png","height":60},
-                            "nodeParent":2488,
-                            "label":"Image",
+                            "props":{"presetID":2,"preset":"laya/assets/prefab/wall.prefab"},
+                            "nodeParent":3102,
+                            "label":"Image(wall)",
                             "isOpen":true,
                             "isDirectory":false,
                             "isAniNode":true,
                             "hasChild":false,
-                            "compId":2489,
+                            "compId":3103,
                             "child":[
                                 ]
                         }]
@@ -2753,25 +2623,25 @@
                 {
                     "x":30,
                     "type":"Box",
-                    "props":{"y":420,"x":420,"sort":1,"name":"item112","appendProps":"laya/pages/script/Brick.prop"},
+                    "props":{"y":510,"x":30,"sort":1,"presetID":1,"preset":"laya/assets/prefab/wall.prefab","name":"item112","anchorY":0.5,"anchorX":0.5},
                     "nodeParent":925,
                     "label":"Box(item112)",
                     "isOpen":false,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
-                    "compId":2490,
+                    "compId":3104,
                     "child":[
                         {
                             "type":"Image",
-                            "props":{"y":0,"x":0,"width":60,"skin":"game/walls.png","height":60},
-                            "nodeParent":2490,
-                            "label":"Image",
+                            "props":{"presetID":2,"preset":"laya/assets/prefab/wall.prefab"},
+                            "nodeParent":3104,
+                            "label":"Image(wall)",
                             "isOpen":true,
                             "isDirectory":false,
                             "isAniNode":true,
                             "hasChild":false,
-                            "compId":2491,
+                            "compId":3105,
                             "child":[
                                 ]
                         }]
@@ -2779,25 +2649,25 @@
                 {
                     "x":30,
                     "type":"Box",
-                    "props":{"y":420,"x":480,"sort":1,"name":"item113","appendProps":"laya/pages/script/Brick.prop"},
+                    "props":{"y":510,"x":90,"sort":1,"presetID":1,"preset":"laya/assets/prefab/wall.prefab","name":"item113","anchorY":0.5,"anchorX":0.5},
                     "nodeParent":925,
                     "label":"Box(item113)",
                     "isOpen":false,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
-                    "compId":2492,
+                    "compId":3106,
                     "child":[
                         {
                             "type":"Image",
-                            "props":{"y":0,"x":0,"width":60,"skin":"game/walls.png","height":60},
-                            "nodeParent":2492,
-                            "label":"Image",
+                            "props":{"presetID":2,"preset":"laya/assets/prefab/wall.prefab"},
+                            "nodeParent":3106,
+                            "label":"Image(wall)",
                             "isOpen":true,
                             "isDirectory":false,
                             "isAniNode":true,
                             "hasChild":false,
-                            "compId":2493,
+                            "compId":3107,
                             "child":[
                                 ]
                         }]
@@ -2805,25 +2675,25 @@
                 {
                     "x":30,
                     "type":"Box",
-                    "props":{"y":420,"x":600,"sort":1,"name":"item115","appendProps":"laya/pages/script/Brick.prop"},
+                    "props":{"y":510,"x":150,"sort":1,"presetID":1,"preset":"laya/assets/prefab/wall.prefab","name":"item114","anchorY":0.5,"anchorX":0.5},
                     "nodeParent":925,
-                    "label":"Box(item115)",
+                    "label":"Box(item114)",
                     "isOpen":false,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
-                    "compId":2496,
+                    "compId":3108,
                     "child":[
                         {
                             "type":"Image",
-                            "props":{"y":0,"x":0,"width":60,"skin":"game/walls.png","height":60},
-                            "nodeParent":2496,
-                            "label":"Image",
+                            "props":{"presetID":2,"preset":"laya/assets/prefab/wall.prefab"},
+                            "nodeParent":3108,
+                            "label":"Image(wall)",
                             "isOpen":true,
                             "isDirectory":false,
                             "isAniNode":true,
                             "hasChild":false,
-                            "compId":2497,
+                            "compId":3109,
                             "child":[
                                 ]
                         }]
@@ -2831,25 +2701,25 @@
                 {
                     "x":30,
                     "type":"Box",
-                    "props":{"y":420,"x":660,"sort":1,"name":"item116","appendProps":"laya/pages/script/Brick.prop"},
+                    "props":{"y":510,"x":270,"sort":1,"presetID":1,"preset":"laya/assets/prefab/wall.prefab","name":"item116","anchorY":0.5,"anchorX":0.5},
                     "nodeParent":925,
                     "label":"Box(item116)",
                     "isOpen":false,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
-                    "compId":2498,
+                    "compId":3112,
                     "child":[
                         {
                             "type":"Image",
-                            "props":{"y":0,"x":0,"width":60,"skin":"game/walls.png","height":60},
-                            "nodeParent":2498,
-                            "label":"Image",
+                            "props":{"presetID":2,"preset":"laya/assets/prefab/wall.prefab"},
+                            "nodeParent":3112,
+                            "label":"Image(wall)",
                             "isOpen":true,
                             "isDirectory":false,
                             "isAniNode":true,
                             "hasChild":false,
-                            "compId":2499,
+                            "compId":3113,
                             "child":[
                                 ]
                         }]
@@ -2857,25 +2727,25 @@
                 {
                     "x":30,
                     "type":"Box",
-                    "props":{"y":420,"x":720,"sort":1,"name":"item117","appendProps":"laya/pages/script/Brick.prop"},
+                    "props":{"y":510,"x":330,"sort":1,"presetID":1,"preset":"laya/assets/prefab/wall.prefab","name":"item117","anchorY":0.5,"anchorX":0.5},
                     "nodeParent":925,
                     "label":"Box(item117)",
                     "isOpen":false,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
-                    "compId":2500,
+                    "compId":3114,
                     "child":[
                         {
                             "type":"Image",
-                            "props":{"y":0,"x":0,"width":60,"skin":"game/walls.png","height":60},
-                            "nodeParent":2500,
-                            "label":"Image",
+                            "props":{"presetID":2,"preset":"laya/assets/prefab/wall.prefab"},
+                            "nodeParent":3114,
+                            "label":"Image(wall)",
                             "isOpen":true,
                             "isDirectory":false,
                             "isAniNode":true,
                             "hasChild":false,
-                            "compId":2501,
+                            "compId":3115,
                             "child":[
                                 ]
                         }]
@@ -2883,25 +2753,25 @@
                 {
                     "x":30,
                     "type":"Box",
-                    "props":{"y":420,"x":780,"sort":1,"name":"item118","appendProps":"laya/pages/script/Brick.prop"},
+                    "props":{"y":510,"x":390,"sort":1,"presetID":1,"preset":"laya/assets/prefab/wall.prefab","name":"item118","anchorY":0.5,"anchorX":0.5},
                     "nodeParent":925,
                     "label":"Box(item118)",
                     "isOpen":false,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
-                    "compId":2502,
+                    "compId":3116,
                     "child":[
                         {
                             "type":"Image",
-                            "props":{"y":0,"x":0,"width":60,"skin":"game/walls.png","height":60},
-                            "nodeParent":2502,
-                            "label":"Image",
+                            "props":{"presetID":2,"preset":"laya/assets/prefab/wall.prefab"},
+                            "nodeParent":3116,
+                            "label":"Image(wall)",
                             "isOpen":true,
                             "isDirectory":false,
                             "isAniNode":true,
                             "hasChild":false,
-                            "compId":2503,
+                            "compId":3117,
                             "child":[
                                 ]
                         }]
@@ -2909,25 +2779,25 @@
                 {
                     "x":30,
                     "type":"Box",
-                    "props":{"y":420,"x":840,"sort":1,"name":"item119","appendProps":"laya/pages/script/Brick.prop"},
+                    "props":{"y":510,"x":450,"sort":1,"presetID":1,"preset":"laya/assets/prefab/wall.prefab","name":"item119","anchorY":0.5,"anchorX":0.5},
                     "nodeParent":925,
                     "label":"Box(item119)",
                     "isOpen":false,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
-                    "compId":2504,
+                    "compId":3118,
                     "child":[
                         {
                             "type":"Image",
-                            "props":{"y":0,"x":0,"width":60,"skin":"game/walls.png","height":60},
-                            "nodeParent":2504,
-                            "label":"Image",
+                            "props":{"presetID":2,"preset":"laya/assets/prefab/wall.prefab"},
+                            "nodeParent":3118,
+                            "label":"Image(wall)",
                             "isOpen":true,
                             "isDirectory":false,
                             "isAniNode":true,
                             "hasChild":false,
-                            "compId":2505,
+                            "compId":3119,
                             "child":[
                                 ]
                         }]
@@ -2935,25 +2805,25 @@
                 {
                     "x":30,
                     "type":"Box",
-                    "props":{"y":480,"x":0,"sort":1,"name":"item120","appendProps":"laya/pages/script/Brick.prop"},
+                    "props":{"y":510,"x":510,"sort":1,"presetID":1,"preset":"laya/assets/prefab/wall.prefab","name":"item120","anchorY":0.5,"anchorX":0.5},
                     "nodeParent":925,
                     "label":"Box(item120)",
                     "isOpen":false,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
-                    "compId":2506,
+                    "compId":3120,
                     "child":[
                         {
                             "type":"Image",
-                            "props":{"y":0,"x":0,"width":60,"skin":"game/walls.png","height":60},
-                            "nodeParent":2506,
-                            "label":"Image",
+                            "props":{"presetID":2,"preset":"laya/assets/prefab/wall.prefab"},
+                            "nodeParent":3120,
+                            "label":"Image(wall)",
                             "isOpen":true,
                             "isDirectory":false,
                             "isAniNode":true,
                             "hasChild":false,
-                            "compId":2507,
+                            "compId":3121,
                             "child":[
                                 ]
                         }]
@@ -2961,25 +2831,25 @@
                 {
                     "x":30,
                     "type":"Box",
-                    "props":{"y":480,"x":60,"sort":1,"name":"item121","appendProps":"laya/pages/script/Brick.prop"},
+                    "props":{"y":510,"x":570,"sort":1,"presetID":1,"preset":"laya/assets/prefab/wall.prefab","name":"item121","anchorY":0.5,"anchorX":0.5},
                     "nodeParent":925,
                     "label":"Box(item121)",
                     "isOpen":false,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
-                    "compId":2508,
+                    "compId":3122,
                     "child":[
                         {
                             "type":"Image",
-                            "props":{"y":0,"x":0,"width":60,"skin":"game/walls.png","height":60},
-                            "nodeParent":2508,
-                            "label":"Image",
+                            "props":{"presetID":2,"preset":"laya/assets/prefab/wall.prefab"},
+                            "nodeParent":3122,
+                            "label":"Image(wall)",
                             "isOpen":true,
                             "isDirectory":false,
                             "isAniNode":true,
                             "hasChild":false,
-                            "compId":2509,
+                            "compId":3123,
                             "child":[
                                 ]
                         }]
@@ -2987,25 +2857,25 @@
                 {
                     "x":30,
                     "type":"Box",
-                    "props":{"y":480,"x":120,"sort":1,"name":"item122","appendProps":"laya/pages/script/Brick.prop"},
+                    "props":{"y":510,"x":630,"sort":1,"presetID":1,"preset":"laya/assets/prefab/wall.prefab","name":"item122","anchorY":0.5,"anchorX":0.5},
                     "nodeParent":925,
                     "label":"Box(item122)",
                     "isOpen":false,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
-                    "compId":2510,
+                    "compId":3124,
                     "child":[
                         {
                             "type":"Image",
-                            "props":{"y":0,"x":0,"width":60,"skin":"game/walls.png","height":60},
-                            "nodeParent":2510,
-                            "label":"Image",
+                            "props":{"presetID":2,"preset":"laya/assets/prefab/wall.prefab"},
+                            "nodeParent":3124,
+                            "label":"Image(wall)",
                             "isOpen":true,
                             "isDirectory":false,
                             "isAniNode":true,
                             "hasChild":false,
-                            "compId":2511,
+                            "compId":3125,
                             "child":[
                                 ]
                         }]
@@ -3013,25 +2883,51 @@
                 {
                     "x":30,
                     "type":"Box",
-                    "props":{"y":480,"x":240,"sort":1,"name":"item124","appendProps":"laya/pages/script/Brick.prop"},
+                    "props":{"y":510,"x":690,"sort":1,"presetID":1,"preset":"laya/assets/prefab/wall.prefab","name":"item123","anchorY":0.5,"anchorX":0.5},
+                    "nodeParent":925,
+                    "label":"Box(item123)",
+                    "isOpen":false,
+                    "isDirectory":true,
+                    "isAniNode":true,
+                    "hasChild":true,
+                    "compId":3126,
+                    "child":[
+                        {
+                            "type":"Image",
+                            "props":{"presetID":2,"preset":"laya/assets/prefab/wall.prefab"},
+                            "nodeParent":3126,
+                            "label":"Image(wall)",
+                            "isOpen":true,
+                            "isDirectory":false,
+                            "isAniNode":true,
+                            "hasChild":false,
+                            "compId":3127,
+                            "child":[
+                                ]
+                        }]
+                },
+                {
+                    "x":30,
+                    "type":"Box",
+                    "props":{"y":510,"x":750,"sort":1,"presetID":1,"preset":"laya/assets/prefab/wall.prefab","name":"item124","anchorY":0.5,"anchorX":0.5},
                     "nodeParent":925,
                     "label":"Box(item124)",
                     "isOpen":false,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
-                    "compId":2514,
+                    "compId":3128,
                     "child":[
                         {
                             "type":"Image",
-                            "props":{"y":0,"x":0,"width":60,"skin":"game/walls.png","height":60},
-                            "nodeParent":2514,
-                            "label":"Image",
+                            "props":{"presetID":2,"preset":"laya/assets/prefab/wall.prefab"},
+                            "nodeParent":3128,
+                            "label":"Image(wall)",
                             "isOpen":true,
                             "isDirectory":false,
                             "isAniNode":true,
                             "hasChild":false,
-                            "compId":2515,
+                            "compId":3129,
                             "child":[
                                 ]
                         }]
@@ -3039,25 +2935,25 @@
                 {
                     "x":30,
                     "type":"Box",
-                    "props":{"y":480,"x":300,"sort":1,"name":"item125","appendProps":"laya/pages/script/Brick.prop"},
+                    "props":{"y":510,"x":810,"sort":1,"presetID":1,"preset":"laya/assets/prefab/wall.prefab","name":"item125","anchorY":0.5,"anchorX":0.5},
                     "nodeParent":925,
                     "label":"Box(item125)",
                     "isOpen":false,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
-                    "compId":2516,
+                    "compId":3130,
                     "child":[
                         {
                             "type":"Image",
-                            "props":{"y":0,"x":0,"width":60,"skin":"game/walls.png","height":60},
-                            "nodeParent":2516,
-                            "label":"Image",
+                            "props":{"presetID":2,"preset":"laya/assets/prefab/wall.prefab"},
+                            "nodeParent":3130,
+                            "label":"Image(wall)",
                             "isOpen":true,
                             "isDirectory":false,
                             "isAniNode":true,
                             "hasChild":false,
-                            "compId":2517,
+                            "compId":3131,
                             "child":[
                                 ]
                         }]
@@ -3065,25 +2961,25 @@
                 {
                     "x":30,
                     "type":"Box",
-                    "props":{"y":480,"x":360,"sort":1,"name":"item126","appendProps":"laya/pages/script/Brick.prop"},
+                    "props":{"y":570,"x":690,"sort":1,"presetID":1,"preset":"laya/assets/prefab/wall.prefab","name":"item137","anchorY":0.5,"anchorX":0.5},
                     "nodeParent":925,
-                    "label":"Box(item126)",
+                    "label":"Box(item137)",
                     "isOpen":false,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
-                    "compId":2518,
+                    "compId":3154,
                     "child":[
                         {
                             "type":"Image",
-                            "props":{"y":0,"x":0,"width":60,"skin":"game/walls.png","height":60},
-                            "nodeParent":2518,
-                            "label":"Image",
+                            "props":{"presetID":2,"preset":"laya/assets/prefab/wall.prefab"},
+                            "nodeParent":3154,
+                            "label":"Image(wall)",
                             "isOpen":true,
                             "isDirectory":false,
                             "isAniNode":true,
                             "hasChild":false,
-                            "compId":2519,
+                            "compId":3155,
                             "child":[
                                 ]
                         }]
@@ -3091,25 +2987,25 @@
                 {
                     "x":30,
                     "type":"Box",
-                    "props":{"y":480,"x":420,"sort":1,"name":"item127","appendProps":"laya/pages/script/Brick.prop"},
+                    "props":{"y":570,"x":750,"sort":1,"presetID":1,"preset":"laya/assets/prefab/wall.prefab","name":"item138","anchorY":0.5,"anchorX":0.5},
                     "nodeParent":925,
-                    "label":"Box(item127)",
+                    "label":"Box(item138)",
                     "isOpen":false,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
-                    "compId":2520,
+                    "compId":3156,
                     "child":[
                         {
                             "type":"Image",
-                            "props":{"y":0,"x":0,"width":60,"skin":"game/walls.png","height":60},
-                            "nodeParent":2520,
-                            "label":"Image",
+                            "props":{"presetID":2,"preset":"laya/assets/prefab/wall.prefab"},
+                            "nodeParent":3156,
+                            "label":"Image(wall)",
                             "isOpen":true,
                             "isDirectory":false,
                             "isAniNode":true,
                             "hasChild":false,
-                            "compId":2521,
+                            "compId":3157,
                             "child":[
                                 ]
                         }]
@@ -3117,155 +3013,25 @@
                 {
                     "x":30,
                     "type":"Box",
-                    "props":{"y":480,"x":480,"sort":1,"name":"item128","appendProps":"laya/pages/script/Brick.prop"},
+                    "props":{"y":570,"x":810,"sort":1,"presetID":1,"preset":"laya/assets/prefab/wall.prefab","name":"item139","anchorY":0.5,"anchorX":0.5},
                     "nodeParent":925,
-                    "label":"Box(item128)",
+                    "label":"Box(item139)",
                     "isOpen":false,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
-                    "compId":2522,
+                    "compId":3158,
                     "child":[
                         {
                             "type":"Image",
-                            "props":{"y":0,"x":0,"width":60,"skin":"game/walls.png","height":60},
-                            "nodeParent":2522,
-                            "label":"Image",
+                            "props":{"presetID":2,"preset":"laya/assets/prefab/wall.prefab"},
+                            "nodeParent":3158,
+                            "label":"Image(wall)",
                             "isOpen":true,
                             "isDirectory":false,
                             "isAniNode":true,
                             "hasChild":false,
-                            "compId":2523,
-                            "child":[
-                                ]
-                        }]
-                },
-                {
-                    "x":30,
-                    "type":"Box",
-                    "props":{"y":480,"x":600,"sort":1,"name":"item130","appendProps":"laya/pages/script/Brick.prop"},
-                    "nodeParent":925,
-                    "label":"Box(item130)",
-                    "isOpen":false,
-                    "isDirectory":true,
-                    "isAniNode":true,
-                    "hasChild":true,
-                    "compId":2526,
-                    "child":[
-                        {
-                            "type":"Image",
-                            "props":{"y":0,"x":0,"width":60,"skin":"game/walls.png","height":60},
-                            "nodeParent":2526,
-                            "label":"Image",
-                            "isOpen":true,
-                            "isDirectory":false,
-                            "isAniNode":true,
-                            "hasChild":false,
-                            "compId":2527,
-                            "child":[
-                                ]
-                        }]
-                },
-                {
-                    "x":30,
-                    "type":"Box",
-                    "props":{"y":480,"x":660,"sort":1,"name":"item131","appendProps":"laya/pages/script/Brick.prop"},
-                    "nodeParent":925,
-                    "label":"Box(item131)",
-                    "isOpen":false,
-                    "isDirectory":true,
-                    "isAniNode":true,
-                    "hasChild":true,
-                    "compId":2528,
-                    "child":[
-                        {
-                            "type":"Image",
-                            "props":{"y":0,"x":0,"width":60,"skin":"game/walls.png","height":60},
-                            "nodeParent":2528,
-                            "label":"Image",
-                            "isOpen":true,
-                            "isDirectory":false,
-                            "isAniNode":true,
-                            "hasChild":false,
-                            "compId":2529,
-                            "child":[
-                                ]
-                        }]
-                },
-                {
-                    "x":30,
-                    "type":"Box",
-                    "props":{"y":480,"x":720,"sort":1,"name":"item132","appendProps":"laya/pages/script/Brick.prop"},
-                    "nodeParent":925,
-                    "label":"Box(item132)",
-                    "isOpen":false,
-                    "isDirectory":true,
-                    "isAniNode":true,
-                    "hasChild":true,
-                    "compId":2530,
-                    "child":[
-                        {
-                            "type":"Image",
-                            "props":{"y":0,"x":0,"width":60,"skin":"game/walls.png","height":60},
-                            "nodeParent":2530,
-                            "label":"Image",
-                            "isOpen":true,
-                            "isDirectory":false,
-                            "isAniNode":true,
-                            "hasChild":false,
-                            "compId":2531,
-                            "child":[
-                                ]
-                        }]
-                },
-                {
-                    "x":30,
-                    "type":"Box",
-                    "props":{"y":480,"x":780,"sort":1,"name":"item133","appendProps":"laya/pages/script/Brick.prop"},
-                    "nodeParent":925,
-                    "label":"Box(item133)",
-                    "isOpen":false,
-                    "isDirectory":true,
-                    "isAniNode":true,
-                    "hasChild":true,
-                    "compId":2532,
-                    "child":[
-                        {
-                            "type":"Image",
-                            "props":{"y":0,"x":0,"width":60,"skin":"game/walls.png","height":60},
-                            "nodeParent":2532,
-                            "label":"Image",
-                            "isOpen":true,
-                            "isDirectory":false,
-                            "isAniNode":true,
-                            "hasChild":false,
-                            "compId":2533,
-                            "child":[
-                                ]
-                        }]
-                },
-                {
-                    "x":30,
-                    "type":"Box",
-                    "props":{"y":480,"x":840,"sort":1,"name":"item134","appendProps":"laya/pages/script/Brick.prop"},
-                    "nodeParent":925,
-                    "label":"Box(item134)",
-                    "isOpen":false,
-                    "isDirectory":true,
-                    "isAniNode":true,
-                    "hasChild":true,
-                    "compId":2534,
-                    "child":[
-                        {
-                            "type":"Image",
-                            "props":{"y":0,"x":0,"width":60,"skin":"game/walls.png","height":60},
-                            "nodeParent":2534,
-                            "label":"Image",
-                            "isOpen":true,
-                            "isDirectory":false,
-                            "isAniNode":true,
-                            "hasChild":false,
-                            "compId":2535,
+                            "compId":3159,
                             "child":[
                                 ]
                         }]
@@ -3569,7 +3335,6 @@
             "compId":2600,
             "child":[
                 {
-                    "x":30,
                     "type":"Button",
                     "props":{"y":-138,"x":-2,"width":119,"var":"attack","skin":"ui/qt228.png","name":"item0","label":"攻击","height":40},
                     "nodeParent":2600,
@@ -3582,7 +3347,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"Button",
                     "props":{"y":-95,"x":-806,"width":119,"var":"up","skin":"ui/qt228.png","name":"item1","label":"上","height":40,"anchorY":0.5,"anchorX":0.5},
                     "nodeParent":2600,
@@ -3595,7 +3359,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"Button",
                     "props":{"y":-70,"x":-989,"width":119,"var":"left","skin":"ui/qt228.png","name":"item2","label":"左","height":40},
                     "nodeParent":2600,
@@ -3608,7 +3371,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"Button",
                     "props":{"y":-65,"x":-725,"width":119,"var":"right","skin":"ui/qt228.png","name":"item0","label":"右","height":40},
                     "nodeParent":2600,
@@ -3621,7 +3383,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"Button",
                     "props":{"y":-25,"x":-865,"width":119,"var":"down","skin":"ui/qt228.png","name":"item1","label":"攻击","height":40},
                     "nodeParent":2600,

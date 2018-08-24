@@ -25,6 +25,8 @@ var obj;
             _this._speed = 6;
             _this._dir = MoveDir.UP;
             _this._ismoving = false;
+            _this.width = 60;
+            _this.height = 60;
             _this.zeroRect = new Laya.Rectangle(0, 0, 0, 0);
             _this.oneRect = new Laya.Rectangle(0, 0, 60, 60);
             if (_this instanceof obj.Bullet) {
@@ -99,6 +101,15 @@ var obj;
                 default:
                     console.log("move rotation：" + this.rotation);
                     break;
+            }
+        };
+        InstanceObject.prototype.stopMove = function () {
+            if (this._ismoving) {
+                this._ismoving = false;
+                console.log("before this.x :" + this.x + ",this.y:" + this.y);
+                this.x = Math.round((this.x - 30) / 60) * 60 + 30;
+                this.y = Math.round((this.y - 30) / 60) * 60 + 30;
+                console.log("after this.x :" + this.x + ",this.y:" + this.y);
             }
         };
         InstanceObject.prototype.turn = function (dir) {

@@ -21,6 +21,8 @@ var obj;
         function Bullet() {
             var _this = _super.call(this) || this;
             _this.speed = 10;
+            _this.width = 60;
+            _this.height = 15;
             return _this;
         }
         Bullet.prototype.onFrameOnce = function () {

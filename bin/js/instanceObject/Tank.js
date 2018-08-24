@@ -27,10 +27,11 @@ var obj;
         }
         Tank.prototype.onFrameOnce = function () {
             _super.prototype.onFrameOnce.call(this);
-            var rect = new Laya.Rectangle(-30, -30, 60, 60);
+            var rect = new Laya.Rectangle(0, 0, 60, 60);
             this.setBounds(rect);
             this._inited = true;
             this.frameLoop(30, this, this.attackLoop);
+            this.graphics.drawRect(0, 0, 60, 60, "#ff0000");
         };
         Tank.prototype.onFrameLoop = function () {
             if (game.GameCenter.gameStage.intersectWithOther(this, MoveDir.UP)) {
@@ -60,6 +61,9 @@ var obj;
         Tank.prototype.intersectWithOther = function (other) {
             if (other instanceof obj.Bullet) {
                 console.log("被击中");
+            }
+            else {
+                this.stopMove();
             }
         };
         return Tank;

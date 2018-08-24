@@ -35,6 +35,8 @@ module obj
 			this._ismoving = ismoving;
 		}
 
+		public width : number = 60;
+		public height : number = 60;
 		protected zeroRect : Laya.Rectangle = new Laya.Rectangle(0,0,0,0);
 		protected oneRect : Laya.Rectangle = new Laya.Rectangle(0,0,60,60);
 
@@ -80,6 +82,17 @@ module obj
 				default:
 					console.log("move rotation："+this.rotation);
 					break;
+			}
+		}
+		public stopMove() : void
+		{
+			if(this._ismoving)
+			{
+				this._ismoving = false;
+				console.log("before this.x :"+this.x  + ",this.y:"+this.y);
+				this.x = Math.round((this.x - 30) / 60) * 60 + 30;
+				this.y = Math.round((this.y - 30) / 60) * 60 + 30;
+				console.log("after this.x :"+this.x  + ",this.y:"+this.y);
 			}
 		}
 

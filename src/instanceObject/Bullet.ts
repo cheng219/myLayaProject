@@ -9,6 +9,8 @@ module obj
         {
             super();
             this.speed = 10;
+            this.width = 60;
+            this.height = 15;
         }
         
         protected onFrameOnce() : void
