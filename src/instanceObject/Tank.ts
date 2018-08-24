@@ -7,11 +7,11 @@ module obj
     export class Tank extends InstanceObject
     {
         public id : number = 0;
+        public bulletSpeed : number = 10;
         constructor()
         {
             super();
             this.camp = 1;
-            game.GameCenter.gameStage.mainTank = this;
         }
 
         protected onFrameOnce() : void
@@ -19,6 +19,7 @@ module obj
             super.onFrameOnce();
             if(!this.isPoolObj)
             {
+                game.GameCenter.gameStage.mainTank = this;
                 this.init();
             }
             //this.graphics.drawRect(0,0,60,60,"#ff0000");
@@ -26,7 +27,7 @@ module obj
         public init() : void
         {
             this._inited = true;
-            this.frameLoop(30,this,this.attackLoop);
+            Laya.timer.loop(2000,this,this.attackLoop)
         }
 
         protected onFrameLoop() : void
@@ -46,7 +47,8 @@ module obj
 
         protected attackLoop() : void
         {
-            //this.attack();
+            if(this.isPoolObj)//敌人
+                this.attack();
         }
 
         public attack() : void
@@ -58,7 +60,7 @@ module obj
                 bullet.pos(this.x,this.y);
                 bullet.ismoving = true;
                 bullet.camp = this.camp;
-                bullet.speed = 10;
+                bullet.speed = this.bulletSpeed;
                 bullet.turn(this.dir);
                 //Laya.stage.addChild(bullet);
             }
@@ -68,10 +70,32 @@ module obj
         {
             if(other instanceof Bullet)
             {
+                if(other.camp != this.camp && this.isPoolObj)
+                {
+                    game.GameCenter.gameStage.DelInstanceObj(this);
+                }
                 console.log("被击中");
             }else
             {
                 this.stopMove();
+                if(this.isPoolObj)
+                {
+                    this.autoTurn();
+                }
+            }
+        }
+         
+        protected autoTurn() : void
+        {
+            let arr : Array<MoveDir> = [MoveDir.DOWN,MoveDir.LEFT,MoveDir.RIGHT,MoveDir.UP];
+            arr.splice(arr.indexOf(this.dir),1);
+            let index : number = Math.round(Math.random() * (arr.length - 1));
+            let mdir : MoveDir = arr[index];
+            console.log("index:"+index + ",arr.length:"+arr.length+",mdir:"+mdir);
+            if(mdir != undefined)
+            {
+                this.turn(mdir);
+                this.ismoving = true;
             }
         }
     }

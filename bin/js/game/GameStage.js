@@ -28,6 +28,8 @@ var game;
             _this.minY = 30;
             _this.maxX = 870; //900-30
             _this.maxY = 570; //600-30
+            _this.bornPos = [{ x: 30, y: 30 }, { x: 420, y: 30 }, { x: 870, y: 30 }];
+            _this.posIndex = 0;
             return _this;
         }
         GameStage.CreateNew = function () {
@@ -63,11 +65,11 @@ var game;
         GameStage.prototype.AddPool = function (brick) {
             if (brick instanceof obj.Bullet) {
                 var len = this.poolBullets.push(brick);
-                brick.pos(1044, 20 * len);
+                brick.pos(1100, 20 * len);
             }
             else if (brick instanceof obj.Tank) {
                 var len = this.poolTanks.push(brick);
-                brick.pos(1144, 60 * len);
+                brick.pos(1050, 60 * len);
             }
             //console.log("pool :"+this.poolBullets.length);
         };
@@ -98,6 +100,7 @@ var game;
             brick.return2Pool();
             this.AddPool(brick);
         };
+        /**检测碰撞 */
         GameStage.prototype.intersectWithOther = function (tank, dir) {
             //console.log("intersectWithOther id:"+tank.camp);
             if ((tank.x <= this.minX && dir == MoveDir.LEFT)
@@ -131,6 +134,23 @@ var game;
                 }
             }
             return false;
+        };
+        GameStage.prototype.CreateEnemyTank = function () {
+            var tank = game.GameCenter.gameStage.requstPool(ObjSort.TANK);
+            if (tank != null) {
+                var pos = this.bornPos[this.posIndex];
+                tank.pos(pos.x, pos.y);
+                tank.ismoving = true;
+                tank.camp = 2;
+                tank.speed = 4;
+                tank.bulletSpeed = 8;
+                tank.turn(MoveDir.DOWN);
+                //Laya.stage.addChild(bullet);
+                this.posIndex++;
+                if (this.posIndex >= this.bornPos.length) {
+                    this.posIndex = 0;
+                }
+            }
         };
         return GameStage;
     }(game.StageBase));

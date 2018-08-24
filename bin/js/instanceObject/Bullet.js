@@ -19,9 +19,7 @@ var obj;
     var Bullet = /** @class */ (function (_super) {
         __extends(Bullet, _super);
         function Bullet() {
-            var _this = _super.call(this) || this;
-            _this.speed = 10;
-            return _this;
+            return _super.call(this) || this;
         }
         /**子弹从对象池取出才调用这里 */
         Bullet.prototype.onFrameOnce = function () {

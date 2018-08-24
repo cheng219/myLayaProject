@@ -8,7 +8,6 @@ module obj
         constructor()
         {
             super();
-            this.speed = 10;
         }
         /**子弹从对象池取出才调用这里 */
         protected onFrameOnce() : void

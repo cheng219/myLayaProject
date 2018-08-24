@@ -21,20 +21,21 @@ var obj;
         function Tank() {
             var _this = _super.call(this) || this;
             _this.id = 0;
+            _this.bulletSpeed = 10;
             _this.camp = 1;
-            game.GameCenter.gameStage.mainTank = _this;
             return _this;
         }
         Tank.prototype.onFrameOnce = function () {
             _super.prototype.onFrameOnce.call(this);
             if (!this.isPoolObj) {
+                game.GameCenter.gameStage.mainTank = this;
                 this.init();
             }
             //this.graphics.drawRect(0,0,60,60,"#ff0000");
         };
         Tank.prototype.init = function () {
             this._inited = true;
-            this.frameLoop(30, this, this.attackLoop);
+            Laya.timer.loop(2000, this, this.attackLoop);
         };
         Tank.prototype.onFrameLoop = function () {
             if (this.ismoving) //移动中才检测碰撞
@@ -49,7 +50,8 @@ var obj;
             }
         };
         Tank.prototype.attackLoop = function () {
-            //this.attack();
+            if (this.isPoolObj) //敌人
+                this.attack();
         };
         Tank.prototype.attack = function () {
             console.log("attack");
@@ -58,17 +60,34 @@ var obj;
                 bullet.pos(this.x, this.y);
                 bullet.ismoving = true;
                 bullet.camp = this.camp;
-                bullet.speed = 10;
+                bullet.speed = this.bulletSpeed;
                 bullet.turn(this.dir);
                 //Laya.stage.addChild(bullet);
             }
         };
         Tank.prototype.intersectWithOther = function (other) {
             if (other instanceof obj.Bullet) {
+                if (other.camp != this.camp && this.isPoolObj) {
+                    game.GameCenter.gameStage.DelInstanceObj(this);
+                }
                 console.log("被击中");
             }
             else {
                 this.stopMove();
+                if (this.isPoolObj) {
+                    this.autoTurn();
+                }
+            }
+        };
+        Tank.prototype.autoTurn = function () {
+            var arr = [MoveDir.DOWN, MoveDir.LEFT, MoveDir.RIGHT, MoveDir.UP];
+            arr.splice(arr.indexOf(this.dir), 1);
+            var index = Math.round(Math.random() * (arr.length - 1));
+            var mdir = arr[index];
+            console.log("index:" + index + ",arr.length:" + arr.length + ",mdir:" + mdir);
+            if (mdir != undefined) {
+                this.turn(mdir);
+                this.ismoving = true;
             }
         };
         return Tank;
