@@ -27,7 +27,8 @@ var obj;
         }
         Brick.prototype.onFrameOnce = function () {
             _super.prototype.onFrameOnce.call(this);
-            //console.log("x:"+this.x + ",y:"+this.y + ",sort:"+this.sort);
+            if (this.sort == 3)
+                console.log("x:" + this.x + ",y:" + this.y + ",sort:" + this.sort);
             if (this.sort != BrickSort.GRASS) {
                 this.widthX = 60;
                 this.heightY = 60;

@@ -39,7 +39,7 @@ var obj;
             _super.prototype.init.call(this);
             this._inited = true;
             this.ismoving = true;
-            console.log("bullet init");
+            //console.log("bullet init");
         };
         Bullet.prototype.onFrameLoop = function () {
             if (!this.inited)
@@ -47,7 +47,6 @@ var obj;
             if (!this.ismoving)
                 return;
             if (game.GameCenter.gameStage.intersectWithOther(this, MoveDir.UP)) {
-                game.GameCenter.gameStage.DelInstanceObj(this);
                 //console.log("遇到障碍");
             }
             else {
@@ -55,11 +54,9 @@ var obj;
             }
         };
         Bullet.prototype.intersectWithOther = function (other) {
-            if (other instanceof obj.Tank || other instanceof obj.Brick) {
-                console.log("击中其他，销毁自己");
-                //this.visible = false;
-                game.GameCenter.gameStage.DelInstanceObj(this);
-            }
+            console.log("击中其他，销毁自己");
+            //this.visible = false;
+            game.GameCenter.gameStage.DelInstanceObj(this);
         };
         return Bullet;
     }(obj.InstanceObject));

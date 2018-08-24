@@ -25,8 +25,8 @@ var game;
             _this.mainTank = null;
             _this.minX = 30;
             _this.minY = 30;
-            _this.maxX = 570; //600-30
-            _this.maxY = 870; //900-30
+            _this.maxX = 870; //900-30
+            _this.maxY = 570; //600-30
             return _this;
         }
         GameStage.CreateNew = function () {
@@ -55,23 +55,22 @@ var game;
             if (brick instanceof obj.Brick) {
                 brick.destroy(true);
             }
-            else if (brick instanceof obj.Bullet) {
+            else if (brick.isPoolObj) {
                 this.return2Pool(brick);
             }
-            //Laya.stage.removeChild(brick);
         };
         GameStage.prototype.AddPool = function (brick) {
-            this.poolBullets.push(brick);
-            var index = this.poolBullets.indexOf(brick);
-            brick.pos(1044, 20 * index);
+            var len = this.poolBullets.push(brick);
+            brick.pos(1044, 20 * len);
             //console.log("pool :"+this.poolBullets.length);
         };
         GameStage.prototype.requstPool = function () {
-            if (this.poolBullets.length > 0) {
-                var go = this.poolBullets[0];
+            var len = this.poolBullets.length;
+            if (len > 0) {
+                var go = this.poolBullets[len - 1];
                 go.init();
-                this.poolBullets.splice(0, 1);
-                console.log("remain :" + this.poolBullets.length);
+                this.poolBullets.splice(len - 1, 1);
+                //console.log("remain :" + this.poolBullets.length);
                 return go;
             }
         };
@@ -99,6 +98,11 @@ var game;
                 var diffH = this.objs[i].heightY / 2 + tank.heightY / 2;
                 if (diffX > 60 || diffY > 60) //距离过远,必然不相交,减少getBounds消耗
                     continue;
+                if (tank instanceof obj.Bullet && this.objs[i] instanceof obj.Brick) {
+                    if (this.objs[i].sort == BrickSort.WATER) {
+                        continue; //子弹过水
+                    }
+                }
                 if (diffX < diffW && diffY < diffH) {
                     console.log("diffX :" + diffX + ",diffW :" + diffW + ",diffY :" + diffY + ",diffH :" + diffH);
                     this.objs[i].intersectWithOther(tank);

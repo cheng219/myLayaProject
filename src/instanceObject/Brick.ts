@@ -16,7 +16,7 @@ module obj
         protected onFrameOnce():void
         {
             super.onFrameOnce();
-            //console.log("x:"+this.x + ",y:"+this.y + ",sort:"+this.sort);
+            console.log("x:"+this.x + ",y:"+this.y + ",sort:"+this.sort);
             if(this.sort != BrickSort.GRASS)
             {
                 this.widthX = 60;

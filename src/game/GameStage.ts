@@ -13,8 +13,8 @@ module game
 
         protected minX : number = 30;
         protected minY : number = 30;
-        protected maxX : number = 570;//600-30
-        protected maxY : number = 870;//900-30
+        protected maxX : number = 870;//900-30
+        protected maxY : number = 570;//600-30
 
         public static CreateNew() : GameStage
         {
@@ -56,27 +56,26 @@ module game
             if(brick instanceof obj.Brick)
             {
                 brick.destroy(true);
-            }else if(brick instanceof obj.Bullet)
+            }else if(brick.isPoolObj)
             {
                 this.return2Pool(brick);
             }
-            //Laya.stage.removeChild(brick);
         }
         public AddPool(brick : obj.InstanceObject) : void
         {
-            this.poolBullets.push(brick);
-            let index = this.poolBullets.indexOf(brick);
-            brick.pos(1044,20*index);
+            let len : number = this.poolBullets.push(brick);
+            brick.pos(1044,20*len);
             //console.log("pool :"+this.poolBullets.length);
         }
         public requstPool() : obj.InstanceObject
         {
-            if(this.poolBullets.length > 0)
+            let len : number = this.poolBullets.length;
+            if(len > 0)
             {
-                let go = this.poolBullets[0];
+                let go = this.poolBullets[len - 1];
                 go.init();
-                this.poolBullets.splice(0,1);
-                console.log("remain :" + this.poolBullets.length);
+                this.poolBullets.splice(len - 1,1);
+                //console.log("remain :" + this.poolBullets.length);
                 return go;
             }
         }
@@ -109,6 +108,13 @@ module game
                 let diffH : number = this.objs[i].heightY/2 + tank.heightY/2;
                 if(diffX > 60 || diffY > 60)//距离过远,必然不相交,减少getBounds消耗
                     continue;
+                if(tank instanceof obj.Bullet && this.objs[i] instanceof obj.Brick)
+                {
+                    if((this.objs[i] as obj.Brick).sort == BrickSort.WATER)
+                    {
+                        continue;//子弹过水
+                    }
+                }
                 if(diffX < diffW && diffY < diffH)
                 {
                     console.log("diffX :"+diffX+",diffW :"+diffW+",diffY :"+diffY+",diffH :"+diffH);

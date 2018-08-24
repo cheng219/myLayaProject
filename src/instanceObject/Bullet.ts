@@ -37,7 +37,6 @@ module obj
             if(!this.ismoving)return;
             if(game.GameCenter.gameStage.intersectWithOther(this,MoveDir.UP))
             {
-                game.GameCenter.gameStage.DelInstanceObj(this);
                 //console.log("遇到障碍");
             }else
             {
