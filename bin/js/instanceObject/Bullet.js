@@ -21,26 +21,36 @@ var obj;
         function Bullet() {
             var _this = _super.call(this) || this;
             _this.speed = 10;
-            _this.width = 60;
-            _this.height = 15;
             return _this;
         }
+        /**子弹从对象池取出才调用这里 */
         Bullet.prototype.onFrameOnce = function () {
             _super.prototype.onFrameOnce.call(this);
-            var rect = new Laya.Rectangle(0, 0, 60, 15);
-            this.setBounds(rect);
+            if (this.dir == MoveDir.DOWN || this.dir == MoveDir.UP) {
+                this.widthX = 60;
+                this.heightY = 15;
+            }
+            else {
+                this.widthX = 15;
+                this.heightY = 60;
+            }
+        };
+        Bullet.prototype.init = function () {
+            _super.prototype.init.call(this);
             this._inited = true;
+            this.ismoving = true;
+            console.log("bullet init");
         };
         Bullet.prototype.onFrameLoop = function () {
             if (!this.inited)
+                return;
+            if (!this.ismoving)
                 return;
             if (game.GameCenter.gameStage.intersectWithOther(this, MoveDir.UP)) {
                 game.GameCenter.gameStage.DelInstanceObj(this);
                 //console.log("遇到障碍");
             }
             else {
-                //this.y = this.y - 6;
-                this.ismoving = true;
                 _super.prototype.move.call(this);
             }
         };

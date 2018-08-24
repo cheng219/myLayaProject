@@ -9,41 +9,47 @@ module obj
         {
             super();
             this.speed = 10;
-            this.width = 60;
-            this.height = 15;
         }
-        
+        /**子弹从对象池取出才调用这里 */
         protected onFrameOnce() : void
         {
             super.onFrameOnce();
-            let rect = new Laya.Rectangle(0,0,60,15)
-            this.setBounds(rect);
-            this._inited = true;
+            if(this.dir == MoveDir.DOWN || this.dir == MoveDir.UP)
+            {
+                this.widthX = 60;
+                this.heightY = 15;
+            }else
+            {
+                this.widthX = 15;
+                this.heightY = 60;
+            }
         }
-
+        public init() : void
+        {
+            super.init();
+            this._inited = true;
+            this.ismoving = true;
+            //console.log("bullet init");
+        }
         protected onFrameLoop() : void
         {
             if(!this.inited)return;
+            if(!this.ismoving)return;
             if(game.GameCenter.gameStage.intersectWithOther(this,MoveDir.UP))
             {
                 game.GameCenter.gameStage.DelInstanceObj(this);
                 //console.log("遇到障碍");
             }else
             {
-                //this.y = this.y - 6;
-                this.ismoving = true;
                 super.move();
             }
         }
 
         public intersectWithOther(other : InstanceObject) : void
         {
-            if(other instanceof Tank || other instanceof Brick)
-            {
-                console.log("击中其他，销毁自己");
-                //this.visible = false;
-                game.GameCenter.gameStage.DelInstanceObj(this);
-            }
+            console.log("击中其他，销毁自己");
+            //this.visible = false;
+            game.GameCenter.gameStage.DelInstanceObj(this);
         }
     }
 }

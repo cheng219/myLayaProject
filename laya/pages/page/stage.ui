@@ -1,8 +1,8 @@
 {
     "x":0,
     "type":"Dialog",
-    "selectedBox":925,
-    "selecteID":3056,
+    "selectedBox":1,
+    "selecteID":3206,
     "props":{"y":0,"x":0,"width":1136,"sceneColor":"#000000","height":640},
     "nodeParent":-1,
     "label":"Dialog",
@@ -118,14 +118,13 @@
             "props":{"y":0,"x":0,"var":"map","name":"map"},
             "nodeParent":1,
             "label":"Box(map)",
-            "isOpen":true,
+            "isOpen":false,
             "isDirectory":true,
             "isAniNode":true,
             "hasChild":true,
             "compId":925,
             "child":[
                 {
-                    "x":30,
                     "type":"Box",
                     "props":{"y":30,"x":30,"sort":1,"presetID":1,"preset":"laya/assets/prefab/wall.prefab","name":"item0","anchorY":0.5,"anchorX":0.5},
                     "nodeParent":925,
@@ -151,7 +150,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Box",
                     "props":{"y":30,"x":90,"sort":1,"presetID":1,"preset":"laya/assets/prefab/wall.prefab","name":"item1","anchorY":0.5,"anchorX":0.5},
                     "nodeParent":925,
@@ -177,7 +175,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Box",
                     "props":{"y":30,"x":150,"sort":1,"presetID":1,"preset":"laya/assets/prefab/wall.prefab","name":"item2","anchorY":0.5,"anchorX":0.5},
                     "nodeParent":925,
@@ -203,7 +200,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Box",
                     "props":{"y":30,"x":210,"sort":1,"presetID":1,"preset":"laya/assets/prefab/wall.prefab","name":"item3","anchorY":0.5,"anchorX":0.5},
                     "nodeParent":925,
@@ -229,7 +225,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Box",
                     "props":{"y":30,"x":270,"sort":1,"presetID":1,"preset":"laya/assets/prefab/wall.prefab","name":"item4","anchorY":0.5,"anchorX":0.5},
                     "nodeParent":925,
@@ -255,7 +250,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Box",
                     "props":{"y":30,"x":330,"sort":1,"presetID":1,"preset":"laya/assets/prefab/wall.prefab","name":"item5","anchorY":0.5,"anchorX":0.5},
                     "nodeParent":925,
@@ -281,7 +275,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Box",
                     "props":{"y":30,"x":390,"sort":1,"presetID":1,"preset":"laya/assets/prefab/wall.prefab","name":"item6","anchorY":0.5,"anchorX":0.5},
                     "nodeParent":925,
@@ -307,7 +300,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Box",
                     "props":{"y":30,"x":450,"sort":1,"presetID":1,"preset":"laya/assets/prefab/wall.prefab","name":"item7","anchorY":0.5,"anchorX":0.5},
                     "nodeParent":925,
@@ -333,7 +325,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Box",
                     "props":{"y":30,"x":510,"sort":1,"presetID":1,"preset":"laya/assets/prefab/wall.prefab","name":"item8","anchorY":0.5,"anchorX":0.5},
                     "nodeParent":925,
@@ -359,7 +350,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Box",
                     "props":{"y":30,"x":570,"sort":1,"presetID":1,"preset":"laya/assets/prefab/wall.prefab","name":"item9","anchorY":0.5,"anchorX":0.5},
                     "nodeParent":925,
@@ -385,7 +375,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Box",
                     "props":{"y":30,"x":630,"sort":1,"presetID":1,"preset":"laya/assets/prefab/wall.prefab","name":"item10","anchorY":0.5,"anchorX":0.5},
                     "nodeParent":925,
@@ -411,7 +400,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Box",
                     "props":{"y":30,"x":690,"sort":1,"presetID":1,"preset":"laya/assets/prefab/wall.prefab","name":"item11","anchorY":0.5,"anchorX":0.5},
                     "nodeParent":925,
@@ -437,7 +425,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Box",
                     "props":{"y":30,"x":750,"sort":1,"presetID":1,"preset":"laya/assets/prefab/wall.prefab","name":"item12","anchorY":0.5,"anchorX":0.5},
                     "nodeParent":925,
@@ -463,7 +450,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Box",
                     "props":{"y":30,"x":810,"sort":1,"presetID":1,"preset":"laya/assets/prefab/wall.prefab","name":"item13","anchorY":0.5,"anchorX":0.5},
                     "nodeParent":925,
@@ -489,7 +475,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Box",
                     "props":{"y":90,"x":30,"sort":1,"presetID":1,"preset":"laya/assets/prefab/wall.prefab","name":"item14","anchorY":0.5,"anchorX":0.5},
                     "nodeParent":925,
@@ -515,7 +500,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Box",
                     "props":{"y":90,"x":90,"sort":1,"presetID":1,"preset":"laya/assets/prefab/wall.prefab","name":"item15","anchorY":0.5,"anchorX":0.5},
                     "nodeParent":925,
@@ -541,7 +525,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Box",
                     "props":{"y":90,"x":150,"sort":1,"presetID":1,"preset":"laya/assets/prefab/wall.prefab","name":"item16","anchorY":0.5,"anchorX":0.5},
                     "nodeParent":925,
@@ -567,7 +550,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Box",
                     "props":{"y":90,"x":210,"sort":1,"presetID":1,"preset":"laya/assets/prefab/wall.prefab","name":"item17","anchorY":0.5,"anchorX":0.5},
                     "nodeParent":925,
@@ -593,7 +575,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Box",
                     "props":{"y":90,"x":270,"sort":1,"presetID":1,"preset":"laya/assets/prefab/wall.prefab","name":"item18","anchorY":0.5,"anchorX":0.5},
                     "nodeParent":925,
@@ -619,7 +600,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Box",
                     "props":{"y":90,"x":330,"sort":1,"presetID":1,"preset":"laya/assets/prefab/wall.prefab","name":"item19","anchorY":0.5,"anchorX":0.5},
                     "nodeParent":925,
@@ -645,7 +625,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Box",
                     "props":{"y":90,"x":390,"sort":1,"presetID":1,"preset":"laya/assets/prefab/wall.prefab","name":"item20","anchorY":0.5,"anchorX":0.5},
                     "nodeParent":925,
@@ -671,7 +650,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Box",
                     "props":{"y":90,"x":450,"sort":1,"presetID":1,"preset":"laya/assets/prefab/wall.prefab","name":"item21","anchorY":0.5,"anchorX":0.5},
                     "nodeParent":925,
@@ -697,7 +675,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Box",
                     "props":{"y":90,"x":510,"sort":1,"presetID":1,"preset":"laya/assets/prefab/wall.prefab","name":"item22","anchorY":0.5,"anchorX":0.5},
                     "nodeParent":925,
@@ -723,7 +700,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Box",
                     "props":{"y":90,"x":570,"sort":1,"presetID":1,"preset":"laya/assets/prefab/wall.prefab","name":"item23","anchorY":0.5,"anchorX":0.5},
                     "nodeParent":925,
@@ -749,7 +725,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Box",
                     "props":{"y":90,"x":630,"sort":1,"presetID":1,"preset":"laya/assets/prefab/wall.prefab","name":"item24","anchorY":0.5,"anchorX":0.5},
                     "nodeParent":925,
@@ -775,7 +750,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Box",
                     "props":{"y":90,"x":690,"sort":1,"presetID":1,"preset":"laya/assets/prefab/wall.prefab","name":"item25","anchorY":0.5,"anchorX":0.5},
                     "nodeParent":925,
@@ -801,7 +775,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Box",
                     "props":{"y":90,"x":750,"sort":1,"presetID":1,"preset":"laya/assets/prefab/wall.prefab","name":"item26","anchorY":0.5,"anchorX":0.5},
                     "nodeParent":925,
@@ -827,7 +800,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Box",
                     "props":{"y":90,"x":810,"sort":1,"presetID":1,"preset":"laya/assets/prefab/wall.prefab","name":"item27","anchorY":0.5,"anchorX":0.5},
                     "nodeParent":925,
@@ -853,7 +825,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Box",
                     "props":{"y":150,"x":30,"sort":1,"presetID":1,"preset":"laya/assets/prefab/wall.prefab","name":"item28","anchorY":0.5,"anchorX":0.5},
                     "nodeParent":925,
@@ -879,7 +850,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Box",
                     "props":{"y":150,"x":90,"sort":1,"presetID":1,"preset":"laya/assets/prefab/wall.prefab","name":"item29","anchorY":0.5,"anchorX":0.5},
                     "nodeParent":925,
@@ -905,7 +875,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Box",
                     "props":{"y":150,"x":150,"sort":1,"presetID":1,"preset":"laya/assets/prefab/wall.prefab","name":"item30","anchorY":0.5,"anchorX":0.5},
                     "nodeParent":925,
@@ -931,7 +900,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Box",
                     "props":{"y":150,"x":210,"sort":1,"presetID":1,"preset":"laya/assets/prefab/wall.prefab","name":"item31","anchorY":0.5,"anchorX":0.5},
                     "nodeParent":925,
@@ -957,7 +925,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Box",
                     "props":{"y":150,"x":270,"sort":1,"presetID":1,"preset":"laya/assets/prefab/wall.prefab","name":"item32","anchorY":0.5,"anchorX":0.5},
                     "nodeParent":925,
@@ -983,7 +950,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Box",
                     "props":{"y":150,"x":330,"sort":1,"presetID":1,"preset":"laya/assets/prefab/wall.prefab","name":"item33","anchorY":0.5,"anchorX":0.5},
                     "nodeParent":925,
@@ -1009,7 +975,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Box",
                     "props":{"y":150,"x":390,"sort":1,"presetID":1,"preset":"laya/assets/prefab/wall.prefab","name":"item34","anchorY":0.5,"anchorX":0.5},
                     "nodeParent":925,
@@ -1035,7 +1000,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Box",
                     "props":{"y":150,"x":450,"sort":1,"presetID":1,"preset":"laya/assets/prefab/wall.prefab","name":"item35","anchorY":0.5,"anchorX":0.5},
                     "nodeParent":925,
@@ -1061,7 +1025,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Box",
                     "props":{"y":150,"x":510,"sort":1,"presetID":1,"preset":"laya/assets/prefab/wall.prefab","name":"item36","anchorY":0.5,"anchorX":0.5},
                     "nodeParent":925,
@@ -1087,7 +1050,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Box",
                     "props":{"y":150,"x":570,"sort":1,"presetID":1,"preset":"laya/assets/prefab/wall.prefab","name":"item37","anchorY":0.5,"anchorX":0.5},
                     "nodeParent":925,
@@ -1113,7 +1075,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Box",
                     "props":{"y":150,"x":630,"sort":1,"presetID":1,"preset":"laya/assets/prefab/wall.prefab","name":"item38","anchorY":0.5,"anchorX":0.5},
                     "nodeParent":925,
@@ -1139,7 +1100,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Box",
                     "props":{"y":150,"x":690,"sort":1,"presetID":1,"preset":"laya/assets/prefab/wall.prefab","name":"item39","anchorY":0.5,"anchorX":0.5},
                     "nodeParent":925,
@@ -1165,7 +1125,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Box",
                     "props":{"y":150,"x":750,"sort":1,"presetID":1,"preset":"laya/assets/prefab/wall.prefab","name":"item40","anchorY":0.5,"anchorX":0.5},
                     "nodeParent":925,
@@ -1191,7 +1150,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Box",
                     "props":{"y":150,"x":810,"sort":1,"presetID":1,"preset":"laya/assets/prefab/wall.prefab","name":"item41","anchorY":0.5,"anchorX":0.5},
                     "nodeParent":925,
@@ -1217,7 +1175,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Box",
                     "props":{"y":210,"x":30,"sort":1,"presetID":1,"preset":"laya/assets/prefab/wall.prefab","name":"item42","anchorY":0.5,"anchorX":0.5},
                     "nodeParent":925,
@@ -1243,7 +1200,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Box",
                     "props":{"y":210,"x":90,"sort":1,"presetID":1,"preset":"laya/assets/prefab/wall.prefab","name":"item43","anchorY":0.5,"anchorX":0.5},
                     "nodeParent":925,
@@ -1269,7 +1225,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Box",
                     "props":{"y":210,"x":150,"sort":1,"presetID":1,"preset":"laya/assets/prefab/wall.prefab","name":"item44","anchorY":0.5,"anchorX":0.5},
                     "nodeParent":925,
@@ -1295,7 +1250,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Box",
                     "props":{"y":210,"x":510,"sort":1,"presetID":1,"preset":"laya/assets/prefab/wall.prefab","name":"item50","anchorY":0.5,"anchorX":0.5},
                     "nodeParent":925,
@@ -1321,7 +1275,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Box",
                     "props":{"y":210,"x":570,"sort":1,"presetID":1,"preset":"laya/assets/prefab/wall.prefab","name":"item51","anchorY":0.5,"anchorX":0.5},
                     "nodeParent":925,
@@ -1347,7 +1300,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Box",
                     "props":{"y":210,"x":630,"sort":1,"presetID":1,"preset":"laya/assets/prefab/wall.prefab","name":"item52","anchorY":0.5,"anchorX":0.5},
                     "nodeParent":925,
@@ -1373,7 +1325,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Box",
                     "props":{"y":210,"x":690,"sort":1,"presetID":1,"preset":"laya/assets/prefab/wall.prefab","name":"item53","anchorY":0.5,"anchorX":0.5},
                     "nodeParent":925,
@@ -1399,7 +1350,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Box",
                     "props":{"y":210,"x":750,"sort":1,"presetID":1,"preset":"laya/assets/prefab/wall.prefab","name":"item54","anchorY":0.5,"anchorX":0.5},
                     "nodeParent":925,
@@ -1425,7 +1375,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Box",
                     "props":{"y":210,"x":810,"sort":1,"presetID":1,"preset":"laya/assets/prefab/wall.prefab","name":"item55","anchorY":0.5,"anchorX":0.5},
                     "nodeParent":925,
@@ -1451,7 +1400,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Box",
                     "props":{"y":270,"x":30,"sort":1,"presetID":1,"preset":"laya/assets/prefab/wall.prefab","name":"item56","anchorY":0.5,"anchorX":0.5},
                     "nodeParent":925,
@@ -1477,7 +1425,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Box",
                     "props":{"y":270,"x":90,"sort":1,"presetID":1,"preset":"laya/assets/prefab/wall.prefab","name":"item57","anchorY":0.5,"anchorX":0.5},
                     "nodeParent":925,
@@ -1503,7 +1450,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Box",
                     "props":{"y":270,"x":150,"sort":1,"presetID":1,"preset":"laya/assets/prefab/wall.prefab","name":"item58","anchorY":0.5,"anchorX":0.5},
                     "nodeParent":925,
@@ -1529,7 +1475,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Box",
                     "props":{"y":270,"x":270,"sort":1,"presetID":1,"preset":"laya/assets/prefab/wall.prefab","name":"item60","anchorY":0.5,"anchorX":0.5},
                     "nodeParent":925,
@@ -1555,7 +1500,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Box",
                     "props":{"y":270,"x":330,"sort":1,"presetID":1,"preset":"laya/assets/prefab/wall.prefab","name":"item61","anchorY":0.5,"anchorX":0.5},
                     "nodeParent":925,
@@ -1581,7 +1525,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Box",
                     "props":{"y":270,"x":390,"sort":1,"presetID":1,"preset":"laya/assets/prefab/wall.prefab","name":"item62","anchorY":0.5,"anchorX":0.5},
                     "nodeParent":925,
@@ -1607,7 +1550,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Box",
                     "props":{"y":270,"x":510,"sort":1,"presetID":1,"preset":"laya/assets/prefab/wall.prefab","name":"item64","anchorY":0.5,"anchorX":0.5},
                     "nodeParent":925,
@@ -1633,7 +1575,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Box",
                     "props":{"y":270,"x":570,"sort":1,"presetID":1,"preset":"laya/assets/prefab/wall.prefab","name":"item65","anchorY":0.5,"anchorX":0.5},
                     "nodeParent":925,
@@ -1659,7 +1600,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Box",
                     "props":{"y":270,"x":630,"sort":1,"presetID":1,"preset":"laya/assets/prefab/wall.prefab","name":"item66","anchorY":0.5,"anchorX":0.5},
                     "nodeParent":925,
@@ -1685,7 +1625,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Box",
                     "props":{"y":270,"x":690,"sort":1,"presetID":1,"preset":"laya/assets/prefab/wall.prefab","name":"item67","anchorY":0.5,"anchorX":0.5},
                     "nodeParent":925,
@@ -1711,7 +1650,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Box",
                     "props":{"y":270,"x":750,"sort":1,"presetID":1,"preset":"laya/assets/prefab/wall.prefab","name":"item68","anchorY":0.5,"anchorX":0.5},
                     "nodeParent":925,
@@ -1737,7 +1675,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Box",
                     "props":{"y":270,"x":810,"sort":1,"presetID":1,"preset":"laya/assets/prefab/wall.prefab","name":"item69","anchorY":0.5,"anchorX":0.5},
                     "nodeParent":925,
@@ -1763,7 +1700,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Box",
                     "props":{"y":330,"x":30,"sort":1,"presetID":1,"preset":"laya/assets/prefab/wall.prefab","name":"item70","anchorY":0.5,"anchorX":0.5},
                     "nodeParent":925,
@@ -1789,7 +1725,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Box",
                     "props":{"y":330,"x":90,"sort":1,"presetID":1,"preset":"laya/assets/prefab/wall.prefab","name":"item71","anchorY":0.5,"anchorX":0.5},
                     "nodeParent":925,
@@ -1815,7 +1750,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Box",
                     "props":{"y":330,"x":150,"sort":1,"presetID":1,"preset":"laya/assets/prefab/wall.prefab","name":"item72","anchorY":0.5,"anchorX":0.5},
                     "nodeParent":925,
@@ -1841,7 +1775,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Box",
                     "props":{"y":330,"x":270,"sort":1,"presetID":1,"preset":"laya/assets/prefab/wall.prefab","name":"item74","anchorY":0.5,"anchorX":0.5},
                     "nodeParent":925,
@@ -1867,7 +1800,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Box",
                     "props":{"y":330,"x":330,"sort":1,"presetID":1,"preset":"laya/assets/prefab/wall.prefab","name":"item75","anchorY":0.5,"anchorX":0.5},
                     "nodeParent":925,
@@ -1893,7 +1825,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Box",
                     "props":{"y":330,"x":390,"sort":1,"presetID":1,"preset":"laya/assets/prefab/wall.prefab","name":"item76","anchorY":0.5,"anchorX":0.5},
                     "nodeParent":925,
@@ -1919,7 +1850,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Box",
                     "props":{"y":330,"x":510,"sort":1,"presetID":1,"preset":"laya/assets/prefab/wall.prefab","name":"item78","anchorY":0.5,"anchorX":0.5},
                     "nodeParent":925,
@@ -1945,7 +1875,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Box",
                     "props":{"y":330,"x":570,"sort":1,"presetID":1,"preset":"laya/assets/prefab/wall.prefab","name":"item79","anchorY":0.5,"anchorX":0.5},
                     "nodeParent":925,
@@ -1971,7 +1900,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Box",
                     "props":{"y":330,"x":630,"sort":1,"presetID":1,"preset":"laya/assets/prefab/wall.prefab","name":"item80","anchorY":0.5,"anchorX":0.5},
                     "nodeParent":925,
@@ -1997,7 +1925,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Box",
                     "props":{"y":330,"x":690,"sort":1,"presetID":1,"preset":"laya/assets/prefab/wall.prefab","name":"item81","anchorY":0.5,"anchorX":0.5},
                     "nodeParent":925,
@@ -2023,7 +1950,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Box",
                     "props":{"y":330,"x":750,"sort":1,"presetID":1,"preset":"laya/assets/prefab/wall.prefab","name":"item82","anchorY":0.5,"anchorX":0.5},
                     "nodeParent":925,
@@ -2049,7 +1975,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Box",
                     "props":{"y":330,"x":810,"sort":1,"presetID":1,"preset":"laya/assets/prefab/wall.prefab","name":"item83","anchorY":0.5,"anchorX":0.5},
                     "nodeParent":925,
@@ -2075,7 +2000,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Box",
                     "props":{"y":390,"x":30,"sort":1,"presetID":1,"preset":"laya/assets/prefab/wall.prefab","name":"item84","anchorY":0.5,"anchorX":0.5},
                     "nodeParent":925,
@@ -2101,7 +2025,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Box",
                     "props":{"y":390,"x":90,"sort":1,"presetID":1,"preset":"laya/assets/prefab/wall.prefab","name":"item85","anchorY":0.5,"anchorX":0.5},
                     "nodeParent":925,
@@ -2127,7 +2050,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Box",
                     "props":{"y":390,"x":150,"sort":1,"presetID":1,"preset":"laya/assets/prefab/wall.prefab","name":"item86","anchorY":0.5,"anchorX":0.5},
                     "nodeParent":925,
@@ -2153,7 +2075,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Box",
                     "props":{"y":390,"x":510,"sort":1,"presetID":1,"preset":"laya/assets/prefab/wall.prefab","name":"item92","anchorY":0.5,"anchorX":0.5},
                     "nodeParent":925,
@@ -2179,7 +2100,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Box",
                     "props":{"y":390,"x":570,"sort":1,"presetID":1,"preset":"laya/assets/prefab/wall.prefab","name":"item93","anchorY":0.5,"anchorX":0.5},
                     "nodeParent":925,
@@ -2205,7 +2125,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Box",
                     "props":{"y":390,"x":630,"sort":1,"presetID":1,"preset":"laya/assets/prefab/wall.prefab","name":"item94","anchorY":0.5,"anchorX":0.5},
                     "nodeParent":925,
@@ -2231,7 +2150,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Box",
                     "props":{"y":390,"x":690,"sort":1,"presetID":1,"preset":"laya/assets/prefab/wall.prefab","name":"item95","anchorY":0.5,"anchorX":0.5},
                     "nodeParent":925,
@@ -2257,7 +2175,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Box",
                     "props":{"y":390,"x":750,"sort":1,"presetID":1,"preset":"laya/assets/prefab/wall.prefab","name":"item96","anchorY":0.5,"anchorX":0.5},
                     "nodeParent":925,
@@ -2283,7 +2200,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Box",
                     "props":{"y":390,"x":810,"sort":1,"presetID":1,"preset":"laya/assets/prefab/wall.prefab","name":"item97","anchorY":0.5,"anchorX":0.5},
                     "nodeParent":925,
@@ -2309,7 +2225,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Box",
                     "props":{"y":450,"x":30,"sort":1,"presetID":1,"preset":"laya/assets/prefab/wall.prefab","name":"item98","anchorY":0.5,"anchorX":0.5},
                     "nodeParent":925,
@@ -2335,7 +2250,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Box",
                     "props":{"y":450,"x":90,"sort":1,"presetID":1,"preset":"laya/assets/prefab/wall.prefab","name":"item99","anchorY":0.5,"anchorX":0.5},
                     "nodeParent":925,
@@ -2361,7 +2275,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Box",
                     "props":{"y":450,"x":150,"sort":1,"presetID":1,"preset":"laya/assets/prefab/wall.prefab","name":"item100","anchorY":0.5,"anchorX":0.5},
                     "nodeParent":925,
@@ -2387,7 +2300,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Box",
                     "props":{"y":450,"x":270,"sort":1,"presetID":1,"preset":"laya/assets/prefab/wall.prefab","name":"item102","anchorY":0.5,"anchorX":0.5},
                     "nodeParent":925,
@@ -2413,7 +2325,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Box",
                     "props":{"y":450,"x":330,"sort":1,"presetID":1,"preset":"laya/assets/prefab/wall.prefab","name":"item103","anchorY":0.5,"anchorX":0.5},
                     "nodeParent":925,
@@ -2439,7 +2350,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Box",
                     "props":{"y":450,"x":390,"sort":1,"presetID":1,"preset":"laya/assets/prefab/wall.prefab","name":"item104","anchorY":0.5,"anchorX":0.5},
                     "nodeParent":925,
@@ -2465,7 +2375,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Box",
                     "props":{"y":450,"x":510,"sort":1,"presetID":1,"preset":"laya/assets/prefab/wall.prefab","name":"item106","anchorY":0.5,"anchorX":0.5},
                     "nodeParent":925,
@@ -2491,7 +2400,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Box",
                     "props":{"y":450,"x":570,"sort":1,"presetID":1,"preset":"laya/assets/prefab/wall.prefab","name":"item107","anchorY":0.5,"anchorX":0.5},
                     "nodeParent":925,
@@ -2517,7 +2425,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Box",
                     "props":{"y":450,"x":630,"sort":1,"presetID":1,"preset":"laya/assets/prefab/wall.prefab","name":"item108","anchorY":0.5,"anchorX":0.5},
                     "nodeParent":925,
@@ -2543,7 +2450,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Box",
                     "props":{"y":450,"x":690,"sort":1,"presetID":1,"preset":"laya/assets/prefab/wall.prefab","name":"item109","anchorY":0.5,"anchorX":0.5},
                     "nodeParent":925,
@@ -2569,7 +2475,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Box",
                     "props":{"y":450,"x":750,"sort":1,"presetID":1,"preset":"laya/assets/prefab/wall.prefab","name":"item110","anchorY":0.5,"anchorX":0.5},
                     "nodeParent":925,
@@ -2595,7 +2500,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Box",
                     "props":{"y":450,"x":810,"sort":1,"presetID":1,"preset":"laya/assets/prefab/wall.prefab","name":"item111","anchorY":0.5,"anchorX":0.5},
                     "nodeParent":925,
@@ -2621,7 +2525,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Box",
                     "props":{"y":510,"x":30,"sort":1,"presetID":1,"preset":"laya/assets/prefab/wall.prefab","name":"item112","anchorY":0.5,"anchorX":0.5},
                     "nodeParent":925,
@@ -2647,7 +2550,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Box",
                     "props":{"y":510,"x":90,"sort":1,"presetID":1,"preset":"laya/assets/prefab/wall.prefab","name":"item113","anchorY":0.5,"anchorX":0.5},
                     "nodeParent":925,
@@ -2673,7 +2575,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Box",
                     "props":{"y":510,"x":150,"sort":1,"presetID":1,"preset":"laya/assets/prefab/wall.prefab","name":"item114","anchorY":0.5,"anchorX":0.5},
                     "nodeParent":925,
@@ -2699,7 +2600,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Box",
                     "props":{"y":510,"x":270,"sort":1,"presetID":1,"preset":"laya/assets/prefab/wall.prefab","name":"item116","anchorY":0.5,"anchorX":0.5},
                     "nodeParent":925,
@@ -2725,7 +2625,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Box",
                     "props":{"y":510,"x":330,"sort":1,"presetID":1,"preset":"laya/assets/prefab/wall.prefab","name":"item117","anchorY":0.5,"anchorX":0.5},
                     "nodeParent":925,
@@ -2751,7 +2650,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Box",
                     "props":{"y":510,"x":390,"sort":1,"presetID":1,"preset":"laya/assets/prefab/wall.prefab","name":"item118","anchorY":0.5,"anchorX":0.5},
                     "nodeParent":925,
@@ -2777,7 +2675,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Box",
                     "props":{"y":510,"x":450,"sort":1,"presetID":1,"preset":"laya/assets/prefab/wall.prefab","name":"item119","anchorY":0.5,"anchorX":0.5},
                     "nodeParent":925,
@@ -2803,7 +2700,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Box",
                     "props":{"y":510,"x":510,"sort":1,"presetID":1,"preset":"laya/assets/prefab/wall.prefab","name":"item120","anchorY":0.5,"anchorX":0.5},
                     "nodeParent":925,
@@ -2829,7 +2725,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Box",
                     "props":{"y":510,"x":570,"sort":1,"presetID":1,"preset":"laya/assets/prefab/wall.prefab","name":"item121","anchorY":0.5,"anchorX":0.5},
                     "nodeParent":925,
@@ -2855,7 +2750,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Box",
                     "props":{"y":510,"x":630,"sort":1,"presetID":1,"preset":"laya/assets/prefab/wall.prefab","name":"item122","anchorY":0.5,"anchorX":0.5},
                     "nodeParent":925,
@@ -2881,7 +2775,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Box",
                     "props":{"y":510,"x":690,"sort":1,"presetID":1,"preset":"laya/assets/prefab/wall.prefab","name":"item123","anchorY":0.5,"anchorX":0.5},
                     "nodeParent":925,
@@ -2907,7 +2800,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Box",
                     "props":{"y":510,"x":750,"sort":1,"presetID":1,"preset":"laya/assets/prefab/wall.prefab","name":"item124","anchorY":0.5,"anchorX":0.5},
                     "nodeParent":925,
@@ -2933,7 +2825,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Box",
                     "props":{"y":510,"x":810,"sort":1,"presetID":1,"preset":"laya/assets/prefab/wall.prefab","name":"item125","anchorY":0.5,"anchorX":0.5},
                     "nodeParent":925,
@@ -2959,7 +2850,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Box",
                     "props":{"y":570,"x":690,"sort":1,"presetID":1,"preset":"laya/assets/prefab/wall.prefab","name":"item137","anchorY":0.5,"anchorX":0.5},
                     "nodeParent":925,
@@ -2985,7 +2875,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Box",
                     "props":{"y":570,"x":750,"sort":1,"presetID":1,"preset":"laya/assets/prefab/wall.prefab","name":"item138","anchorY":0.5,"anchorX":0.5},
                     "nodeParent":925,
@@ -3011,7 +2900,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Box",
                     "props":{"y":570,"x":810,"sort":1,"presetID":1,"preset":"laya/assets/prefab/wall.prefab","name":"item139","anchorY":0.5,"anchorX":0.5},
                     "nodeParent":925,
@@ -3040,33 +2928,7 @@
         {
             "x":15,
             "type":"Box",
-            "props":{"y":237,"x":1044,"width":60,"presetID":1,"preset":"laya/assets/prefab/bullet.prefab","name":"item0","height":15,"appendProps":"laya/pages/script/Bullet.prop"},
-            "nodeParent":1,
-            "label":"Box(item0)",
-            "isOpen":false,
-            "isDirectory":true,
-            "isAniNode":true,
-            "hasChild":true,
-            "compId":2573,
-            "child":[
-                {
-                    "type":"Image",
-                    "props":{"y":7.5,"x":30,"presetID":2,"preset":"laya/assets/prefab/bullet.prefab","anchorY":0.5,"anchorX":0.5},
-                    "nodeParent":2573,
-                    "label":"Image(bullet)",
-                    "isOpen":true,
-                    "isDirectory":false,
-                    "isAniNode":true,
-                    "hasChild":false,
-                    "compId":2574,
-                    "child":[
-                        ]
-                }]
-        },
-        {
-            "x":15,
-            "type":"Box",
-            "props":{"y":597,"x":210,"var":"mainTak","presetID":1,"preset":"laya/assets/prefab/tank.prefab","appendProps":"laya/pages/script/Tank.prop","anchorY":0.5,"anchorX":0.5},
+            "props":{"y":597,"x":210,"var":"mainTak","presetID":1,"preset":"laya/assets/prefab/tank.prefab","isPoolObj":false,"appendProps":"laya/pages/script/Tank.prop","anchorY":0.5,"anchorX":0.5},
             "nodeParent":1,
             "label":"Box(mainTak)",
             "isOpen":false,
@@ -3084,240 +2946,6 @@
                     "isAniNode":true,
                     "hasChild":false,
                     "compId":2568,
-                    "child":[
-                        ]
-                }]
-        },
-        {
-            "x":15,
-            "type":"Box",
-            "props":{"y":257,"x":1044,"width":60,"presetID":1,"preset":"laya/assets/prefab/bullet.prefab","name":"item1","height":15,"appendProps":"laya/pages/script/Bullet.prop"},
-            "nodeParent":1,
-            "label":"Box(item1)",
-            "isOpen":false,
-            "isDirectory":true,
-            "isAniNode":true,
-            "hasChild":true,
-            "compId":2575,
-            "child":[
-                {
-                    "type":"Image",
-                    "props":{"y":7.5,"x":30,"presetID":2,"preset":"laya/assets/prefab/bullet.prefab","anchorY":0.5,"anchorX":0.5},
-                    "nodeParent":2575,
-                    "label":"Image(bullet)",
-                    "isOpen":true,
-                    "isDirectory":false,
-                    "isAniNode":true,
-                    "hasChild":false,
-                    "compId":2576,
-                    "child":[
-                        ]
-                }]
-        },
-        {
-            "x":15,
-            "type":"Box",
-            "props":{"y":277,"x":1044,"width":60,"presetID":1,"preset":"laya/assets/prefab/bullet.prefab","name":"item2","height":15,"appendProps":"laya/pages/script/Bullet.prop"},
-            "nodeParent":1,
-            "label":"Box(item2)",
-            "isOpen":false,
-            "isDirectory":true,
-            "isAniNode":true,
-            "hasChild":true,
-            "compId":2577,
-            "child":[
-                {
-                    "type":"Image",
-                    "props":{"y":7.5,"x":30,"presetID":2,"preset":"laya/assets/prefab/bullet.prefab","anchorY":0.5,"anchorX":0.5},
-                    "nodeParent":2577,
-                    "label":"Image(bullet)",
-                    "isOpen":true,
-                    "isDirectory":false,
-                    "isAniNode":true,
-                    "hasChild":false,
-                    "compId":2578,
-                    "child":[
-                        ]
-                }]
-        },
-        {
-            "x":15,
-            "type":"Box",
-            "props":{"y":297,"x":1044,"width":60,"presetID":1,"preset":"laya/assets/prefab/bullet.prefab","name":"item3","height":15,"appendProps":"laya/pages/script/Bullet.prop"},
-            "nodeParent":1,
-            "label":"Box(item3)",
-            "isOpen":false,
-            "isDirectory":true,
-            "isAniNode":true,
-            "hasChild":true,
-            "compId":2579,
-            "child":[
-                {
-                    "type":"Image",
-                    "props":{"y":7.5,"x":30,"presetID":2,"preset":"laya/assets/prefab/bullet.prefab","anchorY":0.5,"anchorX":0.5},
-                    "nodeParent":2579,
-                    "label":"Image(bullet)",
-                    "isOpen":true,
-                    "isDirectory":false,
-                    "isAniNode":true,
-                    "hasChild":false,
-                    "compId":2580,
-                    "child":[
-                        ]
-                }]
-        },
-        {
-            "x":15,
-            "type":"Box",
-            "props":{"y":317,"x":1044,"width":60,"presetID":1,"preset":"laya/assets/prefab/bullet.prefab","name":"item4","height":15,"appendProps":"laya/pages/script/Bullet.prop"},
-            "nodeParent":1,
-            "label":"Box(item4)",
-            "isOpen":false,
-            "isDirectory":true,
-            "isAniNode":true,
-            "hasChild":true,
-            "compId":2581,
-            "child":[
-                {
-                    "type":"Image",
-                    "props":{"y":7.5,"x":30,"presetID":2,"preset":"laya/assets/prefab/bullet.prefab","anchorY":0.5,"anchorX":0.5},
-                    "nodeParent":2581,
-                    "label":"Image(bullet)",
-                    "isOpen":true,
-                    "isDirectory":false,
-                    "isAniNode":true,
-                    "hasChild":false,
-                    "compId":2582,
-                    "child":[
-                        ]
-                }]
-        },
-        {
-            "x":15,
-            "type":"Box",
-            "props":{"y":337,"x":1044,"width":60,"presetID":1,"preset":"laya/assets/prefab/bullet.prefab","name":"item5","height":15,"appendProps":"laya/pages/script/Bullet.prop"},
-            "nodeParent":1,
-            "label":"Box(item5)",
-            "isOpen":false,
-            "isDirectory":true,
-            "isAniNode":true,
-            "hasChild":true,
-            "compId":2583,
-            "child":[
-                {
-                    "type":"Image",
-                    "props":{"y":7.5,"x":30,"presetID":2,"preset":"laya/assets/prefab/bullet.prefab","anchorY":0.5,"anchorX":0.5},
-                    "nodeParent":2583,
-                    "label":"Image(bullet)",
-                    "isOpen":true,
-                    "isDirectory":false,
-                    "isAniNode":true,
-                    "hasChild":false,
-                    "compId":2584,
-                    "child":[
-                        ]
-                }]
-        },
-        {
-            "x":15,
-            "type":"Box",
-            "props":{"y":357,"x":1044,"width":60,"presetID":1,"preset":"laya/assets/prefab/bullet.prefab","name":"item6","height":15,"appendProps":"laya/pages/script/Bullet.prop"},
-            "nodeParent":1,
-            "label":"Box(item6)",
-            "isOpen":false,
-            "isDirectory":true,
-            "isAniNode":true,
-            "hasChild":true,
-            "compId":2585,
-            "child":[
-                {
-                    "type":"Image",
-                    "props":{"y":7.5,"x":30,"presetID":2,"preset":"laya/assets/prefab/bullet.prefab","anchorY":0.5,"anchorX":0.5},
-                    "nodeParent":2585,
-                    "label":"Image(bullet)",
-                    "isOpen":true,
-                    "isDirectory":false,
-                    "isAniNode":true,
-                    "hasChild":false,
-                    "compId":2586,
-                    "child":[
-                        ]
-                }]
-        },
-        {
-            "x":15,
-            "type":"Box",
-            "props":{"y":377,"x":1044,"width":60,"presetID":1,"preset":"laya/assets/prefab/bullet.prefab","name":"item7","height":15,"appendProps":"laya/pages/script/Bullet.prop"},
-            "nodeParent":1,
-            "label":"Box(item7)",
-            "isOpen":false,
-            "isDirectory":true,
-            "isAniNode":true,
-            "hasChild":true,
-            "compId":2587,
-            "child":[
-                {
-                    "type":"Image",
-                    "props":{"y":7.5,"x":30,"presetID":2,"preset":"laya/assets/prefab/bullet.prefab","anchorY":0.5,"anchorX":0.5},
-                    "nodeParent":2587,
-                    "label":"Image(bullet)",
-                    "isOpen":true,
-                    "isDirectory":false,
-                    "isAniNode":true,
-                    "hasChild":false,
-                    "compId":2588,
-                    "child":[
-                        ]
-                }]
-        },
-        {
-            "x":15,
-            "type":"Box",
-            "props":{"y":397,"x":1044,"width":60,"presetID":1,"preset":"laya/assets/prefab/bullet.prefab","name":"item8","height":15,"appendProps":"laya/pages/script/Bullet.prop"},
-            "nodeParent":1,
-            "label":"Box(item8)",
-            "isOpen":false,
-            "isDirectory":true,
-            "isAniNode":true,
-            "hasChild":true,
-            "compId":2589,
-            "child":[
-                {
-                    "type":"Image",
-                    "props":{"y":7.5,"x":30,"presetID":2,"preset":"laya/assets/prefab/bullet.prefab","anchorY":0.5,"anchorX":0.5},
-                    "nodeParent":2589,
-                    "label":"Image(bullet)",
-                    "isOpen":true,
-                    "isDirectory":false,
-                    "isAniNode":true,
-                    "hasChild":false,
-                    "compId":2590,
-                    "child":[
-                        ]
-                }]
-        },
-        {
-            "x":15,
-            "type":"Box",
-            "props":{"y":417,"x":1044,"width":60,"presetID":1,"preset":"laya/assets/prefab/bullet.prefab","name":"item9","height":15,"appendProps":"laya/pages/script/Bullet.prop"},
-            "nodeParent":1,
-            "label":"Box(item9)",
-            "isOpen":false,
-            "isDirectory":true,
-            "isAniNode":true,
-            "hasChild":true,
-            "compId":2591,
-            "child":[
-                {
-                    "type":"Image",
-                    "props":{"y":7.5,"x":30,"presetID":2,"preset":"laya/assets/prefab/bullet.prefab","anchorY":0.5,"anchorX":0.5},
-                    "nodeParent":2591,
-                    "label":"Image(bullet)",
-                    "isOpen":true,
-                    "isDirectory":false,
-                    "isAniNode":true,
-                    "hasChild":false,
-                    "compId":2592,
                     "child":[
                         ]
                 }]
@@ -3391,6 +3019,266 @@
                     "isAniNode":true,
                     "hasChild":false,
                     "compId":2599,
+                    "child":[
+                        ]
+                }]
+        },
+        {
+            "x":15,
+            "type":"Box",
+            "props":{"y":34,"x":1102,"presetID":1,"preset":"laya/assets/prefab/bullet.prefab","name":"item0","isPoolObj":true,"appendProps":"laya/pages/script/Bullet.prop","anchorY":0.5,"anchorX":0.5},
+            "nodeParent":1,
+            "label":"Box(item0)",
+            "isOpen":false,
+            "isDirectory":true,
+            "isAniNode":true,
+            "hasChild":true,
+            "compId":3188,
+            "child":[
+                {
+                    "type":"Image",
+                    "props":{"presetID":2,"preset":"laya/assets/prefab/bullet.prefab"},
+                    "nodeParent":3188,
+                    "label":"Image(bullet)",
+                    "isOpen":true,
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":3189,
+                    "child":[
+                        ]
+                }]
+        },
+        {
+            "x":15,
+            "type":"Box",
+            "props":{"y":94,"x":1102,"presetID":1,"preset":"laya/assets/prefab/bullet.prefab","name":"item1","isPoolObj":true,"appendProps":"laya/pages/script/Bullet.prop","anchorY":0.5,"anchorX":0.5},
+            "nodeParent":1,
+            "label":"Box(item1)",
+            "isOpen":false,
+            "isDirectory":true,
+            "isAniNode":true,
+            "hasChild":true,
+            "compId":3190,
+            "child":[
+                {
+                    "type":"Image",
+                    "props":{"presetID":2,"preset":"laya/assets/prefab/bullet.prefab"},
+                    "nodeParent":3190,
+                    "label":"Image(bullet)",
+                    "isOpen":true,
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":3191,
+                    "child":[
+                        ]
+                }]
+        },
+        {
+            "x":15,
+            "type":"Box",
+            "props":{"y":154,"x":1102,"presetID":1,"preset":"laya/assets/prefab/bullet.prefab","name":"item2","isPoolObj":true,"appendProps":"laya/pages/script/Bullet.prop","anchorY":0.5,"anchorX":0.5},
+            "nodeParent":1,
+            "label":"Box(item2)",
+            "isOpen":false,
+            "isDirectory":true,
+            "isAniNode":true,
+            "hasChild":true,
+            "compId":3192,
+            "child":[
+                {
+                    "type":"Image",
+                    "props":{"presetID":2,"preset":"laya/assets/prefab/bullet.prefab"},
+                    "nodeParent":3192,
+                    "label":"Image(bullet)",
+                    "isOpen":true,
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":3193,
+                    "child":[
+                        ]
+                }]
+        },
+        {
+            "x":15,
+            "type":"Box",
+            "props":{"y":214,"x":1102,"presetID":1,"preset":"laya/assets/prefab/bullet.prefab","name":"item3","isPoolObj":true,"appendProps":"laya/pages/script/Bullet.prop","anchorY":0.5,"anchorX":0.5},
+            "nodeParent":1,
+            "label":"Box(item3)",
+            "isOpen":false,
+            "isDirectory":true,
+            "isAniNode":true,
+            "hasChild":true,
+            "compId":3194,
+            "child":[
+                {
+                    "type":"Image",
+                    "props":{"presetID":2,"preset":"laya/assets/prefab/bullet.prefab"},
+                    "nodeParent":3194,
+                    "label":"Image(bullet)",
+                    "isOpen":true,
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":3195,
+                    "child":[
+                        ]
+                }]
+        },
+        {
+            "x":15,
+            "type":"Box",
+            "props":{"y":274,"x":1102,"presetID":1,"preset":"laya/assets/prefab/bullet.prefab","name":"item4","isPoolObj":true,"appendProps":"laya/pages/script/Bullet.prop","anchorY":0.5,"anchorX":0.5},
+            "nodeParent":1,
+            "label":"Box(item4)",
+            "isOpen":false,
+            "isDirectory":true,
+            "isAniNode":true,
+            "hasChild":true,
+            "compId":3196,
+            "child":[
+                {
+                    "type":"Image",
+                    "props":{"presetID":2,"preset":"laya/assets/prefab/bullet.prefab"},
+                    "nodeParent":3196,
+                    "label":"Image(bullet)",
+                    "isOpen":true,
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":3197,
+                    "child":[
+                        ]
+                }]
+        },
+        {
+            "x":15,
+            "type":"Box",
+            "props":{"y":334,"x":1102,"presetID":1,"preset":"laya/assets/prefab/bullet.prefab","name":"item5","isPoolObj":true,"appendProps":"laya/pages/script/Bullet.prop","anchorY":0.5,"anchorX":0.5},
+            "nodeParent":1,
+            "label":"Box(item5)",
+            "isOpen":false,
+            "isDirectory":true,
+            "isAniNode":true,
+            "hasChild":true,
+            "compId":3198,
+            "child":[
+                {
+                    "type":"Image",
+                    "props":{"presetID":2,"preset":"laya/assets/prefab/bullet.prefab"},
+                    "nodeParent":3198,
+                    "label":"Image(bullet)",
+                    "isOpen":true,
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":3199,
+                    "child":[
+                        ]
+                }]
+        },
+        {
+            "x":15,
+            "type":"Box",
+            "props":{"y":394,"x":1102,"presetID":1,"preset":"laya/assets/prefab/bullet.prefab","name":"item6","isPoolObj":true,"appendProps":"laya/pages/script/Bullet.prop","anchorY":0.5,"anchorX":0.5},
+            "nodeParent":1,
+            "label":"Box(item6)",
+            "isOpen":false,
+            "isDirectory":true,
+            "isAniNode":true,
+            "hasChild":true,
+            "compId":3200,
+            "child":[
+                {
+                    "type":"Image",
+                    "props":{"presetID":2,"preset":"laya/assets/prefab/bullet.prefab"},
+                    "nodeParent":3200,
+                    "label":"Image(bullet)",
+                    "isOpen":true,
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":3201,
+                    "child":[
+                        ]
+                }]
+        },
+        {
+            "x":15,
+            "type":"Box",
+            "props":{"y":454,"x":1102,"presetID":1,"preset":"laya/assets/prefab/bullet.prefab","name":"item7","isPoolObj":true,"appendProps":"laya/pages/script/Bullet.prop","anchorY":0.5,"anchorX":0.5},
+            "nodeParent":1,
+            "label":"Box(item7)",
+            "isOpen":false,
+            "isDirectory":true,
+            "isAniNode":true,
+            "hasChild":true,
+            "compId":3202,
+            "child":[
+                {
+                    "type":"Image",
+                    "props":{"presetID":2,"preset":"laya/assets/prefab/bullet.prefab"},
+                    "nodeParent":3202,
+                    "label":"Image(bullet)",
+                    "isOpen":true,
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":3203,
+                    "child":[
+                        ]
+                }]
+        },
+        {
+            "x":15,
+            "type":"Box",
+            "props":{"y":514,"x":1102,"presetID":1,"preset":"laya/assets/prefab/bullet.prefab","name":"item8","isPoolObj":true,"appendProps":"laya/pages/script/Bullet.prop","anchorY":0.5,"anchorX":0.5},
+            "nodeParent":1,
+            "label":"Box(item8)",
+            "isOpen":false,
+            "isDirectory":true,
+            "isAniNode":true,
+            "hasChild":true,
+            "compId":3204,
+            "child":[
+                {
+                    "type":"Image",
+                    "props":{"presetID":2,"preset":"laya/assets/prefab/bullet.prefab"},
+                    "nodeParent":3204,
+                    "label":"Image(bullet)",
+                    "isOpen":true,
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":3205,
+                    "child":[
+                        ]
+                }]
+        },
+        {
+            "x":15,
+            "type":"Box",
+            "props":{"y":574,"x":1102,"presetID":1,"preset":"laya/assets/prefab/bullet.prefab","name":"item9","isPoolObj":true,"appendProps":"laya/pages/script/Bullet.prop","anchorY":0.5,"anchorX":0.5},
+            "nodeParent":1,
+            "label":"Box(item9)",
+            "isOpen":false,
+            "isDirectory":true,
+            "isAniNode":true,
+            "hasChild":true,
+            "compId":3206,
+            "child":[
+                {
+                    "type":"Image",
+                    "props":{"presetID":2,"preset":"laya/assets/prefab/bullet.prefab"},
+                    "nodeParent":3206,
+                    "label":"Image(bullet)",
+                    "isOpen":true,
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":3207,
                     "child":[
                         ]
                 }]

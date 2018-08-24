@@ -27,19 +27,20 @@ var obj;
         }
         Tank.prototype.onFrameOnce = function () {
             _super.prototype.onFrameOnce.call(this);
-            var rect = new Laya.Rectangle(0, 0, 60, 60);
-            this.setBounds(rect);
             this._inited = true;
             this.frameLoop(30, this, this.attackLoop);
             this.graphics.drawRect(0, 0, 60, 60, "#ff0000");
         };
         Tank.prototype.onFrameLoop = function () {
-            if (game.GameCenter.gameStage.intersectWithOther(this, MoveDir.UP)) {
-                //console.log("遇到障碍");
-            }
-            else {
-                //this.ismoving = true;
-                _super.prototype.move.call(this);
+            if (this.ismoving) //移动中才检测碰撞
+             {
+                if (game.GameCenter.gameStage.intersectWithOther(this, this.dir)) {
+                    //console.log("遇到障碍");
+                }
+                else {
+                    //this.ismoving = true;
+                    _super.prototype.move.call(this);
+                }
             }
         };
         Tank.prototype.attackLoop = function () {
@@ -53,8 +54,7 @@ var obj;
                 bullet.ismoving = true;
                 bullet.camp = this.camp;
                 bullet.speed = 10;
-                //bullet.dir = this.Dir;
-                bullet.rotation = this.rotation;
+                bullet.turn(this.dir);
                 //Laya.stage.addChild(bullet);
             }
         };

@@ -81,8 +81,13 @@ var game;
         };
         GameStage.prototype.intersectWithOther = function (tank, dir) {
             //console.log("intersectWithOther id:"+tank.camp);
-            if (tank.x <= this.minX || tank.x >= this.maxX || tank.y <= this.minY || tank.y >= this.maxY)
+            if ((tank.x <= this.minX && dir == MoveDir.LEFT)
+                || (tank.x >= this.maxX && dir == MoveDir.RIGHT)
+                || (tank.y <= this.minY && dir == MoveDir.UP)
+                || (tank.y >= this.maxY && dir == MoveDir.DOWN)) {
+                tank.intersectWithOther(null); //撞到边界
                 return true;
+            }
             for (var i = 0, len = this.objs.length; i < len; i++) {
                 if (!this.objs[i].inited)
                     continue;
@@ -90,8 +95,8 @@ var game;
                     continue;
                 var diffX = Math.abs(this.objs[i].x - tank.x);
                 var diffY = Math.abs(this.objs[i].y - tank.y);
-                var diffW = this.objs[i].width / 2 + tank.width / 2;
-                var diffH = this.objs[i].height / 2 + tank.height / 2;
+                var diffW = this.objs[i].widthX / 2 + tank.widthX / 2;
+                var diffH = this.objs[i].heightY / 2 + tank.heightY / 2;
                 if (diffX > 60 || diffY > 60) //距离过远,必然不相交,减少getBounds消耗
                     continue;
                 if (diffX < diffW && diffY < diffH) {
@@ -100,47 +105,6 @@ var game;
                     tank.intersectWithOther(this.objs[i]);
                     return true;
                 }
-                // if(this.objs[i].getBounds().intersects(tank.getBounds()))
-                // {
-                //     let intersect : boolean = false;
-                //     switch(dir)
-                //     {
-                //         case MoveDir.UP:
-                //             if(diffY < 0 && Math.abs(diffX)  < 60)
-                //             {
-                //                 //console.log("intersectWithOther other x:"+this.objs[i].x + ",y:"+this.objs[i].y + ",dir:"+dir);
-                //                 intersect = true;
-                //             }
-                //             break;
-                //         case MoveDir.DOWN:
-                //             if(diffY > 0 && Math.abs(diffX) < 60)
-                //             {
-                //                 //console.log("intersectWithOther other x:"+this.objs[i].x + ",y:"+this.objs[i].y + ",dir:"+dir);
-                //                 intersect = true;
-                //             }
-                //             break;
-                //         case MoveDir.LEFT:
-                //             if(diffX > 0 && Math.abs(diffY) < 60)
-                //             {
-                //                 //console.log("intersectWithOther other x:"+this.objs[i].x + ",y:"+this.objs[i].y + ",dir:"+dir);
-                //                 intersect = true;
-                //             }
-                //             break;
-                //         case MoveDir.RIGHT:
-                //             if(diffX > 0 && Math.abs(diffY) < 60)
-                //             {
-                //                 //console.log("intersectWithOther other x:"+this.objs[i].x + ",y:"+this.objs[i].y + ",dir:"+dir);
-                //                 intersect = true;
-                //             }
-                //             break;
-                //     }
-                //     if(intersect)
-                //     {
-                //         this.objs[i].intersectWithOther(tank);
-                //         tank.intersectWithOther(this.objs[i]);
-                //         return true;
-                //     }
-                // }
             }
             return false;
         };

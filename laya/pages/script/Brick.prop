@@ -7,4 +7,5 @@
 	<prop name="xxx" tips="下拉框类型" type="option" option="left,center,right"/>-->
 	<prop name="id" tips="整数类型" type="int"/>
 	<prop name="sort" tips="整数类型" type="int"/>
+	<prop name="isPoolObj" tips="布尔类型" type="bool"/>
 </Brick>

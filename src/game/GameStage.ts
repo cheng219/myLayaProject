@@ -89,8 +89,14 @@ module game
         public intersectWithOther(tank : obj.InstanceObject,dir : MoveDir) : boolean
         {
             //console.log("intersectWithOther id:"+tank.camp);
-            if(tank.x <= this.minX || tank.x >= this.maxX || tank.y <= this.minY || tank.y >= this.maxY)
+            if((tank.x <= this.minX && dir == MoveDir.LEFT) 
+            || (tank.x >= this.maxX && dir == MoveDir.RIGHT)
+            || (tank.y <= this.minY && dir == MoveDir.UP)
+            || (tank.y >= this.maxY && dir == MoveDir.DOWN))
+            {
+                tank.intersectWithOther(null);//撞到边界
                 return true;
+            } 
             for(let i = 0,len=this.objs.length;i < len;i++)
             {
                 if(!this.objs[i].inited)
@@ -99,8 +105,8 @@ module game
                     continue;
                 let diffX : number = Math.abs(this.objs[i].x - tank.x);
                 let diffY : number = Math.abs(this.objs[i].y - tank.y);
-                let diffW : number = this.objs[i].width/2 + tank.width/2;
-                let diffH : number = this.objs[i].height/2 + tank.height/2;
+                let diffW : number = this.objs[i].widthX/2 + tank.widthX/2;
+                let diffH : number = this.objs[i].heightY/2 + tank.heightY/2;
                 if(diffX > 60 || diffY > 60)//距离过远,必然不相交,减少getBounds消耗
                     continue;
                 if(diffX < diffW && diffY < diffH)

@@ -17,8 +17,6 @@ module obj
         protected onFrameOnce() : void
         {
             super.onFrameOnce();
-            let rect = new Laya.Rectangle(0,0,60,60)
-            this.setBounds(rect);
             this._inited = true;
             this.frameLoop(30,this,this.attackLoop);
             this.graphics.drawRect(0,0,60,60,"#ff0000");
@@ -26,13 +24,16 @@ module obj
 
         protected onFrameLoop() : void
         {
-            if(game.GameCenter.gameStage.intersectWithOther(this,MoveDir.UP))
+            if(this.ismoving)//移动中才检测碰撞
             {
-                //console.log("遇到障碍");
-            }else
-            {
-                //this.ismoving = true;
-                super.move();
+                if(game.GameCenter.gameStage.intersectWithOther(this,this.dir))
+                {
+                    //console.log("遇到障碍");
+                }else
+                {
+                    //this.ismoving = true;
+                    super.move();
+                }
             }
         }
 
@@ -51,8 +52,7 @@ module obj
                 bullet.ismoving = true;
                 bullet.camp = this.camp;
                 bullet.speed = 10;
-                //bullet.dir = this.Dir;
-                bullet.rotation = this.rotation;
+                bullet.turn(this.dir);
                 //Laya.stage.addChild(bullet);
             }
         }

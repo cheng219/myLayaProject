@@ -41,14 +41,13 @@ module game
         }
         private initMainWnd() : void
         {
-            console.log("initMainWnd");
-            //GameCenter.pageStage.showPages();
+            //console.log("initMainWnd");
             this.CreateLoginWnd();
         }
 
         protected CreateLoginWnd() : void
         {
-            console.log("CreateLoginWnd");
+            //console.log("CreateLoginWnd");
             this.loginWnd = new ui.page.loginUI();
             Laya.stage.addChild(this.loginWnd);
             this.loginWnd.btn_start.on(Laya.Event.MOUSE_UP,this,this.CreateStageWnd);
@@ -56,6 +55,7 @@ module game
 
         protected CreateStageWnd() : void
         {
+            Laya.stage.removeChild(this.loginWnd);
             this.stageWnd = new ui.page.stageUI();
             Laya.stage.addChild(this.stageWnd);
             this.stageWnd.attack.on(Laya.Event.MOUSE_UP,this,this.tankAttack);
@@ -96,6 +96,7 @@ module game
         protected tankStopMove() : void
         {
             game.GameCenter.gameStage.mainTank.ismoving = false;
+            //game.GameCenter.gameStage.mainTank.stopMove(); 效果不好,移动一小段就矫正位置
         }
     }
 }

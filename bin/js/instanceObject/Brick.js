@@ -23,31 +23,36 @@ var obj;
             _this.id = 0;
             _this.sort = 0;
             _this.camp = 0;
-            //自定义的脚本会有时序问题，所以在此添加一个延时
-            _this.frameOnce(1, _this, _this.onFrame);
             return _this;
         }
-        Brick.prototype.onFrame = function () {
+        Brick.prototype.onFrameOnce = function () {
+            _super.prototype.onFrameOnce.call(this);
             //console.log("x:"+this.x + ",y:"+this.y + ",sort:"+this.sort);
-            this.frameLoop(1, this, this.onLoop);
             if (this.sort != BrickSort.GRASS) {
-                var rect = new Laya.Rectangle(0, 0, 60, 60);
-                this.setBounds(rect);
+                this.widthX = 60;
+                this.heightY = 60;
             }
             else {
-                var rect = new Laya.Rectangle(0, 0, 0, 0);
-                this.setBounds(rect);
+                this.widthX = 0;
+                this.heightY = 0;
             }
             this._inited = true;
         };
-        Brick.prototype.onLoop = function () {
+        Brick.prototype.onFrameLoop = function () {
+            _super.prototype.onFrameLoop.call(this);
         };
         Brick.prototype.intersectWithOther = function (other) {
+            _super.prototype.intersectWithOther.call(this, other);
             if (other instanceof obj.Bullet) {
-                console.log("被击中,销毁自己");
-                //this.visible = false;
-                //this.setBounds(this.zeroRect);
-                game.GameCenter.gameStage.DelInstanceObj(this);
+                if (this.sort == BrickSort.WALL) {
+                    console.log("被击中,销毁自己");
+                    //this.visible = false;
+                    //this.setBounds(this.zeroRect);
+                    game.GameCenter.gameStage.DelInstanceObj(this);
+                }
+                else if (this.sort == BrickSort.METAL) {
+                    //金属必须强力子弹
+                }
             }
         };
         return Brick;

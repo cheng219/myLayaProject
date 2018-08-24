@@ -45,17 +45,17 @@ var game;
             Laya.loader.load(["res/atlas/ui.atlas", "res/atlas/game.atlas"], Handler.create(this, this.initMainWnd));
         };
         GameCenter.prototype.initMainWnd = function () {
-            console.log("initMainWnd");
-            //GameCenter.pageStage.showPages();
+            //console.log("initMainWnd");
             this.CreateLoginWnd();
         };
         GameCenter.prototype.CreateLoginWnd = function () {
-            console.log("CreateLoginWnd");
+            //console.log("CreateLoginWnd");
             this.loginWnd = new ui.page.loginUI();
             Laya.stage.addChild(this.loginWnd);
             this.loginWnd.btn_start.on(Laya.Event.MOUSE_UP, this, this.CreateStageWnd);
         };
         GameCenter.prototype.CreateStageWnd = function () {
+            Laya.stage.removeChild(this.loginWnd);
             this.stageWnd = new ui.page.stageUI();
             Laya.stage.addChild(this.stageWnd);
             this.stageWnd.attack.on(Laya.Event.MOUSE_UP, this, this.tankAttack);
@@ -90,6 +90,7 @@ var game;
         };
         GameCenter.prototype.tankStopMove = function () {
             game.GameCenter.gameStage.mainTank.ismoving = false;
+            //game.GameCenter.gameStage.mainTank.stopMove(); 效果不好,移动一小段就矫正位置
         };
         GameCenter.instance = null;
         GameCenter.gameStage = null;
