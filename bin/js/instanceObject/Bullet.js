@@ -24,14 +24,8 @@ var obj;
         /**子弹从对象池取出才调用这里 */
         Bullet.prototype.onFrameOnce = function () {
             _super.prototype.onFrameOnce.call(this);
-            if (this.dir == MoveDir.DOWN || this.dir == MoveDir.UP) {
-                this.widthX = 2;
-                this.heightY = 2;
-            }
-            else {
-                this.widthX = 2;
-                this.heightY = 2;
-            }
+            this.widthX = ConfigMng.bulletWidth;
+            this.heightY = ConfigMng.bulletWidth;
         };
         Bullet.prototype.init = function () {
             _super.prototype.init.call(this);

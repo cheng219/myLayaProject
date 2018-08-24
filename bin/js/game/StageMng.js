@@ -24,11 +24,12 @@ var game;
             return _this;
         }
         StageMng.prototype.onFrameOnce = function () {
-            console.log("onFrameOnce");
+            //console.log("onFrameOnce");
             Laya.timer.loop(5000, this, this.onFrameLoop);
         };
+        /** 每五秒创建一个敌人*/
         StageMng.prototype.onFrameLoop = function () {
-            console.log("onFrameLoop");
+            //console.log("onFrameLoop");
             game.GameCenter.gameStage.CreateEnemyTank();
         };
         return StageMng;

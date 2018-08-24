@@ -29,7 +29,7 @@ module obj
         public init() : void
         {
             this._inited = true;
-            Laya.timer.loop(2000,this,this.attackLoop)
+            Laya.timer.loop(ConfigMng.autoAttackCd,this,this.attackLoop)
         }
 
         protected onFrameLoop() : void
@@ -49,7 +49,7 @@ module obj
         /**没两秒攻击一次 */
         protected attackLoop() : void
         {
-            if(this.isPoolObj)//敌人
+            if(this.inited && this.isPoolObj)//敌人
                 this.attack();
         }
         protected lastAttackTime : number = 0;
@@ -73,14 +73,9 @@ module obj
             }
         }
 
-        protected lastTurnTime : number = 0;
+        
         public intersectWithOther(other : InstanceObject) : void
         {
-            if(Laya.timer.currTimer - this.lastTurnTime < ConfigMng.autoTurnCd)
-            {
-                return;
-            }
-            this.lastTurnTime = Laya.timer.currTimer;
             if(other instanceof Bullet)
             {
                 if(other.camp != this.camp && this.isPoolObj)
@@ -93,10 +88,11 @@ module obj
                 this.stopMove();
                 if(this.isPoolObj)
                 {
-                    this.autoTurn();
+                    Laya.timer.once(ConfigMng.autoTurnCd,this,this.autoTurn);
                 }
             }
         }
+
         /** 每1秒自动转向 */
         protected autoTurn() : void
         {

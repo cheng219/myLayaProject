@@ -28,6 +28,8 @@ var obj;
         }
         Tank.prototype.onFrameOnce = function () {
             _super.prototype.onFrameOnce.call(this);
+            this.widthX = ConfigMng.tanktWidth;
+            this.heightY = ConfigMng.tanktWidth;
             if (!this.isPoolObj) {
                 game.GameCenter.gameStage.mainTank = this;
                 this.init();
@@ -36,7 +38,7 @@ var obj;
         };
         Tank.prototype.init = function () {
             this._inited = true;
-            Laya.timer.loop(2000, this, this.attackLoop);
+            Laya.timer.loop(ConfigMng.autoAttackCd, this, this.attackLoop);
         };
         Tank.prototype.onFrameLoop = function () {
             if (this.ismoving) //移动中才检测碰撞
@@ -50,8 +52,9 @@ var obj;
                 }
             }
         };
+        /**没两秒攻击一次 */
         Tank.prototype.attackLoop = function () {
-            if (this.isPoolObj) //敌人
+            if (this.inited && this.isPoolObj) //敌人
                 this.attack();
         };
         Tank.prototype.attack = function () {
@@ -80,10 +83,11 @@ var obj;
             else {
                 this.stopMove();
                 if (this.isPoolObj) {
-                    this.autoTurn();
+                    Laya.timer.once(ConfigMng.autoTurnCd, this, this.autoTurn);
                 }
             }
         };
+        /** 每1秒自动转向 */
         Tank.prototype.autoTurn = function () {
             var arr = [MoveDir.DOWN, MoveDir.LEFT, MoveDir.RIGHT, MoveDir.UP];
             arr.splice(arr.indexOf(this.dir), 1);
