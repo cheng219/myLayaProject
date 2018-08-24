@@ -16,12 +16,12 @@ module obj
             super.onFrameOnce();
             if(this.dir == MoveDir.DOWN || this.dir == MoveDir.UP)
             {
-                this.widthX = 60;
-                this.heightY = 15;
+                this.widthX = 2;
+                this.heightY = 2;
             }else
             {
-                this.widthX = 15;
-                this.heightY = 60;
+                this.widthX = 2;
+                this.heightY = 2;
             }
         }
         public init() : void
@@ -35,7 +35,7 @@ module obj
         {
             if(!this.inited)return;
             if(!this.ismoving)return;
-            if(game.GameCenter.gameStage.intersectWithOther(this,MoveDir.UP))
+            if(game.GameCenter.gameStage.intersectWithOther(this,this.dir))
             {
                 //console.log("遇到障碍");
             }else

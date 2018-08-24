@@ -17,9 +17,16 @@ module obj
         protected onFrameOnce() : void
         {
             super.onFrameOnce();
+            if(!this.isPoolObj)
+            {
+                this.init();
+            }
+            //this.graphics.drawRect(0,0,60,60,"#ff0000");
+        }
+        public init() : void
+        {
             this._inited = true;
             this.frameLoop(30,this,this.attackLoop);
-            this.graphics.drawRect(0,0,60,60,"#ff0000");
         }
 
         protected onFrameLoop() : void
@@ -45,7 +52,7 @@ module obj
         public attack() : void
         {
             console.log("attack");
-            let bullet = game.GameCenter.gameStage.requstPool() as Bullet;
+            let bullet = game.GameCenter.gameStage.requstPool(ObjSort.BULLET) as Bullet;
             if(bullet != null)
             {
                 bullet.pos(this.x,this.y);

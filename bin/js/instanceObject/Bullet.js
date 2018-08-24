@@ -27,12 +27,12 @@ var obj;
         Bullet.prototype.onFrameOnce = function () {
             _super.prototype.onFrameOnce.call(this);
             if (this.dir == MoveDir.DOWN || this.dir == MoveDir.UP) {
-                this.widthX = 60;
-                this.heightY = 15;
+                this.widthX = 2;
+                this.heightY = 2;
             }
             else {
-                this.widthX = 15;
-                this.heightY = 60;
+                this.widthX = 2;
+                this.heightY = 2;
             }
         };
         Bullet.prototype.init = function () {
@@ -46,7 +46,7 @@ var obj;
                 return;
             if (!this.ismoving)
                 return;
-            if (game.GameCenter.gameStage.intersectWithOther(this, MoveDir.UP)) {
+            if (game.GameCenter.gameStage.intersectWithOther(this, this.dir)) {
                 //console.log("遇到障碍");
             }
             else {

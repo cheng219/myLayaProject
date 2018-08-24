@@ -53360,6 +53360,528 @@ if (typeof define === 'function' && define.amd){
         }
     });
 }
+/*
+* name;
+*/
+var game;
+(function (game) {
+    var StageBase = /** @class */ (function () {
+        function StageBase() {
+            this.UnRegist();
+            this.Regist();
+        }
+        StageBase.prototype.Regist = function () {
+        };
+        StageBase.prototype.UnRegist = function () {
+        };
+        return StageBase;
+    }());
+    game.StageBase = StageBase;
+})(game || (game = {}));
+//# sourceMappingURL=StageBase.js.map
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    }
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+/*
+* name;
+*/
+var game;
+(function (game) {
+    var GameStage = /** @class */ (function (_super) {
+        __extends(GameStage, _super);
+        function GameStage() {
+            var _this = _super.call(this) || this;
+            _this.objs = [];
+            _this.poolBullets = [];
+            _this.mainTank = null;
+            _this.minX = 30;
+            _this.minY = 30;
+            _this.maxX = 870; //900-30
+            _this.maxY = 570; //600-30
+            return _this;
+        }
+        GameStage.CreateNew = function () {
+            if (game.GameCenter.gameStage == null) {
+                game.GameCenter.gameStage = new GameStage();
+            }
+            else {
+                game.GameCenter.gameStage.UnRegist();
+                game.GameCenter.gameStage.Regist();
+            }
+            return game.GameCenter.gameStage;
+        };
+        GameStage.prototype.Regist = function () {
+        };
+        GameStage.prototype.UnRegist = function () {
+            this.objs = [];
+        };
+        GameStage.prototype.AddInstanceObj = function (brick) {
+            this.objs.push(brick);
+        };
+        GameStage.prototype.DelInstanceObj = function (brick) {
+            var index = this.objs.indexOf(brick);
+            if (index > -1) {
+                this.objs.splice(index, 1);
+            }
+            if (brick instanceof obj.Brick) {
+                brick.destroy(true);
+            }
+            else if (brick.isPoolObj) {
+                this.return2Pool(brick);
+            }
+        };
+        GameStage.prototype.AddPool = function (brick) {
+            var len = this.poolBullets.push(brick);
+            brick.pos(1044, 20 * len);
+            //console.log("pool :"+this.poolBullets.length);
+        };
+        GameStage.prototype.requstPool = function () {
+            var len = this.poolBullets.length;
+            if (len > 0) {
+                var go = this.poolBullets[len - 1];
+                go.init();
+                this.poolBullets.splice(len - 1, 1);
+                //console.log("remain :" + this.poolBullets.length);
+                return go;
+            }
+        };
+        GameStage.prototype.return2Pool = function (brick) {
+            brick.return2Pool();
+            this.AddPool(brick);
+        };
+        GameStage.prototype.intersectWithOther = function (tank, dir) {
+            //console.log("intersectWithOther id:"+tank.camp);
+            if ((tank.x <= this.minX && dir == MoveDir.LEFT)
+                || (tank.x >= this.maxX && dir == MoveDir.RIGHT)
+                || (tank.y <= this.minY && dir == MoveDir.UP)
+                || (tank.y >= this.maxY && dir == MoveDir.DOWN)) {
+                tank.intersectWithOther(null); //撞到边界
+                return true;
+            }
+            for (var i = 0, len = this.objs.length; i < len; i++) {
+                if (!this.objs[i].inited)
+                    continue;
+                if (this.objs[i] == tank || this.objs[i].camp == tank.camp) //这里会导致坦克穿透
+                    continue;
+                var diffX = Math.abs(this.objs[i].x - tank.x);
+                var diffY = Math.abs(this.objs[i].y - tank.y);
+                var diffW = this.objs[i].widthX / 2 + tank.widthX / 2;
+                var diffH = this.objs[i].heightY / 2 + tank.heightY / 2;
+                if (diffX > 60 || diffY > 60) //距离过远,必然不相交,减少getBounds消耗
+                    continue;
+                if (tank instanceof obj.Bullet && this.objs[i] instanceof obj.Brick) {
+                    if (this.objs[i].sort == BrickSort.WATER) {
+                        continue; //子弹过水
+                    }
+                }
+                if (diffX < diffW && diffY < diffH) {
+                    console.log("diffX :" + diffX + ",diffW :" + diffW + ",diffY :" + diffY + ",diffH :" + diffH);
+                    this.objs[i].intersectWithOther(tank);
+                    tank.intersectWithOther(this.objs[i]);
+                    return true;
+                }
+            }
+            return false;
+        };
+        return GameStage;
+    }(game.StageBase));
+    game.GameStage = GameStage;
+})(game || (game = {}));
+var MoveDir;
+(function (MoveDir) {
+    MoveDir[MoveDir["UP"] = 0] = "UP";
+    MoveDir[MoveDir["DOWN"] = 1] = "DOWN";
+    MoveDir[MoveDir["LEFT"] = 2] = "LEFT";
+    MoveDir[MoveDir["RIGHT"] = 3] = "RIGHT";
+})(MoveDir || (MoveDir = {}));
+//# sourceMappingURL=GameStage.js.map
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    }
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+/**
+* name
+*/
+var obj;
+(function (obj) {
+    var InstanceObject = /** @class */ (function (_super) {
+        __extends(InstanceObject, _super);
+        function InstanceObject() {
+            var _this = _super.call(this) || this;
+            _this.isPoolObj = false;
+            _this._inited = false;
+            /**阵营(相等则不碰撞检测) */
+            _this._camp = 0;
+            /**移动速度 */
+            _this._speed = 6;
+            /**朝向 */
+            _this._dir = MoveDir.UP;
+            /**是否移动中 */
+            _this._ismoving = false;
+            /**对象碰撞宽度 */
+            _this.widthX = 60;
+            /**对象碰撞高度 */
+            _this.heightY = 60;
+            //自定义的脚本会有时序问题，所以在此添加一个延时
+            _this.frameOnce(1, _this, _this.onFrameOnce);
+            return _this;
+        }
+        Object.defineProperty(InstanceObject.prototype, "inited", {
+            get: function () {
+                return this._inited;
+            },
+            enumerable: true,
+            configurable: true
+        });
+        Object.defineProperty(InstanceObject.prototype, "camp", {
+            get: function () {
+                return this._camp;
+            },
+            /**阵营(相等则不碰撞检测) */
+            set: function (camp) {
+                this._camp = camp;
+            },
+            enumerable: true,
+            configurable: true
+        });
+        Object.defineProperty(InstanceObject.prototype, "speed", {
+            /**移动速度 */
+            set: function (speed) {
+                this._speed = speed;
+            },
+            enumerable: true,
+            configurable: true
+        });
+        Object.defineProperty(InstanceObject.prototype, "dir", {
+            get: function () {
+                return this._dir;
+            },
+            /**朝向 */
+            set: function (dir) {
+                this._dir = dir;
+            },
+            enumerable: true,
+            configurable: true
+        });
+        Object.defineProperty(InstanceObject.prototype, "ismoving", {
+            get: function () {
+                return this._ismoving;
+            },
+            /**是否移动中 */
+            set: function (ismoving) {
+                this._ismoving = ismoving;
+            },
+            enumerable: true,
+            configurable: true
+        });
+        /**对象初始化后延迟一帧后执行的函数 */
+        InstanceObject.prototype.onFrameOnce = function () {
+            if (this.isPoolObj) {
+                game.GameCenter.gameStage.AddPool(this);
+            }
+            else {
+                game.GameCenter.gameStage.AddInstanceObj(this);
+            }
+            this.frameLoop(1, this, this.onFrameLoop);
+        };
+        /**每帧执行的函数 */
+        InstanceObject.prototype.onFrameLoop = function () {
+        };
+        /**移动 */
+        InstanceObject.prototype.move = function () {
+            //console.log("move ismoving : "+this._ismoving);
+            if (!this._ismoving)
+                return;
+            switch (this.rotation) {
+                case 0:
+                    this.y = this.y - this._speed;
+                    break;
+                case 90:
+                    this.x = this.x + this._speed;
+                    break;
+                case 180:
+                    this.y = this.y + this._speed;
+                    break;
+                case 270:
+                    this.x = this.x - this._speed;
+                    break;
+                default:
+                    console.log("move rotation：" + this.rotation);
+                    break;
+            }
+        };
+        /**移动停止,矫正位置*/
+        InstanceObject.prototype.stopMove = function () {
+            if (this._ismoving) {
+                this._ismoving = false;
+                //console.log("before this.x :"+this.x  + ",this.y:"+this.y);
+                this.x = Math.round((this.x - 30) / 60) * 60 + 30;
+                this.y = Math.round((this.y - 30) / 60) * 60 + 30;
+                //console.log("after this.x :"+this.x  + ",this.y:"+this.y);
+            }
+        };
+        /**转向 */
+        InstanceObject.prototype.turn = function (dir) {
+            switch (dir) {
+                case MoveDir.UP:
+                    this.rotation = 0;
+                    break;
+                case MoveDir.RIGHT:
+                    this.rotation = 90;
+                    break;
+                case MoveDir.DOWN:
+                    this.rotation = 180;
+                    break;
+                case MoveDir.LEFT:
+                    this.rotation = 270;
+                    break;
+            }
+            this.dir = dir;
+        };
+        /**被其他物体碰撞 */
+        InstanceObject.prototype.intersectWithOther = function (other) {
+        };
+        /**初始化 */
+        InstanceObject.prototype.init = function () {
+            game.GameCenter.gameStage.AddInstanceObj(this);
+        };
+        /**返回对象池，注销一些参数 */
+        InstanceObject.prototype.return2Pool = function () {
+            this._inited = false;
+            this._ismoving = false;
+        };
+        return InstanceObject;
+    }(laya.ui.Box));
+    obj.InstanceObject = InstanceObject;
+})(obj || (obj = {}));
+//# sourceMappingURL=InstanceObject.js.map
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    }
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+/*
+* 砖块运行时类;
+*/
+var obj;
+(function (obj) {
+    var Brick = /** @class */ (function (_super) {
+        __extends(Brick, _super);
+        function Brick() {
+            var _this = _super.call(this) || this;
+            _this.id = 0;
+            _this.sort = 0;
+            _this.camp = 0;
+            return _this;
+        }
+        Brick.prototype.onFrameOnce = function () {
+            _super.prototype.onFrameOnce.call(this);
+            if (this.sort == 3)
+                console.log("x:" + this.x + ",y:" + this.y + ",sort:" + this.sort);
+            if (this.sort != BrickSort.GRASS) {
+                this.widthX = 60;
+                this.heightY = 60;
+            }
+            else {
+                this.widthX = 0;
+                this.heightY = 0;
+            }
+            this._inited = true;
+        };
+        Brick.prototype.onFrameLoop = function () {
+            _super.prototype.onFrameLoop.call(this);
+        };
+        Brick.prototype.intersectWithOther = function (other) {
+            _super.prototype.intersectWithOther.call(this, other);
+            if (other instanceof obj.Bullet) {
+                if (this.sort == BrickSort.WALL) {
+                    console.log("被击中,销毁自己");
+                    //this.visible = false;
+                    //this.setBounds(this.zeroRect);
+                    game.GameCenter.gameStage.DelInstanceObj(this);
+                }
+                else if (this.sort == BrickSort.METAL) {
+                    //金属必须强力子弹
+                }
+            }
+        };
+        return Brick;
+    }(obj.InstanceObject));
+    obj.Brick = Brick;
+})(obj || (obj = {}));
+var BrickSort;
+(function (BrickSort) {
+    BrickSort[BrickSort["WALL"] = 1] = "WALL";
+    BrickSort[BrickSort["GRASS"] = 2] = "GRASS";
+    BrickSort[BrickSort["WATER"] = 3] = "WATER";
+    BrickSort[BrickSort["METAL"] = 4] = "METAL";
+})(BrickSort || (BrickSort = {}));
+//# sourceMappingURL=Brick.js.map
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    }
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+/*
+* 子弹对象;
+*/
+var obj;
+(function (obj) {
+    var Bullet = /** @class */ (function (_super) {
+        __extends(Bullet, _super);
+        function Bullet() {
+            var _this = _super.call(this) || this;
+            _this.speed = 10;
+            return _this;
+        }
+        /**子弹从对象池取出才调用这里 */
+        Bullet.prototype.onFrameOnce = function () {
+            _super.prototype.onFrameOnce.call(this);
+            if (this.dir == MoveDir.DOWN || this.dir == MoveDir.UP) {
+                this.widthX = 60;
+                this.heightY = 15;
+            }
+            else {
+                this.widthX = 15;
+                this.heightY = 60;
+            }
+        };
+        Bullet.prototype.init = function () {
+            _super.prototype.init.call(this);
+            this._inited = true;
+            this.ismoving = true;
+            //console.log("bullet init");
+        };
+        Bullet.prototype.onFrameLoop = function () {
+            if (!this.inited)
+                return;
+            if (!this.ismoving)
+                return;
+            if (game.GameCenter.gameStage.intersectWithOther(this, MoveDir.UP)) {
+                //console.log("遇到障碍");
+            }
+            else {
+                _super.prototype.move.call(this);
+            }
+        };
+        Bullet.prototype.intersectWithOther = function (other) {
+            console.log("击中其他，销毁自己");
+            //this.visible = false;
+            game.GameCenter.gameStage.DelInstanceObj(this);
+        };
+        return Bullet;
+    }(obj.InstanceObject));
+    obj.Bullet = Bullet;
+})(obj || (obj = {}));
+//# sourceMappingURL=Bullet.js.map
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    }
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+/*
+* 坦克对象;
+*/
+var obj;
+(function (obj) {
+    var Tank = /** @class */ (function (_super) {
+        __extends(Tank, _super);
+        function Tank() {
+            var _this = _super.call(this) || this;
+            _this.id = 0;
+            _this.camp = 1;
+            game.GameCenter.gameStage.mainTank = _this;
+            return _this;
+        }
+        Tank.prototype.onFrameOnce = function () {
+            _super.prototype.onFrameOnce.call(this);
+            this._inited = true;
+            this.frameLoop(30, this, this.attackLoop);
+            this.graphics.drawRect(0, 0, 60, 60, "#ff0000");
+        };
+        Tank.prototype.onFrameLoop = function () {
+            if (this.ismoving) //移动中才检测碰撞
+             {
+                if (game.GameCenter.gameStage.intersectWithOther(this, this.dir)) {
+                    //console.log("遇到障碍");
+                }
+                else {
+                    //this.ismoving = true;
+                    _super.prototype.move.call(this);
+                }
+            }
+        };
+        Tank.prototype.attackLoop = function () {
+            //this.attack();
+        };
+        Tank.prototype.attack = function () {
+            console.log("attack");
+            var bullet = game.GameCenter.gameStage.requstPool();
+            if (bullet != null) {
+                bullet.pos(this.x, this.y);
+                bullet.ismoving = true;
+                bullet.camp = this.camp;
+                bullet.speed = 10;
+                bullet.turn(this.dir);
+                //Laya.stage.addChild(bullet);
+            }
+        };
+        Tank.prototype.intersectWithOther = function (other) {
+            if (other instanceof obj.Bullet) {
+                console.log("被击中");
+            }
+            else {
+                this.stopMove();
+            }
+        };
+        return Tank;
+    }(obj.InstanceObject));
+    obj.Tank = Tank;
+})(obj || (obj = {}));
+//# sourceMappingURL=Tank.js.map
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -53377,22 +53899,6 @@ var View = laya.ui.View;
 var Dialog = laya.ui.Dialog;
 var EffectAnimation = laya.display.EffectAnimation;
 var ui;
-(function (ui) {
-    var efc;
-    (function (efc) {
-        var scaleUI = /** @class */ (function (_super) {
-            __extends(scaleUI, _super);
-            function scaleUI() {
-                var _this = _super.call(this) || this;
-                _this.effectData = ui.efc.scaleUI.uiView;
-                return _this;
-            }
-            scaleUI.uiView = { "type": "View", "props": {}, "child": [{ "type": "Image", "props": { "skin": "comp/image.png", "anchorY": 0.5, "anchorX": 0.5 }, "compId": 2 }], "animations": [{ "nodes": [{ "target": 2, "keyframes": { "scaleY": [{ "value": 1, "tweenMethod": "linearNone", "tween": true, "target": 2, "key": "scaleY", "index": 0 }, { "value": 0.2, "tweenMethod": "linearNone", "tween": true, "target": 2, "key": "scaleY", "index": 1 }, { "value": 1, "tweenMethod": "linearNone", "tween": true, "target": 2, "key": "scaleY", "index": 10 }], "scaleX": [{ "value": 1, "tweenMethod": "linearNone", "tween": true, "target": 2, "key": "scaleX", "index": 0 }, { "value": 0.2, "tweenMethod": "linearNone", "tween": true, "target": 2, "key": "scaleX", "index": 1 }, { "value": 1, "tweenMethod": "linearNone", "tween": true, "target": 2, "key": "scaleX", "index": 10 }] } }], "name": "ani1", "id": 1, "frameRate": 24, "action": 0 }] };
-            return scaleUI;
-        }(EffectAnimation));
-        efc.scaleUI = scaleUI;
-    })(efc = ui.efc || (ui.efc = {}));
-})(ui || (ui = {}));
 (function (ui) {
     var page;
     (function (page) {
@@ -53432,20 +53938,40 @@ var ui;
 (function (ui) {
     var page;
     (function (page) {
-        var testUI = /** @class */ (function (_super) {
-            __extends(testUI, _super);
-            function testUI() {
+        var loginUI = /** @class */ (function (_super) {
+            __extends(loginUI, _super);
+            function loginUI() {
                 return _super.call(this) || this;
             }
-            testUI.prototype.createChildren = function () {
-                View.regComponent("ui.scaleUI", ui.scaleUI);
+            loginUI.prototype.createChildren = function () {
                 _super.prototype.createChildren.call(this);
-                this.createView(ui.page.testUI.uiView);
+                this.createView(ui.page.loginUI.uiView);
             };
-            testUI.uiView = { "type": "View", "props": { "width": 600, "height": 400 }, "child": [{ "type": "Image", "props": { "y": 200, "x": 300, "width": 600, "skin": "ui/qt228.png", "height": 400, "anchorY": 0.5, "anchorX": 0.5, "sizeGrid": "5,5,5,5" } }, { "type": "Image", "props": { "y": 4, "skin": "ui/close.png", "right": 7, "height": 40 } }, { "type": "Image", "props": { "x": 242, "width": 146, "skin": "ui/qt279.png", "mouseEnabled": true, "height": 49, "bottom": 14 }, "compId": 5, "child": [{ "type": "Label", "props": { "y": 11, "x": 19, "width": 104, "text": "按钮", "height": 31, "fontSize": 20, "color": "#0b0a0a", "bold": true, "align": "center" } }, { "type": "Button", "props": { "y": 12, "x": 22, "width": 105, "var": "button1", "height": 25 } }, { "type": "Script", "props": { "runtime": "ui.scaleUI" } }] }, { "type": "List", "props": { "y": 35, "x": 58, "width": 375, "height": 237 }, "child": [{ "type": "List", "props": { "renderType": "render" }, "child": [{ "type": "Image", "props": { "width": 375, "skin": "template/Search/search bar_blue.png", "height": 62 } }, { "type": "Button", "props": { "y": 12, "x": 318, "skin": "template/Search/btn_search_close.png" } }, { "type": "Button", "props": { "y": 22, "x": 37, "width": 30, "skin": "template/Search/btn_search_icon.png", "height": 20 } }, { "type": "Label", "props": { "y": 10, "x": 79, "width": 155, "text": "Text", "skin": "template/Search/label.png", "height": 28, "fontSize": 36, "align": "left" } }] }] }], "animations": [{ "nodes": [{ "target": 5, "keyframes": { "anchorY": [{ "value": 0, "tweenMethod": "linearNone", "tween": true, "target": 5, "key": "anchorY", "index": 0 }, { "value": 0.5, "tweenMethod": "linearNone", "tween": true, "target": 5, "key": "anchorY", "index": 1 }], "anchorX": [{ "value": 0, "tweenMethod": "linearNone", "tween": true, "target": 5, "key": "anchorX", "index": 0 }, { "value": 0.5, "tweenMethod": "linearNone", "tween": true, "target": 5, "key": "anchorX", "index": 1 }] } }], "name": "ani1", "id": 1, "frameRate": 24, "action": 0 }] };
-            return testUI;
+            loginUI.uiView = { "type": "View", "props": { "width": 1136, "height": 640 }, "child": [{ "type": "Button", "props": { "y": 320, "x": 568, "width": 84, "var": "btn_start", "skin": "ui/btn_qt113.png", "label": "start", "height": 27, "anchorY": 0.5, "anchorX": 0.5 } }] };
+            return loginUI;
         }(View));
-        page.testUI = testUI;
+        page.loginUI = loginUI;
+    })(page = ui.page || (ui.page = {}));
+})(ui || (ui = {}));
+(function (ui) {
+    var page;
+    (function (page) {
+        var stageUI = /** @class */ (function (_super) {
+            __extends(stageUI, _super);
+            function stageUI() {
+                return _super.call(this) || this;
+            }
+            stageUI.prototype.createChildren = function () {
+                View.regComponent("obj.Brick", obj.Brick);
+                View.regComponent("obj.Tank", obj.Tank);
+                View.regComponent("obj.Bullet", obj.Bullet);
+                _super.prototype.createChildren.call(this);
+                this.createView(ui.page.stageUI.uiView);
+            };
+            stageUI.uiView = { "type": "Dialog", "props": { "y": 0, "x": 0, "width": 1136, "height": 640 }, "child": [{ "type": "Box", "props": { "y": 320, "x": 1136, "width": 236, "name": "right", "height": 640, "anchorY": 0.5, "anchorX": 1 }, "child": [{ "type": "Image", "props": { "y": 320, "x": 236, "width": 236, "skin": "ui/qt228.png", "name": "right", "height": 640, "anchorY": 0.5, "anchorX": 1, "sizeGrid": "5,5,5,5" } }, { "type": "Label", "props": { "y": 14, "x": 17, "width": 72, "text": "剩余敌军", "height": 35, "fontSize": 25, "font": "Arial" } }, { "type": "Label", "props": { "y": 57, "x": 76, "width": 64, "var": "remainEnemy", "text": "10", "name": "enemyLabel", "height": 27, "fontSize": 20, "font": "Arial", "color": "#0f933a", "bold": true } }, { "type": "Label", "props": { "y": 119, "x": 8, "width": 72, "text": "剩余挑战次数", "height": 35, "fontSize": 25, "font": "Arial" } }, { "type": "Label", "props": { "y": 158, "x": 76, "width": 64, "var": "remainTimes", "text": "10", "name": "enemyLabel", "height": 27, "fontSize": 20, "font": "Arial", "color": "#0f933a", "bold": true } }, { "type": "Label", "props": { "y": 549, "x": 63, "width": 64, "var": "stageName", "text": "第一关", "name": "stageLabel", "height": 27, "fontSize": 20, "font": "Arial", "color": "#0f933a" } }, { "type": "Label", "props": { "y": 509, "x": 31, "width": 72, "text": "关卡", "height": 35, "fontSize": 30, "font": "Arial" } }] }, { "type": "Box", "props": { "y": 0, "x": 0, "var": "map", "name": "map" }, "child": [{ "type": "Box", "props": { "y": 30, "x": 30, "sort": 1, "name": "item0", "anchorY": 0.5, "anchorX": 0.5, "id": 1, "runtime": "obj.Brick" }, "child": [{ "type": "Image", "props": { "y": 0, "x": 0, "width": 60, "skin": "game/walls.png", "height": 60 } }] }, { "type": "Box", "props": { "y": 30, "x": 90, "sort": 1, "name": "item1", "anchorY": 0.5, "anchorX": 0.5, "id": 1, "runtime": "obj.Brick" }, "child": [{ "type": "Image", "props": { "y": 0, "x": 0, "width": 60, "skin": "game/walls.png", "height": 60 } }] }, { "type": "Box", "props": { "y": 30, "x": 150, "sort": 1, "name": "item2", "anchorY": 0.5, "anchorX": 0.5, "id": 1, "runtime": "obj.Brick" }, "child": [{ "type": "Image", "props": { "y": 0, "x": 0, "width": 60, "skin": "game/walls.png", "height": 60 } }] }, { "type": "Box", "props": { "y": 30, "x": 210, "sort": 1, "name": "item3", "anchorY": 0.5, "anchorX": 0.5, "id": 1, "runtime": "obj.Brick" }, "child": [{ "type": "Image", "props": { "y": 0, "x": 0, "width": 60, "skin": "game/walls.png", "height": 60 } }] }, { "type": "Box", "props": { "y": 30, "x": 270, "sort": 1, "name": "item4", "anchorY": 0.5, "anchorX": 0.5, "id": 1, "runtime": "obj.Brick" }, "child": [{ "type": "Image", "props": { "y": 0, "x": 0, "width": 60, "skin": "game/walls.png", "height": 60 } }] }, { "type": "Box", "props": { "y": 30, "x": 330, "sort": 1, "name": "item5", "anchorY": 0.5, "anchorX": 0.5, "id": 1, "runtime": "obj.Brick" }, "child": [{ "type": "Image", "props": { "y": 0, "x": 0, "width": 60, "skin": "game/walls.png", "height": 60 } }] }, { "type": "Box", "props": { "y": 30, "x": 390, "sort": 1, "name": "item6", "anchorY": 0.5, "anchorX": 0.5, "id": 1, "runtime": "obj.Brick" }, "child": [{ "type": "Image", "props": { "y": 0, "x": 0, "width": 60, "skin": "game/walls.png", "height": 60 } }] }, { "type": "Box", "props": { "y": 30, "x": 450, "sort": 1, "name": "item7", "anchorY": 0.5, "anchorX": 0.5, "id": 1, "runtime": "obj.Brick" }, "child": [{ "type": "Image", "props": { "y": 0, "x": 0, "width": 60, "skin": "game/walls.png", "height": 60 } }] }, { "type": "Box", "props": { "y": 30, "x": 510, "sort": 1, "name": "item8", "anchorY": 0.5, "anchorX": 0.5, "id": 1, "runtime": "obj.Brick" }, "child": [{ "type": "Image", "props": { "y": 0, "x": 0, "width": 60, "skin": "game/walls.png", "height": 60 } }] }, { "type": "Box", "props": { "y": 30, "x": 570, "sort": 1, "name": "item9", "anchorY": 0.5, "anchorX": 0.5, "id": 1, "runtime": "obj.Brick" }, "child": [{ "type": "Image", "props": { "y": 0, "x": 0, "width": 60, "skin": "game/walls.png", "height": 60 } }] }, { "type": "Box", "props": { "y": 30, "x": 630, "sort": 1, "name": "item10", "anchorY": 0.5, "anchorX": 0.5, "id": 1, "runtime": "obj.Brick" }, "child": [{ "type": "Image", "props": { "y": 0, "x": 0, "width": 60, "skin": "game/walls.png", "height": 60 } }] }, { "type": "Box", "props": { "y": 30, "x": 690, "sort": 1, "name": "item11", "anchorY": 0.5, "anchorX": 0.5, "id": 1, "runtime": "obj.Brick" }, "child": [{ "type": "Image", "props": { "y": 0, "x": 0, "width": 60, "skin": "game/walls.png", "height": 60 } }] }, { "type": "Box", "props": { "y": 30, "x": 750, "sort": 1, "name": "item12", "anchorY": 0.5, "anchorX": 0.5, "id": 1, "runtime": "obj.Brick" }, "child": [{ "type": "Image", "props": { "y": 0, "x": 0, "width": 60, "skin": "game/walls.png", "height": 60 } }] }, { "type": "Box", "props": { "y": 30, "x": 810, "sort": 1, "name": "item13", "anchorY": 0.5, "anchorX": 0.5, "id": 1, "runtime": "obj.Brick" }, "child": [{ "type": "Image", "props": { "y": 0, "x": 0, "width": 60, "skin": "game/walls.png", "height": 60 } }] }, { "type": "Box", "props": { "y": 90, "x": 30, "sort": 1, "name": "item14", "anchorY": 0.5, "anchorX": 0.5, "id": 1, "runtime": "obj.Brick" }, "child": [{ "type": "Image", "props": { "y": 0, "x": 0, "width": 60, "skin": "game/walls.png", "height": 60 } }] }, { "type": "Box", "props": { "y": 90, "x": 90, "sort": 1, "name": "item15", "anchorY": 0.5, "anchorX": 0.5, "id": 1, "runtime": "obj.Brick" }, "child": [{ "type": "Image", "props": { "y": 0, "x": 0, "width": 60, "skin": "game/walls.png", "height": 60 } }] }, { "type": "Box", "props": { "y": 90, "x": 150, "sort": 1, "name": "item16", "anchorY": 0.5, "anchorX": 0.5, "id": 1, "runtime": "obj.Brick" }, "child": [{ "type": "Image", "props": { "y": 0, "x": 0, "width": 60, "skin": "game/walls.png", "height": 60 } }] }, { "type": "Box", "props": { "y": 90, "x": 210, "sort": 1, "name": "item17", "anchorY": 0.5, "anchorX": 0.5, "id": 1, "runtime": "obj.Brick" }, "child": [{ "type": "Image", "props": { "y": 0, "x": 0, "width": 60, "skin": "game/walls.png", "height": 60 } }] }, { "type": "Box", "props": { "y": 90, "x": 270, "sort": 1, "name": "item18", "anchorY": 0.5, "anchorX": 0.5, "id": 1, "runtime": "obj.Brick" }, "child": [{ "type": "Image", "props": { "y": 0, "x": 0, "width": 60, "skin": "game/walls.png", "height": 60 } }] }, { "type": "Box", "props": { "y": 90, "x": 330, "sort": 1, "name": "item19", "anchorY": 0.5, "anchorX": 0.5, "id": 1, "runtime": "obj.Brick" }, "child": [{ "type": "Image", "props": { "y": 0, "x": 0, "width": 60, "skin": "game/walls.png", "height": 60 } }] }, { "type": "Box", "props": { "y": 90, "x": 390, "sort": 1, "name": "item20", "anchorY": 0.5, "anchorX": 0.5, "id": 1, "runtime": "obj.Brick" }, "child": [{ "type": "Image", "props": { "y": 0, "x": 0, "width": 60, "skin": "game/walls.png", "height": 60 } }] }, { "type": "Box", "props": { "y": 90, "x": 450, "sort": 1, "name": "item21", "anchorY": 0.5, "anchorX": 0.5, "id": 1, "runtime": "obj.Brick" }, "child": [{ "type": "Image", "props": { "y": 0, "x": 0, "width": 60, "skin": "game/walls.png", "height": 60 } }] }, { "type": "Box", "props": { "y": 90, "x": 510, "sort": 1, "name": "item22", "anchorY": 0.5, "anchorX": 0.5, "id": 1, "runtime": "obj.Brick" }, "child": [{ "type": "Image", "props": { "y": 0, "x": 0, "width": 60, "skin": "game/walls.png", "height": 60 } }] }, { "type": "Box", "props": { "y": 90, "x": 570, "sort": 1, "name": "item23", "anchorY": 0.5, "anchorX": 0.5, "id": 1, "runtime": "obj.Brick" }, "child": [{ "type": "Image", "props": { "y": 0, "x": 0, "width": 60, "skin": "game/walls.png", "height": 60 } }] }, { "type": "Box", "props": { "y": 90, "x": 630, "sort": 1, "name": "item24", "anchorY": 0.5, "anchorX": 0.5, "id": 1, "runtime": "obj.Brick" }, "child": [{ "type": "Image", "props": { "y": 0, "x": 0, "width": 60, "skin": "game/walls.png", "height": 60 } }] }, { "type": "Box", "props": { "y": 90, "x": 690, "sort": 1, "name": "item25", "anchorY": 0.5, "anchorX": 0.5, "id": 1, "runtime": "obj.Brick" }, "child": [{ "type": "Image", "props": { "y": 0, "x": 0, "width": 60, "skin": "game/walls.png", "height": 60 } }] }, { "type": "Box", "props": { "y": 90, "x": 750, "sort": 1, "name": "item26", "anchorY": 0.5, "anchorX": 0.5, "id": 1, "runtime": "obj.Brick" }, "child": [{ "type": "Image", "props": { "y": 0, "x": 0, "width": 60, "skin": "game/walls.png", "height": 60 } }] }, { "type": "Box", "props": { "y": 90, "x": 810, "sort": 1, "name": "item27", "anchorY": 0.5, "anchorX": 0.5, "id": 1, "runtime": "obj.Brick" }, "child": [{ "type": "Image", "props": { "y": 0, "x": 0, "width": 60, "skin": "game/walls.png", "height": 60 } }] }, { "type": "Box", "props": { "y": 150, "x": 30, "sort": 1, "name": "item28", "anchorY": 0.5, "anchorX": 0.5, "id": 1, "runtime": "obj.Brick" }, "child": [{ "type": "Image", "props": { "y": 0, "x": 0, "width": 60, "skin": "game/walls.png", "height": 60 } }] }, { "type": "Box", "props": { "y": 150, "x": 90, "sort": 1, "name": "item29", "anchorY": 0.5, "anchorX": 0.5, "id": 1, "runtime": "obj.Brick" }, "child": [{ "type": "Image", "props": { "y": 0, "x": 0, "width": 60, "skin": "game/walls.png", "height": 60 } }] }, { "type": "Box", "props": { "y": 150, "x": 150, "sort": 1, "name": "item30", "anchorY": 0.5, "anchorX": 0.5, "id": 1, "runtime": "obj.Brick" }, "child": [{ "type": "Image", "props": { "y": 0, "x": 0, "width": 60, "skin": "game/walls.png", "height": 60 } }] }, { "type": "Box", "props": { "y": 150, "x": 630, "sort": 1, "name": "item38", "anchorY": 0.5, "anchorX": 0.5, "id": 1, "runtime": "obj.Brick" }, "child": [{ "type": "Image", "props": { "y": 0, "x": 0, "width": 60, "skin": "game/walls.png", "height": 60 } }] }, { "type": "Box", "props": { "y": 150, "x": 690, "sort": 1, "name": "item39", "anchorY": 0.5, "anchorX": 0.5, "id": 1, "runtime": "obj.Brick" }, "child": [{ "type": "Image", "props": { "y": 0, "x": 0, "width": 60, "skin": "game/walls.png", "height": 60 } }] }, { "type": "Box", "props": { "y": 150, "x": 750, "sort": 1, "name": "item40", "anchorY": 0.5, "anchorX": 0.5, "id": 1, "runtime": "obj.Brick" }, "child": [{ "type": "Image", "props": { "y": 0, "x": 0, "width": 60, "skin": "game/walls.png", "height": 60 } }] }, { "type": "Box", "props": { "y": 150, "x": 810, "sort": 1, "name": "item41", "anchorY": 0.5, "anchorX": 0.5, "id": 1, "runtime": "obj.Brick" }, "child": [{ "type": "Image", "props": { "y": 0, "x": 0, "width": 60, "skin": "game/walls.png", "height": 60 } }] }, { "type": "Box", "props": { "y": 210, "x": 30, "sort": 1, "name": "item42", "anchorY": 0.5, "anchorX": 0.5, "id": 1, "runtime": "obj.Brick" }, "child": [{ "type": "Image", "props": { "y": 0, "x": 0, "width": 60, "skin": "game/walls.png", "height": 60 } }] }, { "type": "Box", "props": { "y": 210, "x": 90, "sort": 1, "name": "item43", "anchorY": 0.5, "anchorX": 0.5, "id": 1, "runtime": "obj.Brick" }, "child": [{ "type": "Image", "props": { "y": 0, "x": 0, "width": 60, "skin": "game/walls.png", "height": 60 } }] }, { "type": "Box", "props": { "y": 210, "x": 150, "sort": 1, "name": "item44", "anchorY": 0.5, "anchorX": 0.5, "id": 1, "runtime": "obj.Brick" }, "child": [{ "type": "Image", "props": { "y": 0, "x": 0, "width": 60, "skin": "game/walls.png", "height": 60 } }] }, { "type": "Box", "props": { "y": 210, "x": 510, "sort": 1, "name": "item50", "anchorY": 0.5, "anchorX": 0.5, "id": 1, "runtime": "obj.Brick" }, "child": [{ "type": "Image", "props": { "y": 0, "x": 0, "width": 60, "skin": "game/walls.png", "height": 60 } }] }, { "type": "Box", "props": { "y": 210, "x": 570, "sort": 1, "name": "item51", "anchorY": 0.5, "anchorX": 0.5, "id": 1, "runtime": "obj.Brick" }, "child": [{ "type": "Image", "props": { "y": 0, "x": 0, "width": 60, "skin": "game/walls.png", "height": 60 } }] }, { "type": "Box", "props": { "y": 210, "x": 630, "sort": 1, "name": "item52", "anchorY": 0.5, "anchorX": 0.5, "id": 1, "runtime": "obj.Brick" }, "child": [{ "type": "Image", "props": { "y": 0, "x": 0, "width": 60, "skin": "game/walls.png", "height": 60 } }] }, { "type": "Box", "props": { "y": 210, "x": 690, "sort": 1, "name": "item53", "anchorY": 0.5, "anchorX": 0.5, "id": 1, "runtime": "obj.Brick" }, "child": [{ "type": "Image", "props": { "y": 0, "x": 0, "width": 60, "skin": "game/walls.png", "height": 60 } }] }, { "type": "Box", "props": { "y": 210, "x": 750, "sort": 1, "name": "item54", "anchorY": 0.5, "anchorX": 0.5, "id": 1, "runtime": "obj.Brick" }, "child": [{ "type": "Image", "props": { "y": 0, "x": 0, "width": 60, "skin": "game/walls.png", "height": 60 } }] }, { "type": "Box", "props": { "y": 210, "x": 810, "sort": 1, "name": "item55", "anchorY": 0.5, "anchorX": 0.5, "id": 1, "runtime": "obj.Brick" }, "child": [{ "type": "Image", "props": { "y": 0, "x": 0, "width": 60, "skin": "game/walls.png", "height": 60 } }] }, { "type": "Box", "props": { "y": 270, "x": 30, "sort": 1, "name": "item56", "anchorY": 0.5, "anchorX": 0.5, "id": 1, "runtime": "obj.Brick" }, "child": [{ "type": "Image", "props": { "y": 0, "x": 0, "width": 60, "skin": "game/walls.png", "height": 60 } }] }, { "type": "Box", "props": { "y": 270, "x": 90, "sort": 1, "name": "item57", "anchorY": 0.5, "anchorX": 0.5, "id": 1, "runtime": "obj.Brick" }, "child": [{ "type": "Image", "props": { "y": 0, "x": 0, "width": 60, "skin": "game/walls.png", "height": 60 } }] }, { "type": "Box", "props": { "y": 270, "x": 150, "sort": 1, "name": "item58", "anchorY": 0.5, "anchorX": 0.5, "id": 1, "runtime": "obj.Brick" }, "child": [{ "type": "Image", "props": { "y": 0, "x": 0, "width": 60, "skin": "game/walls.png", "height": 60 } }] }, { "type": "Box", "props": { "y": 270, "x": 270, "sort": 1, "name": "item60", "anchorY": 0.5, "anchorX": 0.5, "id": 1, "runtime": "obj.Brick" }, "child": [{ "type": "Image", "props": { "y": 0, "x": 0, "width": 60, "skin": "game/walls.png", "height": 60 } }] }, { "type": "Box", "props": { "y": 270, "x": 330, "sort": 1, "name": "item61", "anchorY": 0.5, "anchorX": 0.5, "id": 1, "runtime": "obj.Brick" }, "child": [{ "type": "Image", "props": { "y": 0, "x": 0, "width": 60, "skin": "game/walls.png", "height": 60 } }] }, { "type": "Box", "props": { "y": 270, "x": 390, "sort": 1, "name": "item62", "anchorY": 0.5, "anchorX": 0.5, "id": 1, "runtime": "obj.Brick" }, "child": [{ "type": "Image", "props": { "y": 0, "x": 0, "width": 60, "skin": "game/walls.png", "height": 60 } }] }, { "type": "Box", "props": { "y": 270, "x": 510, "sort": 1, "name": "item64", "anchorY": 0.5, "anchorX": 0.5, "id": 1, "runtime": "obj.Brick" }, "child": [{ "type": "Image", "props": { "y": 0, "x": 0, "width": 60, "skin": "game/walls.png", "height": 60 } }] }, { "type": "Box", "props": { "y": 270, "x": 570, "sort": 1, "name": "item65", "anchorY": 0.5, "anchorX": 0.5, "id": 1, "runtime": "obj.Brick" }, "child": [{ "type": "Image", "props": { "y": 0, "x": 0, "width": 60, "skin": "game/walls.png", "height": 60 } }] }, { "type": "Box", "props": { "y": 270, "x": 630, "sort": 1, "name": "item66", "anchorY": 0.5, "anchorX": 0.5, "id": 1, "runtime": "obj.Brick" }, "child": [{ "type": "Image", "props": { "y": 0, "x": 0, "width": 60, "skin": "game/walls.png", "height": 60 } }] }, { "type": "Box", "props": { "y": 270, "x": 690, "sort": 1, "name": "item67", "anchorY": 0.5, "anchorX": 0.5, "id": 1, "runtime": "obj.Brick" }, "child": [{ "type": "Image", "props": { "y": 0, "x": 0, "width": 60, "skin": "game/walls.png", "height": 60 } }] }, { "type": "Box", "props": { "y": 270, "x": 750, "sort": 1, "name": "item68", "anchorY": 0.5, "anchorX": 0.5, "id": 1, "runtime": "obj.Brick" }, "child": [{ "type": "Image", "props": { "y": 0, "x": 0, "width": 60, "skin": "game/walls.png", "height": 60 } }] }, { "type": "Box", "props": { "y": 270, "x": 810, "sort": 1, "name": "item69", "anchorY": 0.5, "anchorX": 0.5, "id": 1, "runtime": "obj.Brick" }, "child": [{ "type": "Image", "props": { "y": 0, "x": 0, "width": 60, "skin": "game/walls.png", "height": 60 } }] }, { "type": "Box", "props": { "y": 330, "x": 30, "sort": 1, "name": "item70", "anchorY": 0.5, "anchorX": 0.5, "id": 1, "runtime": "obj.Brick" }, "child": [{ "type": "Image", "props": { "y": 0, "x": 0, "width": 60, "skin": "game/walls.png", "height": 60 } }] }, { "type": "Box", "props": { "y": 330, "x": 90, "sort": 1, "name": "item71", "anchorY": 0.5, "anchorX": 0.5, "id": 1, "runtime": "obj.Brick" }, "child": [{ "type": "Image", "props": { "y": 0, "x": 0, "width": 60, "skin": "game/walls.png", "height": 60 } }] }, { "type": "Box", "props": { "y": 330, "x": 150, "sort": 1, "name": "item72", "anchorY": 0.5, "anchorX": 0.5, "id": 1, "runtime": "obj.Brick" }, "child": [{ "type": "Image", "props": { "y": 0, "x": 0, "width": 60, "skin": "game/walls.png", "height": 60 } }] }, { "type": "Box", "props": { "y": 330, "x": 270, "sort": 1, "name": "item74", "anchorY": 0.5, "anchorX": 0.5, "id": 1, "runtime": "obj.Brick" }, "child": [{ "type": "Image", "props": { "y": 0, "x": 0, "width": 60, "skin": "game/walls.png", "height": 60 } }] }, { "type": "Box", "props": { "y": 330, "x": 330, "sort": 1, "name": "item75", "anchorY": 0.5, "anchorX": 0.5, "id": 1, "runtime": "obj.Brick" }, "child": [{ "type": "Image", "props": { "y": 0, "x": 0, "width": 60, "skin": "game/walls.png", "height": 60 } }] }, { "type": "Box", "props": { "y": 330, "x": 390, "sort": 1, "name": "item76", "anchorY": 0.5, "anchorX": 0.5, "id": 1, "runtime": "obj.Brick" }, "child": [{ "type": "Image", "props": { "y": 0, "x": 0, "width": 60, "skin": "game/walls.png", "height": 60 } }] }, { "type": "Box", "props": { "y": 330, "x": 510, "sort": 1, "name": "item78", "anchorY": 0.5, "anchorX": 0.5, "id": 1, "runtime": "obj.Brick" }, "child": [{ "type": "Image", "props": { "y": 0, "x": 0, "width": 60, "skin": "game/walls.png", "height": 60 } }] }, { "type": "Box", "props": { "y": 330, "x": 570, "sort": 1, "name": "item79", "anchorY": 0.5, "anchorX": 0.5, "id": 1, "runtime": "obj.Brick" }, "child": [{ "type": "Image", "props": { "y": 0, "x": 0, "width": 60, "skin": "game/walls.png", "height": 60 } }] }, { "type": "Box", "props": { "y": 330, "x": 630, "sort": 1, "name": "item80", "anchorY": 0.5, "anchorX": 0.5, "id": 1, "runtime": "obj.Brick" }, "child": [{ "type": "Image", "props": { "y": 0, "x": 0, "width": 60, "skin": "game/walls.png", "height": 60 } }] }, { "type": "Box", "props": { "y": 330, "x": 690, "sort": 1, "name": "item81", "anchorY": 0.5, "anchorX": 0.5, "id": 1, "runtime": "obj.Brick" }, "child": [{ "type": "Image", "props": { "y": 0, "x": 0, "width": 60, "skin": "game/walls.png", "height": 60 } }] }, { "type": "Box", "props": { "y": 330, "x": 750, "sort": 1, "name": "item82", "anchorY": 0.5, "anchorX": 0.5, "id": 1, "runtime": "obj.Brick" }, "child": [{ "type": "Image", "props": { "y": 0, "x": 0, "width": 60, "skin": "game/walls.png", "height": 60 } }] }, { "type": "Box", "props": { "y": 330, "x": 810, "sort": 1, "name": "item83", "anchorY": 0.5, "anchorX": 0.5, "id": 1, "runtime": "obj.Brick" }, "child": [{ "type": "Image", "props": { "y": 0, "x": 0, "width": 60, "skin": "game/walls.png", "height": 60 } }] }, { "type": "Box", "props": { "y": 390, "x": 30, "sort": 1, "name": "item84", "anchorY": 0.5, "anchorX": 0.5, "id": 1, "runtime": "obj.Brick" }, "child": [{ "type": "Image", "props": { "y": 0, "x": 0, "width": 60, "skin": "game/walls.png", "height": 60 } }] }, { "type": "Box", "props": { "y": 390, "x": 90, "sort": 1, "name": "item85", "anchorY": 0.5, "anchorX": 0.5, "id": 1, "runtime": "obj.Brick" }, "child": [{ "type": "Image", "props": { "y": 0, "x": 0, "width": 60, "skin": "game/walls.png", "height": 60 } }] }, { "type": "Box", "props": { "y": 390, "x": 150, "sort": 1, "name": "item86", "anchorY": 0.5, "anchorX": 0.5, "id": 1, "runtime": "obj.Brick" }, "child": [{ "type": "Image", "props": { "y": 0, "x": 0, "width": 60, "skin": "game/walls.png", "height": 60 } }] }, { "type": "Box", "props": { "y": 390, "x": 510, "sort": 1, "name": "item92", "anchorY": 0.5, "anchorX": 0.5, "id": 1, "runtime": "obj.Brick" }, "child": [{ "type": "Image", "props": { "y": 0, "x": 0, "width": 60, "skin": "game/walls.png", "height": 60 } }] }, { "type": "Box", "props": { "y": 390, "x": 570, "sort": 1, "name": "item93", "anchorY": 0.5, "anchorX": 0.5, "id": 1, "runtime": "obj.Brick" }, "child": [{ "type": "Image", "props": { "y": 0, "x": 0, "width": 60, "skin": "game/walls.png", "height": 60 } }] }, { "type": "Box", "props": { "y": 390, "x": 630, "sort": 1, "name": "item94", "anchorY": 0.5, "anchorX": 0.5, "id": 1, "runtime": "obj.Brick" }, "child": [{ "type": "Image", "props": { "y": 0, "x": 0, "width": 60, "skin": "game/walls.png", "height": 60 } }] }, { "type": "Box", "props": { "y": 390, "x": 690, "sort": 1, "name": "item95", "anchorY": 0.5, "anchorX": 0.5, "id": 1, "runtime": "obj.Brick" }, "child": [{ "type": "Image", "props": { "y": 0, "x": 0, "width": 60, "skin": "game/walls.png", "height": 60 } }] }, { "type": "Box", "props": { "y": 390, "x": 750, "sort": 1, "name": "item96", "anchorY": 0.5, "anchorX": 0.5, "id": 1, "runtime": "obj.Brick" }, "child": [{ "type": "Image", "props": { "y": 0, "x": 0, "width": 60, "skin": "game/walls.png", "height": 60 } }] }, { "type": "Box", "props": { "y": 390, "x": 810, "sort": 1, "name": "item97", "anchorY": 0.5, "anchorX": 0.5, "id": 1, "runtime": "obj.Brick" }, "child": [{ "type": "Image", "props": { "y": 0, "x": 0, "width": 60, "skin": "game/walls.png", "height": 60 } }] }, { "type": "Box", "props": { "y": 450, "x": 30, "sort": 1, "name": "item98", "anchorY": 0.5, "anchorX": 0.5, "id": 1, "runtime": "obj.Brick" }, "child": [{ "type": "Image", "props": { "y": 0, "x": 0, "width": 60, "skin": "game/walls.png", "height": 60 } }] }, { "type": "Box", "props": { "y": 450, "x": 90, "sort": 1, "name": "item99", "anchorY": 0.5, "anchorX": 0.5, "id": 1, "runtime": "obj.Brick" }, "child": [{ "type": "Image", "props": { "y": 0, "x": 0, "width": 60, "skin": "game/walls.png", "height": 60 } }] }, { "type": "Box", "props": { "y": 450, "x": 150, "sort": 1, "name": "item100", "anchorY": 0.5, "anchorX": 0.5, "id": 1, "runtime": "obj.Brick" }, "child": [{ "type": "Image", "props": { "y": 0, "x": 0, "width": 60, "skin": "game/walls.png", "height": 60 } }] }, { "type": "Box", "props": { "y": 450, "x": 270, "sort": 1, "name": "item102", "anchorY": 0.5, "anchorX": 0.5, "id": 1, "runtime": "obj.Brick" }, "child": [{ "type": "Image", "props": { "y": 0, "x": 0, "width": 60, "skin": "game/walls.png", "height": 60 } }] }, { "type": "Box", "props": { "y": 450, "x": 330, "sort": 1, "name": "item103", "anchorY": 0.5, "anchorX": 0.5, "id": 1, "runtime": "obj.Brick" }, "child": [{ "type": "Image", "props": { "y": 0, "x": 0, "width": 60, "skin": "game/walls.png", "height": 60 } }] }, { "type": "Box", "props": { "y": 450, "x": 390, "sort": 1, "name": "item104", "anchorY": 0.5, "anchorX": 0.5, "id": 1, "runtime": "obj.Brick" }, "child": [{ "type": "Image", "props": { "y": 0, "x": 0, "width": 60, "skin": "game/walls.png", "height": 60 } }] }, { "type": "Box", "props": { "y": 450, "x": 510, "sort": 1, "name": "item106", "anchorY": 0.5, "anchorX": 0.5, "id": 1, "runtime": "obj.Brick" }, "child": [{ "type": "Image", "props": { "y": 0, "x": 0, "width": 60, "skin": "game/walls.png", "height": 60 } }] }, { "type": "Box", "props": { "y": 450, "x": 570, "sort": 1, "name": "item107", "anchorY": 0.5, "anchorX": 0.5, "id": 1, "runtime": "obj.Brick" }, "child": [{ "type": "Image", "props": { "y": 0, "x": 0, "width": 60, "skin": "game/walls.png", "height": 60 } }] }, { "type": "Box", "props": { "y": 450, "x": 630, "sort": 1, "name": "item108", "anchorY": 0.5, "anchorX": 0.5, "id": 1, "runtime": "obj.Brick" }, "child": [{ "type": "Image", "props": { "y": 0, "x": 0, "width": 60, "skin": "game/walls.png", "height": 60 } }] }, { "type": "Box", "props": { "y": 450, "x": 690, "sort": 1, "name": "item109", "anchorY": 0.5, "anchorX": 0.5, "id": 1, "runtime": "obj.Brick" }, "child": [{ "type": "Image", "props": { "y": 0, "x": 0, "width": 60, "skin": "game/walls.png", "height": 60 } }] }, { "type": "Box", "props": { "y": 450, "x": 750, "sort": 1, "name": "item110", "anchorY": 0.5, "anchorX": 0.5, "id": 1, "runtime": "obj.Brick" }, "child": [{ "type": "Image", "props": { "y": 0, "x": 0, "width": 60, "skin": "game/walls.png", "height": 60 } }] }, { "type": "Box", "props": { "y": 450, "x": 810, "sort": 1, "name": "item111", "anchorY": 0.5, "anchorX": 0.5, "id": 1, "runtime": "obj.Brick" }, "child": [{ "type": "Image", "props": { "y": 0, "x": 0, "width": 60, "skin": "game/walls.png", "height": 60 } }] }, { "type": "Box", "props": { "y": 510, "x": 30, "sort": 1, "name": "item112", "anchorY": 0.5, "anchorX": 0.5, "id": 1, "runtime": "obj.Brick" }, "child": [{ "type": "Image", "props": { "y": 0, "x": 0, "width": 60, "skin": "game/walls.png", "height": 60 } }] }, { "type": "Box", "props": { "y": 510, "x": 90, "sort": 1, "name": "item113", "anchorY": 0.5, "anchorX": 0.5, "id": 1, "runtime": "obj.Brick" }, "child": [{ "type": "Image", "props": { "y": 0, "x": 0, "width": 60, "skin": "game/walls.png", "height": 60 } }] }, { "type": "Box", "props": { "y": 510, "x": 150, "sort": 1, "name": "item114", "anchorY": 0.5, "anchorX": 0.5, "id": 1, "runtime": "obj.Brick" }, "child": [{ "type": "Image", "props": { "y": 0, "x": 0, "width": 60, "skin": "game/walls.png", "height": 60 } }] }, { "type": "Box", "props": { "y": 510, "x": 270, "sort": 1, "name": "item116", "anchorY": 0.5, "anchorX": 0.5, "id": 1, "runtime": "obj.Brick" }, "child": [{ "type": "Image", "props": { "y": 0, "x": 0, "width": 60, "skin": "game/walls.png", "height": 60 } }] }, { "type": "Box", "props": { "y": 510, "x": 330, "sort": 1, "name": "item117", "anchorY": 0.5, "anchorX": 0.5, "id": 1, "runtime": "obj.Brick" }, "child": [{ "type": "Image", "props": { "y": 0, "x": 0, "width": 60, "skin": "game/walls.png", "height": 60 } }] }, { "type": "Box", "props": { "y": 510, "x": 390, "sort": 1, "name": "item118", "anchorY": 0.5, "anchorX": 0.5, "id": 1, "runtime": "obj.Brick" }, "child": [{ "type": "Image", "props": { "y": 0, "x": 0, "width": 60, "skin": "game/walls.png", "height": 60 } }] }, { "type": "Box", "props": { "y": 510, "x": 450, "sort": 1, "name": "item119", "anchorY": 0.5, "anchorX": 0.5, "id": 1, "runtime": "obj.Brick" }, "child": [{ "type": "Image", "props": { "y": 0, "x": 0, "width": 60, "skin": "game/walls.png", "height": 60 } }] }, { "type": "Box", "props": { "y": 510, "x": 510, "sort": 1, "name": "item120", "anchorY": 0.5, "anchorX": 0.5, "id": 1, "runtime": "obj.Brick" }, "child": [{ "type": "Image", "props": { "y": 0, "x": 0, "width": 60, "skin": "game/walls.png", "height": 60 } }] }, { "type": "Box", "props": { "y": 510, "x": 570, "sort": 1, "name": "item121", "anchorY": 0.5, "anchorX": 0.5, "id": 1, "runtime": "obj.Brick" }, "child": [{ "type": "Image", "props": { "y": 0, "x": 0, "width": 60, "skin": "game/walls.png", "height": 60 } }] }, { "type": "Box", "props": { "y": 510, "x": 630, "sort": 1, "name": "item122", "anchorY": 0.5, "anchorX": 0.5, "id": 1, "runtime": "obj.Brick" }, "child": [{ "type": "Image", "props": { "y": 0, "x": 0, "width": 60, "skin": "game/walls.png", "height": 60 } }] }, { "type": "Box", "props": { "y": 510, "x": 690, "sort": 1, "name": "item123", "anchorY": 0.5, "anchorX": 0.5, "id": 1, "runtime": "obj.Brick" }, "child": [{ "type": "Image", "props": { "y": 0, "x": 0, "width": 60, "skin": "game/walls.png", "height": 60 } }] }, { "type": "Box", "props": { "y": 510, "x": 750, "sort": 1, "name": "item124", "anchorY": 0.5, "anchorX": 0.5, "id": 1, "runtime": "obj.Brick" }, "child": [{ "type": "Image", "props": { "y": 0, "x": 0, "width": 60, "skin": "game/walls.png", "height": 60 } }] }, { "type": "Box", "props": { "y": 510, "x": 810, "sort": 1, "name": "item125", "anchorY": 0.5, "anchorX": 0.5, "id": 1, "runtime": "obj.Brick" }, "child": [{ "type": "Image", "props": { "y": 0, "x": 0, "width": 60, "skin": "game/walls.png", "height": 60 } }] }, { "type": "Box", "props": { "y": 570, "x": 690, "sort": 1, "name": "item137", "anchorY": 0.5, "anchorX": 0.5, "id": 1, "runtime": "obj.Brick" }, "child": [{ "type": "Image", "props": { "y": 0, "x": 0, "width": 60, "skin": "game/walls.png", "height": 60 } }] }, { "type": "Box", "props": { "y": 570, "x": 750, "sort": 1, "name": "item138", "anchorY": 0.5, "anchorX": 0.5, "id": 1, "runtime": "obj.Brick" }, "child": [{ "type": "Image", "props": { "y": 0, "x": 0, "width": 60, "skin": "game/walls.png", "height": 60 } }] }, { "type": "Box", "props": { "y": 570, "x": 810, "sort": 1, "name": "item139", "anchorY": 0.5, "anchorX": 0.5, "id": 1, "runtime": "obj.Brick" }, "child": [{ "type": "Image", "props": { "y": 0, "x": 0, "width": 60, "skin": "game/walls.png", "height": 60 } }] }, { "type": "Box", "props": { "y": 150, "x": 270, "sort": 4, "name": "item0", "anchorY": 0.5, "anchorX": 0.5, "runtime": "obj.Brick" }, "child": [{ "type": "Image", "props": { "y": 0, "x": 0, "width": 60, "skin": "game/tugai.net.20101117145147.png", "height": 60 } }] }, { "type": "Box", "props": { "y": 150, "x": 330, "sort": 4, "name": "item1", "anchorY": 0.5, "anchorX": 0.5, "runtime": "obj.Brick" }, "child": [{ "type": "Image", "props": { "y": 0, "x": 0, "width": 60, "skin": "game/tugai.net.20101117145147.png", "height": 60 } }] }, { "type": "Box", "props": { "y": 150, "x": 390, "sort": 4, "name": "item2", "anchorY": 0.5, "anchorX": 0.5, "runtime": "obj.Brick" }, "child": [{ "type": "Image", "props": { "y": 0, "x": 0, "width": 60, "skin": "game/tugai.net.20101117145147.png", "height": 60 } }] }, { "type": "Box", "props": { "y": 150, "x": 450, "sort": 4, "name": "item3", "anchorY": 0.5, "anchorX": 0.5, "runtime": "obj.Brick" }, "child": [{ "type": "Image", "props": { "y": 0, "x": 0, "width": 60, "skin": "game/tugai.net.20101117145147.png", "height": 60 } }] }, { "type": "Box", "props": { "y": 150, "x": 510, "sort": 4, "name": "item4", "anchorY": 0.5, "anchorX": 0.5, "runtime": "obj.Brick" }, "child": [{ "type": "Image", "props": { "y": 0, "x": 0, "width": 60, "skin": "game/tugai.net.20101117145147.png", "height": 60 } }] }, { "type": "Box", "props": { "y": 150, "x": 210, "sort": 3, "name": "item0", "anchorY": 0.5, "anchorX": 0.5, "runtime": "obj.Brick" }, "child": [{ "type": "Image", "props": { "y": 0, "x": 0, "width": 60, "skin": "game/water.png", "height": 60 } }] }, { "type": "Box", "props": { "y": 150, "x": 570, "sort": 3, "name": "item1", "anchorY": 0.5, "anchorX": 0.5, "runtime": "obj.Brick" }, "child": [{ "type": "Image", "props": { "y": 0, "x": 0, "width": 60, "skin": "game/water.png", "height": 60 } }] }] }, { "type": "Box", "props": { "y": 597, "x": 210, "var": "mainTak", "isPoolObj": false, "anchorY": 0.5, "anchorX": 0.5, "name": "tank", "runtime": "obj.Tank" }, "child": [{ "type": "Image", "props": { "skin": "game/mintank.png", "width": 60, "height": 60, "x": 0, "y": 0 } }] }, { "type": "Box", "props": { "y": 589, "x": 997 }, "child": [{ "type": "Button", "props": { "y": -138, "x": -2, "width": 119, "var": "attack", "skin": "ui/qt228.png", "name": "item0", "label": "攻击", "height": 40, "sizeGrid": "5,5,5,5" } }, { "type": "Button", "props": { "y": -95, "x": -806, "width": 119, "var": "up", "skin": "ui/qt228.png", "name": "item1", "label": "上", "height": 40, "anchorY": 0.5, "anchorX": 0.5, "sizeGrid": "5,5,5,5" } }, { "type": "Button", "props": { "y": -70, "x": -989, "width": 119, "var": "left", "skin": "ui/qt228.png", "name": "item2", "label": "左", "height": 40, "sizeGrid": "5,5,5,5" } }, { "type": "Button", "props": { "y": -65, "x": -725, "width": 119, "var": "right", "skin": "ui/qt228.png", "name": "item0", "label": "右", "height": 40, "sizeGrid": "5,5,5,5" } }, { "type": "Button", "props": { "y": -25, "x": -865, "width": 119, "var": "down", "skin": "ui/qt228.png", "name": "item1", "label": "攻击", "height": 40, "sizeGrid": "5,5,5,5" } }] }, { "type": "Box", "props": { "y": 34, "x": 1102, "name": "item0", "isPoolObj": true, "anchorY": 0.5, "anchorX": 0.5, "sort": 1, "width": 60, "height": 60, "runtime": "obj.Bullet" }, "child": [{ "type": "Image", "props": { "y": 30, "x": 30, "width": 15, "skin": "game/enemymissile.png", "height": 15, "anchorX": 0.5, "anchorY": 0.5 } }] }, { "type": "Box", "props": { "y": 94, "x": 1102, "name": "item1", "isPoolObj": true, "anchorY": 0.5, "anchorX": 0.5, "sort": 1, "width": 60, "height": 60, "runtime": "obj.Bullet" }, "child": [{ "type": "Image", "props": { "y": 30, "x": 30, "width": 15, "skin": "game/enemymissile.png", "height": 15, "anchorX": 0.5, "anchorY": 0.5 } }] }, { "type": "Box", "props": { "y": 154, "x": 1102, "name": "item2", "isPoolObj": true, "anchorY": 0.5, "anchorX": 0.5, "sort": 1, "width": 60, "height": 60, "runtime": "obj.Bullet" }, "child": [{ "type": "Image", "props": { "y": 30, "x": 30, "width": 15, "skin": "game/enemymissile.png", "height": 15, "anchorX": 0.5, "anchorY": 0.5 } }] }, { "type": "Box", "props": { "y": 214, "x": 1102, "name": "item3", "isPoolObj": true, "anchorY": 0.5, "anchorX": 0.5, "sort": 1, "width": 60, "height": 60, "runtime": "obj.Bullet" }, "child": [{ "type": "Image", "props": { "y": 30, "x": 30, "width": 15, "skin": "game/enemymissile.png", "height": 15, "anchorX": 0.5, "anchorY": 0.5 } }] }, { "type": "Box", "props": { "y": 274, "x": 1102, "name": "item4", "isPoolObj": true, "anchorY": 0.5, "anchorX": 0.5, "sort": 1, "width": 60, "height": 60, "runtime": "obj.Bullet" }, "child": [{ "type": "Image", "props": { "y": 30, "x": 30, "width": 15, "skin": "game/enemymissile.png", "height": 15, "anchorX": 0.5, "anchorY": 0.5 } }] }, { "type": "Box", "props": { "y": 334, "x": 1102, "name": "item5", "isPoolObj": true, "anchorY": 0.5, "anchorX": 0.5, "sort": 1, "width": 60, "height": 60, "runtime": "obj.Bullet" }, "child": [{ "type": "Image", "props": { "y": 30, "x": 30, "width": 15, "skin": "game/enemymissile.png", "height": 15, "anchorX": 0.5, "anchorY": 0.5 } }] }, { "type": "Box", "props": { "y": 394, "x": 1102, "name": "item6", "isPoolObj": true, "anchorY": 0.5, "anchorX": 0.5, "sort": 1, "width": 60, "height": 60, "runtime": "obj.Bullet" }, "child": [{ "type": "Image", "props": { "y": 30, "x": 30, "width": 15, "skin": "game/enemymissile.png", "height": 15, "anchorX": 0.5, "anchorY": 0.5 } }] }, { "type": "Box", "props": { "y": 454, "x": 1102, "name": "item7", "isPoolObj": true, "anchorY": 0.5, "anchorX": 0.5, "sort": 1, "width": 60, "height": 60, "runtime": "obj.Bullet" }, "child": [{ "type": "Image", "props": { "y": 30, "x": 30, "width": 15, "skin": "game/enemymissile.png", "height": 15, "anchorX": 0.5, "anchorY": 0.5 } }] }, { "type": "Box", "props": { "y": 514, "x": 1102, "name": "item8", "isPoolObj": true, "anchorY": 0.5, "anchorX": 0.5, "sort": 1, "width": 60, "height": 60, "runtime": "obj.Bullet" }, "child": [{ "type": "Image", "props": { "y": 30, "x": 30, "width": 15, "skin": "game/enemymissile.png", "height": 15, "anchorX": 0.5, "anchorY": 0.5 } }] }, { "type": "Box", "props": { "y": 574, "x": 1102, "name": "item9", "isPoolObj": true, "anchorY": 0.5, "anchorX": 0.5, "sort": 1, "width": 60, "height": 60, "runtime": "obj.Bullet" }, "child": [{ "type": "Image", "props": { "y": 30, "x": 30, "width": 15, "skin": "game/enemymissile.png", "height": 15, "anchorX": 0.5, "anchorY": 0.5 } }] }] };
+            return stageUI;
+        }(Dialog));
+        page.stageUI = stageUI;
     })(page = ui.page || (ui.page = {}));
 })(ui || (ui = {}));
 //# sourceMappingURL=layaUI.max.all.js.map
@@ -53541,5 +54067,107 @@ var demo;
     }());
     demo.listDemo = listDemo;
 })(demo || (demo = {}));
-new demo.listDemo();
+//new demo.listDemo();
 //# sourceMappingURL=listDemo.js.map
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    }
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+/*
+* name;
+*/
+var game;
+(function (game) {
+    var WebGL = Laya.WebGL;
+    var Handler = laya.utils.Handler;
+    var GameCenter = /** @class */ (function (_super) {
+        __extends(GameCenter, _super);
+        function GameCenter() {
+            var _this = _super.call(this) || this;
+            _this.loginWnd = null;
+            _this.stageWnd = null;
+            GameCenter.instance = _this;
+            return _this;
+        }
+        GameCenter.prototype.Regist = function () {
+            //super.Regist();
+            GameCenter.gameStage = game.GameStage.CreateNew();
+            this.initStage();
+        };
+        GameCenter.prototype.UnRegist = function () {
+            //super.UnRegist();
+            this.loginWnd = null;
+            this.stageWnd = null;
+        };
+        GameCenter.prototype.initStage = function () {
+            Laya.MiniAdpter.init();
+            Laya.init(1136, 640, WebGL);
+            Laya.stage.bgColor = "#000000";
+            Laya.stage.scaleMode = Laya.Stage.SCALE_FIXED_AUTO;
+            Laya.loader.load(["res/atlas/ui.atlas", "res/atlas/game.atlas"], Handler.create(this, this.initMainWnd));
+        };
+        GameCenter.prototype.initMainWnd = function () {
+            //console.log("initMainWnd");
+            this.CreateLoginWnd();
+        };
+        GameCenter.prototype.CreateLoginWnd = function () {
+            //console.log("CreateLoginWnd");
+            this.loginWnd = new ui.page.loginUI();
+            Laya.stage.addChild(this.loginWnd);
+            this.loginWnd.btn_start.on(Laya.Event.MOUSE_UP, this, this.CreateStageWnd);
+        };
+        GameCenter.prototype.CreateStageWnd = function () {
+            Laya.stage.removeChild(this.loginWnd);
+            this.stageWnd = new ui.page.stageUI();
+            Laya.stage.addChild(this.stageWnd);
+            this.stageWnd.attack.on(Laya.Event.MOUSE_UP, this, this.tankAttack);
+            this.stageWnd.up.on(Laya.Event.MOUSE_DOWN, this, this.tankUp);
+            this.stageWnd.down.on(Laya.Event.MOUSE_DOWN, this, this.tankDown);
+            this.stageWnd.right.on(Laya.Event.MOUSE_DOWN, this, this.tankRight);
+            this.stageWnd.left.on(Laya.Event.MOUSE_DOWN, this, this.tankLeft);
+            this.stageWnd.up.on(Laya.Event.MOUSE_UP, this, this.tankStopMove);
+            this.stageWnd.down.on(Laya.Event.MOUSE_UP, this, this.tankStopMove);
+            this.stageWnd.right.on(Laya.Event.MOUSE_UP, this, this.tankStopMove);
+            this.stageWnd.left.on(Laya.Event.MOUSE_UP, this, this.tankStopMove);
+        };
+        GameCenter.prototype.tankAttack = function () {
+            game.GameCenter.gameStage.mainTank.attack();
+        };
+        GameCenter.prototype.tankUp = function () {
+            console.log("tankUp");
+            game.GameCenter.gameStage.mainTank.turn(MoveDir.UP);
+            game.GameCenter.gameStage.mainTank.ismoving = true;
+        };
+        GameCenter.prototype.tankDown = function () {
+            game.GameCenter.gameStage.mainTank.turn(MoveDir.DOWN);
+            game.GameCenter.gameStage.mainTank.ismoving = true;
+        };
+        GameCenter.prototype.tankLeft = function () {
+            game.GameCenter.gameStage.mainTank.turn(MoveDir.LEFT);
+            game.GameCenter.gameStage.mainTank.ismoving = true;
+        };
+        GameCenter.prototype.tankRight = function () {
+            game.GameCenter.gameStage.mainTank.turn(MoveDir.RIGHT);
+            game.GameCenter.gameStage.mainTank.ismoving = true;
+        };
+        GameCenter.prototype.tankStopMove = function () {
+            game.GameCenter.gameStage.mainTank.ismoving = false;
+            //game.GameCenter.gameStage.mainTank.stopMove(); 效果不好,移动一小段就矫正位置
+        };
+        GameCenter.instance = null;
+        GameCenter.gameStage = null;
+        return GameCenter;
+    }(game.StageBase));
+    game.GameCenter = GameCenter;
+})(game || (game = {}));
+new game.GameCenter();
+//# sourceMappingURL=GameCenter.js.map

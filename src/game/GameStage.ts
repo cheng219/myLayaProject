@@ -8,6 +8,7 @@ module game
         protected objs : Array<obj.InstanceObject> = [];
 
         protected poolBullets : Array<obj.InstanceObject> = [];
+        protected poolTanks : Array<obj.InstanceObject> = [];
 
         public mainTank : obj.Tank = null;
 
@@ -63,21 +64,43 @@ module game
         }
         public AddPool(brick : obj.InstanceObject) : void
         {
-            let len : number = this.poolBullets.push(brick);
-            brick.pos(1044,20*len);
+            if(brick instanceof obj.Bullet)
+            {
+                let len : number = this.poolBullets.push(brick);
+                brick.pos(1044,20*len);
+            }else if(brick instanceof obj.Tank)
+            {
+                let len : number = this.poolTanks.push(brick);
+                brick.pos(1144,60*len);
+            }
             //console.log("pool :"+this.poolBullets.length);
         }
-        public requstPool() : obj.InstanceObject
+        public requstPool(sort : ObjSort) : obj.InstanceObject
         {
-            let len : number = this.poolBullets.length;
-            if(len > 0)
+            if(sort == ObjSort.BULLET)
             {
-                let go = this.poolBullets[len - 1];
-                go.init();
-                this.poolBullets.splice(len - 1,1);
-                //console.log("remain :" + this.poolBullets.length);
-                return go;
+                let len : number = this.poolBullets.length;
+                if(len > 0)
+                {
+                    let go = this.poolBullets[len - 1];
+                    go.init();
+                    this.poolBullets.splice(len - 1,1);
+                    //console.log("remain :" + this.poolBullets.length);
+                    return go;
+                }
+            }else if(sort == ObjSort.TANK)
+            {
+                let len : number = this.poolTanks.length;
+                if(len > 0)
+                {
+                    let go = this.poolTanks[len - 1];
+                    go.init();
+                    this.poolTanks.splice(len - 1,1);
+                    //console.log("remain :" + this.poolBullets.length);
+                    return go;
+                }
             }
+            return null;
         }
         public return2Pool(brick : obj.InstanceObject) : void
         {
@@ -133,4 +156,10 @@ enum MoveDir
     DOWN,
     LEFT,
     RIGHT,
+}
+enum ObjSort
+{
+    BRICK,
+    TANK,
+    BULLET,
 }

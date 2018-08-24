@@ -22,6 +22,7 @@ var game;
             var _this = _super.call(this) || this;
             _this.objs = [];
             _this.poolBullets = [];
+            _this.poolTanks = [];
             _this.mainTank = null;
             _this.minX = 30;
             _this.minY = 30;
@@ -60,19 +61,38 @@ var game;
             }
         };
         GameStage.prototype.AddPool = function (brick) {
-            var len = this.poolBullets.push(brick);
-            brick.pos(1044, 20 * len);
+            if (brick instanceof obj.Bullet) {
+                var len = this.poolBullets.push(brick);
+                brick.pos(1044, 20 * len);
+            }
+            else if (brick instanceof obj.Tank) {
+                var len = this.poolTanks.push(brick);
+                brick.pos(1144, 60 * len);
+            }
             //console.log("pool :"+this.poolBullets.length);
         };
-        GameStage.prototype.requstPool = function () {
-            var len = this.poolBullets.length;
-            if (len > 0) {
-                var go = this.poolBullets[len - 1];
-                go.init();
-                this.poolBullets.splice(len - 1, 1);
-                //console.log("remain :" + this.poolBullets.length);
-                return go;
+        GameStage.prototype.requstPool = function (sort) {
+            if (sort == ObjSort.BULLET) {
+                var len = this.poolBullets.length;
+                if (len > 0) {
+                    var go = this.poolBullets[len - 1];
+                    go.init();
+                    this.poolBullets.splice(len - 1, 1);
+                    //console.log("remain :" + this.poolBullets.length);
+                    return go;
+                }
             }
+            else if (sort == ObjSort.TANK) {
+                var len = this.poolTanks.length;
+                if (len > 0) {
+                    var go = this.poolTanks[len - 1];
+                    go.init();
+                    this.poolTanks.splice(len - 1, 1);
+                    //console.log("remain :" + this.poolBullets.length);
+                    return go;
+                }
+            }
+            return null;
         };
         GameStage.prototype.return2Pool = function (brick) {
             brick.return2Pool();
@@ -123,4 +143,10 @@ var MoveDir;
     MoveDir[MoveDir["LEFT"] = 2] = "LEFT";
     MoveDir[MoveDir["RIGHT"] = 3] = "RIGHT";
 })(MoveDir || (MoveDir = {}));
+var ObjSort;
+(function (ObjSort) {
+    ObjSort[ObjSort["BRICK"] = 0] = "BRICK";
+    ObjSort[ObjSort["TANK"] = 1] = "TANK";
+    ObjSort[ObjSort["BULLET"] = 2] = "BULLET";
+})(ObjSort || (ObjSort = {}));
 //# sourceMappingURL=GameStage.js.map

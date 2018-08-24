@@ -27,9 +27,14 @@ var obj;
         }
         Tank.prototype.onFrameOnce = function () {
             _super.prototype.onFrameOnce.call(this);
+            if (!this.isPoolObj) {
+                this.init();
+            }
+            //this.graphics.drawRect(0,0,60,60,"#ff0000");
+        };
+        Tank.prototype.init = function () {
             this._inited = true;
             this.frameLoop(30, this, this.attackLoop);
-            this.graphics.drawRect(0, 0, 60, 60, "#ff0000");
         };
         Tank.prototype.onFrameLoop = function () {
             if (this.ismoving) //移动中才检测碰撞
@@ -48,7 +53,7 @@ var obj;
         };
         Tank.prototype.attack = function () {
             console.log("attack");
-            var bullet = game.GameCenter.gameStage.requstPool();
+            var bullet = game.GameCenter.gameStage.requstPool(ObjSort.BULLET);
             if (bullet != null) {
                 bullet.pos(this.x, this.y);
                 bullet.ismoving = true;
