@@ -37,7 +37,8 @@ module game
             Laya.init(1136,640,WebGL);
             Laya.stage.bgColor = "#000000";
             Laya.stage.scaleMode = Laya.Stage.SCALE_FIXED_AUTO;
-            Laya.loader.load(["res/atlas/ui.atlas","res/atlas/game.atlas"],Handler.create(this,this.initMainWnd));
+            Laya.loader.load([{url:"res/atlas/myUI.atlas",type:Laya.Loader.ATLAS},{url:"res/atlas/game.atlas",type:Laya.Loader.ATLAS}
+            ,{url:"ui.json",type:Laya.Loader.JSON}],Handler.create(this,this.initMainWnd));
         }
         private initMainWnd() : void
         {
@@ -48,6 +49,7 @@ module game
         protected CreateLoginWnd() : void
         {
             //console.log("CreateLoginWnd");
+            View.uiMap = Laya.loader.getRes("ui.json");
             this.loginWnd = new ui.page.loginUI();
             Laya.stage.addChild(this.loginWnd);
             this.loginWnd.btn_start.on(Laya.Event.MOUSE_UP,this,this.CreateStageWnd);

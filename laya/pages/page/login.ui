@@ -15,7 +15,7 @@
         {
             "x":15,
             "type":"Button",
-            "props":{"y":320,"x":568,"width":84,"var":"btn_start","skin":"ui/btn_qt113.png","label":"start","height":27,"anchorY":0.5,"anchorX":0.5},
+            "props":{"y":320,"x":568,"width":84,"var":"btn_start","skin":"myUI/btn_qt113.png","label":"start","height":27,"anchorY":0.5,"anchorX":0.5},
             "nodeParent":1,
             "label":"Button(btn_start)",
             "isDirectory":false,

@@ -1,0 +1,6 @@
+<page>
+   <item name="page/login.ui" props="" ifExport="加载模式" aName="login"/>
+   <item name="page/stage.ui" props="" ifExport="加载模式" aName="stage"/>
+   <item name="page/background.ui" props="" ifExport="加载模式" aName="back"/>
+   <item name="page/ListPage.ui" props="" ifExport="加载模式" aName="listPage"/>
+</page>

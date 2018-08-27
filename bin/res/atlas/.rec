@@ -1,9 +1,4 @@
 D .
-R 246B90A9 .rec
-R ECE34CE5 game.atlas
-R CDFF87FF game.png
-R 49C5DAD2 ui.atlas
-R 35DB9498 ui.png
 D game
 P 1EC30EDE blast1.png
 P 90B3C8B9 blast2.png
@@ -54,14 +49,7 @@ P A8E1A07C tugai.net.20101117145147.png
 P 74815AAC wall.png
 P FCD31347 walls.png
 P 00FCA9B5 water.png
-D prefab
-R 9F6DF6B5 bullet.prefab
-R 81623A3E grass.prefab
-R 4E987313 metal.prefab
-R 6FBCFCCF tank.prefab
-R CC9B88F5 wall.prefab
-R 2ABA4F26 water.prefab
-D ui
+D myUI
 P 52E437E8 btn_qt113.png
 P 6F3D2937 close.png
 P AA7B3D93 jiesuan_01.png
@@ -74,3 +62,10 @@ P 180C8AB0 qt276.png
 P 2B0FD14F qt279.png
 P 89402E87 qt281.png
 P ED0D00D4 qt286.png
+D prefab
+R 9F6DF6B5 bullet.prefab
+R 81623A3E grass.prefab
+R 4E987313 metal.prefab
+R 6FBCFCCF tank.prefab
+R CC9B88F5 wall.prefab
+R 2ABA4F26 water.prefab
