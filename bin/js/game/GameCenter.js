@@ -42,19 +42,21 @@ var game;
             Laya.init(1136, 640, WebGL);
             Laya.stage.bgColor = "#000000";
             Laya.stage.scaleMode = Laya.Stage.SCALE_FIXED_AUTO;
-            Laya.loader.load([{ url: "res/atlas/myUI.atlas", type: Laya.Loader.ATLAS }, { url: "res/atlas/game.atlas", type: Laya.Loader.ATLAS },
-                { url: "ui.json", type: Laya.Loader.JSON }], Handler.create(this, this.initMainWnd));
+            Laya.loader.load([{ url: "res/atlas/myUI.atlas", type: Loader.ATLAS },
+                { url: "res/atlas/game.atlas", type: Loader.ATLAS },
+                { url: "ui.json", type: Loader.JSON }], Handler.create(this, this.initMainWnd));
         };
         GameCenter.prototype.initMainWnd = function () {
             //console.log("initMainWnd");
+            View.uiMap = Laya.loader.getRes("ui.json");
             this.CreateLoginWnd();
         };
         GameCenter.prototype.CreateLoginWnd = function () {
             //console.log("CreateLoginWnd");
-            View.uiMap = Laya.loader.getRes("ui.json");
-            this.loginWnd = new ui.page.loginUI();
+            this.loginWnd = new LoginWnd();
             Laya.stage.addChild(this.loginWnd);
             this.loginWnd.btn_start.on(Laya.Event.MOUSE_UP, this, this.CreateStageWnd);
+            //this.loginWnd.btn_start
         };
         GameCenter.prototype.CreateStageWnd = function () {
             Laya.stage.removeChild(this.loginWnd);

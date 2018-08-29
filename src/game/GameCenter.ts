@@ -10,7 +10,7 @@ module game
         public static instance : GameCenter = null;
         public static gameStage : game.GameStage = null;
 
-        private loginWnd : ui.page.loginUI = null;
+        private loginWnd : LoginWnd = null;
         private stageWnd : ui.page.stageUI = null;
         constructor()
         {
@@ -36,23 +36,25 @@ module game
             Laya.MiniAdpter.init();
             Laya.init(1136,640,WebGL);
             Laya.stage.bgColor = "#000000";
-            Laya.stage.scaleMode = Laya.Stage.SCALE_FIXED_AUTO;
-            Laya.loader.load([{url:"res/atlas/myUI.atlas",type:Laya.Loader.ATLAS},{url:"res/atlas/game.atlas",type:Laya.Loader.ATLAS}
-            ,{url:"ui.json",type:Laya.Loader.JSON}],Handler.create(this,this.initMainWnd));
+            Laya.stage.scaleMode = Laya.Stage.SCALE_FIXED_AUTO;  
+            Laya.loader.load([{url:"res/atlas/myUI.atlas",type:Loader.ATLAS},
+                {url:"ui.json",type:Loader.JSON}],Handler.create(this,this.initMainWnd));
         }
         private initMainWnd() : void
         {
             //console.log("initMainWnd");
+            View.uiMap = Laya.loader.getRes("ui.json");
             this.CreateLoginWnd();
         }
 
         protected CreateLoginWnd() : void
         {
             //console.log("CreateLoginWnd");
-            View.uiMap = Laya.loader.getRes("ui.json");
-            this.loginWnd = new ui.page.loginUI();
+            
+            this.loginWnd = new LoginWnd();
             Laya.stage.addChild(this.loginWnd);
             this.loginWnd.btn_start.on(Laya.Event.MOUSE_UP,this,this.CreateStageWnd);
+            //this.loginWnd.btn_start
         }
 
         protected CreateStageWnd() : void

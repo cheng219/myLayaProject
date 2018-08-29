@@ -2,7 +2,7 @@
     "x":0,
     "type":"View",
     "selectedBox":1,
-    "selecteID":2,
+    "selecteID":3,
     "props":{"width":1136,"sceneColor":"#000000","height":640},
     "nodeParent":-1,
     "label":"View",
@@ -24,12 +24,46 @@
             "compId":2,
             "child":[
                 ]
+        },
+        {
+            "x":15,
+            "type":"Label",
+            "props":{"y":397,"x":400,"width":351,"var":"load_text","text":"资源加载中，当前进度：100%","height":22,"fontSize":18,"font":"Arial","color":"#ffffff","bold":true,"align":"left"},
+            "nodeParent":1,
+            "label":"Label(load_text)",
+            "isDirectory":false,
+            "isAniNode":true,
+            "hasChild":false,
+            "compId":3,
+            "child":[
+                ]
         }],
     "animations":[
         {
             "nodes":[
-                ],
-            "name":"ani1",
+                {
+                    "target":2,
+                    "keyframes":{
+                        "y":[
+                            {
+                                "value":320,
+                                "tweenMethod":"linearNone",
+                                "tween":true,
+                                "target":2,
+                                "key":"y",
+                                "index":0
+                            },
+                            {
+                                "value":300,
+                                "tweenMethod":"linearNone",
+                                "tween":true,
+                                "target":2,
+                                "key":"y",
+                                "index":8
+                            }]
+                    }
+                }],
+            "name":"ani_start",
             "id":1,
             "frameRate":24,
             "action":0
