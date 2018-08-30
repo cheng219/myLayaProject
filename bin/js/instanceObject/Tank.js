@@ -16,12 +16,15 @@ var __extends = (this && this.__extends) || (function () {
 */
 var obj;
 (function (obj) {
+    var Animation = laya.display.Animation;
     var Tank = /** @class */ (function (_super) {
         __extends(Tank, _super);
         function Tank() {
             var _this = _super.call(this) || this;
             _this.id = 0;
             _this.bulletSpeed = 10;
+            _this.bornAnim = null;
+            _this.dieAnim = null;
             _this.lastAttackTime = 0;
             _this.camp = 1;
             return _this;
@@ -30,6 +33,11 @@ var obj;
             _super.prototype.onFrameOnce.call(this);
             this.widthX = ConfigMng.tanktWidth;
             this.heightY = ConfigMng.tanktWidth;
+            this.dieAnim = new Animation();
+            this.dieAnim.loadAnimation("anim/die.ani");
+            //Laya.stage.addChild(this.dieAnim);
+            this.addChild(this.dieAnim);
+            this.dieAnim.pos(this.widthX / 2, this.heightY / 2);
             if (!this.isPoolObj) {
                 game.GameCenter.gameStage.mainTank = this;
                 this.init();
@@ -76,7 +84,9 @@ var obj;
         Tank.prototype.intersectWithOther = function (other) {
             if (other instanceof obj.Bullet) {
                 if (other.camp != this.camp && this.isPoolObj) {
-                    game.GameCenter.gameStage.DelInstanceObj(this);
+                    this.dieAnim.play(0, true, "die");
+                    this.dieAnim.on(Laya.Event.COMPLETE, this, this.dieComplete);
+                    //game.GameCenter.gameStage.DelInstanceObj(this);
                 }
                 console.log("被击中");
             }
@@ -87,17 +97,28 @@ var obj;
                 }
             }
         };
+        Tank.prototype.dieComplete = function () {
+            console.log("dieComplete");
+            game.GameCenter.gameStage.DelInstanceObj(this);
+        };
         /** 每1秒自动转向 */
         Tank.prototype.autoTurn = function () {
             var arr = [MoveDir.DOWN, MoveDir.LEFT, MoveDir.RIGHT, MoveDir.UP];
             arr.splice(arr.indexOf(this.dir), 1);
             var index = Math.round(Math.random() * (arr.length - 1));
             var mdir = arr[index];
-            console.log("index:" + index + ",arr.length:" + arr.length + ",mdir:" + mdir);
+            //console.log("index:"+index + ",arr.length:"+arr.length+",mdir:"+mdir);
             if (mdir != undefined) {
                 this.turn(mdir);
                 this.ismoving = true;
             }
+        };
+        /**返回对象池，注销一些参数 */
+        Tank.prototype.return2Pool = function () {
+            _super.prototype.return2Pool.call(this);
+            this.dieAnim.offAll();
+            this.removeChild(this.dieAnim);
+            this.offAll();
         };
         return Tank;
     }(obj.InstanceObject));

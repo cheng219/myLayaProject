@@ -43,7 +43,6 @@ var game;
             Laya.stage.bgColor = "#000000";
             Laya.stage.scaleMode = Laya.Stage.SCALE_FIXED_AUTO;
             Laya.loader.load([{ url: "res/atlas/myUI.atlas", type: Loader.ATLAS },
-                { url: "res/atlas/game.atlas", type: Loader.ATLAS },
                 { url: "ui.json", type: Loader.JSON }], Handler.create(this, this.initMainWnd));
         };
         GameCenter.prototype.initMainWnd = function () {

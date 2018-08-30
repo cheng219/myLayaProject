@@ -14,7 +14,7 @@ class ConfigMng{
     /**主角子弹速度=8 */
     public static enemyBulletSpeed : number = 8;
     /** 攻击间隔1秒 */
-    public static attackCd : number = 500;
+    public static attackCd : number = 100;//500
     /** 敌人自动攻击间隔2秒 */
     public static autoAttackCd : number = 2000;
     /** 敌人遇到障碍转向间隔0.2秒 */

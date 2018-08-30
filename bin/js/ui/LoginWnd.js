@@ -21,7 +21,8 @@ var LoginWnd = /** @class */ (function (_super) {
     function LoginWnd() {
         var _this = _super.call(this) || this;
         _this.btn_start.visible = false;
-        Laya.loader.load([{ url: "sound/add.wav", type: Loader.SOUND },
+        Laya.loader.load([{ url: "res/atlas/game.atlas", type: Loader.ATLAS },
+            { url: "sound/add.wav", type: Loader.SOUND },
             { url: "sound/start.wav", type: Loader.SOUND },
             { url: "sound/hit.wav", type: Loader.SOUND },
             { url: "sound/blast.wav", type: Loader.SOUND },

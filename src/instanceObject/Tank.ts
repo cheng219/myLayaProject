@@ -3,11 +3,13 @@
 */
 module obj
 {
-    
+    import Animation = laya.display.Animation;
     export class Tank extends InstanceObject
     {
         public id : number = 0;
         public bulletSpeed : number = 10;
+        protected bornAnim : Animation = null;
+        protected dieAnim : Animation = null;
         constructor()
         {
             super();
@@ -19,6 +21,12 @@ module obj
             super.onFrameOnce();
             this.widthX = ConfigMng.tanktWidth;
             this.heightY = ConfigMng.tanktWidth;
+            this.dieAnim = new Animation();
+            this.dieAnim.loadAnimation("anim/die.ani");
+            this.dieAnim.visible = false; 
+            //Laya.stage.addChild(this.dieAnim);
+            this.addChild(this.dieAnim);
+            this.dieAnim.pos(this.widthX / 2,this.heightY / 2);
             if(!this.isPoolObj)
             {
                 game.GameCenter.gameStage.mainTank = this;
@@ -80,7 +88,10 @@ module obj
             {
                 if(other.camp != this.camp && this.isPoolObj)
                 {
-                    game.GameCenter.gameStage.DelInstanceObj(this);
+                    this.dieAnim.visible = true; 
+                    this.dieAnim.play(0,true,"die");
+                    this.dieAnim.on(Laya.Event.COMPLETE,this,this.dieComplete)
+                    //game.GameCenter.gameStage.DelInstanceObj(this);
                 }
                 console.log("被击中");
             }else
@@ -93,6 +104,12 @@ module obj
             }
         }
 
+        protected dieComplete() : void
+        {
+            console.log("dieComplete");
+            game.GameCenter.gameStage.DelInstanceObj(this);
+        }
+
         /** 每1秒自动转向 */
         protected autoTurn() : void
         {
@@ -100,12 +117,21 @@ module obj
             arr.splice(arr.indexOf(this.dir),1);
             let index : number = Math.round(Math.random() * (arr.length - 1));
             let mdir : MoveDir = arr[index];
-            console.log("index:"+index + ",arr.length:"+arr.length+",mdir:"+mdir);
+            //console.log("index:"+index + ",arr.length:"+arr.length+",mdir:"+mdir);
             if(mdir != undefined)
             {
                 this.turn(mdir);
                 this.ismoving = true;
             }
         }
+
+        /**返回对象池，注销一些参数 */
+		public return2Pool() : void
+		{
+            super.return2Pool();
+            this.dieAnim.visible = false;
+            this.dieAnim.offAll();
+            this.offAll();
+		}
     }
 }
