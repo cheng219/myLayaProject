@@ -41,18 +41,16 @@ var obj;
         Brick.prototype.onFrameLoop = function () {
             _super.prototype.onFrameLoop.call(this);
         };
-        Brick.prototype.intersectWithOther = function (other) {
-            _super.prototype.intersectWithOther.call(this, other);
-            if (other instanceof obj.Bullet) {
-                if (this.sort == BrickSort.WALL) {
-                    console.log("被击中,销毁自己");
-                    //this.visible = false;
-                    //this.setBounds(this.zeroRect);
-                    game.GameCenter.gameStage.DelInstanceObj(this);
-                }
-                else if (this.sort == BrickSort.METAL) {
-                    //金属必须强力子弹
-                }
+        Brick.prototype.beHit = function (other) {
+            _super.prototype.beHit.call(this, other);
+            if (this.sort == BrickSort.WALL) {
+                console.log("被击中,销毁自己");
+                //this.visible = false;
+                //this.setBounds(this.zeroRect);
+                game.GameCenter.gameStage.DelInstanceObj(this);
+            }
+            else if (this.sort == BrickSort.METAL) {
+                //金属必须强力子弹
             }
         };
         return Brick;

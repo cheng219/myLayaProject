@@ -22,6 +22,7 @@ var obj;
             var _this = _super.call(this) || this;
             _this.isPoolObj = false;
             _this._inited = false;
+            _this.isDead = false;
             /**阵营(相等则不碰撞检测) */
             _this._camp = 0;
             /**移动速度 */
@@ -38,6 +39,13 @@ var obj;
             _this.frameOnce(1, _this, _this.onFrameOnce);
             return _this;
         }
+        Object.defineProperty(InstanceObject.prototype, "IsDead", {
+            get: function () {
+                return this.isDead;
+            },
+            enumerable: true,
+            configurable: true
+        });
         Object.defineProperty(InstanceObject.prototype, "inited", {
             get: function () {
                 return this._inited;
@@ -150,8 +158,14 @@ var obj;
             }
             this.dir = dir;
         };
+        InstanceObject.prototype.Dead = function () {
+            this.isDead = true;
+        };
         /**被其他物体碰撞 */
-        InstanceObject.prototype.intersectWithOther = function (other) {
+        InstanceObject.prototype.beHit = function (other) {
+        };
+        /**碰撞到砖或者其他坦克 */
+        InstanceObject.prototype.stopMoveByOther = function () {
         };
         /**初始化 */
         InstanceObject.prototype.init = function () {
@@ -161,6 +175,7 @@ var obj;
         InstanceObject.prototype.return2Pool = function () {
             this._inited = false;
             this._ismoving = false;
+            this.isDead = false;
         };
         return InstanceObject;
     }(laya.ui.Box));

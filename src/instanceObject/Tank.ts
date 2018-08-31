@@ -24,27 +24,27 @@ module obj
             this.dieAnim = new Animation();
             this.dieAnim.loadAnimation("anim/die.ani");
             this.dieAnim.visible = false; 
-            //Laya.stage.addChild(this.dieAnim);
             this.addChild(this.dieAnim);
             this.dieAnim.pos(this.widthX / 2,this.heightY / 2);
             if(!this.isPoolObj)
             {
                 game.GameCenter.gameStage.mainTank = this;
-                this.init();
+                this._inited = true;
+                //this.graphics.drawRect(0,0,60,60,"#ff0000");
             }
-            //this.graphics.drawRect(0,0,60,60,"#ff0000");
         }
         public init() : void
         {
+            super.init();
             this._inited = true;
             Laya.timer.loop(ConfigMng.autoAttackCd,this,this.attackLoop)
         }
 
         protected onFrameLoop() : void
         {
-            if(this.ismoving)//移动中才检测碰撞
+            if(this.ismoving && !this.isDead)//移动中才检测碰撞
             {
-                if(game.GameCenter.gameStage.intersectWithOther(this,this.dir))
+                if(game.GameCenter.gameStage.checkCanMove(this,this.dir))
                 {
                     //console.log("遇到障碍");
                 }else
@@ -82,25 +82,24 @@ module obj
         }
 
         
-        public intersectWithOther(other : InstanceObject) : void
+        public beHit(other : InstanceObject) : void
         {
-            if(other instanceof Bullet)
+            if(other.camp != this.camp && this.isPoolObj)
             {
-                if(other.camp != this.camp && this.isPoolObj)
-                {
-                    this.dieAnim.visible = true; 
-                    this.dieAnim.play(0,true,"die");
-                    this.dieAnim.on(Laya.Event.COMPLETE,this,this.dieComplete)
-                    //game.GameCenter.gameStage.DelInstanceObj(this);
-                }
-                console.log("被击中");
-            }else
+                this.dieAnim.visible = true; 
+                this.dieAnim.play(0,true,"die");
+                this.dieAnim.on(Laya.Event.COMPLETE,this,this.dieComplete)
+                this.Dead();
+                //game.GameCenter.gameStage.DelInstanceObj(this);
+            }
+            console.log("被击中");
+        }
+        public stopMoveByOther() : void
+        {
+            this.stopMove();
+            if(this.isPoolObj)
             {
-                this.stopMove();
-                if(this.isPoolObj)
-                {
-                    Laya.timer.once(ConfigMng.autoTurnCd,this,this.autoTurn);
-                }
+                Laya.timer.once(ConfigMng.autoTurnCd,this,this.autoTurn);
             }
         }
 

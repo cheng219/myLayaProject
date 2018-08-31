@@ -7,6 +7,11 @@ module obj
 	{
 		public isPoolObj : boolean = false;
 		protected _inited : boolean = false;
+		protected isDead : boolean = false;
+		public get IsDead()
+		{
+			return this.isDead;
+		}
 		public get inited()
 		{
 			return this._inited;
@@ -135,8 +140,18 @@ module obj
 			}
 			this.dir = dir;
 		}
+
+		public Dead() : void
+		{
+			this.isDead = true;
+		}
 		/**被其他物体碰撞 */
-		public intersectWithOther(other : InstanceObject) : void
+		public beHit(other : InstanceObject) : void
+		{
+			
+		}
+		/**碰撞到砖或者其他坦克 */
+		public stopMoveByOther() : void
 		{
 			
 		}
@@ -150,6 +165,7 @@ module obj
 		{
 			this._inited = false;
 			this._ismoving = false;
+			this.isDead = false;
 		}
 	}
 }

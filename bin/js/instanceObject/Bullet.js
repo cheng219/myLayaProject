@@ -34,20 +34,21 @@ var obj;
             //console.log("bullet init");
         };
         Bullet.prototype.onFrameLoop = function () {
-            if (!this.inited)
+            if (!this.inited || this.isDead)
                 return;
             if (!this.ismoving)
                 return;
-            if (game.GameCenter.gameStage.intersectWithOther(this, this.dir)) {
+            if (game.GameCenter.gameStage.checkHit(this, this.dir)) {
                 //console.log("遇到障碍");
             }
             else {
                 _super.prototype.move.call(this);
             }
         };
-        Bullet.prototype.intersectWithOther = function (other) {
+        Bullet.prototype.beHit = function (other) {
             console.log("击中其他，销毁自己");
             //this.visible = false;
+            this.Dead();
             game.GameCenter.gameStage.DelInstanceObj(this);
         };
         return Bullet;

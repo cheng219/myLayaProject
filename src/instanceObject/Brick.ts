@@ -34,21 +34,18 @@ module obj
             super.onFrameLoop();
         }
 
-        public intersectWithOther(other : InstanceObject) : void
+        public beHit(other : InstanceObject) : void
         {
-            super.intersectWithOther(other);
-            if(other instanceof Bullet)
+            super.beHit(other);
+            if(this.sort == BrickSort.WALL)
             {
-                if(this.sort == BrickSort.WALL)
-                {
-                    console.log("被击中,销毁自己");
-                    //this.visible = false;
-                    //this.setBounds(this.zeroRect);
-                    game.GameCenter.gameStage.DelInstanceObj(this);
-                }else if(this.sort == BrickSort.METAL)
-                {
-                    //金属必须强力子弹
-                }
+                console.log("被击中,销毁自己");
+                //this.visible = false;
+                //this.setBounds(this.zeroRect);
+                game.GameCenter.gameStage.DelInstanceObj(this);
+            }else if(this.sort == BrickSort.METAL)
+            {
+                //金属必须强力子弹
             }
         }
     }

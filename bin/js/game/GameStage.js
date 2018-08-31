@@ -101,19 +101,58 @@ var game;
             this.AddPool(brick);
         };
         /**检测碰撞 */
-        GameStage.prototype.intersectWithOther = function (tank, dir) {
+        GameStage.prototype.checkHit = function (bullet, dir) {
             //console.log("intersectWithOther id:"+tank.camp);
-            if ((tank.x <= this.minX && dir == MoveDir.LEFT)
-                || (tank.x >= this.maxX && dir == MoveDir.RIGHT)
-                || (tank.y <= this.minY && dir == MoveDir.UP)
-                || (tank.y >= this.maxY && dir == MoveDir.DOWN)) {
-                tank.intersectWithOther(null); //撞到边界
+            if ((bullet.x <= this.minX && dir == MoveDir.LEFT)
+                || (bullet.x >= this.maxX && dir == MoveDir.RIGHT)
+                || (bullet.y <= this.minY && dir == MoveDir.UP)
+                || (bullet.y >= this.maxY && dir == MoveDir.DOWN)) {
+                bullet.beHit(null); //撞到边界
                 return true;
             }
             for (var i = 0, len = this.objs.length; i < len; i++) {
                 if (!this.objs[i].inited)
                     continue;
-                if (this.objs[i] == tank || this.objs[i].camp == tank.camp) //这里会导致坦克穿透
+                if (this.objs[i] == bullet)
+                    continue;
+                if (this.objs[i].camp == bullet.camp)
+                    continue;
+                var diffX = Math.abs(this.objs[i].x - bullet.x);
+                var diffY = Math.abs(this.objs[i].y - bullet.y);
+                var diffW = this.objs[i].widthX / 2 + bullet.widthX / 2;
+                var diffH = this.objs[i].heightY / 2 + bullet.heightY / 2;
+                if (diffX > diffW || diffY > diffH) //距离过远
+                    continue;
+                if (this.objs[i] instanceof obj.Brick) {
+                    if (this.objs[i].sort == BrickSort.WATER) {
+                        continue; //子弹过水
+                    }
+                }
+                if (diffX < diffW && diffY < diffH) {
+                    //console.log("diffX :"+diffX+",diffW :"+diffW+",diffY :"+diffY+",diffH :"+diffH);
+                    if (!this.objs[i].IsDead && !bullet.IsDead) {
+                        this.objs[i].beHit(bullet);
+                        bullet.beHit(this.objs[i]);
+                        return true;
+                    }
+                }
+            }
+            return false;
+        };
+        /**检测碰撞 */
+        GameStage.prototype.checkCanMove = function (tank, dir) {
+            //console.log("intersectWithOther id:"+tank.camp);
+            if ((tank.x <= this.minX && dir == MoveDir.LEFT)
+                || (tank.x >= this.maxX && dir == MoveDir.RIGHT)
+                || (tank.y <= this.minY && dir == MoveDir.UP)
+                || (tank.y >= this.maxY && dir == MoveDir.DOWN)) {
+                tank.stopMoveByOther(); //撞到边界
+                return true;
+            }
+            for (var i = 0, len = this.objs.length; i < len; i++) {
+                if (this.objs[i] instanceof obj.Bullet || !this.objs[i].inited)
+                    continue;
+                if (this.objs[i] == tank)
                     continue;
                 var diffX = Math.abs(this.objs[i].x - tank.x);
                 var diffY = Math.abs(this.objs[i].y - tank.y);
@@ -121,16 +160,12 @@ var game;
                 var diffH = this.objs[i].heightY / 2 + tank.heightY / 2;
                 if (diffX > diffW || diffY > diffH) //距离过远
                     continue;
-                if (tank instanceof obj.Bullet && this.objs[i] instanceof obj.Brick) {
-                    if (this.objs[i].sort == BrickSort.WATER) {
-                        continue; //子弹过水
-                    }
-                }
                 if (diffX < diffW && diffY < diffH) {
                     //console.log("diffX :"+diffX+",diffW :"+diffW+",diffY :"+diffY+",diffH :"+diffH);
-                    this.objs[i].intersectWithOther(tank);
-                    tank.intersectWithOther(this.objs[i]);
-                    return true;
+                    if (!this.objs[i].IsDead && !tank.IsDead) {
+                        tank.stopMoveByOther();
+                        return true;
+                    }
                 }
             }
             return false;

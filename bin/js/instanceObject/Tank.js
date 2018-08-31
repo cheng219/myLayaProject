@@ -35,23 +35,24 @@ var obj;
             this.heightY = ConfigMng.tanktWidth;
             this.dieAnim = new Animation();
             this.dieAnim.loadAnimation("anim/die.ani");
-            //Laya.stage.addChild(this.dieAnim);
+            this.dieAnim.visible = false;
             this.addChild(this.dieAnim);
             this.dieAnim.pos(this.widthX / 2, this.heightY / 2);
             if (!this.isPoolObj) {
                 game.GameCenter.gameStage.mainTank = this;
-                this.init();
+                this._inited = true;
+                //this.graphics.drawRect(0,0,60,60,"#ff0000");
             }
-            //this.graphics.drawRect(0,0,60,60,"#ff0000");
         };
         Tank.prototype.init = function () {
+            _super.prototype.init.call(this);
             this._inited = true;
-            Laya.timer.loop(ConfigMng.autoAttackCd, this, this.attackLoop);
+            //Laya.timer.loop(ConfigMng.autoAttackCd,this,this.attackLoop)
         };
         Tank.prototype.onFrameLoop = function () {
-            if (this.ismoving) //移动中才检测碰撞
+            if (this.ismoving && !this.isDead) //移动中才检测碰撞
              {
-                if (game.GameCenter.gameStage.intersectWithOther(this, this.dir)) {
+                if (game.GameCenter.gameStage.checkCanMove(this, this.dir)) {
                     //console.log("遇到障碍");
                 }
                 else {
@@ -81,20 +82,20 @@ var obj;
                 //Laya.stage.addChild(bullet);
             }
         };
-        Tank.prototype.intersectWithOther = function (other) {
-            if (other instanceof obj.Bullet) {
-                if (other.camp != this.camp && this.isPoolObj) {
-                    this.dieAnim.play(0, true, "die");
-                    this.dieAnim.on(Laya.Event.COMPLETE, this, this.dieComplete);
-                    //game.GameCenter.gameStage.DelInstanceObj(this);
-                }
-                console.log("被击中");
+        Tank.prototype.beHit = function (other) {
+            if (other.camp != this.camp && this.isPoolObj) {
+                this.dieAnim.visible = true;
+                this.dieAnim.play(0, true, "die");
+                this.dieAnim.on(Laya.Event.COMPLETE, this, this.dieComplete);
+                this.Dead();
+                //game.GameCenter.gameStage.DelInstanceObj(this);
             }
-            else {
-                this.stopMove();
-                if (this.isPoolObj) {
-                    Laya.timer.once(ConfigMng.autoTurnCd, this, this.autoTurn);
-                }
+            console.log("被击中");
+        };
+        Tank.prototype.stopMoveByOther = function () {
+            this.stopMove();
+            if (this.isPoolObj) {
+                Laya.timer.once(ConfigMng.autoTurnCd, this, this.autoTurn);
             }
         };
         Tank.prototype.dieComplete = function () {
@@ -116,8 +117,8 @@ var obj;
         /**返回对象池，注销一些参数 */
         Tank.prototype.return2Pool = function () {
             _super.prototype.return2Pool.call(this);
+            this.dieAnim.visible = false;
             this.dieAnim.offAll();
-            this.removeChild(this.dieAnim);
             this.offAll();
         };
         return Tank;
